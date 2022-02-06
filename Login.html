@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Fiscalia - Chamical</title>
+     <!--Import Google Icon Font-->
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <link rel="stylesheet" href="css/navi.css">
+   <link rel="stylesheet" href="css/estilos.css">
+   <link rel="stylesheet" href="css/var.scss">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+   <!-- Font Awesome -->
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"  rel="stylesheet">
+</head>
+<body class="bg-image" style="background-image:url('images/login.jpg');" >
+
+<ul class="nav bg-image d-flex justify-content-center" style="background-image: url('images/login.jpg');">
+     
+    <nav class="navbar navbar-light bg-light rounded" >
+    <div class="container-fluid">
+      <a class="navbar-brand" style="font-weight: bold;" onclick="accion()" href="#">
+        <img src="images/justicia2.png" alt="" width="40" height="34" class="d-inline-block align-text-top">
+        Fiscalia Web
+      </a>
+    </div>
+  </nav>
+  
+
+  <li class="nav-item desaparece1">
+    <a class="nav-link " aria-current="page" href="#" aria-disabled="false" onclick="accion()">Menu</a>
+  </li>
+  <li class="nav-item justify-content-right desaparece">
+    <a class="nav-link" href="index.html">Inicio</a>
+  </li>
+  <li class="nav-item justify-content-right desaparece">
+    <a class="nav-link" href="comisarias.php">Comisarias</a>
+  </li>
+  <li class="nav-item justify-content-right desaparece">
+    <a class="nav-link" href="estadodenuncia.php">Estado de su Denuncia</a>
+  </li>
+  <li class="nav-item desaparece">
+    <a class="nav-link" href="registro.html"  aria-disabled="true">Registrar</a>
+  </li>
+  <li class="nav-item desaparece">
+    <a class="nav-link" href="Login.html"  aria-disabled="true">Iniciar Sesion</a>
+  </li>
+  <li class="nav-item desaparece">
+    <a class="nav-link" href="contacto.html"  aria-disabled="true">Contacto</a>
+  </li>
+</ul>
+
+<div class="mt-5 col-xl-12 col-lg-12 col-md-12 col-sm-12  d-flex justify-content-center">   
+
+  <div class="container col-10 col-md-7 col-sm-9 col-lg-6 col-xl-4 containerlogin d-flex justify-content-center">
+    
+    <form action="" id="sesion" method="post" class="row g-2 col-md-11 col-sm-12 d-flex justify-content-center">
+
+      <label for="" class="logintitulo col-md-12 col-sm-12 text-center">Ingreso al Sistema</label>
+      
+      <div class="col-md-12 col-sm-12 d-flex justify-content-center">
+        
+        <div class="form-floating mb-3 letrasreg">
+          <input type="text" class="form-control"  name="usuario" id="floatingInput" placeholder="Usuario" required></input>
+          <label for="floatingInput">Usuario</label>
+        </div> 
+      </div>
+      
+      <div class="col-md-12 col-sm-12 d-flex justify-content-center">
+        <div class="form-floating mb-3 letrasreg">
+          <input type="password" class="form-control"  name="contrasena" id="input_contra" placeholder="Password" required>
+          <label for="floatingInput">Contraseña</label>
+        </div>     
+      </div>
+
+      <div class="container col-xl-7 col-lg-5 col-md-5 col-sm-6 col-7" style="margin-top: -5px;;font-family:Georgia, 'Times New Roman', Times, serif;">
+
+        <div class="form-check  d-flex justify-content-center" style="margin-top:-8px; width:fit-content;">
+          <input class="form-check-input" type="checkbox" value="" id="password">
+          <label class="form-check-label text-light" for="flexCheckDefault" id="label_contra">
+            Mostrar Contraseña
+          </label>
+        </div>
+      </div>
+      
+ <div class=" gap-2 col-md-12 col-sm-12 col-lg-12 col-xl-12 col-12 d-flex justify-content-center">
+   <a href="registro.html"><button class="button  rounded" type="button">Registrarse</button> </a> 
+    <button class="button rounded" type="submit" id="btn-L" >Iniciar Sesion</button> 
+      </div>
+     
+      
+
+      <div class="container" style="height: 3vh;"></div>
+
+</form>
+
+
+</div> 
+
+</div>  
+
+<div class="row d-flex justify-content-center" id="respuesta">
+
+</div>
+  
+      
+
+    
+          <script>
+
+            function accion(){
+              var ancla= document.getElementsByClassName('nav-item');
+              for (i = 1; i < ancla.length; i++) {
+                  ancla[i].classList.toggle('desaparece');
+                  
+              }
+            }
+
+        </script>
+
+      <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+      <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"></script>
+      <script src="/js/main.js"></script>
+
+      <script>
+          $(document).ready(function () {
+          $('#password').click(function () {
+            if ($('#password').is(':checked')) {
+              $('#input_contra').attr('type', 'text');
+              $('#label_contra').text('Volver a Ocultar')
+            } else {
+              $('#input_contra').attr('type', 'password');
+              $('#label_contra').text('Mostrar Contraseña')
+            }
+          });
+        });
+      </script>
+</body>
+</html>
+    
+
+   
+   
+      
+
+    

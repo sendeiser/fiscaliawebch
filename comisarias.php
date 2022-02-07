@@ -72,33 +72,34 @@ include("phpserv/connect.php");
     </ul>
 
     <div class="container"  id="comisaria1">  
-      <br> 
-      <div class="row" id="comisariafila">
-       
-          <span id="comisariatitu" class="col-xl-12 border border-success">Informacion de Contacto con las Comisarias</span>   
+        <br> 
+        <div class="row" id="comisariafila">
+        
+            <span id="comisariatitu" class="col-xl-12 border border-success text-light">Informacion de Contacto con tus Comisarias</span>   
 
-   </div>
-
+        </div>
+   <br><br>
    <div class="row" id="comisaria2">
      
     <div class="table-responsive" style="width:auto">
     
-      <table class="table table-sm table-hover">
+      <table class="table table-sm table-hover border border-dark border-5">
         <thead>
-          <tr class="table-light">
-            <th scope="col">Comisarias</th>
+          <tr class="table-light fs-2 fw-bold border-bottom border-dark border-2">
+            <th scope="col" class="border-end border-dark border-2">Comisarias</th>
             <th scope="col">Telefonos</th>
             
           </tr> 
-          <tbody id="exped" class="table-hover">
+          <tbody id="exped" class="table-hover fs-4 fw-bold">
         <?php $consult="SELECT nrodetelefono,descripcion FROM comisarias";
         $resul=mysqli_query($conexion,$consult);
         while($row=mysqli_fetch_assoc($resul)){ ?>
               
         <tr class="table-warning " >
               
-              <td><?php echo $row["descripcion"]?></td>
-              <td><a href="tel:"><?php echo $row["nrodetelefono"]?></a></td>
+              <td class="border border-dark border-2"><?php echo $row["descripcion"]?></td>
+             
+              <td class="border border-dark border-2"><a <?php echo 'href="tel:'.$row["nrodetelefono"].'"'?> ><?php echo $row["nrodetelefono"]?></a></td>
             </tr>
             <?php } mysqli_free_result($resul); ?>  
 
@@ -117,16 +118,15 @@ include("phpserv/connect.php");
       
 
     <!-- Footer -->
-<footer class="page-footer font-small cyan" style="background-color:#4a3933; color:#ffff;font-size: x-large;font-weight:bold">
+    <footer class="page-footer font-small" style="border-top:5px solid rgba(0, 0, 0, 0.555);background-color:#4a3933; color:rgba(202, 159, 159, 0.835);font-size: small;font-weight:bold;height:max-content">
 
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2021 Copyright:
-    <a href="" style="color: #f8f4e1;">Fiscalia - Chamical,La Rioja - Argentina</a>
-  </div>
-  <!-- Copyright -->
+<!-- Copyright -->
+<div class="footer-copyright text-center py-3">© 2021 Copyright:
+  <a href="" style="color: #f8ecb296;">Fiscalia - Chamical,La Rioja - Argentina</a>
+</div>
+<!-- Copyright -->
 
 </footer>
-<!-- Footer -->
 
       <script>
         function accion(){

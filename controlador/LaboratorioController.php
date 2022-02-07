@@ -1,6 +1,8 @@
 <?php
 include '../modelo/Laboratorio.php';
+
 $laboratorio = new Laboratorio();
+
 if($_POST['funcion']=="listar"){
     $laboratorio->mostrar();
     $json = array();

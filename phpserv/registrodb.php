@@ -23,7 +23,7 @@ mysqli_select_db($conexion,$database_db) or die ("Ninguna DB seleccionada");
                 }else{
                   json_encode('Error al insertar datos: '.$conexion->error);
                 }
-                $conexion->close();
+                
    }
 
 

@@ -1,5 +1,14 @@
 $(document).ready(function() {
     var user_id, opcion;
+    var buttonCommon = {
+      exportOptions: {
+          columns: function(column, data, node) {
+              if (column < 3 ) {
+                  return true;
+              }
+              return false;
+                     }
+                      }           }
         
  tablapersonas= $('#tablaper').DataTable({ 
             "language": {
@@ -8,37 +17,42 @@ $(document).ready(function() {
           responsive: true,
           dom: 'Bfrtilp',
           buttons:{
-              dom: {
-                  button: {
-                      className: 'btn'
-                  }
-              },
-              buttons: [
+            dom: {
+                button: {
+                    className: 'btn'
+                }
+            },
+            buttons: [
+              $.extend( true, {}, buttonCommon,{
+                //definimos estilos del boton de excel
+                extend:'excelHtml5',
+                text:'',
+                titleAttr: 'Exportar a Excel',
+                html:`<i></i>`,
+                className:'btn btn-success fas fa-file-excel',
+               }),
+               $.extend( true, {}, buttonCommon, {
+                extend:'pdfHtml5',
+                text:'',
+                titleAttr:'Exportar a PDF',
+                html:`<i></i>`,
+                className: 'btn btn-danger fas fa-file-pdf',
+               }),
+               $.extend( true, {}, buttonCommon,{
+                extend:'print',
+                text:'',
+                titleAttr:'Imprimir',
+                html:`<i></i>`,
+                className: 'btn btn-info fas fa-print',
+                }),
                {
-                  //definimos estilos del boton de excel
-                  extend: "excel",
-                  text:'Exportar a Excel',
-                  className:'btn btn-warning',
-  
-                  // 1 - ejemplo básico - uso de templates pre-definidos
-                  //definimos los parametros al exportar a excel
-                  
-                  excelStyles: {                
-                      //template: "header_blue",  // Apply the 'header_blue' template part (white font on a blue background in the header/footer)
-                      //template:"green_medium" 
-                      
-                      "template": [
-                          "blue_medium",
-                          "header_green",
-                          "title_medium"
-                      ] }
-                      
-                  }, {
-                    //definimos estilos del boton de excel
-                    html:`<i></i>`,
-                    className:'btn btn-warning fas fa-sync reload_per',
-                   }]   
-                },
+                titleAttr:'Actualizar Tabla',
+                html:`<i></i>`,
+                className:'btn btn-light fas fa-sync reload_per',
+               }
+               
+        ]   
+              },
                                     
             "bProcessing": true,
             "bDeferRender": true,	
@@ -85,6 +99,7 @@ $(document).on("click", "#si-editarper", function(){
     
   })
 
+  //boton de recarga de tabla
   $(document).on("click", ".reload_per", function(){ 
     tablapersonas.ajax.reload(null, false);
   });

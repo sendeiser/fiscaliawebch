@@ -180,16 +180,15 @@ include("phpserv/connect.php");
       
 
     <!-- Footer -->
-<footer class="page-footer font-small cyan" style="background-color:#4a3933; color:#ffff;font-size: x-large;font-weight:bold">
+    <footer class="page-footer font-small" style="border-top:5px solid rgba(0, 0, 0, 0.555);background-color:#4a3933; color:rgba(202, 159, 159, 0.835);font-size: large;font-weight:bold;height:max-content">
 
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2021 Copyright:
-    <a href="" style="color: #f8f4e1;">Fiscalia - Chamical,La Rioja - Argentina</a>
-  </div>
-  <!-- Copyright -->
+<!-- Copyright -->
+<div class="footer-copyright text-center py-3">© 2021 Copyright:
+  <a href="" style="color: #f8ecb296;">Fiscalia - Chamical,La Rioja - Argentina</a>
+</div>
+<!-- Copyright -->
 
 </footer>
-<!-- Footer -->
 
       <script>
         function accion(){

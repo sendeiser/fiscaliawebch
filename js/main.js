@@ -1,3 +1,4 @@
+
 /////////////////Logueo/Login//////////////////////
 function login(){
     const Toast = Swal.mixin({
@@ -160,7 +161,7 @@ if(btn_regist){
   btn_regist.addEventListener('click',function(e){
       e.preventDefault();
       var formreg= document.getElementById('form-reg');
-      var resp_reg = document.getElementById('resp-reg');
+      
 
     var data_reg = new FormData(formreg);
   
@@ -278,5 +279,86 @@ if(btn_salida){
         })
 }
 
+//Subida de Noticias
 
+var btn_noti= document.getElementById('btn-noti');
+
+if(btn_noti){
+    btn_noti.addEventListener('click',function(e){
+
+    e.preventDefault();
+
+    titu=$('#inp-titu').val();
+    texto=$('#inp-texto').val();
+    img=document.getElementById("inp-img").files[0].name;
+
+  $.post('phpserv/carganoti.php',{titu,texto,img},(response)=>{
+  
+    
+     var form_data = new FormData($('#form_img')[0]);                  
+    
+     $.ajax({
+      data: form_data ,
+      url: "phpserv/carganoti.php",
+      type: "POST",
+      cahe:false,
+      contentType: false,
+      processData: false,
+      beforeSend: function() {
+
+        let timerInterval
+        Swal.fire({
+          title: 'Subiendo la Noticia',
+          html: 'Progreso de la carga <b></b> en milisegundos.',
+          timer: 3000,
+          timerProgressBar: true,
+          allowOutsideClick: false,
+          allowEnterkey:false,
+          allowEscapekey:false,
+          didOpen: () => {
+            Swal.showLoading()
+            timerInterval = setInterval(() => {
+              const content = Swal.getHtmlContainer()
+              if (content) {
+                const b = content.querySelector('b')
+                if (b) {
+                  b.textContent = Swal.getTimerLeft()
+                }
+              }
+            }, 100)
+          },
+          willClose: () => {
+            clearInterval(timerInterval)
+          }
+        }).then((result) => {
+          /* Read more about handling dismissals below */
+          if (result.dismiss === Swal.DismissReason.timer) {
+            console.log('I was closed by the timer')
+          }
+        })
+  
+      },
+       success:
+              function (r) {
+                data=JSON.parse(r);
+                if(data==='exito'){
+                  Swal.fire({
+                    title: '¡Todo Okey!',
+                    icon: 'success',
+                    html:`<span class="text-success text-center">La noticia se ha subido exitosamente.</span>`,
+                    confirmButton: 'Aceptar'
+                  })
+
+                }
+              }
+     });
+
+    
+
+  })
+
+
+ })
+
+}
 

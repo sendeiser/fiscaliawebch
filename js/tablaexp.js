@@ -1,5 +1,14 @@
 $(document).ready(function() {
-    //var funcion='listar';
+    var buttonCommon = {
+        exportOptions: {
+            columns: function(column, data, node) {
+                if ((column>0)&(column < 11)) {
+                    return true;
+                }
+                return false;
+                       }
+                        }           }
+      
 datatable = $('#tablaexp').DataTable({
                 "bProcessing": true,
                 "bDeferRender": true,	
@@ -9,11 +18,13 @@ datatable = $('#tablaexp').DataTable({
                     "targets": -1,        
                     "defaultContent": `<button class="editar btn btn-success" type="button" data-toggle="modal" data-target="#editar">Editar</button>
                                     <button class="eliminar btn btn-danger" type="button" data-toggle="modal" data-target="#eliminar">Eliminar</button>`
-                                } ],
+                                }
+                             ],
                 "language": {
                             "url":"http://cdn.datatables.net/plug-ins/1.10.24/i18n/Spanish.json"
                             },
                 responsive: true,
+                
                 dom: 'Bfrtilp',
                 buttons:{
                     dom: {
@@ -22,35 +33,37 @@ datatable = $('#tablaexp').DataTable({
                         }
                     },
                     buttons: [
-                    {
-          //definimos estilos del boton de excel
-          extend: "excel",
-          text:'Exportar a Excel',
-          className:'btn btn-outline-info',
+                        $.extend( true, {}, buttonCommon, {
+                            extend: 'excelHtml5',text:'',
+                            titleAttr: 'Exportar a Excel',
+                            html:`<i></i>`,
+                            className:'btn btn-success fas fa-file-excel'
+                        } ),
+                        $.extend( true, {}, buttonCommon, {
+                            extend:'pdfHtml5',
+                            text:'',
+                            titleAttr:'Exportar a PDF',
+                            html:`<i></i>`,
+                            className: 'btn btn-danger fas fa-file-pdf',
 
-          // 1 - ejemplo básico - uso de templates pre-definidos
-          //definimos los parametros al exportar a excel
-          
-          excelStyles: {                
-              //template: "header_blue",  // Apply the 'header_blue' template part (white font on a blue background in the header/footer)
-              //template:"green_medium" 
-              
-              "template": [
-                  "blue_medium",
-                  "header_blue",
-                  "title_medium"
-              ] }
-              
-          },
-          {
-            //definimos estilos del boton de excel
-            html:`<i></i>`,
-            className:'btn btn-info fas fa-sync reload_exp',
-           }]     
-           
-        }
-});
-
+                        } ),
+                        $.extend( true, {}, buttonCommon, {
+                            extend:'print',
+                            text:'',
+                            titleAttr:'Imprimir',
+                            html:`<i></i>`,
+                            className: 'btn btn-info fas fa-print',
+                        } ),
+                       {
+                        titleAttr:'Actualizar Tabla',
+                        html:`<i></i>`,
+                        className:'btn btn-light fas fa-sync reload_exp',
+                       }
+                       
+                ]   
+                      }
+})
+})
             var data; //captura la fila, para editar o eliminar
 
             $('#tablaexp tbody').on('click','.editar', function(){
@@ -116,7 +129,4 @@ datatable = $('#tablaexp').DataTable({
              //boton de recarga de tabla
             $(document).on("click", ".reload_exp", function(){ 
                 datatable.ajax.reload(null, false);
-               });
-            } );
-
-            
+               }) 

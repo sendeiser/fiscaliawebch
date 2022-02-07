@@ -24,36 +24,47 @@ function actualizar(){location.reload(true);}
         maxLength:16,
         autocapitalize:'off',
         autocorrect:'off'
-    }
-       
-    })
-
-    if (password=='fiscaliach2021') {
-        Swal.fire({
-            iconColor:'#00EAD3',
-            title:'<h1 class="border bg-primary" style="color:#0de77ed0;">Bienvenido</h1>',
-            icon: 'success',
-            background:'#A2DBFA',
-            confirmButtonText: 'Aceptar',
-    confirmButtonColor: '#0db4e7d0',
-        html:'<p class="fw-bold text-dark border border-3 border-light">Ahora podra registrarse para poder gestionar el sistema de FiscaliaWeB</p>'
-         })
-        
-        }
-    else{
-        Swal.fire({
-            icon:'error',
-            title:'ERROR',
-            confirmButtonText:'OKEY!',
-            
-            allowOutsideClick: false,
-    allowEnterkey:false,
-    allowEscapekey:false,
-            html:'<p>La contraseña ingresada es incorrecta!!</p><br><p style="color:red">Vuelva intentarlo</p>'
+    },
+    inputValidator: (value) => {
+        return new Promise((resolve) => {
+          if (value === 'fiscaliach2021') {
+            Swal.fire({
+                iconColor:'#00EAD3',
+                title:'<h1 class="border bg-primary" style="color:#0de77ed0;">Bienvenido</h1>',
+                icon: 'success',
+                background:'#A2DBFA',
+                confirmButtonText: 'Aceptar',
+        confirmButtonColor: '#0db4e7d0',
+            html:'<p class="fw-bold text-dark border border-3 border-light">Ahora podra registrarse para poder gestionar el sistema de FiscaliaWeb</p>'
+             })
+          } else {
+            resolve('Contraseña incorrecta vuelva a intentarlo :)')
+          }
         })
-        setInterval("actualizar()",1600);   
+      }
+       
+    }).then((result) => {
+    if (result.dismiss === Swal.DismissReason.cancel) 
+        {
+            window.location.href="index.html";
+        }
+         
+       })      
+            
+          
+
+
         
-    }    
+    
+        
+      
+
+        
+         
+        
+
+     
+
 })()
 
 

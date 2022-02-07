@@ -5,6 +5,7 @@ table.dataTable thead {
 /* Estilos para los botones de paginacion */
 
 
+
 .page-item.active .page-link {
     background-color: #150f16 !important;
     color: #f21170 !important;

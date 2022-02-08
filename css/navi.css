@@ -52,10 +52,7 @@ color:black;
 .desaparece1{
     display: none;
 }
-.MenuAdm{
-    opacity: 0.99;
-    text-shadow: 2px 2px 5px red;
-}
+
 .gradiente{
     /* fallback for old browsers */
     background: #6a11cb;
@@ -77,11 +74,12 @@ ul{
 }
 ul nav,
 ul li{
-    width: 45vw;
-    text-align: center;    
+    width: 200px;
+    align-content: center;    
 }
 ul nav div a{
     text-align: center;
+    
 }
 .aparece{
 display: flex;

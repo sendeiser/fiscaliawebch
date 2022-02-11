@@ -27,10 +27,12 @@
 </head>
 
 <body>
+  <div class="image10"></div>
+    <div class="image4"></div>
   <header>
     <div class="cont-titulog">
       <div class="menulogo">
-        <a class="cont-melogo" href="index.html">
+        <a class="cont-melogo"  onclick="accion()"">
           <img src="images/justicia2.png" alt="" width="40" height="32" class="" />
           Fiscalia Web
         </a>
@@ -41,9 +43,9 @@
     </div>
   </header>
  
-      <nav>
+      <nav id="submenu">
         <ul>
-          <a class="nav-link1 border text-center" href="#" onclick="regexpe()">Registrar Expedientes</a>
+          <a class="nav-link1 border text-center"  href="#" onclick="regexpe()">Registrar Expedientes</a>
   
           <div class="container" style="height: 40px; width: 100%"></div>
   
@@ -117,12 +119,12 @@
           </div>
         </div>
       </div>
-  
-    <footer>
-      <div class="item-foot">
-        © 2021 Copyright: Fiscalia - Chamical,La Rioja - Argentina
-      </div>
-    </footer>
+      <footer>
+        <div class="item-foot">
+          © 2021 Copyright: Fiscalia - Chamical,La Rioja - Argentina
+        </div>
+      </footer>
+      
   
   
 
@@ -323,6 +325,18 @@
   <script src="/js/main.js"></script>
   <script src="/js/tablaper.js"></script>
 
+  <script>
+    function accion(){
+      if($("#submenu").hasClass("aparece")===true){
+        $("#submenu").removeClass("aparece");
+      }
+      else{
+      $("#submenu").addClass("aparece");
+     }
+    }
+  </script>
+
+  
   <!-- Personas No Registradas o Registradas -->
   <script>
     var inp_dni = document.getElementById("inp_dni");

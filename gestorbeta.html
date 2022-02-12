@@ -14,6 +14,7 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
   <link rel="stylesheet" href="css/navi.css" />
   <link rel="stylesheet" href="css/gestorbeta.css" />
+  <link rel="stylesheet" href="css/estilos.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous" />
   <!-- Font Awesome -->
@@ -27,14 +28,12 @@
 </head>
 
 <body>
-  <div class="image10"></div>
-    <div class="image4"></div>
   <header>
     <div class="cont-titulog">
       <div class="menulogo">
-        <a class="cont-melogo"  onclick="accion()"">
-          <img src="images/justicia2.png" alt="" width="40" height="32" class="" />
-          Fiscalia Web
+        <a class="cont-melogo" onclick="accion()"">
+          <img src=" images/justicia2.png" alt="" width="40" height="32" class="" />
+        Fiscalia Web
         </a>
       </div>
       <div class="">
@@ -42,94 +41,469 @@
       </div>
     </div>
   </header>
- 
-      <nav id="submenu">
-        <ul>
-          <a class="nav-link1 border text-center"  href="#" onclick="regexpe()">Registrar Expedientes</a>
-  
-          <div class="container" style="height: 40px; width: 100%"></div>
-  
-          <a class="nav-link1 border text-center" href="#" onclick="estdenun()">Estado de la Denuncia</a>
-  
-          <div class="container" style="height: 40px; width: 100%"></div>
-  
-          <a class="nav-link1 border text-center" href="#" onclick="salida()">Registrar Salida</a>
-  
-          <div class="container" style="height: 40px; width: 100%"></div>
-  
-          <a class="nav-link1 border text-center" href="#" onclick="consexpe()">Expedientes</a>
-  
-          <div class="container" style="height: 40px; width: 100%"></div>
-  
-          <a class="nav-link1 border text-center" href="#" onclick="person()">Personas Registradas</a>
-  
-          <div class="container" style="height: 40px; width: 100%"></div>
-  
-          <a class="nav-link1 active border text-center" onclick="comi()" aria-current="page" href="#">Comisarias</a>
-  
-          <div class="container" style="height: 40px; width: 100%"></div>
-  
-          <a class="nav-link1 active border text-center" onclick="infor()" aria-current="page" href="#">Informes</a>
-  
-          <div class="container" style="height: 40px; width: 100%"></div>
-  
-          <a class="nav-link1 active border text-center" onclick="noti()" aria-current="page" href="#">Noticias</a>
-        </ul>
-      </nav>
-      
-      <div class="ventanas-cont">
-        <!-- FORMULARIOS DEL CONTENEDOR -->
-  
-        <div id="estden">
-          <div class="container p-1" style="background-color: #f5e6ca">
-            <div class="row d-flex justify-content-center">
-              <label for="" class="col-10 badge bg-primary bg-gradient text-center fs-3 fw-bold rounded rounder-4">Estado
-                de las Denuncias</label>
-            </div>
-            <form action="" method="POST" id="form-denu">
-              <div class="row d-flex justify-content-center mt-4">
-                <div class="col-xl-5 col-lg-5 col-md-6 col-sm-6 col-7">
-                  <div class="input-group input-group-lg">
-                    <span class="input-group-text bg-dark text-light fw-bold" id="spandni">DNI</span>
-                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="spandni"
-                      id="input-d" name="dni1" />
-                  </div>
-                </div>
+
+  <nav id="submenu">
+    <ul>
+      <a class="nav-link1 border text-center" href="#" onclick="regexpe()">Registrar Expedientes</a>
+
+      <div class="container" style="height: 40px; width: 100%"></div>
+
+      <a class="nav-link1 border text-center" href="#" onclick="estdenun()">Estado de la Denuncia</a>
+
+      <div class="container" style="height: 40px; width: 100%"></div>
+
+      <a class="nav-link1 border text-center" href="#" onclick="salida()">Registrar Salida</a>
+
+      <div class="container" style="height: 40px; width: 100%"></div>
+
+      <a class="nav-link1 border text-center" href="#" onclick="consexpe()">Expedientes</a>
+
+      <div class="container" style="height: 40px; width: 100%"></div>
+
+      <a class="nav-link1 border text-center" href="#" onclick="person()">Personas Registradas</a>
+
+      <div class="container" style="height: 40px; width: 100%"></div>
+
+      <a class="nav-link1 active border text-center" onclick="comi()" aria-current="page" href="#">Comisarias</a>
+
+      <div class="container" style="height: 40px; width: 100%"></div>
+
+      <a class="nav-link1 active border text-center" onclick="infor()" aria-current="page" href="#">Informes</a>
+
+      <div class="container" style="height: 40px; width: 100%"></div>
+
+      <a class="nav-link1 active border text-center" onclick="noti()" aria-current="page" href="#">Noticias</a>
+    </ul>
+  </nav>
+
+  <div class="ventanas-cont">
+    <!-- FORMULARIOS DEL CONTENEDOR -->
+
+    <div id="estden" class="">
+      <div class="container p-1 col-lg-12 col-9" style="background-color: #f5e6ca">
+        <div class="row d-flex justify-content-center">
+          <label for="" class="col-10 badge bg-primary bg-gradient text-center fs-3 fw-bold rounded rounder-4">Estado
+            de las Denuncias</label>
+        </div>
+        <form action="" method="POST" id="form-denu">
+          <div class="row d-flex justify-content-center mt-4">
+            <div class="col-xl-5 col-lg-7 col-md-7 col-sm-7 col-9">
+              <div class="input-group input-group-lg">
+                <span class="input-group-text bg-dark text-light fw-bold" id="spandni">DNI</span>
+                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="spandni"
+                  id="input-d" name="dni1" />
               </div>
-  
-              <div class="row d-flex justify-content-center mt-3">
-                <button id="btn-d" type="submit"
-                  class="btn btn-light fw-bold fs-6 col-xl-2 col-lg-2 col-md-3 col-sm-3 col-4 border border-dark">
-                  Consultar
-                </button>
-              </div>
-            </form>
-  
-            <div class="row d-flex justify-content-center mt-3">
-              <div class="container text-center col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9"
-                style="background-color: black; border-radius: 15px">
-                <label class="text-light fw-bold">Digite el DNI de la persona para saber el estado de la
-                  SALIDA</label>
-              </div>
-            </div>
-  
-            <div class="row d-flex justify-content-center mt-4">
-              <div class="col-9" id="respuesta-d"></div>
             </div>
           </div>
+
+          <div class="row d-flex justify-content-center mt-3">
+            <button id="btn-d" type="submit"
+              class="btn btn-light fw-bold fs-6 col-xl-4 col-lg-4 col-md-4 col-sm-4 col-5 border border-dark">
+              Consultar
+            </button>
+          </div>
+        </form>
+
+        <div class="row d-flex justify-content-center mt-3">
+          <div class="container text-center col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9"
+            style="background-color: black; border-radius: 15px">
+            <label class="text-light fw-bold">Digite el DNI de la persona para saber el estado de la
+              SALIDA</label>
+          </div>
+        </div>
+
+        <div class="row d-flex justify-content-center mt-4">
+          <div class="col-9" id="respuesta-d"></div>
         </div>
       </div>
-      <footer>
-        <div class="item-foot">
-          © 2021 Copyright: Fiscalia - Chamical,La Rioja - Argentina
-        </div>
-      </footer>
-      
-  
-  
+    </div>
 
+    <form  id="regexp" method="post"
+      class="row  g-2 col-xl-9 col-lg-9 col-md-9 col-sm-11 col-12 bg-light d-flex justify-content-center border border-2 border-primary invisible mt-3">
+
+
+      <label for="" class="registitulo text-center">Registro de
+        Expedientes</label>
+
+      <div class="container d-grid d-flex justify-content-center"
+        style="height: 4vh;font-weight: bold; font-size: 26px;"><span><u>Denunciante</u></span></div>
+
+      <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-10">
+        <div class="form-floating mb-3 letrasreg">
+          <input type="number" class="form-control" name="dni" id="inp_dni" placeholder="DNI" required>
+          <label for="floatingInput">DNI</label>
+        </div>
+      </div>
+
+
+      <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-7">
+        <div class="form-floating mb-3 letrasreg">
+          <input type="text" class="form-control" name="nombre" id="inp_nombre" placeholder="Nombre">
+          <label for="inp_nombre">Nombre</label>
+        </div>
+      </div>
+
+      <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-5">
+        <div class="form-floating mb-3 letrasreg">
+          <input type="text" class="form-control" name="apellido" id="inp_apellido" placeholder="Apellido">
+          <label for="inp_apellido">Apellido</label>
+        </div>
+      </div>
+
+
+
+      <div class="container d-grid d-flex justify-content-center"
+        style="height: 4vh;font-weight: bold; font-size: 26px;margin-top: -20px"><span><u>Denunciado</u></span></div>
+
+      <div class="col-xl-5 col-md-7 col-sm-9 col-lg-6 col-10">
+        <div class="form-floating mb-3 letrasreg">
+          <input type="text" class="form-control" name="denunciado" id="floatingInput" placeholder="Nombre" required>
+          <label for="floatingInput">Nombre Completo</label>
+        </div>
+      </div>
+
+      <div class="container d-grid d-flex justify-content-center"
+        style="height: 4vh;font-weight: bold; font-size: 26px;margin-top: -20px"><span><u>Datos a
+            Complementar</u></span></div>
+
+
+
+      <div class="col-xl-2 col-md-4 col-sm-4 col-lg-2 col-2">
+        <div class="form-floating mb-3 letrasreg">
+          <input type="number" class="form-control" name="fojas" id="floatingInput" placeholder="Fojas" required>
+          <label for="floatingInput">Fojas</label>
+        </div>
+      </div>
+
+
+      <div class="col-xl-2 col-md-4 col-sm-4 col-lg-3 col-2">
+        <div class="form-floating mb-3 letrasreg">
+          <input type="number" class="form-control" name="librodeactas" id="floatingInput" placeholder="Libro de Actas"
+            required>
+          <label for="floatingInput">Libro de Actas</label>
+        </div>
+      </div>
+
+      <div class="col-xl-2 col-md-4 col-sm-4 col-lg-4 col-2">
+        <div class="form-floating mb-3 letrasreg">
+          <input type="number" class="form-control" name="nroexpediente" id="floatingInput"
+            placeholder="Numero de Expediente" required>
+          <label for="floatingInput">Nro.Expediente</label>
+        </div>
+      </div>
+
+
+
+
+      <div class="col-xl-2 col-md-4 col-sm-4 col-lg-3 col-5">
+
+        <div class="form-floating mb-3 letrasreg">
+          <input type="number" class="form-control" name="comisaria" id="comisarias" placeholder="Comisaria"
+            data-bs-toggle="popover" data-bs-trigger="focus" title="Comisarias" data-bs-content="1.Comisaria Primera Chamical-------
+             2.Comisaria Segunda Chamical-----
+             3.Comisaria de la Mujer Chamical
+             4.Comisaria de Olta-----------------------            
+             5.Comisaria de Chañar------------------         
+             6.Comisaria de Milagro------------------         
+             7.Comisaria de Catuna-------------------" required>
+          <label for="comisarias">Comisaria</label>
+        </div>
+      </div>
+
+      <div class="col-xl-2 col-md-4 col-sm-4 col-lg-3 col-5">
+        <div class="form-floating mb-3 letrasreg">
+          <input type="text" class="form-control" name="causa" id="floatingInput" placeholder="Causa" required>
+          <label for="floatingInput">Causa</label>
+        </div>
+      </div>
+
+      <div class="col-xl-3 col-md-4 col-sm-4 col-lg-3 col-5">
+        <div class="form-floating mb-3 letrasreg">
+          <input type="text" class="form-control" name="medida" id="floatingInput" placeholder="Medida" required>
+          <label for="floatingInput">Medida</label>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 col-lg-4 col-10">
+        <div class="form-floating mb-3 letrasreg">
+          <input type="date" class="form-control" name="fechadeentrada" id="floatingInput" placeholder="FechaEntrada"
+            required>
+          <label for="floatingInput">Fecha de Entrada</label>
+        </div>
+      </div>
+
+
+      <div class="d-grid gap-3 d-flex justify-content-center">
+        <a href=""><button class="button rounded" type="reset">Limpiar</button></a>
+        <button id="btn-exp" class="button  rounded" type="submit">Registrar</button>
+      </div>
+      <div class="container" style="height: 2vh;"></div>
+
+      <div class="row">
+        <div id="resp-exp" class="col-9">
+
+        </div>
+
+      </div>
+    </form>
+
+    <div id="consexp" class="row mt-1 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 invisible">
+
+      <iframe src="tablaexp.html" frameborder="0" style="height: 99vh" allowfullscreen></iframe>
+
+    </div>
+
+    <div id="consper"  class="row col-xl-10 col-lg-10 col-md-10 col-sm-11 col-12 d-flex justify-content-center mt-4 invisible" style="position:absolute;" > 
+
+      <iframe  src="tablaper.html"  frameborder="0"  style="height: 100vh;width:100vw" allowfullscreen ></iframe> 
+
+     </div> 
+
+    <div id="expsali"
+      class="row col-xl-9 col-lg-9 col-md-9 col-sm-10 col-11 border d-flex justify-content-center mt-5 invisible">
+
+      <div class="container p-1 " style="background-color:#f5e6ca">
+
+        <div class="row mt-3">
+          <div class="container text-center col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 bg-dark"
+            style="border-radius:15px">
+            <label for="" class="text-light fw-bold fs-2 text-decoration-underline">Registro de Salida del
+              Expediente</label>
+          </div>
+        </div>
+
+        <form action="" method="POST" id="form-sali">
+
+          <div class="row d-flex justify-content-center mt-4">
+            <div class="col-xl-5 col-lg-5 col-md-6 col-sm-6 col-7">
+              <div class="input-group input-group-lg">
+                <span class="input-group-text bg-dark text-light fw-bold" id="spandni">DNI</span>
+                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="spandni"
+                  id="input-dni" name="dni1">
+              </div>
+            </div>
+          </div>
+          <div class="row d-flex justify-content-center mt-4">
+            <div class="col-xl-5 col-lg-5 col-md-6 col-sm-6 col-9">
+              <div class="input-group input-group-lg">
+                <span class="input-group-text bg-dark text-light fw-bold" id="sali">SALIDA</span>
+                <input type="date" class="form-control" aria-label="Sizing example input" aria-describedby="spansalida"
+                  id="input-salida" name="fecha_salida">
+              </div>
+            </div>
+          </div>
+
+          <div class="row d-flex justify-content-center mt-3">
+            <button id="btn_salida" type="submit"
+              class="btn btn-light fw-bold fs-6 col-xl-2 col-lg-2 col-md-3 col-sm-3 col-4 border border-dark">CARGAR</button>
+          </div>
+        </form>
+
+
+
+
+        <div class="row mt-3">
+          <div class="container text-center col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 bg-dark"
+            style="border-radius:15px">
+
+            <span class="text-light fw-bold" style="font-size:14px">Digite el DNI de la persona y la fecha de salida
+              para cargarla en la base de datos</span>
+
+          </div>
+        </div>
+
+
+
+        <div class="row d-flex justify-content-center mt-4">
+          <div class="col-9" id="respuesta-salida"> </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="comisaria"  class="row col-xl-9 col-lg-9 col-md-9 col-sm-11 col-12 d-flex justify-content-center mt-4 invisible" > 
+
+      <iframe  src="tablacomi.html"  frameborder="0"  style="height: 90vh" allowfullscreen ></iframe> 
+
+    </div> 
+
+    <div id="informes" class="row col-xl-9 col-lg-9 col-md-9 col-sm-10 col-9 border d-flex justify-content-center mt-5 invisible" > 
+
+      <div class="container p-1 " style="background-color:#f5e6ca">
+
+        <div class="row d-flex justify-content-center">
+          <label for="" class="col-10 badge bg-primary bg-gradient text-center fs-3 fw-bold rounded rounder-4">INFORMES</label>
+        </div>
+      <form action="/phpserv/informes/reporte.php" method="POST" id="form-denu">
+
+          <div class="row d-flex justify-content-center mt-4" >
+            <div class="col-xl-5 col-lg-5 col-md-6 col-sm-6 col-8">
+              <div class="input-group input-group-lg">
+                <span class="input-group-text bg-dark text-light fw-bold" id="spandni">DESDE</span>
+                <input type="date" class="form-control" aria-label="Sizing example input" aria-describedby="spandni" id="input-d" name="desde">
+              </div>             
+            </div>
+          </div>
+          <div class="row d-flex justify-content-center mt-4" >
+            <div class="col-xl-5 col-lg-5 col-md-6 col-sm-6 col-8">
+              <div class="input-group input-group-lg">
+                <span class="input-group-text bg-dark text-light fw-bold" id="spandni">HASTA</span>
+                <input type="date" class="form-control" aria-label="Sizing example input" aria-describedby="spandni" id="input-d" name="hasta">
+              </div>             
+            </div>
+          </div>
+
+          <div class="row d-flex justify-content-center mt-3">
+            <button id="btn-d" type="submit" class="btn btn-light fw-bold col-xl-2 col-lg-2 col-md-3 col-sm-3 col-4 border border-dark">Generar Informe</button>
+          </div>
+      </form>
+
+            <div class="row d-flex justify-content-center mt-3">
+              <div class="container text-center col-10" style="background-color:#5d2cff;border-radius: 15px">
+
+                <span class="text-light fw-bold">Seleccione las fechas de inicio a fin para generar el informe de la tabla de expedientes</span>
+              </div>
+            </div>
+
+            <div class="row d-flex justify-content-center mt-4" >
+                <div class="col-9" id="respuesta-d"> </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="noti" class="row col-xl-9 col-lg-9 col-md-9 col-sm-10 col-11 border border-4 border-success d-flex justify-content-center mt-5 invisible">
+
+      <div class="container p-1 " style="background-color:#f5e6ca">
+
+        <div class="row d-flex justify-content-center">
+          <label for="" class="col-10 badge bg-success bg-gradient text-center fs-3 fw-bold rounded rounder-4">NOTICIAS</label>
+        </div>
+      
+
+          <div class="row d-flex justify-content-center mt-4" >
+            <div class="col-xl-5 col-lg-5 col-md-6 col-sm-6 col-7">
+              <div class="input-group input-group-lg">
+                <span class="input-group-text bg-warning text-light fw-bold" id="spandni">TITULO</span>
+                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="spandni" id="inp-titu" name="desde">
+              </div>             
+            </div>
+          </div>
+
+          <div class="row d-flex justify-content-center mt-4">
+            <div class="container col-8">
+              <div class="form-floating d-flex justify-content-center">
+                <textarea class="form-control" placeholder="Texto de la Noticia" id="inp-texto" style="height: 100px;"></textarea>
+                <label for="floatingTextarea2">Texto de la Noticia</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mt-3">
+            <div class="container col-8">
+
+              
+            <form action="" method="post" enctype="multipart/form-data" id="form_img">
+              <div class="mb-3 text-center">
+                <label for="inp-img" class="form-label badge bg-info" style="font-size:18px">Imagen que llevara la Noticia</label>
+                <input class="form-control" type="file" id="inp-img" name="inp-img">
+              </div>
+            </div>
+            </form>           
+          </div>
+
+          <div class="row  mt-3">
+             
+            <div class="container text-center col-5" style="background-color:rgba(50, 205, 192, 0.815);border-radius: 15px;">
+
+              <label class="fw-bold" style="font-size:13px;color:#e5ff00">Al no seleccionar una imagen se pondra una por defecto.</label>
+            </div>
+
+          </div>
+
+          <div class="row d-flex justify-content-center mt-3">
+            <button id="btn-noti" type="submit" class="btn btn-success fw-bold col-xl-2 col-lg-2 col-md-3 col-sm-3 col-4 border border-dark fs-6">Subir</button>
+          </div>
+
+            <div class="row  mt-3">
+             
+              <div class="container text-center col-11 col-sm-11 col-md-11 col-lg-11 col-xl-11" style="background-color:yellowgreen">
+
+                <label class="fw-bold" style="font-size:13px;color:#5d2cff">Escriba el titulo que llevara la noticia, el texto que contendra y suba una imagen descriptiva del mismo(opcional)</label>
+              </div>
+
+            </div>
+
+        </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="item-foot">
+      © 2021 Copyright: Fiscalia - Chamical,La Rioja - Argentina
+    </div>
+  </footer>
+
+
+
+
+
+
+  <!-- Compiled and minified JavaScript -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous">
+    </script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
+    integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous">
+    </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
+    integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous">
+    </script>
+  <!-- MDB -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- jquery y bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+    </script>
+
+  <!-- datatables con bootstrap -->
+  <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap5.min.js"></script>
+
+  <!-- Para usar los botones -->
+  <script src="https://cdn.datatables.net/buttons/1.6.5/js/dataTables.buttons.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.html5.min.js"></script>
+
+  <!-- Para los estilos en Excel     -->
+  <script src="https://cdn.jsdelivr.net/npm/datatables-buttons-excel-styles@1.1.1/js/buttons.html5.styles.min.js">
+  </script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/datatables-buttons-excel-styles@1.1.1/js/buttons.html5.styles.templates.min.js">
+    </script>
+
+  <!-- Responsive DataTable   -->
+  <script src="https://cdn.datatables.net/responsive/2.2.7/js/dataTables.responsive.min.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/tablaper.js"></script>
+
+  <script>
+    function accion() {
+      if ($("#submenu").hasClass("aparece") === true) {
+        $("#submenu").removeClass("aparece");
+      }
+      else {
+        $("#submenu").addClass("aparece");
+      }
+    }
+  </script>
   <!--Funciones del Menu-->
   <script>
+   
     function regexpe() {
       var form = document.getElementById("regexp");
       form.classList.remove("invisible");
@@ -147,6 +521,9 @@
       form6.classList.add("invisible");
       var form7 = document.getElementById("noti");
       form7.classList.add("invisible");
+      accion();
+     /* var nav = document.getElementsByTagName("nav");
+      nav.style.setProperty("visibility","hidden");*/
     }
 
     function estdenun() {
@@ -166,6 +543,7 @@
       form6.classList.add("invisible");
       var form7 = document.getElementById("noti");
       form7.classList.add("invisible");
+      accion();
     }
 
     function consexpe() {
@@ -185,6 +563,7 @@
       form6.classList.add("invisible");
       var form7 = document.getElementById("noti");
       form7.classList.add("invisible");
+      accion();
     }
 
     function person() {
@@ -204,6 +583,7 @@
       form6.classList.add("invisible");
       var form7 = document.getElementById("noti");
       form7.classList.add("invisible");
+      accion();
     }
 
     function salida() {
@@ -223,6 +603,7 @@
       form6.classList.add("invisible");
       var form7 = document.getElementById("noti");
       form7.classList.add("invisible");
+      accion();
     }
 
     function comi() {
@@ -242,6 +623,7 @@
       form6.classList.add("invisible");
       var form7 = document.getElementById("noti");
       form7.classList.add("invisible");
+      accion();
     }
 
     function infor() {
@@ -261,6 +643,7 @@
       form6.classList.remove("invisible");
       var form7 = document.getElementById("noti");
       form7.classList.add("invisible");
+      accion();
     }
 
     function noti() {
@@ -280,63 +663,10 @@
       form6.classList.add("invisible");
       var form7 = document.getElementById("noti");
       form7.classList.remove("invisible");
+      accion();
     }
   </script>
 
-  <!-- Compiled and minified JavaScript -->
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous">
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
-    integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous">
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
-    integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous">
-  </script>
-  <!-- MDB -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <!-- jquery y bootstrap -->
-  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
-  </script>
-
-  <!-- datatables con bootstrap -->
-  <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
-  <script src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap5.min.js"></script>
-
-  <!-- Para usar los botones -->
-  <script src="https://cdn.datatables.net/buttons/1.6.5/js/dataTables.buttons.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
-  <script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.html5.min.js"></script>
-
-  <!-- Para los estilos en Excel     -->
-  <script src="https://cdn.jsdelivr.net/npm/datatables-buttons-excel-styles@1.1.1/js/buttons.html5.styles.min.js">
-  </script>
-  <script
-    src="https://cdn.jsdelivr.net/npm/datatables-buttons-excel-styles@1.1.1/js/buttons.html5.styles.templates.min.js">
-  </script>
-
-  <!-- Responsive DataTable   -->
-  <script src="https://cdn.datatables.net/responsive/2.2.7/js/dataTables.responsive.min.js"></script>
-  <script src="/js/main.js"></script>
-  <script src="/js/tablaper.js"></script>
-
-  <script>
-    function accion(){
-      if($("#submenu").hasClass("aparece")===true){
-        $("#submenu").removeClass("aparece");
-      }
-      else{
-      $("#submenu").addClass("aparece");
-     }
-    }
-  </script>
-
-  
   <!-- Personas No Registradas o Registradas -->
   <script>
     var inp_dni = document.getElementById("inp_dni");

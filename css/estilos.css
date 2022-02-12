@@ -29,17 +29,7 @@
      color:#23795c71;         
 }
 
-.registitulo{
-     font-size:40px;
-     font-weight:bold;
-     background-image:url('/images/info.jpg');
-     color:#566d62d0;
-     margin-top: 10px;
-     border: 5px solid #98b4ac;  
-     text-shadow: 4px 2px px white;
-     border-radius: 10px; 
-     color:#0de77ed0
-}
+
 .logintitulo{
      font-size:40px;
      font-weight:bold;

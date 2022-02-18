@@ -29,16 +29,16 @@ $.post('phpserv/noticias.php',{datos},(response)=>{
 
 
 })()*/
-function noti(i){
-  let url='./phpserv/noticias.php';
-  fetch(url).then(res => res.json()).then((out) =>{ 
-   const almac=[];
-   
- out.forEach(function(elemento,indice,array){
- 
-   if (indice<i) {
-     
-     almac.push(`
+function noti(i) {
+  let url = './phpserv/noticias.php';
+  fetch(url).then(res => res.json()).then((out) => {
+      const almac = [];
+
+      out.forEach(function (elemento, indice, array) {
+
+        if (indice < i) {
+
+          almac.push(`
      
      
      <div class="col-9 col-lg-4 col-md-7 col-sm-7 col-xl-4 p-3 rounded"> <div class="card">
@@ -50,42 +50,44 @@ function noti(i){
      </div> </div>
      `)
 
-    
-     noticias.innerHTML = almac.join("").toString()
-   }
-  
 
- }) 
-  })
- .catch(err =>{throw err});
+          noticias.innerHTML = almac.join("").toString()
+        }
+
+
+      })
+    })
+    .catch(err => {
+      throw err
+    });
 }
 
-$(document).ready(function() {
+$(document).ready(function () {
 
-var id=3;
-noti(id);
-$("#notibot").click(function(){
-noti(id+3);
-id=id+3;
+  var id = 3;
+  noti(id);
+  $("#notibot").click(function () {
+    noti(id + 3);
+    id = id + 3;
 
-});
+  });
 
 
- } )
+})
 
- /*$.ajax({
-      url:'phpserv/noticias.php',
-      type:'POST',
+/*$.ajax({
+     url:'phpserv/noticias.php',
+     type:'POST',
 
-      success: function(res){
-       
-      json= JSON.parse(res);
-
+     success: function(res){
       
-      console.log(json);
-       
-      } 
-    });*/
+     json= JSON.parse(res);
+
+     
+     console.log(json);
+      
+     } 
+   });*/
 
 /*    $(document).ready(function() {
 envio='numero';
@@ -122,10 +124,10 @@ $.post('phpserv/noticias.php',{envio},(response)=>{
      })
       })*/
 
-    
-  //response.forEach(item => console.log(item));
-        
- 
+
+//response.forEach(item => console.log(item));
+
+
 //})
 
 

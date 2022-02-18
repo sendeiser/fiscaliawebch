@@ -1,51 +1,52 @@
-
 /////////////////Logueo/Login//////////////////////
-function login(){
-    const Toast = Swal.mixin({
-        toast: true,
-        position: 'top-end',
-        showConfirmButton: false,
-        timer: 2500,
-        timerProgressBar: true,
-        didOpen: (toast) => {
-          toast.addEventListener('mouseenter', Swal.stopTimer)
-          toast.addEventListener('mouseleave', Swal.resumeTimer)
-        }
-      })
-      
-      Toast.fire({
-        icon: 'success',
-        title: 'Signed in successfully'
-      })
+function login() {
+  const Toast = Swal.mixin({
+    toast: true,
+    position: 'top-end',
+    showConfirmButton: false,
+    timer: 2500,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.addEventListener('mouseenter', Swal.stopTimer)
+      toast.addEventListener('mouseleave', Swal.resumeTimer)
+    }
+  })
+
+  Toast.fire({
+    icon: 'success',
+    title: 'Signed in successfully'
+  })
 
 }
 var btn_login = document.getElementById('btn-L');
 
-if(btn_login){
+if (btn_login) {
 
-  btn_login.addEventListener('click',function(e){ 
-  
+  btn_login.addEventListener('click', function (e) {
+
     e.preventDefault();
     var formsesion = document.getElementById('sesion');
     var respuesta = document.getElementById('respuesta');
-    
-    var datos = new FormData(formsesion);
-   
 
-    fetch('/phpserv/logueodb.php',{
-    method:'POST',
-    body: datos
+    var datos = new FormData(formsesion);
+
+
+    fetch('/phpserv/logueodb.php', {
+        method: 'POST',
+        body: datos
 
       }).then(res => res.json())
       .then(data => {
         switch (data) {
           case 'conexion exitosa':
-            setInterval(login(),2500);
-            setTimeout(function(){window.location.href="gestor.php?seguridad=1";},2500);
-            
+            setInterval(login(), 2500);
+            setTimeout(function () {
+              window.location.href = "gestor.php?seguridad=1";
+            }, 2500);
+
             break
           case 'contraseña incorrecta':
-          respuesta.innerHTML=`<svg xmlns="http://www.w3.org/2000/svg" style="display: none;"> <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16"><path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></symbol></svg>
+            respuesta.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" style="display: none;"> <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16"><path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></symbol></svg>
           <div class="alert alert-danger d-flex align-items-center col-8 alert-dismissible fade show"  role="alert">
             <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
             <div>
@@ -53,11 +54,11 @@ if(btn_login){
             </div>
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" aria-hidden="true"></button>
           </div>
-          `      
+          `
             break
-        
+
           case 'usuario incorrecto':
-            respuesta.innerHTML=`<svg xmlns="http://www.w3.org/2000/svg" style="display: none;"> <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16"><path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></symbol></svg>
+            respuesta.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" style="display: none;"> <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16"><path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></symbol></svg>
           <div class="alert alert-danger d-flex align-items-center col-8 alert-dismissible fade show"  role="alert">
             <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
             <div>
@@ -65,10 +66,10 @@ if(btn_login){
             </div>
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" aria-hidden="true"></button>
           </div>
-          `  
+          `
             break
           default:
-            respuesta.innerHTML=`<svg xmlns="http://www.w3.org/2000/svg" style="display: none;"> <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16"><path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></symbol></svg>
+            respuesta.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" style="display: none;"> <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16"><path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></symbol></svg>
             <div class="alert alert-danger d-flex align-items-center col-8 alert-dismissible fade show"  role="alert">
               <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
               <div>
@@ -76,44 +77,44 @@ if(btn_login){
               </div>
               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" aria-hidden="true"></button>
             </div>
-            ` 
+            `
             break
         }
-  
-              })
 
-              
+      })
+
+
   });
- 
+
 }
 
 /////////////////Estado de Denuncia///////////////////
 var btn_d = document.getElementById('btn-d');
 
 
-if(btn_d){
+if (btn_d) {
 
- btn_d.addEventListener('click',function(e){
+  btn_d.addEventListener('click', function (e) {
 
-  var form_denu= document.getElementById('form-denu');
-  var respuesta_d = document.getElementById('respuesta-d');
-  var input_d = document.getElementById('input-d');
-  e.preventDefault();
-  
-  var datos_denu = new FormData(form_denu);
+    var form_denu = document.getElementById('form-denu');
+    var respuesta_d = document.getElementById('respuesta-d');
+    var input_d = document.getElementById('input-d');
+    e.preventDefault();
+
+    var datos_denu = new FormData(form_denu);
 
 
-  fetch('/phpserv/estdenu.php',{ 
-    method: 'POST',
-    body: datos_denu
-    
-  })
- 
-  
-  .then(res => res.json())
-    .then(data => {
-     if(data==='noprocesada'){
-     respuesta_d.innerHTML=`
+    fetch('/phpserv/estdenu.php', {
+        method: 'POST',
+        body: datos_denu
+
+      })
+
+
+      .then(res => res.json())
+      .then(data => {
+        if (data === 'noprocesada') {
+          respuesta_d.innerHTML = `
      <br>
                      <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
                       <symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16">
@@ -128,9 +129,8 @@ if(btn_d){
                       </div>
                     </div>
      `
-     }
-     else{
-         respuesta_d.innerHTML=`
+        } else {
+          respuesta_d.innerHTML = `
          <br>
                          <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
                           <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
@@ -145,52 +145,51 @@ if(btn_d){
                         </div>
          
          `
-     }
-          
-   })
+        }
+
+      })
 
   });
 
-}  
+}
 
 /////////REGISTRO DE USUARIOS///////////////////
 var btn_regist = document.getElementById('btn-reg');
 
-if(btn_regist){
+if (btn_regist) {
 
-  btn_regist.addEventListener('click',function(e){
-      e.preventDefault();
-      var formreg= document.getElementById('form-reg');
-      
+  btn_regist.addEventListener('click', function (e) {
+    e.preventDefault();
+    var formreg = document.getElementById('form-reg');
+
 
     var data_reg = new FormData(formreg);
-  
-    fetch('/phpserv/registrodb.php',{
-      method: 'POST',
-      body: data_reg
-    }).then(res => res.json())
-    .then(data => {
-      if (data === 'exitoso'){
 
-        
-        Swal.fire({
-        title:'Registro Exitoso!',
-        icon: 'success',
-        html:`<p><strong>Logueese con su usuario y contraseña para gestionar el sistema</strong></p>`
-         })
+    fetch('/phpserv/registrodb.php', {
+        method: 'POST',
+        body: data_reg
+      }).then(res => res.json())
+      .then(data => {
+        if (data === 'exitoso') {
 
-       
-        
-      }
-      else{
-        Swal.fire({
-          title:'Error!',
-          icon: 'warning',
-          html: `Info: ${data}`
-           })  
-      }
-    })
-  
+
+          Swal.fire({
+            title: 'Registro Exitoso!',
+            icon: 'success',
+            html: `<p><strong>Logueese con su usuario y contraseña para gestionar el sistema</strong></p>`
+          })
+
+
+
+        } else {
+          Swal.fire({
+            title: 'Error!',
+            icon: 'warning',
+            html: `Info: ${data}`
+          })
+        }
+      })
+
   })
 
 }
@@ -200,165 +199,165 @@ if(btn_regist){
 
 var btn_exp = document.getElementById('btn-exp');
 
-if(btn_exp){
+if (btn_exp) {
 
 
-    btn_exp.addEventListener('click',function(e){  
-          e.preventDefault();
-          var regexp= document.getElementById('regexp');
-          
-          var datos_exp = new FormData(regexp);
+  btn_exp.addEventListener('click', function (e) {
+    e.preventDefault();
+    var regexp = document.getElementById('regexp');
 
-  
-          fetch('/phpserv/regexp.php',{
-            method: 'POST',
-            body: datos_exp
-                        }).then(res => res.json())
-                          .then(data => {
-                              if(data==='personanueva'){
-                                Swal.fire({
-                                  title: 'Registro Exitoso',
-                                  icon: 'success',
-                                  html:`<span class="text-success text-center">El Expediente fue registrado exitosamente a la base de datos</span><br><span class="text-center text-info">${data}</span>`,
-                                  confirmButton: 'Aceptar'
-                                })
-                              }
-                              else{
-                                Swal.fire({
-                                  title: 'Registro Exitoso',
-                                  icon: 'success',
-                                  html:`<span class="text-success text-center">El Expediente fue registrado exitosamente a la base de datos</span><br><span class="text-center text-info">${data}</span>`,
-                                  confirmButton: 'Aceptar'
-                                        }) 
+    var datos_exp = new FormData(regexp);
 
-                                }
-                           })
-        })
+
+    fetch('/phpserv/regexp.php', {
+        method: 'POST',
+        body: datos_exp
+      }).then(res => res.json())
+      .then(data => {
+        if (data === 'personanueva') {
+          Swal.fire({
+            title: 'Registro Exitoso',
+            icon: 'success',
+            html: `<span class="text-success text-center">El Expediente fue registrado exitosamente a la base de datos</span><br><span class="text-center text-info">${data}</span>`,
+            confirmButton: 'Aceptar'
+          })
+        } else {
+          Swal.fire({
+            title: 'Registro Exitoso',
+            icon: 'success',
+            html: `<span class="text-success text-center">El Expediente fue registrado exitosamente a la base de datos</span><br><span class="text-center text-info">${data}</span>`,
+            confirmButton: 'Aceptar'
+          })
+
+        }
+      })
+  })
 
 }
 
 //Registro de Salida del Expediente
 
-var btn_salida= document.getElementById('btn_salida');
+var btn_salida = document.getElementById('btn_salida');
 
-if(btn_salida){ 
+if (btn_salida) {
 
-  btn_salida.addEventListener('click',function(e){
-  e.preventDefault();
+  btn_salida.addEventListener('click', function (e) {
+    e.preventDefault();
 
-        var form_sali= document.getElementById('form-sali');
+    var form_sali = document.getElementById('form-sali');
 
-          var datos_sali= new FormData(form_sali);
+    var datos_sali = new FormData(form_sali);
 
-          fetch('/phpserv/regexp.php',{
-            method: 'POST',
-            body: datos_sali
-                        }).then(res => res.json())
-                          .then(data => { 
-                            if(data==='exitoso'){
-                              Swal.fire({
-                                title: 'Registro Exitoso',
-                                icon: 'success',
-                                html:`<span class="text-success text-center">La Fecha del Expediente para el DNI: <span class="text-center badge bg-dark text-light fs-5"> ${datos_sali.get('dni1')} </span> fue registrado exitosamente a la base de datos</span>`,
-                                confirmButton: 'Aceptar'
-                              })
-                            }
-                            else{
-                              Swal.fire({
-                                title: 'ERROR',
-                                icon: 'warning',
-                                html:`<span class="text-success text-center">Hubo erro inesperado al cargar los datos.</span><br><span class="text-center text-info">${data}</span>`,
-                                confirmButton: 'Aceptar'
-                                      }) 
+    fetch('/phpserv/regexp.php', {
+        method: 'POST',
+        body: datos_sali
+      }).then(res => res.json())
+      .then(data => {
+        if (data === 'exitoso') {
+          Swal.fire({
+            title: 'Registro Exitoso',
+            icon: 'success',
+            html: `<span class="text-success text-center">La Fecha del Expediente para el DNI: <span class="text-center badge bg-dark text-light fs-5"> ${datos_sali.get('dni1')} </span> fue registrado exitosamente a la base de datos</span>`,
+            confirmButton: 'Aceptar'
+          })
+        } else {
+          Swal.fire({
+            title: 'ERROR',
+            icon: 'warning',
+            html: `<span class="text-success text-center">Hubo erro inesperado al cargar los datos.</span><br><span class="text-center text-info">${data}</span>`,
+            confirmButton: 'Aceptar'
+          })
 
-                                }
+        }
 
-                          })
+      })
 
 
-        })
+  })
 }
 
 //Subida de Noticias
 
-var btn_noti= document.getElementById('btn-noti');
+var btn_noti = document.getElementById('btn-noti');
 
-if(btn_noti){
-    btn_noti.addEventListener('click',function(e){
+if (btn_noti) {
+  btn_noti.addEventListener('click', function (e) {
 
     e.preventDefault();
 
-    titu=$('#inp-titu').val();
-    texto=$('#inp-texto').val();
-    img=document.getElementById("inp-img").files[0].name;
+    titu = $('#inp-titu').val();
+    texto = $('#inp-texto').val();
+    img = document.getElementById("inp-img").files[0].name;
 
-  $.post('phpserv/carganoti.php',{titu,texto,img},(response)=>{
-  
-    
-     var form_data = new FormData($('#form_img')[0]);                  
-    
-     $.ajax({
-      data: form_data ,
-      url: "phpserv/carganoti.php",
-      type: "POST",
-      cahe:false,
-      contentType: false,
-      processData: false,
-      beforeSend: function() {
+    $.post('phpserv/carganoti.php', {
+      titu,
+      texto,
+      img
+    }, (response) => {
 
-        let timerInterval
-        Swal.fire({
-          title: 'Subiendo la Noticia',
-          html: 'Progreso de la carga <b></b> en milisegundos.',
-          timer: 3000,
-          timerProgressBar: true,
-          allowOutsideClick: false,
-          allowEnterkey:false,
-          allowEscapekey:false,
-          didOpen: () => {
-            Swal.showLoading()
-            timerInterval = setInterval(() => {
-              const content = Swal.getHtmlContainer()
-              if (content) {
-                const b = content.querySelector('b')
-                if (b) {
-                  b.textContent = Swal.getTimerLeft()
+
+      var form_data = new FormData($('#form_img')[0]);
+
+      $.ajax({
+        data: form_data,
+        url: "phpserv/carganoti.php",
+        type: "POST",
+        cahe: false,
+        contentType: false,
+        processData: false,
+        beforeSend: function () {
+
+          let timerInterval
+          Swal.fire({
+            title: 'Subiendo la Noticia',
+            html: 'Progreso de la carga <b></b> en milisegundos.',
+            timer: 3000,
+            timerProgressBar: true,
+            allowOutsideClick: false,
+            allowEnterkey: false,
+            allowEscapekey: false,
+            didOpen: () => {
+              Swal.showLoading()
+              timerInterval = setInterval(() => {
+                const content = Swal.getHtmlContainer()
+                if (content) {
+                  const b = content.querySelector('b')
+                  if (b) {
+                    b.textContent = Swal.getTimerLeft()
+                  }
                 }
-              }
-            }, 100)
-          },
-          willClose: () => {
-            clearInterval(timerInterval)
-          }
-        }).then((result) => {
-          /* Read more about handling dismissals below */
-          if (result.dismiss === Swal.DismissReason.timer) {
-            console.log('I was closed by the timer')
-          }
-        })
-  
-      },
-       success:
-              function (r) {
-                data=JSON.parse(r);
-                if(data==='exito'){
-                  Swal.fire({
-                    title: '¡Todo Okey!',
-                    icon: 'success',
-                    html:`<span class="text-success text-center">La noticia se ha subido exitosamente.</span>`,
-                    confirmButton: 'Aceptar'
-                  })
+              }, 100)
+            },
+            willClose: () => {
+              clearInterval(timerInterval)
+            }
+          }).then((result) => {
+            /* Read more about handling dismissals below */
+            if (result.dismiss === Swal.DismissReason.timer) {
+              console.log('I was closed by the timer')
+            }
+          })
 
-                }
-              }
-     });
+        },
+        success: function (r) {
+          data = JSON.parse(r);
+          if (data === 'exito') {
+            Swal.fire({
+              title: '¡Todo Okey!',
+              icon: 'success',
+              html: `<span class="text-success text-center">La noticia se ha subido exitosamente.</span>`,
+              confirmButton: 'Aceptar'
+            })
 
-    
+          }
+        }
+      });
+
+
+
+    })
+
 
   })
 
-
- })
-
 }
-

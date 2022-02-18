@@ -1,5 +1,5 @@
 <?php
 
 
-$mysqli = new mysqli("localhost", "root", "martin/123", "Fiscalia");
+$mysqli = new mysqli("localhost", "root", "", "fiscaliach");
 $mysqli->set_charset('utf8');

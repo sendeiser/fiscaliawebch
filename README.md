@@ -3,9 +3,10 @@ proyecto de titulacion
 
 Hola a toda a la comunidad ! Comparto mi proyecto de tesis de un sistema de Fiscalia de mi ciudad,
 esta trabajado con las tecnologias HTML5, CSS,PHP y JS.
-Frameworks utilizados como Boostrap, JQuery,etc.
+Frameworks utilizado: Boostrap, JQuery,SweetAlert entre otros.
 Base de datos que se utilizo fue MySQL y para el servidor se uso una pila LAMP en un servidor virtual privado(VPS),
 donde se configuro todo manualmente para la recepcion de peticiones del sistema a la BD y viceversa.
+Archivo de Base de Datos se subira proximamente
 
 ![1](https://user-images.githubusercontent.com/87587210/152698363-5868e247-5a25-4154-ad70-c78a0f54c49a.jpg)
 ![2](https://user-images.githubusercontent.com/87587210/152698364-647c78e4-8bc7-4a3e-bf31-b66cfb8d9388.jpg)

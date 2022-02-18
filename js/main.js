@@ -41,7 +41,7 @@ if (btn_login) {
           case 'conexion exitosa':
             setInterval(login(), 2500);
             setTimeout(function () {
-              window.location.href = "gestor.php?seguridad=1";
+              window.location.href = "gestorbeta.html";
             }, 2500);
 
             break

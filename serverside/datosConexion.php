@@ -1,5 +1,5 @@
 <?php
-define("SERVIDOR","45.236.131.227");
-define("BD","Fiscalia");
+define("SERVIDOR","localhost");
+define("BD","fiscaliach");
 define("USUARIO","root");
-define("PASS","martin/123");
+define("PASS","");

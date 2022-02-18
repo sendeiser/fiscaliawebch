@@ -5,8 +5,8 @@
 
 $servidor = "localhost";
 $nombreusuario = "root";
-$password = "martin/123";
-$db = "Fiscalia";
+$password = "";
+$db = "fiscaliach";
 $conexion = new mysqli($servidor, $nombreusuario, $password, $db);
 $conexion->set_charset('utf8');
 

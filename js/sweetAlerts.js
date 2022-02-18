@@ -27,7 +27,7 @@ function actualizar(){location.reload(true);}
     },
     inputValidator: (value) => {
         return new Promise((resolve) => {
-          if (value === 'fiscaliach2021') {
+          if (value === 'fiscaliach2022') {
             Swal.fire({
                 iconColor:'#00EAD3',
                 title:'<h1 class="border bg-primary" style="color:#0de77ed0;">Bienvenido</h1>',

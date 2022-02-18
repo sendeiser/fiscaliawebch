@@ -2,9 +2,9 @@
 
 //CONEXIÓN A LA BASE DE DATOS
 $hostname_db = "localhost";
-$database_db = "Fiscalia";
+$database_db = "fiscaliach";
 $username_db = "root";
-$password_db = "martin/123";
+$password_db = "";
 
 //recoleccion de datos
 $usuario=$_POST['usuario'];

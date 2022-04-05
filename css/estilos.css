@@ -267,23 +267,32 @@ button:active {
 }
 
 #denuncia {
+     display: flex;
      justify-content: center;
-     height: 60vh;
      font-family: 'Mate SC', serif;
      font-weight: bold;
+     flex-wrap: wrap;
+    align-items: center;
 }
 
-#imgjust {
-     position: relative;
-     bottom: 30%
+.denuncia__img {
+     margin: 0;
 }
-
-#secciondenuncia {
+.denuncia__container__form
+{
+     width: 100%;
+     background-color:#00d9ff22;
+}
+.denuncia__label {
      background-color: #faf2da;
      border-radius: 10px;
      padding: 10px;
-     border-radius: solid 1px rgb(0, 0, 0);
      width: auto;
+}
+.alert-mod
+{
+     width: fit-content;
+     margin: 0 auto;
 }
 
 #contactobase {

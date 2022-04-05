@@ -7,8 +7,12 @@
 html {
     display:flex;
     height: 100vh;
-    width: 100vw;
-    
+    width: 100vw;    
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
 }
 
 body {
@@ -76,6 +80,7 @@ body header {
 
 
 body nav {
+    position: relative;
     grid-column: 1/2;
     background: url('/images/menuabs.jpg');
     grid-row: 2/3;
@@ -100,14 +105,12 @@ nav ul {
 
 body .ventanas-cont {
     grid-column: 2/6;
-    background: url(/images/fondocont.jpg);
+    background: url('../images/oscu.jpg');
     background-size: cover;
     background-position: center;
     grid-row: 2/3; 
     display: flex;  
-    justify-content: center;
-    
-    
+    justify-content: center; 
 }
 
 .nav-link1 {
@@ -117,6 +120,14 @@ body .ventanas-cont {
     font-size: 20px;
     background: #007965;
     opacity: 0.9;
+    margin: 1rem 0;
+}
+.nav-link1 span
+{
+    display: inline-block;
+    height: 48px;
+    width: 48px;
+    background:url('../images/icons/exp.gif') center/cover no-repeat;
 }
 
 .nav-link1:hover {
@@ -202,7 +213,7 @@ body footer {
 
 
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
 
     body{
         grid-template-rows:  0.4fr 100vh 0.15fr;
@@ -226,19 +237,18 @@ body footer {
     }
 
     body nav {
-        position:relative;
         grid-column: 1/-1;
         visibility:hidden;
         justify-content: center;
-        z-index: 999;
+        z-index: 2;
     }
 
     body nav ul {
-        width: max-content;
+        width: 60%;
     }
 
     .nav-link1 {
-        padding: 5px;
+        padding: inherit;
         width: 100%;
     }
 

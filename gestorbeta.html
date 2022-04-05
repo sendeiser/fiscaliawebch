@@ -44,37 +44,37 @@
 
   <nav id="submenu">
     <ul id="menunav">
-      <a class="nav-link1 border text-center" onclick="accion()" name="reg-exp" href="#">Registrar Expedientes</a>
+      <a class="nav-link1 border " onclick="accion()" name="reg-exp" href="#"><span></span> Registrar Expedientes</a>
 
-      <div class="container" style="height: 40px; width: 100%"></div>
+     
 
-      <a class="nav-link1 border text-center" onclick="accion()" name="estden" href="#">Estado de la Denuncia</a>
+      <a class="nav-link1 border " onclick="accion()" name="estden" href="#">Estado de la Denuncia</a>
 
-      <div class="container" style="height: 40px; width: 100%"></div>
+     
 
-      <a class="nav-link1 border text-center" onclick="accion()" name="expsali" href="#">Registrar Salida</a>
+      <a class="nav-link1 border " onclick="accion()" name="expsali" href="#">Registrar Salida</a>
 
-      <div class="container" style="height: 40px; width: 100%"></div>
+     
 
-      <a class="nav-link1 border text-center" onclick="accion()" name="consexp" href="#">Expedientes</a>
+      <a class="nav-link1 border " onclick="accion()" name="consexp" href="#">Expedientes</a>
 
-      <div class="container" style="height: 40px; width: 100%"></div>
+     
 
-      <a class="nav-link1 border text-center" onclick="accion()" name="consper" href="#">Personas Registradas</a>
+      <a class="nav-link1 border " onclick="accion()" name="consper" href="#">Personas Registradas</a>
 
-      <div class="container" style="height: 40px; width: 100%"></div>
+     
 
-      <a class="nav-link1 active border text-center" onclick="accion()" name="comisaria" aria-current="page"
+      <a class="nav-link1 active border " onclick="accion()" name="comisaria" aria-current="page"
         href="#">Comisarias</a>
 
-      <div class="container" style="height: 40px; width: 100%"></div>
+     
 
-      <a class="nav-link1 active border text-center" onclick="accion()" name="informes" aria-current="page"
+      <a class="nav-link1 active border " onclick="accion()" name="informes" aria-current="page"
         href="#">Informes</a>
 
-      <div class="container" style="height: 40px; width: 100%"></div>
+     
 
-      <a class="nav-link1 active border text-center" name="noti" onclick="accion()" aria-current="page"
+      <a class="nav-link1 active border " name="noti" onclick="accion()" aria-current="page"
         href="#">Noticias</a>
     </ul>
   </nav>
@@ -123,7 +123,7 @@
 
     <div id="reg-exp"
       class="row col-xl-9 col-lg-9 col-md-9 col-sm-10 col-11 m-2  bg-light d-flex border border-2 border-primary invisible">
-      <form id="regexp" method="post" class="row g-1  d-flex justify-content-center mx-auto">
+      <form id="regexp" method="post" class="row g-1  d-flex justify-content-center ">
 
 
         <label for="" class="registitulo text-center">Registro de
@@ -202,7 +202,7 @@
         <div class="col-xl-2 col-md-4 col-sm-4 col-lg-3 col-5">
 
           <div class="form-floating mb-3 letrasreg">
-            <input type="number" class="form-control" name="comisaria" id="comisarias" placeholder="Comisaria"
+            <input autocomplete="off" type="number" class="form-control" name="comisaria" id="comisarias" placeholder="Comisaria"
               data-bs-toggle="popover" data-bs-trigger="focus" title="Comisarias" data-bs-content="1.Comisaria Primera Chamical-------
                2.Comisaria Segunda Chamical-----
                3.Comisaria de la Mujer Chamical
@@ -216,8 +216,17 @@
 
         <div class="col-xl-2 col-md-4 col-sm-4 col-lg-3 col-5">
           <div class="form-floating mb-3 letrasreg">
-            <input type="text" class="form-control" name="causa" id="floatingInput" placeholder="Causa" required>
+            <input type="text" class="form-control" name="causa" id="floatingInput" placeholder="Causa"  list="causas" autocomplete="off" required>
             <label for="floatingInput">Causa</label>
+            <datalist id="causas">
+              <option value="Amenazas"></option>
+              <option value="Lesiones"></option>
+              <option value="Lesiones leves"></option>
+              <option value="Lesiones graves"></option>
+              <option value="Violencia psicológica"></option>
+              <option value="Violencia psicológica y amenazas"></option>
+              <option value="Violencia psicológica y lesiones leves o graves"></option>
+            </datalist>
           </div>
         </div>
 
@@ -468,11 +477,6 @@
     </div>
   </footer>
 
-
-
-
-
-
   <!-- Compiled and minified JavaScript -->
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -515,6 +519,7 @@
   <script src="/js/main.js"></script>
   <script src="/js/tablaper.js"></script>
 
+<!-- Funciones del menu -->
   <script>
     function accion() {
       if ($("#submenu").hasClass("aparece") === true) {
@@ -525,11 +530,8 @@
       }
     }
 
-
-
     var nav_el = document.querySelectorAll('#menunav a');
     var ventanas = document.querySelectorAll("div .invisible");
-
 
     function cambio() {
       const this_nav = this.name;
@@ -548,185 +550,10 @@
 
     nav_el.forEach(nav => nav.addEventListener("click", cambio))
 
-    /* $('#menunav a').onclick(function() {
-       $('#ventanas div').each(function(id,element) {
-          $(element).
-        })
-
-      })
-    }) */
-
-
   </script>
-  <!--Funciones del Menu-->
+ 
+  <!-- Personas No Registradas o Registradas + PoppoverList de Boostrap-->
   <script>
-
-
-    /*  function regexpe() {
-       var form = document.getElementById("regexp");
-       form.classList.remove("invisible");
-       var form1 = document.getElementById("estden");
-       form1.classList.add("invisible");
-       var form2 = document.getElementById("consexp");
-       form2.classList.add("invisible");
-       var form3 = document.getElementById("consper");
-       form3.classList.add("invisible");
-       var form4 = document.getElementById("expsali");
-       form4.classList.add("invisible");
-       var form5 = document.getElementById("comisaria");
-       form5.classList.add("invisible");
-       var form6 = document.getElementById("informes");
-       form6.classList.add("invisible");
-       var form7 = document.getElementById("noti");
-       form7.classList.add("invisible");
-       accion();
-     }
- 
-     function estdenun() {
-       var form = document.getElementById("estden");
-       form.classList.remove("invisible");
-       var form1 = document.getElementById("regexp");
-       form1.classList.add("invisible");
-       var form2 = document.getElementById("consexp");
-       form2.classList.add("invisible");
-       var form3 = document.getElementById("consper");
-       form3.classList.add("invisible");
-       var form4 = document.getElementById("expsali");
-       form4.classList.add("invisible");
-       var form5 = document.getElementById("comisaria");
-       form5.classList.add("invisible");
-       var form6 = document.getElementById("informes");
-       form6.classList.add("invisible");
-       var form7 = document.getElementById("noti");
-       form7.classList.add("invisible");
-       accion();
-     }
- 
-     function consexpe() {
-       var form = document.getElementById("consexp");
-       form.classList.remove("invisible");
-       var form1 = document.getElementById("estden");
-       form1.classList.add("invisible");
-       var form2 = document.getElementById("regexp");
-       form2.classList.add("invisible");
-       var form3 = document.getElementById("consper");
-       form3.classList.add("invisible");
-       var form4 = document.getElementById("expsali");
-       form4.classList.add("invisible");
-       var form5 = document.getElementById("comisaria");
-       form5.classList.add("invisible");
-       var form6 = document.getElementById("informes");
-       form6.classList.add("invisible");
-       var form7 = document.getElementById("noti");
-       form7.classList.add("invisible");
-       accion();
-     }
- 
-     function person() {
-       var form3 = document.getElementById("consper");
-       form3.classList.remove("invisible");
-       var form = document.getElementById("consexp");
-       form.classList.add("invisible");
-       var form1 = document.getElementById("estden");
-       form1.classList.add("invisible");
-       var form2 = document.getElementById("regexp");
-       form2.classList.add("invisible");
-       var form4 = document.getElementById("expsali");
-       form4.classList.add("invisible");
-       var form5 = document.getElementById("comisaria");
-       form5.classList.add("invisible");
-       var form6 = document.getElementById("informes");
-       form6.classList.add("invisible");
-       var form7 = document.getElementById("noti");
-       form7.classList.add("invisible");
-       accion();
-     }
- 
-     function salida() {
-       var form4 = document.getElementById("expsali");
-       form4.classList.remove("invisible");
-       var form = document.getElementById("consexp");
-       form.classList.add("invisible");
-       var form1 = document.getElementById("estden");
-       form1.classList.add("invisible");
-       var form2 = document.getElementById("regexp");
-       form2.classList.add("invisible");
-       var form3 = document.getElementById("consper");
-       form3.classList.add("invisible");
-       var form5 = document.getElementById("comisaria");
-       form5.classList.add("invisible");
-       var form6 = document.getElementById("informes");
-       form6.classList.add("invisible");
-       var form7 = document.getElementById("noti");
-       form7.classList.add("invisible");
-       accion();
-     }
- 
-     function comi() {
-       var form = document.getElementById("regexp");
-       form.classList.add("invisible");
-       var form1 = document.getElementById("estden");
-       form1.classList.add("invisible");
-       var form2 = document.getElementById("consexp");
-       form2.classList.add("invisible");
-       var form3 = document.getElementById("consper");
-       form3.classList.add("invisible");
-       var form4 = document.getElementById("expsali");
-       form4.classList.add("invisible");
-       var form5 = document.getElementById("comisaria");
-       form5.classList.remove("invisible");
-       var form6 = document.getElementById("informes");
-       form6.classList.add("invisible");
-       var form7 = document.getElementById("noti");
-       form7.classList.add("invisible");
-       accion();
-     }
- 
-     function infor() {
-       var form4 = document.getElementById("expsali");
-       form4.classList.add("invisible");
-       var form = document.getElementById("consexp");
-       form.classList.add("invisible");
-       var form1 = document.getElementById("estden");
-       form1.classList.add("invisible");
-       var form2 = document.getElementById("regexp");
-       form2.classList.add("invisible");
-       var form3 = document.getElementById("consper");
-       form3.classList.add("invisible");
-       var form5 = document.getElementById("comisaria");
-       form5.classList.add("invisible");
-       var form6 = document.getElementById("informes");
-       form6.classList.remove("invisible");
-       var form7 = document.getElementById("noti");
-       form7.classList.add("invisible");
-       accion();
-     }
- 
-     function noti() {
-       var form4 = document.getElementById("expsali");
-       form4.classList.add("invisible");
-       var form = document.getElementById("consexp");
-       form.classList.add("invisible");
-       var form1 = document.getElementById("estden");
-       form1.classList.add("invisible");
-       var form2 = document.getElementById("regexp");
-       form2.classList.add("invisible");
-       var form3 = document.getElementById("consper");
-       form3.classList.add("invisible");
-       var form5 = document.getElementById("comisaria");
-       form5.classList.add("invisible");
-       var form6 = document.getElementById("informes");
-       form6.classList.add("invisible");
-       var form7 = document.getElementById("noti");
-       form7.classList.remove("invisible");
-       accion();
-     } */
-  </script>
-
-  <!-- Personas No Registradas o Registradas -->
-  <script>
-
-
     var inp_dni = document.getElementById("inp_dni");
 
     inp_dni.addEventListener("keyup", function () {

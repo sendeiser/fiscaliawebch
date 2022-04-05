@@ -35,17 +35,18 @@ include("phpserv/connect.php");
 
 <body>
 
-  <ul class="nav bg-image d-flex justify-content-center" style="background-image: url('images/16982.jpg');">
+  <nav class="nav bg-image d-flex justify-content-center" style="background-image: url('images/16982.jpg');">
 
-    <nav class="navbar navbar-light bg-light rounded">
+    <ul class="navbar navbar-light bg-light rounded">
       <div class="container-fluid">
         <a class="navbar-brand" onclick="accion()" href="#" style="font-weight: bold;">
           <img src="images/justicia2.png" alt="" width="40" height="34" class="d-inline-block align-text-top">
           Fiscalia Web
         </a>
       </div>
-    </nav>
+    </ul>
 
+  <ul>
 
     <li class="nav-item desaparece1">
       <a class="nav-link " aria-current="page" href="#" aria-disabled="false" onclick="accion()">Menu</a>
@@ -69,8 +70,9 @@ include("phpserv/connect.php");
       <a class="nav-link" href="contacto.html" aria-disabled="true">Contacto</a>
     </li>
   </ul>
+  </nav>
 
-  <div class="container" id="comisaria1">
+  <main class="container" id="comisaria1">
     <br>
     <div class="row" id="comisariafila">
 
@@ -80,26 +82,17 @@ include("phpserv/connect.php");
     <br>
 
 
-    <div class="row " id="denuncia">
+    <div class="" id="denuncia">
 
-      <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
-        <div class="row " style="position:relative">
-          <span class="text-center" id="secciondenuncia">En esta seccion podra ver el estado en que se encuentra su denuncia</span>
-        </div>
-
-        <div class="row mt-5" style="position:relative">
-          <span class="text-center" id="secciondenuncia">Solo escriba su DNI para consultar el estado de su denuncia</span>
-        </div>
+      <div class="denuncia__label">
+          <p class="denuncia__label">En esta seccion podra ver el estado en que se encuentra su denuncia</p>
       </div>
 
-
-      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-7 border border-primary">
+      <div class="denuncia__container__form">
 
         <form action="" method="post" class="">
-
-
           <div class="form-floating mb-3 letrasreg  d-block mx-auto">
-            <input type="number" class="form-control text-center" name="dni1" id="floatingInput" placeholder="DNI" style="font-size: 20px;font-weight:bold">
+            <input type="number" class="form-control text-center" name="dni1" id="floatingInput" placeholder="DNI"  style="font-size: 20px;font-weight:bold">
             <label for="floatingInput">Escriba su DNI</label>
           </div>
 
@@ -131,7 +124,7 @@ include("phpserv/connect.php");
                 </symbol>
               </svg>
 
-              <div class="alert alert-primary d-flex align-items-center" role="alert">
+              <div class="alert alert-primary d-flex align-items-center alert-mod" role="alert">
                 <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Info:">
                   <use xlink:href="#info-fill" />
                 </svg>
@@ -146,7 +139,7 @@ include("phpserv/connect.php");
                   <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
                 </symbol>
               </svg>
-              <div class="alert alert-success d-flex align-items-center" role="alert">
+              <div class="alert alert-success d-flex align-items-center alert-mod"  role="alert">
                 <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:">
                   <use xlink:href="#check-circle-fill" />
                 </svg>
@@ -165,19 +158,15 @@ include("phpserv/connect.php");
         </form>
 
       </div>
-
-      <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-1 text-center" id="imgjust">
-
-        <img src="/images/denunciajust1.png" alt="justiciadenuncia" width="330" height="330" class="img-fluid" />
+      <div class="denuncia__label" style="position:relative">
+          <p>Solo escriba su DNI para consultar el estado de su denuncia</p>
+        </div>
       </div>
-
-
     </div>
-
-
-
-
-  </div>
+    <figure class="denuncia__img" id="">
+       <img src="/images/denunciajust1.png" alt="justiciadenuncia" width="330" height="330" class="" />
+     </figure> 
+  </main>
 
 
 

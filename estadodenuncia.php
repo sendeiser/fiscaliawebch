@@ -72,11 +72,11 @@ include("phpserv/connect.php");
   </ul>
   </nav>
 
-  <main class="container" id="comisaria1">
+  <main class="main__denuncia__estado">
     <br>
-    <div class="row" id="comisariafila">
+    <div class="denuncia__titulo">
 
-      <label for="" class="registitulo text-center col-xl-8" style="height: min-content;margin-bottom:0px;width:fit-content;margin-top: 20px">Estado de la Denuncia</label>
+      <h1  class="registitulo ">Estado de la Denuncia</h1>
 
     </div>
     <br>
@@ -85,7 +85,7 @@ include("phpserv/connect.php");
     <div class="" id="denuncia">
 
       <div class="denuncia__label">
-          <p class="denuncia__label">En esta seccion podra ver el estado en que se encuentra su denuncia</p>
+          <p >En esta seccion podra ver el estado en que se encuentra su denuncia</p>
       </div>
 
       <div class="denuncia__container__form">
@@ -158,7 +158,7 @@ include("phpserv/connect.php");
         </form>
 
       </div>
-      <div class="denuncia__label" style="position:relative">
+      <div class="denuncia__label">
           <p>Solo escriba su DNI para consultar el estado de su denuncia</p>
         </div>
       </div>

@@ -1,3 +1,8 @@
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
 .text {
      color: #00E6FF45;
 }
@@ -68,17 +73,7 @@ button:active {
      border-radius: 10px;
 
 }
-.registitulo{
-     font-size:40px;
-     font-weight:bold;
-     background-image:url('/images/info.jpg');
-     color:#566d62d0;
-     margin-top: 10px;
-     border: 5px solid #98b4ac;  
-     text-shadow: 4px 2px px white;
-     border-radius: 10px; 
-     color:#0de77ed0
-}
+
 
 .containerregis {
      margin: 25px;
@@ -234,15 +229,32 @@ button:active {
      background-color: #2f0808
 }
 
-#comisaria1 {
+.main__denuncia__estado {
+     display: flex;
+     flex-direction: column;
      background-image: url('/images/oscu.jpg');
-     height: 110vh;
-     max-width: 450vw !important;
+     height: auto;
+     width: 100%;
+     align-items: center;
 }
 
-#comisariafila {
+.denuncia__titulo {
      justify-content: center;
      align-items: center;
+}
+.registitulo{
+     height: min-content;
+     width:fit-content;
+     font-size:3.2rem;
+     font-weight:bold;
+     background-image:url('/images/info.jpg');
+     border: 5px solid #98b4ac;  
+     text-shadow: 4px 2px 5px white;
+     text-align: center;
+     border-radius: 10px; 
+     color:#0de77ed0;
+     padding: 5px; 
+     margin: 0 auto;
 }
 
 #comisariatitu {
@@ -271,12 +283,21 @@ button:active {
      justify-content: center;
      font-family: 'Mate SC', serif;
      font-weight: bold;
-     flex-wrap: wrap;
-    align-items: center;
+     align-items: center;
 }
 
 .denuncia__img {
      margin: 0;
+     max-width: 450px;
+     min-width: 200px;
+}
+.denuncia__img img
+{
+     width: 100%;
+     height: auto;
+     background: radial-gradient(#f3f3f382, #76bb1e00);
+     border-radius: 50%;
+     box-shadow: 0px 1px 5px #1b3e66, 0px 2px 5px #143e6e, 0px 3px 5px #163c67;
 }
 .denuncia__container__form
 {
@@ -287,7 +308,11 @@ button:active {
      background-color: #faf2da;
      border-radius: 10px;
      padding: 10px;
-     width: auto;
+     width: auto;   
+}
+.denuncia__label p
+{
+     margin-bottom: 0;
 }
 .alert-mod
 {
@@ -426,5 +451,9 @@ button:active {
 @media (max-width: 576px) {
      #gestor {
           height: 115vh !important;
+     }
+     #denuncia 
+     {
+          flex-wrap: wrap;
      }
 }

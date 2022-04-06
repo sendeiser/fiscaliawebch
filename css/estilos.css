@@ -1,8 +1,10 @@
-*{
+
+* {
      margin: 0;
      padding: 0;
      box-sizing: border-box;
 }
+
 .text {
      color: #00E6FF45;
 }
@@ -117,8 +119,10 @@ button:active {
      text-shadow: 2px 2px 5px white;
 }
 
-.mapa{
-     height:45vh;
+.contacto__body__mapa {
+     height: auto;
+     width: 100%;
+     min-width: 240px;
 }
 
 #principal {
@@ -145,11 +149,11 @@ button:active {
 
 #bien {
      text-align: center;
-     color: hsl(209, 100%, 40%);
+     color: hsl(209, 99%, 58%);
 }
 
 #bien1 {
-     color: hsl(350, 61%, 44%);
+     color: hsl(350, 83%, 49%);
 }
 
 #title1row {
@@ -164,9 +168,6 @@ button:active {
      box-shadow: 1px 0px 10px rgb(235, 235, 235);
 }
 
-#f1 {
-     color: hsl(209, 30%, 72%)
-}
 
 .contenido1 {
      padding: 10px;
@@ -242,31 +243,29 @@ button:active {
      justify-content: center;
      align-items: center;
 }
-.registitulo{
+
+.registitulo {
      height: min-content;
-     width:fit-content;
-     font-size:3.2rem;
-     font-weight:bold;
-     background-image:url('/images/info.jpg');
-     border: 5px solid #98b4ac;  
+     width: 100%;
+     font-size: 3rem;
+     font-weight: bold;
+     background-image: url('/images/info.jpg');
+     border: 5px solid #98b4ac;
      text-shadow: 4px 2px 5px white;
      text-align: center;
-     border-radius: 10px; 
-     color:#0de77ed0;
-     padding: 5px; 
+     border-radius: 10px;
+     color: #0de77ed0;
+     padding: 5px;
      margin: 0 auto;
 }
-.comisaria
-{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background:url("../images/madera1.jpg") center/cover no-repeat;
+
+.comisaria {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     background: url("../images/madera1.jpg") center/cover no-repeat;
 }
-.comisaria__title__container
-{
-     
-}
+
 .comisaria__title {
      color: #340441;
      font-weight: bold;
@@ -279,17 +278,20 @@ button:active {
      box-shadow: 1px -1px 20px rgb(32, 238, 228);
      font-family: 'Pattaya', sans-serif;
 }
-.comisaria__body
-{
+
+.comisaria__body {
      margin-bottom: 2rem;
 }
 
-#comisaria2 {
-     justify-content: center;
+.contacto__body {
+     display: flex;
+     flex-direction: column;
      align-items: center;
-     height: 60vh;
+     height: auto;
      font-family: 'Mate SC', serif;
      font-weight: bold;
+     margin: 1.5rem 1rem;
+     gap: 2rem;
 }
 
 #denuncia {
@@ -305,43 +307,45 @@ button:active {
      max-width: 450px;
      min-width: 200px;
 }
-.denuncia__img img
-{
+
+.denuncia__img img {
      width: 100%;
      height: auto;
      background: radial-gradient(#f3f3f382, #76bb1e00);
      border-radius: 50%;
      box-shadow: 0px 1px 5px #1b3e66, 0px 2px 5px #143e6e, 0px 3px 5px #163c67;
 }
-.denuncia__container__form
-{
+
+.denuncia__container__form {
      width: 100%;
-     background-color:#00d9ff22;
+     background-color: #00d9ff22;
 }
+
 .denuncia__label {
      background-color: #faf2da;
      border-radius: 10px;
      padding: 10px;
-     width: auto;   
+     width: auto;
 }
-.denuncia__label p
-{
+
+.denuncia__label p {
      margin-bottom: 0;
 }
-.alert-mod
-{
+
+.alert-mod {
      width: fit-content;
      margin: 0 auto;
 }
 
-#contactobase {
+.contacto {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     flex-wrap: wrap;
      background-image: url('/images/oscu.jpg');
-     height: 175vh;
-     max-width: 100vw;
-
 }
 
-#contactotitulo {
+.contacto__title {
      color: #fff8d9;
      font-weight: bold;
      font-size: 40px;
@@ -349,17 +353,23 @@ button:active {
      padding: 5px;
      border-radius: 30px;
      text-align: center;
-     width: max-content;
+     width: 100%;
      box-shadow: 1px -1px 20px rgb(241, 13, 154);
      font-family: 'Pattaya', sans-serif;
 
 }
 
-.containercont {
-     background: linear-gradient(0deg, rgb(1, 0, 3), rgb(80, 74, 138));
+.contacto__body__info {
+     background: linear-gradient(45deg, rgb(1, 0, 3), rgb(80, 74, 138));
      text-align: center;
      border-radius: 15px;
      box-shadow: 1px -2px 15px rgba(245, 245, 245, 0.432);
+     border: 3px dashed #fff;
+     padding: 0.7rem;
+}
+
+.contacto__title_container {
+     margin: 1.5rem 0;
 }
 
 .itemstitucont {
@@ -376,21 +386,41 @@ button:active {
 }
 
 .sociales {
-     border: 2px 2px 10px solid #ee1515;
-     border-radius: 5px;
-     display: inline-block;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
      position: fixed;
      z-index: 2;
      padding: 4px;
      left: 0;
      top: 250px;
-     width: 40px;
+     width: 37px;
      height: 120px;
-     background-color: #333333;
-     box-shadow: 1px 1px 15px #ffffff;
+     background-color: #33333392;
+     border: 2px 2px 10px solid #ee1515;
+     border-radius: 5px;
+     box-shadow: 1px 1px 10px #ffffff;
+}
+div.sociales a i
+{
+  border-radius: 35%;
+}
+div.sociales a:nth-child(1)>i {
+     font-size: 28px;
+     background: linear-gradient(75deg, white, blue, blue, white);
 }
 
+div.sociales a:nth-child(2)>i {
+     font-size: 30px;
+     background: linear-gradient(110deg, white, rgb(255, 255, 1), rgb(255, 136, 0), red, rgb(233, 21, 162), rgb(128, 0, 160), blue, cyan);
+     color: white;
+}
 
+div.sociales a:nth-child(3)>i 
+{
+     font-size:30px;color:white;background: linear-gradient(rgb(164, 229, 164),#2ecc12);
+}
 
 #gestor {
      display: flex;
@@ -466,8 +496,9 @@ button:active {
      #gestor {
           height: 115vh !important;
      }
-     #denuncia 
-     {
+
+     #denuncia {
           flex-wrap: wrap;
      }
 }
+

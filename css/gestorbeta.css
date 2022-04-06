@@ -121,13 +121,7 @@ body .ventanas-cont {
     background: #007965;
     opacity: 0.9;
     margin: 1rem 0;
-}
-.nav-link1 span
-{
-    display: inline-block;
-    height: 48px;
-    width: 48px;
-    background:url('../images/icons/exp.gif') center/cover no-repeat;
+    vertical-align:sub; 
 }
 
 .nav-link1:hover {
@@ -239,24 +233,25 @@ body footer {
     body nav {
         grid-column: 1/-1;
         visibility:hidden;
-        justify-content: center;
         z-index: 2;
+        width: 100%;
     }
 
     body nav ul {
-        width: 60%;
+        width: 100%;
+        align-content: center;
+        justify-content:flex-start;
     }
 
     .nav-link1 {
-        padding: inherit;
-        width: 100%;
+        width: 90%;
+        text-align: center;
     }
 
     body .ventanas-cont {
         grid-column: 1/-1;
         grid-row:2/4;
-        height:100%;
-       
+        height:100%; 
     }
 
     body footer {
@@ -264,8 +259,7 @@ body footer {
     }
     #regexp {
         margin-top:0;
-        margin-bottom:50vh;
-        
+        margin-bottom:50vh;    
     }
     .registitulo{
         font-size:27px;

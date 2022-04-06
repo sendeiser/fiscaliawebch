@@ -1,10 +1,14 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 * {
      margin: 0;
      padding: 0;
      box-sizing: border-box;
 }
-
+h2
+{
+     font-family: 'Pacifico', cursive;
+     text-shadow: 0px 2px 3px #ffff;
+}
 .text {
      color: #00E6FF45;
 }
@@ -20,7 +24,6 @@
 .letraslgco {
      font-size: large;
      font-weight: bold;
-     margin-inline: 39%;
      color: #126e82;
 }
 
@@ -142,18 +145,22 @@ button:active {
      padding: 10px;
      position: relative;
      top: 30vh;
-     background: linear-gradient(0deg, rgba(42, 7, 238, 0.514), rgba(62, 113, 145, 0.856), rgba(0, 0, 0, 0.767));
+     background: linear-gradient(0deg, rgba(42, 7, 238, 0.514), rgba(62, 113, 145, 0.856), rgb(92, 0, 149));
      box-shadow: 0 10px 20px rgb(22, 209, 193), 0 6px 6px rgba(0, 0, 0, 0.23);
      margin: 20px;
 }
 
-#bien {
+.bien {
+     font-family: 'Pacifico', cursive;
+     text-shadow: 0px 2px 3px #ffff;
      text-align: center;
-     color: hsl(209, 99%, 58%);
+     color: hsl(209, 97%, 73%);
 }
 
-#bien1 {
-     color: hsl(350, 83%, 49%);
+.bien1 {
+     font-family: 'Pacifico', cursive;
+     color: hsl(350, 100%, 65%);
+     text-shadow: 0px 2px 3px rgb(91, 54, 255);
 }
 
 #title1row {

@@ -111,6 +111,7 @@ body .ventanas-cont {
     grid-row: 2/3; 
     display: flex;  
     justify-content: center; 
+    height: auto;
 }
 
 .nav-link1 {
@@ -168,7 +169,58 @@ body .ventanas-cont {
 }
 #informes{ 
     position: absolute;
-    height: 40vh;
+    height: 100%;
+    
+}
+.informe__container
+{
+    padding: 0.4rem 1rem;
+    width: 100%;
+    height: 100%;
+    
+}
+.form__reportes
+{
+    background-color: #f5e6ca;
+    border: 4px solid rgb(36, 7, 255);
+    padding-bottom: 0.5rem;
+}
+.reportes__tittle label 
+{
+    width: 100%;
+}
+.report__causas
+{
+    justify-content:center;
+    justify-items: center;
+    background-color: #f5e6ca;
+    width: 100%;
+    height: auto;
+    border: 4px solid rgb(36, 7, 255);
+    padding-bottom: 0.5rem;  
+}
+.report__causas .causas__tittle h1
+{
+    width: 100%;
+    border-bottom: 4px solid rgb(36, 7, 255) !important;
+}
+.report__causas .causa__form
+{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    gap: 1rem;
+}
+.report__causas .causa__form .causas__select
+{
+    background: #F4F4F4;
+    box-shadow: inset 0px 3px 4px rgb(0 0 0 / 25%);
+    border-radius: 5px;
+    color: rgb(27, 12, 12);
+    font-size: 1.35rem;
+    outline: none;
+    margin-top:1rem;
+    width: calc(100% - 40vw);
 }
 #noti{
     position: absolute;
@@ -245,7 +297,7 @@ body footer {
 
     .nav-link1 {
         width: 90%;
-        text-align: center;
+        text-align:center;
     }
 
     body .ventanas-cont {

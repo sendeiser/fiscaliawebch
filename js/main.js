@@ -361,3 +361,6 @@ if (btn_noti) {
   })
 
 }
+
+//Reportes Graficos 
+

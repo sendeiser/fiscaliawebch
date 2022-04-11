@@ -150,138 +150,64 @@
       </div>
     </div>
 
-    <div id="reg-exp"
-      class="row col-xl-9 col-lg-9 col-md-9 col-sm-10 col-11 m-2  bg-light d-flex border border-2 border-primary ">
-      <form id="regexp" method="post" class="row g-1  d-flex justify-content-center ">
+    <div id="reg-exp" class="m-2  bg-light  border border-2 border-primary invisible">
 
+      <h1  class="registitulo text-center">Registro de
+        Expedientes</h1>
+      <form id="regexp" method="post" class="">
 
-        <label for="" class="registitulo text-center">Registro de
-          Expedientes</label>
+        <label for="dni"><u>Datos del Denunciante</u> 
+          <input type="number" class="form-control" name="dni" id="inp_dni" placeholder="DNI*" required>
+          <input type="text" class="form-control" name="nombre" id="inp_nombre" placeholder="Nombre*">
+          <input type="text" class="form-control" name="apellido" id="inp_apellido" placeholder="Apellido*">
+        </label>
 
-        <div class="container d-grid d-flex justify-content-center"
-          style="height: 4vh;font-weight: bold; font-size: 26px;"><span><u>Denunciante</u></span></div>
+        <label><u>Datos del Denunciado</u> 
+          <input type="text" class="form-control" name="denunciado" id="floatingInput" placeholder="Nombre*" required>
+        </label>
 
-        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-10">
-          <div class="form-floating mb-3 letrasreg">
-            <input type="number" class="form-control" name="dni" id="inp_dni" placeholder="DNI" required>
-            <label for="floatingInput">DNI</label>
-          </div>
-        </div>
+        <label><u>Datos a Completar</u> 
+          <input type="number" class="form-control" name="fojas" id="floatingInput" placeholder="Fojas*" required>
 
+          <input type="number" class="form-control" name="librodeactas" id="floatingInput" placeholder="Libro de Actas*"
+            required>
 
-        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-7">
-          <div class="form-floating mb-3 letrasreg">
-            <input type="text" class="form-control" name="nombre" id="inp_nombre" placeholder="Nombre">
-            <label for="inp_nombre">Nombre</label>
-          </div>
-        </div>
+          <input type="number" class="form-control" name="nroexpediente" id="floatingInput"
+            placeholder="Numero de Expediente*" required>
 
-        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-5">
-          <div class="form-floating mb-3 letrasreg">
-            <input type="text" class="form-control" name="apellido" id="inp_apellido" placeholder="Apellido">
-            <label for="inp_apellido">Apellido</label>
-          </div>
-        </div>
-
-
-
-        <div class="container d-grid d-flex justify-content-center"
-          style="height: 4vh;font-weight: bold; font-size: 26px;margin-top: -20px"><span><u>Denunciado</u></span></div>
-
-        <div class="col-xl-5 col-md-7 col-sm-9 col-lg-6 col-10">
-          <div class="form-floating mb-3 letrasreg">
-            <input type="text" class="form-control" name="denunciado" id="floatingInput" placeholder="Nombre" required>
-            <label for="floatingInput">Nombre Completo</label>
-          </div>
-        </div>
-
-        <div class="container d-grid d-flex justify-content-center"
-          style="height: 4vh;font-weight: bold; font-size: 26px;margin-top: -20px"><span><u>Datos a
-              Complementar</u></span></div>
-
-
-
-        <div class="col-xl-2 col-md-4 col-sm-4 col-lg-2 col-2">
-          <div class="form-floating mb-3 letrasreg">
-            <input type="number" class="form-control" name="fojas" id="floatingInput" placeholder="Fojas" required>
-            <label for="floatingInput">Fojas</label>
-          </div>
-        </div>
-
-
-        <div class="col-xl-2 col-md-4 col-sm-4 col-lg-3 col-2">
-          <div class="form-floating mb-3 letrasreg">
-            <input type="number" class="form-control" name="librodeactas" id="floatingInput"
-              placeholder="Libro de Actas" required>
-            <label for="floatingInput">Libro de Actas</label>
-          </div>
-        </div>
-
-        <div class="col-xl-2 col-md-4 col-sm-4 col-lg-4 col-2">
-          <div class="form-floating mb-3 letrasreg">
-            <input type="number" class="form-control" name="nroexpediente" id="floatingInput"
-              placeholder="Numero de Expediente" required>
-            <label for="floatingInput">Nro.Expediente</label>
-          </div>
-        </div>
-
-
-
-
-        <div class="col-xl-2 col-md-4 col-sm-4 col-lg-3 col-5">
-
-          <div class="form-floating mb-3 letrasreg">
-            <input autocomplete="off" type="number" class="form-control" name="comisaria" id="comisarias"
-              placeholder="Comisaria" data-bs-toggle="popover" data-bs-trigger="focus" title="Comisarias"
-              data-bs-content="1.Comisaria Primera Chamical-------
+          <input autocomplete="off" type="number" class="form-control" name="comisaria" id="comisarias"
+            placeholder="Comisaria*" maxlength="1" data-bs-toggle="popover" data-bs-trigger="focus" title="Comisarias" data-bs-content="1.Comisaria Primera Chamical-------
                2.Comisaria Segunda Chamical-----
                3.Comisaria de la Mujer Chamical
                4.Comisaria de Olta-----------------------            
                5.Comisaria de Chañar------------------         
                6.Comisaria de Milagro------------------         
                7.Comisaria de Catuna-------------------" required>
-            <label for="comisarias">Comisaria</label>
-          </div>
-        </div>
-
-        <div class="col-xl-2 col-md-4 col-sm-4 col-lg-3 col-5">
-          <div class="form-floating mb-3 letrasreg">
-            <input type="text" class="form-control" name="causa" id="floatingInput" placeholder="Causa" list="causas"
-              autocomplete="off" required>
-            <label for="floatingInput">Causa</label>
-            <datalist id="causas">
-              <option value="Amenazas"></option>
-              <option value="Lesiones"></option>
-              <option value="Lesiones leves"></option>
-              <option value="Lesiones graves"></option>
-              <option value="Violencia psicológica"></option>
-              <option value="Violencia psicológica y amenazas"></option>
-              <option value="Violencia psicológica y lesiones leves o graves"></option>
-            </datalist>
-          </div>
-        </div>
-
-        <div class="col-xl-3 col-md-4 col-sm-4 col-lg-3 col-5">
-          <div class="form-floating mb-3 letrasreg">
-            <input type="text" class="form-control" name="medida" id="floatingInput" placeholder="Medida" required>
-            <label for="floatingInput">Medida</label>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6 col-lg-4 col-10">
-          <div class="form-floating mb-3 letrasreg">
-            <input type="date" class="form-control" name="fechadeentrada" id="floatingInput" placeholder="FechaEntrada"
-              required>
-            <label for="floatingInput">Fecha de Entrada</label>
-          </div>
-        </div>
 
 
-        <div class="d-grid gap-3 d-flex justify-content-center">
+          <input type="text" class="form-control" name="causa" id="floatingInput" placeholder="Causa*" list="causas"
+            autocomplete="off" required>
+          <datalist id="causas">
+            <option value="Amenazas"></option>
+            <option value="Lesiones"></option>
+            <option value="Lesiones leves"></option>
+            <option value="Lesiones graves"></option>
+            <option value="Violencia psicológica"></option>
+            <option value="Violencia psicológica y amenazas"></option>
+            <option value="Violencia psicológica y lesiones leves o graves"></option>
+          </datalist>
+
+
+          <input type="text" class="form-control" name="medida" id="floatingInput" placeholder="Medida*" required>
+
+          <input type="date" class="form-control" name="fechadeentrada" id="floatingInput" placeholder="FechaEntrada*"
+            required>
+
+        </label>
+        <div class="d-grid gap-3 d-flex justify-content-center mt-3">
           <a href=""><button class="button rounded" type="reset">Limpiar</button></a>
           <button id="btn-exp" class="button  rounded" type="submit">Registrar</button>
         </div>
-        <div class="container" style="height: 2vh;"></div>
-
         <div class="row">
           <div id="resp-exp" class="col-9">
 
@@ -402,13 +328,12 @@
           </div>
 
           <div class="d-flex justify-content-center mt-3">
-            <button id="btn-d" type="submit"
-              class="btn btn-light fw-bold  border border-dark">Generar
+            <button id="btn-d" type="submit" class="btn btn-light fw-bold  border border-dark">Generar
               Informe</button>
           </div>
           <div class="row d-flex justify-content-center mt-2">
             <div class="container text-center col-10" style="background-color:#5d2cff;border-radius: 15px">
-  
+
               <span class="text-light fw-bold">Seleccione las fechas de inicio a fin para generar el informe de la tabla
                 de expedientes</span>
             </div>
@@ -418,7 +343,8 @@
 
         <div class="report__causas mt-3">
           <div class="causas__tittle">
-            <label for="" class="col-12 badge bg-primary bg-gradient text-center fs-3 fw-bold rounded rounder-4">REPORTES
+            <label for=""
+              class="col-12 badge bg-primary bg-gradient text-center fs-3 fw-bold rounded rounder-4">REPORTES
               POR CAUSA</label>
           </div>
           <form action="" class="causa__form">
@@ -433,12 +359,11 @@
                 graves</option>
             </select>
             <input type="text">
-            <button id="btn__causas" type="submit"
-              class="btn btn-light fw-bold  border border-dark">Generar
+            <button id="btn__causas" type="submit" class="btn btn-light fw-bold  border border-dark">Generar
               Reporte</button>
             <div class="d-flex justify-content-center">
               <div class="container text-center col-10" style="background-color:#5d2cff;border-radius: 15px">
-  
+
                 <span class="text-light fw-bold">Se generara un grafico de barra de la causa que elija.</span>
               </div>
             </div>

@@ -147,7 +147,7 @@ body .ventanas-cont {
 
 #reg-exp{ 
     position: absolute;
-    height:90vh;   
+    height:auto;   
 }
 #regexp{ 
     height:100%;
@@ -183,7 +183,7 @@ body .ventanas-cont {
 {
     background-color: #f5e6ca;
     border: 4px solid rgb(36, 7, 255);
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.8rem;
 }
 .reportes__tittle label 
 {
@@ -311,7 +311,7 @@ body footer {
     }
     #regexp {
         margin-top:0;
-        margin-bottom:50vh;    
+           
     }
     .registitulo{
         font-size:27px;

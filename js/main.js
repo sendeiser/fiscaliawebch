@@ -109,8 +109,6 @@ if (btn_d) {
         body: datos_denu
 
       })
-
-
       .then(res => res.json())
       .then(data => {
         if (data === 'noprocesada') {
@@ -364,3 +362,27 @@ if (btn_noti) {
 
 //Reportes Graficos 
 
+/* function crearCadenaLineal(json){
+  var parsed = JSON.parse(json);
+  var arr = [];
+  for(var x in parsed){
+    arr.push(parsed[x]);
+  }
+  return arr;
+}
+var btn_causas = document.getElementById('btn__causas');
+
+if(btn_causas){
+  btn_causas.addEventListener('click', (e) => {
+    e.preventDefault();
+    causa_form = document.getElementById('causas_form')
+    var causa_type = new FormData(causa_form);
+    fetch('/phpserv/graficos.php', {
+      method: 'POST',
+      body: causa_type
+    }).then(res => res.json())
+    .then(data => {
+      console.log(data)
+    })
+  })
+} */

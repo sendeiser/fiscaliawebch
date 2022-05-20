@@ -110,13 +110,28 @@
 
   <div id="ventanas" class="ventanas-cont">
     <!-- FORMULARIOS DEL CONTENEDOR -->
+    
+    <div class="bienvenida">
+      <h1 class="title__bienvenida">S.A.G.D.F.</h1>
+      <h1 class="title__bienvenida subtitle__bienvenida">Sistema Administrativo de Gestion Documentaria Fiscal.</h1>
+      <figure><img src="./images/title_welcome.png" alt=""></figure>
+      <div class="body__bienvenida">
+          <h2>Bienvenido al Sistema de Gestion de Fiscalia Chamical. </h2>
+          <p> 
+          Aqui podra crear altas de expedientes de denuncias a partir de los datos correspendiente necesarios para cada una de ellas. Otra de las posibilidades del sistema es el de poder consultar el alta de fecha de salida del expediente para verificar si pasado al area correspondiente o no  poder dar el alta de esa fecha segun corresponda. Otras de las varias funciones que tendremos a disposicion son la de poder hacer modificaciones dentro de tablas conectadas a la base de datos en donde podremos agregar, modificar, eliminar y consultar datos de los expedientes, las personas y las comisarias; con opciones adicionales como la de crear informes de tipo pdf,excel y hasta poder imprimir desde la misma tabla todos los datos. Por ultimo tambien tendremos dos apartados mas en donde se podra crear informes a partir de fechas o tipo de causa dadas por el usuario y un menu de noticias que tiene la funcion de poder crear tarjetas de noticias para la pagina principal de "Fiscalia Chamical"</p>
+          
+      </div>
+      <div class="footer__welcome">
+
+      </div>
+    </div>
 
     <div id="estden" class="invisible">
-      <div class="container p-1 col-lg-12 col-9" style="background-color: #f5e6ca">
-        <div class="row d-flex justify-content-center">
-          <label for="" class="col-10 badge bg-primary bg-gradient text-center fs-3 fw-bold rounded rounder-4">Estado
-            de las Denuncias</label>
-        </div>
+      <div class="container p-1 col-lg-12 col-11" style="background-color: #f5e6ca">
+        
+          <h1 class="badge bg-primary bg-gradient text-center fs-3 fw-bold rounded rounder-4" style="width: 100%;">Estado
+            de las Denuncias</h1>
+        
         <form action="" method="POST" id="form-denu">
           <div class="row d-flex justify-content-center mt-4">
             <div class="col-xl-5 col-lg-7 col-md-7 col-sm-7 col-9">
@@ -137,7 +152,7 @@
         </form>
 
         <div class="row d-flex justify-content-center mt-3">
-          <div class="container text-center col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9"
+          <div class="container text-center col-11 col-sm-9 col-md-9 col-lg-9 col-xl-9"
             style="background-color: black; border-radius: 15px">
             <label class="text-light fw-bold">Digite el DNI de la persona para saber el estado de la
               SALIDA</label>
@@ -236,7 +251,7 @@
       <div class="container p-1 " style="background-color:#f5e6ca">
 
         <div class="row mt-3">
-          <div class="container text-center col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 bg-dark"
+          <div class="container text-center col-xl-8 col-lg-8 col-md-8 col-sm-8 col-10 bg-dark"
             style="border-radius:15px">
             <label for="" class="text-light fw-bold fs-2 text-decoration-underline">Registro de Salida del
               Expediente</label>
@@ -246,7 +261,7 @@
         <form action="" method="POST" id="form-sali">
 
           <div class="row d-flex justify-content-center mt-4">
-            <div class="col-xl-5 col-lg-5 col-md-6 col-sm-6 col-7">
+            <div class="col-xl-5 col-lg-5 col-md-6 col-sm-6 col-11">
               <div class="input-group input-group-lg">
                 <span class="input-group-text bg-dark text-light fw-bold" id="spandni">DNI</span>
                 <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="spandni"
@@ -255,7 +270,7 @@
             </div>
           </div>
           <div class="row d-flex justify-content-center mt-4">
-            <div class="col-xl-5 col-lg-5 col-md-6 col-sm-6 col-9">
+            <div class="col-xl-5 col-lg-5 col-md-6 col-sm-6 col-11">
               <div class="input-group input-group-lg">
                 <span class="input-group-text bg-dark text-light fw-bold" id="sali">SALIDA</span>
                 <input type="date" class="form-control" aria-label="Sizing example input" aria-describedby="spansalida"
@@ -266,7 +281,7 @@
 
           <div class="row d-flex justify-content-center mt-3">
             <button id="btn_salida" type="submit"
-              class="btn btn-light fw-bold fs-6 col-xl-2 col-lg-2 col-md-3 col-sm-3 col-4 border border-dark">CARGAR</button>
+              class="btn btn-light fw-bold fs-6 col-xl-2 col-lg-2 col-md-3 col-sm-3 col-6 border border-dark">CARGAR</button>
           </div>
         </form>
 
@@ -274,7 +289,7 @@
 
 
         <div class="row mt-3">
-          <div class="container text-center col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 bg-dark"
+          <div class="container text-center col-xl-8 col-lg-8 col-md-8 col-sm-10 col-11 bg-dark"
             style="border-radius:15px">
 
             <span class="text-light fw-bold" style="font-size:14px">Digite el DNI de la persona y la fecha de salida
@@ -343,9 +358,8 @@
 
         <div class="report__causas mt-3">
           <div class="causas__tittle">
-            <label for=""
-              class="col-12 badge bg-primary bg-gradient text-center fs-3 fw-bold rounded rounder-4">REPORTES
-              DE CAUSA POR AÑO</label>
+            <h1 class="badge bg-primary bg-gradient fs-6 fw-bold rounded rounder-4">REPORTES
+              DE CAUSA POR AÑO</h1>
           </div>
           <form action="/phpserv/graficos.php" id="causas_form" method="POST" class="causa__form">
             <input  type="number" min="1900" max="2099" 
@@ -369,7 +383,10 @@
 
     </div>
 
+
+
     <div class="grafico" class="invisible"></div>
+
     <div id="noti"
       class="row col-xl-9 col-lg-9 col-md-9 col-sm-10 col-11 border border-4 border-success d-flex justify-content-center mt-5 invisible">
 
@@ -382,9 +399,9 @@
 
 
         <div class="row d-flex justify-content-center mt-4">
-          <div class="col-xl-5 col-lg-5 col-md-6 col-sm-6 col-7">
+          <div class="col-xl-5 col-lg-5 col-md-6 col-sm-10 col-11">
             <div class="input-group input-group-lg">
-              <span class="input-group-text bg-warning text-light fw-bold" id="spandni">TITULO</span>
+              <h1 class="input-group-text bg-warning text-light fw-bold" id="spandni">TITULO</h1>
               <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="spandni"
                 id="inp-titu" name="desde">
             </div>
@@ -406,11 +423,11 @@
 
 
             <form action="" method="post" enctype="multipart/form-data" id="form_img">
-              <div class="mb-3 text-center">
-                <label for="inp-img" class="form-label badge bg-info" style="font-size:18px">Imagen que llevara la
-                  Noticia</label>
+              
+                <div  class="badge bg-info" style="font-size:18px">Imagen que llevara la
+                  Noticia</div>
                 <input class="form-control" type="file" id="inp-img" name="inp-img">
-              </div>
+              
           </div>
           </form>
         </div>
@@ -512,9 +529,14 @@
 
     function cambio() {
       const this_nav = this.name;
+      const welcome = document.querySelector(".bienvenida");
+      const welcome_style = window.getComputedStyle(welcome);
+      const welcome_display = welcome_style.getPropertyValue('display');
 
+      if(welcome_display==="flex") {  welcome.style.setProperty('display','none')} 
+      
       ventanas.forEach(vent => {
-        console.log(vent);
+        
         if (this_nav === vent.id) {
           vent.classList.remove("invisible");
         }

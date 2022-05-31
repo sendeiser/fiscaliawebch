@@ -231,6 +231,7 @@ body .ventanas-cont {
     height:100%;
     background-color: #f5e6ca;
     overflow-x: hidden;
+    padding: 0.8rem 0.8em;
 }
 #regexp label
 {

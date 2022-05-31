@@ -127,7 +127,13 @@ if (btn_d) {
                       </div>
                     </div>
      `
-        } else {
+        } 
+        else if (data==='dninoexiste')
+        {
+              alert('El DNI  que ingreso no existe por favor ingrese un DNI ya cargado previamente.')
+        }
+
+        else {
           respuesta_d.innerHTML = `
          <br>
                          <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -210,7 +216,7 @@ if (btn_exp) {
     fetch('/phpserv/regexp.php', {
         method: 'POST',
         body: datos_exp
-      }).then(res => res.json())
+      }).then(res => console.log(res.json()))
       .then(data => {
         if (data === 'personanueva') {
           Swal.fire({
@@ -251,6 +257,8 @@ if (btn_salida) {
         body: datos_sali
       }).then(res => res.json())
       .then(data => {
+        console.log(data);
+
         if (data === 'exitoso') {
           Swal.fire({
             title: 'Registro Exitoso',
@@ -258,11 +266,21 @@ if (btn_salida) {
             html: `<span class="text-success text-center">La Fecha del Expediente para el DNI: <span class="text-center badge bg-dark text-light fs-5"> ${datos_sali.get('dni1')} </span> fue registrado exitosamente a la base de datos</span>`,
             confirmButton: 'Aceptar'
           })
-        } else {
+        }
+        else if(data === 'dninoexiste')
+        {
           Swal.fire({
             title: 'ERROR',
-            icon: 'warning',
-            html: `<span class="text-success text-center">Hubo erro inesperado al cargar los datos.</span><br><span class="text-center text-info">${data}</span>`,
+            icon: 'error',
+            html: `<span class="text-danger text-center">El DNI igresado no existe en la base de datos, por favor verifique.</span><br><span class="text-center text-info text-uppercase">${data}</span>`,
+            confirmButton: 'Aceptar'
+          })
+        } 
+        else {
+          Swal.fire({
+            title: 'ERROR',
+            icon: 'error',
+            html: `<span class="text-danger text-center">Hubo erro inesperado al cargar los datos.</span><br><span class="text-center text-info">${data}</span>`,
             confirmButton: 'Aceptar'
           })
 

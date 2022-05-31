@@ -76,7 +76,7 @@ include("phpserv/connect.php");
     <br>
     <div class="denuncia__titulo">
 
-      <h1  class="registitulo ">Estado de la Denuncia</h1>
+      <h1  class="registitulo ">Estado de su Denuncia</h1>
 
     </div>
     <br>
@@ -104,19 +104,25 @@ include("phpserv/connect.php");
           <div class="container" style="height: 1vh;"></div>
 
           <?php
-          $dni = $_POST['dni1'];
+
+          if(isset($_POST['dni1']))
+          {
+            $dni = $_POST['dni1'];
+          
 
           //  3.- VISUALIZACIÓN DE LOS DATOS
           $query = "SELECT * FROM expedientes WHERE dnidenunciante='$dni'";
           $result = mysqli_query($conexion, $query);
           //$array=mysqli_fetch_array($result); 
-
+        
           while ($row = $result->fetch_array()) {
             $last = end($row);
           }
+        
           echo "</ol>";
+
           if (isset($dni)) {
-            if ($last == NULL) { ?>
+            if ($last === NULL) { ?>
               <br>
               <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
                 <symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16">
@@ -151,7 +157,7 @@ include("phpserv/connect.php");
           <?php }
           }
           mysqli_free_result($result);
-
+        }
           ?>
 
 

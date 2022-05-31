@@ -310,7 +310,7 @@ button:active {
 }
 
 .denuncia__img {
-     margin: 0;
+     margin: 1rem 0;
      max-width: 450px;
      min-width: 200px;
 }
@@ -326,6 +326,7 @@ button:active {
 .denuncia__container__form {
      width: 100%;
      background-color: #00d9ff22;
+     padding: 1rem;
 }
 
 .denuncia__label {
@@ -333,6 +334,7 @@ button:active {
      border-radius: 10px;
      padding: 10px;
      width: auto;
+     margin: 1rem;
 }
 
 .denuncia__label p {

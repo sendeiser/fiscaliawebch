@@ -61,8 +61,9 @@
 
 
       <a class="nav-link1 border " onclick="accion()" name="expsali" href="#">
-        <lord-icon src="https://cdn.lordicon.com/lywgqtim.json" trigger="loop" delay="70"
-          style="width:40px;height:40px">
+        <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
+        <lord-icon src="https://cdn.lordicon.com/wxnxiano.json" trigger="loop"
+          colors="primary:#121331,secondary:#0a4e5c" stroke="100" style="width:40px;height:40px">
         </lord-icon>Registrar Salida
       </a>
 
@@ -110,16 +111,25 @@
 
   <div id="ventanas" class="ventanas-cont">
     <!-- FORMULARIOS DEL CONTENEDOR -->
-    
+
     <div class="bienvenida">
       <h1 class="title__bienvenida">S.A.G.D.F.</h1>
       <h1 class="title__bienvenida subtitle__bienvenida">Sistema Administrativo de Gestion Documentaria Fiscal.</h1>
       <figure><img src="./images/title_welcome.png" alt=""></figure>
       <div class="body__bienvenida">
-          <h2>Bienvenido al Sistema de Gestion de Fiscalia Chamical. </h2>
-          <p> 
-          Aqui podra crear altas de expedientes de denuncias a partir de los datos correspendiente necesarios para cada una de ellas. Otra de las posibilidades del sistema es el de poder consultar el alta de fecha de salida del expediente para verificar si pasado al area correspondiente o no  poder dar el alta de esa fecha segun corresponda. Otras de las varias funciones que tendremos a disposicion son la de poder hacer modificaciones dentro de tablas conectadas a la base de datos en donde podremos agregar, modificar, eliminar y consultar datos de los expedientes, las personas y las comisarias; con opciones adicionales como la de crear informes de tipo pdf,excel y hasta poder imprimir desde la misma tabla todos los datos. Por ultimo tambien tendremos dos apartados mas en donde se podra crear informes a partir de fechas o tipo de causa dadas por el usuario y un menu de noticias que tiene la funcion de poder crear tarjetas de noticias para la pagina principal de "Fiscalia Chamical"</p>
-          
+        <h2>Bienvenido al Sistema de Gestion de Fiscalia Chamical. </h2>
+        <p>
+          Aqui podra crear altas de expedientes de denuncias a partir de los datos correspendiente necesarios para cada
+          una de ellas. Otra de las posibilidades del sistema es el de poder consultar el alta de fecha de salida del
+          expediente para verificar si pasado al area correspondiente o no poder dar el alta de esa fecha segun
+          corresponda. Otras de las varias funciones que tendremos a disposicion son la de poder hacer modificaciones
+          dentro de tablas conectadas a la base de datos en donde podremos agregar, modificar, eliminar y consultar
+          datos de los expedientes, las personas y las comisarias; con opciones adicionales como la de crear informes de
+          tipo pdf,excel y hasta poder imprimir desde la misma tabla todos los datos. Por ultimo tambien tendremos dos
+          apartados mas en donde se podra crear informes a partir de fechas o tipo de causa dadas por el usuario y un
+          menu de noticias que tiene la funcion de poder crear tarjetas de noticias para la pagina principal de
+          "Fiscalia Chamical"</p>
+
       </div>
       <div class="footer__welcome">
 
@@ -128,10 +138,10 @@
 
     <div id="estden" class="invisible">
       <div class="container p-1 col-lg-12 col-11" style="background-color: #f5e6ca">
-        
-          <h1 class="badge bg-primary bg-gradient text-center fs-3 fw-bold rounded rounder-4" style="width: 100%;">Estado
-            de las Denuncias</h1>
-        
+
+        <h1 class="badge bg-primary bg-gradient text-center fs-3 fw-bold rounded rounder-4" style="width: 100%;">Estado
+          de las Denuncias</h1>
+
         <form action="" method="POST" id="form-denu">
           <div class="row d-flex justify-content-center mt-4">
             <div class="col-xl-5 col-lg-7 col-md-7 col-sm-7 col-9">
@@ -167,31 +177,32 @@
 
     <div id="reg-exp" class="m-2  bg-light  border border-2 border-primary invisible">
 
-      <h1  class="registitulo text-center">Registro de
+      <h1 class="registitulo text-center">Registro de
         Expedientes</h1>
       <form id="regexp" method="post" class="">
 
-        <label for="dni"><u>Datos del Denunciante</u> 
+        <label for="dni"><u>Datos del Denunciante</u>
           <input type="number" class="form-control" name="dni" id="inp_dni" placeholder="DNI*" required>
           <input type="text" class="form-control" name="nombre" id="inp_nombre" placeholder="Nombre*">
           <input type="text" class="form-control" name="apellido" id="inp_apellido" placeholder="Apellido*">
         </label>
 
-        <label><u>Datos del Denunciado</u> 
+        <label><u>Datos del Denunciado</u>
           <input type="text" class="form-control" name="denunciado" id="floatingInput" placeholder="Nombre*" required>
         </label>
 
-        <label><u>Datos a Completar</u> 
+        <label><u>Datos a Completar</u>
           <input type="number" class="form-control" name="fojas" id="floatingInput" placeholder="Fojas*" required>
 
           <input type="number" class="form-control" name="librodeactas" id="floatingInput" placeholder="Libro de Actas*"
             required>
 
-          <input type="number" class="form-control" name="nroexpediente" id="floatingInput"
+          <input type="number" class="form-control" name="nroexpediente" id="nro-exp"
             placeholder="Numero de Expediente*" required>
 
           <input autocomplete="off" type="number" class="form-control" name="comisaria" id="comisarias"
-            placeholder="Comisaria*" maxlength="1" data-bs-toggle="popover" data-bs-trigger="focus" title="Comisarias" data-bs-content="1.Comisaria Primera Chamical-------
+            placeholder="Comisaria*" maxlength="1" data-bs-toggle="popover" data-bs-trigger="focus" title="Comisarias"
+            data-bs-content="1.Comisaria Primera Chamical-------
                2.Comisaria Segunda Chamical-----
                3.Comisaria de la Mujer Chamical
                4.Comisaria de Olta-----------------------            
@@ -316,7 +327,7 @@
 
     <div id="informes" class="invisible">
 
-      <div class="informe__container" >
+      <div class="informe__container">
 
         <form action="/phpserv/informes/reporte.php" method="POST" class="form__reportes">
           <div class="reportes__tittle d-flex justify-content-center">
@@ -362,9 +373,8 @@
               DE CAUSA POR AÑO</h1>
           </div>
           <form action="/phpserv/graficos.php" id="causas_form" method="POST" class="causa__form">
-            <input  type="number" min="1900" max="2099" 
-             size="4" class="causas__select" name="anio" id="anio">
-           
+            <input type="number" min="1900" max="2099" size="4" class="causas__select" name="anio" id="anio">
+
             </input>
             <!-- <input type="text"> -->
             <button id="btn__causas" type="submit" class="btn btn-light fw-bold  border border-dark">Generar
@@ -372,7 +382,8 @@
             <div class="d-flex justify-content-center">
               <div class="container text-center col-10" style="background-color:#5d2cff;border-radius: 15px">
 
-                <span class="text-light fw-bold">Se generara un grafico de torta del año que elija con las causas.</span>
+                <span class="text-light fw-bold">Se generara un grafico de torta del año que elija con las
+                  causas.</span>
               </div>
             </div>
           </form>
@@ -423,11 +434,11 @@
 
 
             <form action="" method="post" enctype="multipart/form-data" id="form_img">
-              
-                <div  class="badge bg-info" style="font-size:18px">Imagen que llevara la
-                  Noticia</div>
-                <input class="form-control" type="file" id="inp-img" name="inp-img">
-              
+
+              <div class="badge bg-info" style="font-size:18px">Imagen que llevara la
+                Noticia</div>
+              <input class="form-control" type="file" id="inp-img" name="inp-img">
+
           </div>
           </form>
         </div>
@@ -466,7 +477,7 @@
 
   <footer>
     <div class="item-foot">
-      © 2021 Copyright: Fiscalia - Chamical,La Rioja - Argentina
+      © 2021 Copyright: Fiscalia - Chamical, La Rioja - Argentina
     </div>
   </footer>
 
@@ -533,10 +544,10 @@
       const welcome_style = window.getComputedStyle(welcome);
       const welcome_display = welcome_style.getPropertyValue('display');
 
-      if(welcome_display==="flex") {  welcome.style.setProperty('display','none')} 
-      
+      if (welcome_display === "flex") { welcome.style.setProperty('display', 'none') }
+
       ventanas.forEach(vent => {
-        
+
         if (this_nav === vent.id) {
           vent.classList.remove("invisible");
         }
@@ -559,14 +570,12 @@
     inp_dni.addEventListener("keyup", function () {
       dni = $(this).val();
 
-      console.log(dni);
-
       $.post("phpserv/persona.php", {
         dni
       }, (response) => {
         json = JSON.parse(response);
 
-        console.log(json);
+        
         if (json == "no") {
           $("#inp_nombre").val("Persona No Registrada");
           $("#inp_apellido").val("Complete DNI,Nombre y Apellido");
@@ -576,6 +585,23 @@
         }
       });
     });
+
+    var inp_nroexp = document.getElementById("nro-exp");
+
+    inp_nroexp.addEventListener("keyup",function(){
+      var nroexp = $(this).val();
+
+      $.post("phpserv/persona.php",{
+        nroexp
+      },(response) => {
+        json1 = JSON.parse(response);
+
+        if (json1 == "si") {
+          alert("El Numero de Expediente ya existe en la base de datos, por favor verifique y/o ingrese uno nuevo.")
+        }
+      })
+    })
+
 
     var popoverTriggerList = [].slice.call(
       document.querySelectorAll('[data-bs-toggle="popover"]')

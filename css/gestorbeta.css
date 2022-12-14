@@ -247,6 +247,33 @@ body .ventanas-cont {
     color: #8df308f7;
 }
 
+.tomard-container
+{
+    display: flex;
+    
+    align-content: center;
+    gap: 5px;  
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    padding: 0 2px;
+}
+.tomard-container i
+{
+    line-height:1.5;
+}
+.tomard 
+{
+    display: none;
+    margin: auto;
+}
+
+.tomard-container:active .tomard
+{
+    display: block;
+    
+}
+
 #estden {
    position: absolute;
     z-index: 1;

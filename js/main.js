@@ -379,6 +379,43 @@ if (btn_noti) {
 
 }
 
+var manual = document.getElementById('manual');
+
+manual.addEventListener('click',  (e) => {
+  e.preventDefault();
+  var manual_option = document.getElementById('manual_opcion');
+if(manual_option.style.display == 'none')
+{
+  manual_option.style.cssText = 'display: grid';
+}
+else
+{
+  manual_option.style.cssText = 'display: none';
+}
+
+} )
+
+let ver_manual = document.getElementById('ver_manual');
+
+ver_manual.addEventListener('click', (e) => {
+  e.preventDefault();
+  window.location.href = "viewmanual.html";
+})
+
+let descargar_manual = document.getElementById('descargar_manual');
+
+descargar_manual.addEventListener('click', (e) => {
+  e.preventDefault();
+  window.location.href = "MANUAL DE USUARIO Y ADM DE S.A.G.D.F. 2022 0212.pdf"
+})
+
+
+document.getElementById('tomar_den').addEventListener('click', (e) => {
+
+e.preventDefault();
+const doc = "https://docs.google.com/document/d/17piMDm0Ohw7PAWDyZgaRlpa4Uf97-Nuy/edit?usp=sharing&ouid=116680726476718182494&rtpof=true&sd=true";
+window.open(doc,"_blank");
+})
 //Reportes Graficos 
 
 /* function crearCadenaLineal(json){

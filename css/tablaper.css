@@ -1,0 +1,16 @@
+/* Estilos para el HEAD de la tabla */
+table.dataTable thead {
+    background-color:linear-gradient(180deg,#f21170,#72147e);color: #ff5200;font-size:larger}
+
+/* Estilos para los botones de paginacion */
+
+
+
+.page-item.active .page-link {
+    background-color: #150f16 !important;
+    color: #f21170 !important;
+    border: 1px solid black;
+}
+.page-link {
+    color: black !important;
+}

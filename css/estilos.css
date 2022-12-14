@@ -1,0 +1,537 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+h2
+{
+     font-family: 'Pacifico', cursive;
+     text-shadow: 0px 2px 3px #ffff;
+}
+.text {
+     color: #00E6FF45;
+}
+
+.pg1
+{
+     font-family: 'Pacifico', cursive;
+     text-shadow: 0px 2px 3px #ffff;
+}
+.letraslgc {
+     font-size: large;
+     font-weight: bold;
+     margin-inline: 41%;
+     color: #126e82;
+}
+
+.letraslgco {
+     font-size: large;
+     font-weight: bold;
+     color: #126e82;
+}
+
+.form-text {
+     color: #f0e3ca;
+}
+
+.letrasreg {
+
+     font-size: medium;
+     font-weight: bold;
+     color: #23795c71;
+}
+
+
+.logintitulo {
+     font-size: 40px;
+     font-weight: bold;
+     background-image: url('/images/info.jpg');
+     color: #687980;
+     margin-top: 1px;
+     border: 3px solid #b4a5a5;
+     text-shadow: 4px 3px 2px rgb(250, 250, 250);
+}
+
+button {
+     background-color: #fff;
+     color: #126e82;
+     border: 1px solid #126e82;
+     font-size: 30px;
+     font-weight: bold;
+     box-shadow: 0 9px #999;
+
+}
+
+.button:hover {
+     background-color: #126e82;
+     color: white;
+}
+
+button:active {
+     box-shadow: 0 5px #666;
+     transform: translateY(4px);
+
+}
+.btn-close
+{
+     height: .5rem !important;
+}
+
+.containerlogin {
+     margin: 25px;
+     padding-top: 15px;
+     background: linear-gradient(-75deg, #2F5D62, #5E8B7E, #A7C4BC);
+     border: 5px solid #DFEEEA;
+     border-radius: 10px;
+
+}
+
+
+.containerregis {
+     margin: 25px;
+     padding-top: 15px;
+     background: linear-gradient(-75deg, #2F5D62, #5E8B7E, #A7C4BC);
+     border: 5px solid #DFEEEA;
+}
+
+.containerinicio {
+     border: 1px solid red;
+     width: max-width;
+     height: max-height;
+}
+
+
+.containerexp {
+     background-color: #edffec;
+
+}
+
+.letrasexp {
+     color: #126e82;
+     font-weight: bold;
+
+}
+
+.container-table {
+
+     background: white;
+     color: red;
+     font-weight: bold;
+     font-size: 20px;
+     width: 50vw;
+}
+
+.verilogin {
+     font-size: 20px;
+     font-weight: bold;
+     border: 3px solid black;
+     border-radius: 5px;
+     text-shadow: 2px 2px 5px white;
+}
+
+.contacto__body__mapa {
+     height: auto;
+     width: 100%;
+     min-width: 240px;
+}
+
+#principal {
+     margin-top: -30px;
+     background-image: url('/images/oscu.jpg');
+     height: max-content !important;
+     max-width: 450vw !important;
+}
+
+#nomelacont {
+     display: flex;
+}
+
+#princi1 {
+     border-radius: 10px;
+     height: auto;
+     padding: 10px;
+     position: relative;
+     top: 30vh;
+     background: linear-gradient(0deg, rgba(42, 7, 238, 0.514), rgba(62, 113, 145, 0.856), rgb(92, 0, 149));
+     box-shadow: 0 10px 20px rgb(22, 209, 193), 0 6px 6px rgba(0, 0, 0, 0.23);
+     margin: 20px;
+}
+
+.bien {
+     font-family: 'Pacifico', cursive;
+     text-shadow: 0px 2px 3px #ffff;
+     text-align: center;
+     color:hsl(188.5, 97.1%, 72.9%);
+}
+
+.bien1 {
+     font-family: 'Pacifico', cursive;
+     color: hsl(222.2, 100%, 64.9%);
+     text-shadow: 0px 2px 3px rgb(91, 54, 255);
+}
+
+#title1row {
+     position: relative;
+     padding: 27px;
+     margin-bottom: -25vh;
+}
+
+#title1cont {
+     width: auto;
+     background-color: hsla(246, 68%, 36%, 0.466);
+     box-shadow: 1px 0px 10px rgb(235, 235, 235);
+}
+
+
+.contenido1 {
+     padding: 10px;
+}
+
+.contenidotexto {
+     margin-bottom: 2px;
+}
+
+.pol1 {
+     font-size: 30px;
+     text-align: center;
+     color: hsl(209, 70%, 90%);
+     background-color: #7b113a;
+     padding: 7px;
+}
+
+#polh1:hover {
+     color: #00d9ff
+}
+
+#polh2:hover {
+     color: #df4545
+}
+
+#polh3:hover {
+     color: #f6e70e
+}
+
+#pol1:active {
+     color: rgb(200, 219, 24)
+}
+
+#pip1 {
+     color: hsl(0, 90%, 95%);
+}
+
+#pol2 {
+     text-align: left;
+     color: hsl(0, 0%, 99%);
+}
+
+.lin {
+     color: #edffa9;
+}
+
+.lin:hover {
+     color: #126e82
+}
+
+#carru {
+     margin-top: 25vh;
+     margin-bottom: -25vh;
+
+}
+
+#contornoimagen {
+     border: 5px solid rgb(126, 17, 17);
+     border-radius: 20px;
+     background-color: #2f0808
+}
+
+.main__denuncia__estado {
+     display: flex;
+     flex-direction: column;
+     background-image: url('/images/oscu.jpg');
+     height: auto;
+     width: 100%;
+     align-items: center;
+}
+
+.dl, ol, ul 
+{
+   margin: 0 !important; 
+   padding-left: 0 !important; 
+}
+
+.denuncia__titulo {
+     justify-content: center;
+     align-items: center;
+     margin: 1rem auto;
+}
+
+.registitulo {
+     height: min-content;
+     width: 100%;
+     font-size: 3rem;
+     font-weight: bold;
+     background-image: url('/images/info.jpg');
+     border: 5px solid #98b4ac;
+     text-shadow: 4px 2px 5px white;
+     text-align: center;
+     border-radius: 10px;
+     color: #0de77ed0;
+     padding: 5px;
+     margin: 0 auto;
+}
+
+.comisaria {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     background: url("../images/madera1.jpg") center/cover no-repeat;
+}
+.comisaria__title__container
+{
+     display: flex;
+     flex-wrap: wrap;
+     width: 100%;
+     justify-content: center;
+     
+}
+.comisaria__title {
+     
+     color: #340441;
+     font-weight: bold;
+     font-size: 30px;
+     background-color: #185adb;
+     padding: 10px;
+     border-radius: 30px;
+     text-align: center;
+     width: max-content;
+     box-shadow: 1px -1px 20px rgb(32, 238, 228);
+     font-family: 'Pattaya', sans-serif;
+     margin: 20px 5px;
+}
+
+.comisaria__body {
+     margin-bottom: 2rem;
+}
+
+.contacto__body {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     height: auto;
+     font-family: 'Mate SC', serif;
+     font-weight: bold;
+     margin: 1.5rem 1rem;
+     gap: 2rem;
+}
+
+#denuncia {
+     display: flex;
+     justify-content: center;
+     font-family: 'Mate SC', serif;
+     font-weight: bold;
+     align-items: center;
+}
+
+.denuncia__img {
+     margin: 1rem 0;
+     max-width: 450px;
+     min-width: 200px;
+}
+
+.denuncia__img img {
+     width: 100%;
+     height: auto;
+     background: radial-gradient(#f3f3f382, #76bb1e00);
+     border-radius: 50%;
+     box-shadow: 0px 1px 5px #1b3e66, 0px 2px 5px #143e6e, 0px 3px 5px #163c67;
+}
+
+.denuncia__container__form {
+     width: 100%;
+     background-color: #00d9ff22;
+     padding: 1rem;
+}
+
+.denuncia__label {
+     background-color: #faf2da;
+     border-radius: 10px;
+     padding: 10px;
+     width: auto;
+     margin: 1rem;
+}
+
+.denuncia__label p {
+     margin-bottom: 0;
+}
+
+.alert-mod {
+     width: fit-content;
+     margin: 0 auto;
+}
+
+.contacto {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     flex-wrap: wrap;
+     background-image: url('/images/oscu.jpg');
+}
+
+.contacto__title {
+     color: #fff8d9;
+     font-weight: bold;
+     font-size: 40px;
+     background-color: #343f56;
+     padding: 5px;
+     border-radius: 30px;
+     text-align: center;
+     width: 100%;
+     box-shadow: 1px -1px 20px rgb(241, 13, 154);
+     font-family: 'Pattaya', sans-serif;
+
+}
+
+.contacto__body__info {
+     background: linear-gradient(45deg, rgb(1, 0, 3), rgb(80, 74, 138));
+     text-align: center;
+     border-radius: 15px;
+     box-shadow: 1px -2px 15px rgba(245, 245, 245, 0.432);
+     border: 3px dashed #fff;
+     padding: 0.7rem;
+}
+
+.contacto__title_container {
+     margin: 1.5rem 0;
+}
+
+.itemstitucont {
+     color: #a5e1ad;
+     text-decoration: underline;
+}
+
+.itemstitucont1 {
+     color: #faf1e6;
+}
+
+.btn-close {
+     background-color: rgba(255, 255, 255, 0);
+}
+
+.sociales {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     position: fixed;
+     z-index: 2;
+     padding: 4px;
+     left: 0;
+     top: 250px;
+     width: 37px;
+     height: 120px;
+     background-color: #33333392;
+     border: 2px 2px 10px solid #ee1515;
+     border-radius: 5px;
+     box-shadow: 1px 1px 10px #ffffff;
+}
+div.sociales a i
+{
+  border-radius: 35%;
+}
+div.sociales a:nth-child(1)>i {
+     font-size: 28px;
+     background: linear-gradient(75deg, white, blue, blue, white);
+}
+
+div.sociales a:nth-child(2)>i {
+     font-size: 30px;
+     background: linear-gradient(110deg, white, rgb(255, 255, 1), rgb(255, 136, 0), red, rgb(233, 21, 162), rgb(128, 0, 160), blue, cyan);
+     color: white;
+}
+
+div.sociales a:nth-child(3)>i 
+{
+     font-size:30px;color:white;background: linear-gradient(rgb(164, 229, 164),#2ecc12);
+}
+
+#gestor {
+     display: flex;
+     background-image: url('images/menuabs.jpg');
+     height: auto;
+}
+
+
+#menucel {
+     visibility: hidden;
+     position: absolute;
+     background-color: darkslategrey;
+
+}
+
+@media (max-width:1500px) {
+     #principal {
+          height: 160vh;
+     }
+
+}
+
+@media (max-width:1200px) {
+     #principal {
+          height: 250vh;
+     }
+
+}
+
+@media (max-width:992px) {
+
+     #menugestor {
+          visibility: hidden;
+          height: 0px;
+     }
+
+     #menucel {
+          visibility: visible;
+          width: 100%;
+          min-width: 101vw;
+     }
+
+     #gestor {
+          margin-top: 75px;
+     }
+
+     #gestor {
+          height: 125vh !important;
+     }
+}
+
+@media (max-width:773px) {
+     #principal {
+          height: 280vh;
+     }
+
+     #gestor {
+          height: 125vh !important;
+     }
+}
+
+@media (max-width: 670px) {
+     #principal {
+          height: 280vh;
+     }
+
+     #gestor {
+          height: 125vh !important;
+     }
+}
+
+@media (max-width: 576px) {
+     #gestor {
+          height: 115vh !important;
+     }
+
+     #denuncia {
+          flex-wrap: wrap;
+     }
+}
+

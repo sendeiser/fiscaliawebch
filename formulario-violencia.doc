@@ -1,0 +1,1868 @@
+{\rtf1\ansi\ansicpg1252{\fonttbl{\f0\froman\fcharset0 Times New Roman;}{\f1\fswiss\fcharset0 Calibri;}{\f2\fswiss\fcharset0 Calibri;}}{\colortbl ;\red0 \green0 \blue0;\red255 \green255 \blue255;}{\stylesheet{\fs22\f1\sqformat\spriority1 Normal}{\s1\f1\fs24\b1\sbasedon0\sqformat\spriority1 Body Text}{\s2\li4223\fi-2563\ri1645\sb26\f1\fs28\b1\sbasedon0\sqformat\spriority1 Title}{\s3\li440\fi-258\f1\sbasedon0\sqformat\spriority1 List Paragraph}{\s4\f2\sbasedon0\sqformat\spriority1 Table Paragraph}}{\*\listtable{\list\listtemplateid2181{\listlevel\levelnfc1\levelstartat2\leveljc0\li376\fi-193{\leveltext\'02\'00.;}{\levelnumbers\'01;}\f1\fs22\b1\expnd0\expndtw-1\charscalex100}{\listlevel\levelnfc4\levelstartat1\leveljc0\li990\fi-212{\leveltext\'02\'01);}{\levelnumbers\'01;}\f2\fs20\b0\charscalex100}{\listlevel\levelnfc23\leveljc0\li1984\fi-212{\leveltext\'01\'95;}{\levelnumbers;}}{\listlevel\levelnfc23\leveljc0\li2969\fi-212{\leveltext\'01\'95;}{\levelnumbers;}}{\listlevel\levelnfc23\leveljc0\li3954\fi-212{\leveltext\'01\'95;}{\levelnumbers;}}{\listlevel\levelnfc23\leveljc0\li4939\fi-212{\leveltext\'01\'95;}{\levelnumbers;}}{\listlevel\levelnfc23\leveljc0\li5924\fi-212{\leveltext\'01\'95;}{\levelnumbers;}}{\listlevel\levelnfc23\leveljc0\li6909\fi-212{\leveltext\'01\'95;}{\levelnumbers;}}{\listlevel\levelnfc23\leveljc0\li7894\fi-212{\leveltext\'01\'95;}{\levelnumbers;}}\listid1026}{\list\listtemplateid2182{\listlevel\levelnfc4\levelstartat1\leveljc0\li430\fi-248{\leveltext\'02\'00);}{\levelnumbers\'01;}\b1\charscalex100}{\listlevel\levelnfc23\leveljc0\li1382\fi-248{\leveltext\'01\'95;}{\levelnumbers;}}{\listlevel\levelnfc23\leveljc0\li2324\fi-248{\leveltext\'01\'95;}{\levelnumbers;}}{\listlevel\levelnfc23\leveljc0\li3267\fi-248{\leveltext\'01\'95;}{\levelnumbers;}}{\listlevel\levelnfc23\leveljc0\li4209\fi-248{\leveltext\'01\'95;}{\levelnumbers;}}{\listlevel\levelnfc23\leveljc0\li5152\fi-248{\leveltext\'01\'95;}{\levelnumbers;}}{\listlevel\levelnfc23\leveljc0\li6094\fi-248{\leveltext\'01\'95;}{\levelnumbers;}}{\listlevel\levelnfc23\leveljc0\li7037\fi-248{\leveltext\'01\'95;}{\levelnumbers;}}{\listlevel\levelnfc23\leveljc0\li7979\fi-248{\leveltext\'01\'95;}{\levelnumbers;}}\listid1027}{\list\listtemplateid2183{\listlevel\levelnfc4\levelstartat2\leveljc0\li440\fi-257{\leveltext\'02\'00);}{\levelnumbers\'01;}\f1\fs24\b1\expnd0\expndtw-1\charscalex100}{\listlevel\levelnfc4\levelstartat1\leveljc0\li1802\fi-203{\leveltext\'02\'01);}{\levelnumbers\'01;}\f2\fs20\b0\charscalex100}{\listlevel\levelnfc23\leveljc0\li2696\fi-203{\leveltext\'01\'95;}{\levelnumbers;}}{\listlevel\levelnfc23\leveljc0\li3592\fi-203{\leveltext\'01\'95;}{\levelnumbers;}}{\listlevel\levelnfc23\leveljc0\li4488\fi-203{\leveltext\'01\'95;}{\levelnumbers;}}{\listlevel\levelnfc23\leveljc0\li5384\fi-203{\leveltext\'01\'95;}{\levelnumbers;}}{\listlevel\levelnfc23\leveljc0\li6280\fi-203{\leveltext\'01\'95;}{\levelnumbers;}}{\listlevel\levelnfc23\leveljc0\li7176\fi-203{\leveltext\'01\'95;}{\levelnumbers;}}{\listlevel\levelnfc23\leveljc0\li8072\fi-203{\leveltext\'01\'95;}{\levelnumbers;}}\listid1028}{\list\listtemplateid2184{\listlevel\levelnfc4\levelstartat10\leveljc0\li183\fi-190{\leveltext\'02\'00);}{\levelnumbers\'01;}\f1\fs24\b1\expnd0\expndtw-1\charscalex100}{\listlevel\levelnfc23\leveljc0\li1148\fi-190{\leveltext\'01\'95;}{\levelnumbers;}}{\listlevel\levelnfc23\leveljc0\li2116\fi-190{\leveltext\'01\'95;}{\levelnumbers;}}{\listlevel\levelnfc23\leveljc0\li3085\fi-190{\leveltext\'01\'95;}{\levelnumbers;}}{\listlevel\levelnfc23\leveljc0\li4053\fi-190{\leveltext\'01\'95;}{\levelnumbers;}}{\listlevel\levelnfc23\leveljc0\li5022\fi-190{\leveltext\'01\'95;}{\levelnumbers;}}{\listlevel\levelnfc23\leveljc0\li5990\fi-190{\leveltext\'01\'95;}{\levelnumbers;}}{\listlevel\levelnfc23\leveljc0\li6959\fi-190{\leveltext\'01\'95;}{\levelnumbers;}}{\listlevel\levelnfc23\leveljc0\li7927\fi-190{\leveltext\'01\'95;}{\levelnumbers;}}\listid1029}{\list\listtemplateid2185{\listlevel\levelnfc0\levelstartat1\leveljc0\li249\fi-250{\leveltext\'02\'00);}{\levelnumbers\'01;}\f1\fs24\b1\expnd0\expndtw-1\charscalex100}{\listlevel\levelnfc23\leveljc0\li598\fi-250{\leveltext\'01\'95;}{\levelnumbers;}}{\listlevel\levelnfc23\leveljc0\li956\fi-250{\leveltext\'01\'95;}{\levelnumbers;}}{\listlevel\levelnfc23\leveljc0\li1314\fi-250{\leveltext\'01\'95;}{\levelnumbers;}}{\listlevel\levelnfc23\leveljc0\li1673\fi-250{\leveltext\'01\'95;}{\levelnumbers;}}{\listlevel\levelnfc23\leveljc0\li2031\fi-250{\leveltext\'01\'95;}{\levelnumbers;}}{\listlevel\levelnfc23\leveljc0\li2389\fi-250{\leveltext\'01\'95;}{\levelnumbers;}}{\listlevel\levelnfc23\leveljc0\li2747\fi-250{\leveltext\'01\'95;}{\levelnumbers;}}{\listlevel\levelnfc23\leveljc0\li3106\fi-250{\leveltext\'01\'95;}{\levelnumbers;}}\listid1030}{\list\listtemplateid2186{\listlevel\levelnfc4\levelstartat4\leveljc0\li256\fi-257{\leveltext\'02\'00);}{\levelnumbers\'01;}\f1\fs24\b1\expnd0\expndtw-1\charscalex100}{\listlevel\levelnfc23\leveljc0\li1037\fi-257{\leveltext\'01\'95;}{\levelnumbers;}}{\listlevel\levelnfc23\leveljc0\li1815\fi-257{\leveltext\'01\'95;}{\levelnumbers;}}{\listlevel\levelnfc23\leveljc0\li2593\fi-257{\leveltext\'01\'95;}{\levelnumbers;}}{\listlevel\levelnfc23\leveljc0\li3370\fi-257{\leveltext\'01\'95;}{\levelnumbers;}}{\listlevel\levelnfc23\leveljc0\li4148\fi-257{\leveltext\'01\'95;}{\levelnumbers;}}{\listlevel\levelnfc23\leveljc0\li4926\fi-257{\leveltext\'01\'95;}{\levelnumbers;}}{\listlevel\levelnfc23\leveljc0\li5704\fi-257{\leveltext\'01\'95;}{\levelnumbers;}}{\listlevel\levelnfc23\leveljc0\li6481\fi-257{\leveltext\'01\'95;}{\levelnumbers;}}\listid1031}{\list\listtemplateid2187{\listlevel\levelnfc4\levelstartat1\leveljc0\li247\fi-248{\leveltext\'02\'00);}{\levelnumbers\'01;}\f1\fs24\b1\charscalex100}{\listlevel\levelnfc0\levelstartat1\leveljc0\li442\fi-443{\leveltext\'04\'00.\'01);}{\levelnumbers\'01\'03;}\f1\fs24\b1\expnd0\expndtw-1\charscalex100}{\listlevel\levelnfc23\leveljc0\li1417\fi-443{\leveltext\'01\'95;}{\levelnumbers;}}{\listlevel\levelnfc23\leveljc0\li2395\fi-443{\leveltext\'01\'95;}{\levelnumbers;}}{\listlevel\levelnfc23\leveljc0\li3373\fi-443{\leveltext\'01\'95;}{\levelnumbers;}}{\listlevel\levelnfc23\leveljc0\li4350\fi-443{\leveltext\'01\'95;}{\levelnumbers;}}{\listlevel\levelnfc23\leveljc0\li5328\fi-443{\leveltext\'01\'95;}{\levelnumbers;}}{\listlevel\levelnfc23\leveljc0\li6306\fi-443{\leveltext\'01\'95;}{\levelnumbers;}}{\listlevel\levelnfc23\leveljc0\li7283\fi-443{\leveltext\'01\'95;}{\levelnumbers;}}\listid1032}}{\*\listoverridetable{\listoverride\listoverridecount0\listid1032\ls7}{\listoverride\listoverridecount0\listid1031\ls6}{\listoverride\listoverridecount0\listid1030\ls5}{\listoverride\listoverridecount0\listid1029\ls4}{\listoverride\listoverridecount0\listid1028\ls3}{\listoverride\listoverridecount0\listid1027\ls2}{\listoverride\listoverridecount0\listid1026\ls1}}{\info{\author ceportillo}{\creatim\yr2013\mo4\dy23\hr8\min55\sec30}{\revtim\yr2022\mo12\dy14\hr22\min33\sec41}{\title FORMULARIO PARA DENUNCIA DE VIOLENCIA FAMILIAR}}{\*\userprops {\propname Creator}\proptype30{\staticval Acrobat PDFMaker 8.1 for Word}}\jexpand\dntblnsbdb\viewkind1\noxlattoyen\nospaceforul\useltbaln\paperw11910\paperh16840\margl1020\margr1020\margt540\margb960\noindnmbrts\sectd\sbkpage\pgnrestart\pgnstarts1\headery0\footery779
+{\footer 
+{\shp{\*\shpinst\shpleft10591\shpright10831\shptop15841\shpbottom16147\shpbxpage\shpbypage\shpwr3\shpfblwtxt1\shpz0\shplid22{\sp{\sn fBehindDocument}{\sv 1}}
+{\sp{\sn shapeType}{\sv 202}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn txflTextFlow}{\sv 0}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn fLine}{\sv 0}}
+{\sp{\sn dxTextLeft}{\sv 0}}{\sp{\sn dxTextRight}{\sv 0}}{\sp{\sn dyTextTop}{\sv 0}}{\sp{\sn dyTextBottom}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 1}}
+{\shptxt\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\li60\sl240\slmult1\sb10\f0\fs24\b0\charscalex100{\field {\*\fldinst { PAGE }}}\par}}}
+\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl14\slmult1\fs20\par}\pard\plain\s2\nooverflow\nocwrap\lnbrkrule\li4223\fi-2563\ri1645\sl240\slmult1\sb26\f1\fs28\b1 FORMULARIO PARA DENUNCIA DE VIOLENCIA FAMILIAR (LEY 12.569\f2\b0 )\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\li104\sl240\slmult1\f2\fs20
+{\field\fldlock
+{\*\fldinst SHAPE  \\* MERGEFORMAT}
+{\fldrslt 
+{\shpgrp{\*\shpinst\shplid30
+\shpleft0\shptop0\shpright9560\shpbottom1730\shpfhdr0
+\shpbxcolumn\shpbxignore\shpbypara\shpbyignore\shpwr3\shpwrk0\shpfblwtxt1\shpz4
+\shplockanchor
+\shpwr3\shpwrk0\shpfblwtxt1{\sp{\sn groupLeft}{\sv 0}}
+{\sp{\sn groupTop}{\sv 0}}
+{\sp{\sn groupRight}{\sv 9560}}
+{\sp{\sn groupBottom}{\sv 1730}}
+{\sp{\sn fFlipH}{\sv 0}}
+{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn fPseudoInline}{\sv 1}}
+{\sp{\sn lidRegroup}{\sv 0}}
+{\sp{\sn posrelh}{\sv 3}}
+{\sp{\sn posrelv}{\sv 3}}
+
+{\shp{\*\shpinst\shplid31
+{\sp{\sn relLeft}{\sv 0}}
+{\sp{\sn relTop}{\sv 4}}
+{\sp{\sn relRight}{\sv 9560}}
+{\sp{\sn relBottom}{\sv 24}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn shapeType}{\sv 0}}
+{\sp{\sn rotation}{\sv 0}}
+{\sp{\sn geoRight}{\sv 9560}}
+{\sp{\sn geoBottom}{\sv 20}}
+{\sp{\sn shapePath}{\sv 4}}
+{\sp{\sn pVerticies}{\sv 8;2;(0,0);(9559,0)}}
+{\sp{\sn pSegmentInfo}{\sv 2;5;16384;45824;1;45824;32768}}
+{\sp{\sn fFillOK}{\sv 1}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn lineWidth}{\sv 6096}}
+{\sp{\sn lineColor}{\sv 0}}
+{\sp{\sn fLine}{\sv 1}}{\sp{\sn lineType}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 1}}
+{\sp{\sn fArrowheadsOK}{\sv 1}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+}}
+
+{\shp{\*\shpinst\shplid32
+{\sp{\sn relLeft}{\sv 4}}
+{\sp{\sn relTop}{\sv 0}}
+{\sp{\sn relRight}{\sv 24}}
+{\sp{\sn relBottom}{\sv 1730}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn shapeType}{\sv 0}}
+{\sp{\sn rotation}{\sv 0}}
+{\sp{\sn geoRight}{\sv 20}}
+{\sp{\sn geoBottom}{\sv 1730}}
+{\sp{\sn shapePath}{\sv 4}}
+{\sp{\sn pVerticies}{\sv 8;2;(0,0);(0,1729)}}
+{\sp{\sn pSegmentInfo}{\sv 2;5;16384;45824;1;45824;32768}}
+{\sp{\sn fFillOK}{\sv 1}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn lineWidth}{\sv 6095}}
+{\sp{\sn lineColor}{\sv 0}}
+{\sp{\sn fLine}{\sv 1}}{\sp{\sn lineType}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 1}}
+{\sp{\sn fArrowheadsOK}{\sv 1}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+}}
+
+{\shp{\*\shpinst\shplid33
+{\sp{\sn relLeft}{\sv 0}}
+{\sp{\sn relTop}{\sv 1724}}
+{\sp{\sn relRight}{\sv 9550}}
+{\sp{\sn relBottom}{\sv 1744}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn shapeType}{\sv 0}}
+{\sp{\sn rotation}{\sv 0}}
+{\sp{\sn geoRight}{\sv 9550}}
+{\sp{\sn geoBottom}{\sv 20}}
+{\sp{\sn shapePath}{\sv 4}}
+{\sp{\sn pVerticies}{\sv 8;2;(0,0);(9549,0)}}
+{\sp{\sn pSegmentInfo}{\sv 2;5;16384;45824;1;45824;32768}}
+{\sp{\sn fFillOK}{\sv 1}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn lineWidth}{\sv 6096}}
+{\sp{\sn lineColor}{\sv 0}}
+{\sp{\sn fLine}{\sv 1}}{\sp{\sn lineType}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 1}}
+{\sp{\sn fArrowheadsOK}{\sv 1}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+}}
+
+{\shp{\*\shpinst\shplid34
+{\sp{\sn relLeft}{\sv 9554}}
+{\sp{\sn relTop}{\sv 0}}
+{\sp{\sn relRight}{\sv 9574}}
+{\sp{\sn relBottom}{\sv 1730}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn shapeType}{\sv 0}}
+{\sp{\sn rotation}{\sv 0}}
+{\sp{\sn geoRight}{\sv 20}}
+{\sp{\sn geoBottom}{\sv 1730}}
+{\sp{\sn shapePath}{\sv 4}}
+{\sp{\sn pVerticies}{\sv 8;2;(0,0);(0,1729)}}
+{\sp{\sn pSegmentInfo}{\sv 2;5;16384;45824;1;45824;32768}}
+{\sp{\sn fFillOK}{\sv 1}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn lineWidth}{\sv 6096}}
+{\sp{\sn lineColor}{\sv 0}}
+{\sp{\sn fLine}{\sv 1}}{\sp{\sn lineType}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 1}}
+{\sp{\sn fArrowheadsOK}{\sv 1}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+}}
+
+{\shp{\*\shpinst{\sp{\sn relLeft}{\sv 74}}
+{\sp{\sn relTop}{\sv 644}}
+{\sp{\sn relRight}{\sv 9465}}
+{\sp{\sn relBottom}{\sv 1715}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+{\sp{\sn shapeType}{\sv 202}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn txflTextFlow}{\sv 0}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn fLine}{\sv 0}}
+{\sp{\sn dxTextLeft}{\sv 0}}{\sp{\sn dxTextRight}{\sv 0}}{\sp{\sn dyTextTop}{\sv 0}}{\sp{\sn dyTextBottom}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 1}}
+{\shptxt\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl-244\tx2336\tx3067\tx4303\f1\fs24\b1 DENUNCIA\expnd0\expndtw-1  \f1\fs24\b1\i0\expnd0\expndtw0 PENAL:\tab \f2\fs20\b0\i0 SI\tab NO\tab \f1\fs24\b1\i0 U.F.I.\expnd0\expndtw-2  \f1\fs24\b1\i0\expnd0\expndtw0 n\'B0:\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\li317\sl-244\tx5086\f2\fs20\b0 Juzgado de Garant\'EDas\expnd-2\expndtw-12  \f2\fs20\b0\i0\expnd0\expndtw0 Interviniente\expnd0\expndtw-2  \f2\fs20\b0\i0\expnd0\expndtw0 :\tab Localidad:\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\li362\sl240\slmult1\tx5207\f2\fs20\b0 Causa\expnd-1\expndtw-3  \f2\fs20\b0\i0\expnd0\expndtw0 nro.:\tab Fecha\fs24 :\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\li54\sl-289\sb1\tx9110\f1\fs24\b1 INTERVENCI\'D3N DEL  SERVICIO DE PROMOCI\'D3N Y PROTECCI\'D3N DE DERECHOS\expnd-5\expndtw-25  \f1\fs24\b1\i0\expnd0\expndtw0 NNyA: \expnd9\expndtw46  \f2\fs20\b0\i0\expnd0\expndtw0 SI\tab NO\par}}}
+
+{\shp{\*\shpinst{\sp{\sn relLeft}{\sv 7862}}
+{\sp{\sn relTop}{\sv 87}}
+{\sp{\sn relRight}{\sv 8332}}
+{\sp{\sn relBottom}{\sv 288}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+{\sp{\sn shapeType}{\sv 202}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn txflTextFlow}{\sv 0}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn fLine}{\sv 0}}
+{\sp{\sn dxTextLeft}{\sv 0}}{\sp{\sn dxTextRight}{\sv 0}}{\sp{\sn dyTextTop}{\sv 0}}{\sp{\sn dyTextBottom}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 1}}
+{\shptxt\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl-200\f2\fs20\b0 Hora:\par}}}
+
+{\shp{\*\shpinst{\sp{\sn relLeft}{\sv 6458}}
+{\sp{\sn relTop}{\sv 87}}
+{\sp{\sn relRight}{\sv 7008}}
+{\sp{\sn relBottom}{\sv 288}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+{\sp{\sn shapeType}{\sv 202}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn txflTextFlow}{\sv 0}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn fLine}{\sv 0}}
+{\sp{\sn dxTextLeft}{\sv 0}}{\sp{\sn dxTextRight}{\sv 0}}{\sp{\sn dyTextTop}{\sv 0}}{\sp{\sn dyTextBottom}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 1}}
+{\shptxt\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl-200\f2\fs20\b0 Fecha:\par}}}
+
+{\shp{\*\shpinst{\sp{\sn relLeft}{\sv 74}}
+{\sp{\sn relTop}{\sv 58}}
+{\sp{\sn relRight}{\sv 6120}}
+{\sp{\sn relBottom}{\sv 592}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+{\sp{\sn shapeType}{\sv 202}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn txflTextFlow}{\sv 0}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn fLine}{\sv 0}}
+{\sp{\sn dxTextLeft}{\sv 0}}{\sp{\sn dxTextRight}{\sv 0}}{\sp{\sn dyTextTop}{\sv 0}}{\sp{\sn dyTextBottom}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 1}}
+{\shptxt\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl-244\f1\fs24\b1 DEPENDENCIA/ORGANO ACTUANTE:\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl-289\sb1\f1\fs24\b1 JUZGADO DE PAZ/FAMILIA AL QUE SE DAR\'C1 INTERVENCI\'D3N:\par}}}
+}}
+{\pict
+{\*\picprop\defshp\shplid30
+{\sp{\sn shapeType}{\sv 75}}
+{\sp{\sn fFlipH}{\sv 0}}
+{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn fPseudoInline}{\sv 1}}
+{\sp{\sn fLayoutInCell}{\sv 1}}
+{\sp{\sn fLockPosition}{\sv 1}}
+{\sp{\sn fLockRotation}{\sv 1}}
+}
+\piccropl0\piccropr0\piccropt-1730\piccropb1730\picwgoal9560\pichgoal1730
+\wmetafile8\bliptag-1003278350\blipupi72
+}
+}}
+\par
+{\shpgrp{\*\shpinst\shplid56
+\shpleft1129\shptop257\shpright10689\shpbottom3207\shpfhdr0
+\shpbxpage\shpbypara\shpwr3\shpwrk0\shpfblwtxt1\shpz16
+\shpwr1{\sp{\sn groupLeft}{\sv 1129}}
+{\sp{\sn groupTop}{\sv 257}}
+{\sp{\sn groupRight}{\sv 10689}}
+{\sp{\sn groupBottom}{\sv 3207}}
+{\sp{\sn fFlipH}{\sv 0}}
+{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 2}}
+{\sp{\sn dxWrapDistLeft}{\sv 0}}{\sp{\sn dxWrapDistRight}{\sv 0}}
+{\shp{\*\shpinst\shplid57
+{\sp{\sn relLeft}{\sv 1129}}
+{\sp{\sn relTop}{\sv 262}}
+{\sp{\sn relRight}{\sv 10689}}
+{\sp{\sn relBottom}{\sv 282}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn shapeType}{\sv 0}}
+{\sp{\sn rotation}{\sv 0}}
+{\sp{\sn geoRight}{\sv 9560}}
+{\sp{\sn geoBottom}{\sv 20}}
+{\sp{\sn shapePath}{\sv 4}}
+{\sp{\sn pVerticies}{\sv 8;2;(0,0);(9559,0)}}
+{\sp{\sn pSegmentInfo}{\sv 2;5;16384;45824;1;45824;32768}}
+{\sp{\sn fFillOK}{\sv 1}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn lineWidth}{\sv 6096}}
+{\sp{\sn lineColor}{\sv 0}}
+{\sp{\sn fLine}{\sv 1}}{\sp{\sn lineType}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 2}}
+{\sp{\sn fArrowheadsOK}{\sv 1}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+}}
+
+{\shp{\*\shpinst\shplid58
+{\sp{\sn relLeft}{\sv 1133}}
+{\sp{\sn relTop}{\sv 257}}
+{\sp{\sn relRight}{\sv 1153}}
+{\sp{\sn relBottom}{\sv 3207}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn shapeType}{\sv 0}}
+{\sp{\sn rotation}{\sv 0}}
+{\sp{\sn geoRight}{\sv 20}}
+{\sp{\sn geoBottom}{\sv 2950}}
+{\sp{\sn shapePath}{\sv 4}}
+{\sp{\sn pVerticies}{\sv 8;2;(0,0);(0,2949)}}
+{\sp{\sn pSegmentInfo}{\sv 2;5;16384;45824;1;45824;32768}}
+{\sp{\sn fFillOK}{\sv 1}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn lineWidth}{\sv 6095}}
+{\sp{\sn lineColor}{\sv 0}}
+{\sp{\sn fLine}{\sv 1}}{\sp{\sn lineType}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 2}}
+{\sp{\sn fArrowheadsOK}{\sv 1}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+}}
+
+{\shp{\*\shpinst\shplid59
+{\sp{\sn relLeft}{\sv 1129}}
+{\sp{\sn relTop}{\sv 3202}}
+{\sp{\sn relRight}{\sv 10679}}
+{\sp{\sn relBottom}{\sv 3222}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn shapeType}{\sv 0}}
+{\sp{\sn rotation}{\sv 0}}
+{\sp{\sn geoRight}{\sv 9550}}
+{\sp{\sn geoBottom}{\sv 20}}
+{\sp{\sn shapePath}{\sv 4}}
+{\sp{\sn pVerticies}{\sv 8;2;(0,0);(9549,0)}}
+{\sp{\sn pSegmentInfo}{\sv 2;5;16384;45824;1;45824;32768}}
+{\sp{\sn fFillOK}{\sv 1}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn lineWidth}{\sv 6096}}
+{\sp{\sn lineColor}{\sv 0}}
+{\sp{\sn fLine}{\sv 1}}{\sp{\sn lineType}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 2}}
+{\sp{\sn fArrowheadsOK}{\sv 1}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+}}
+
+{\shp{\*\shpinst\shplid60
+{\sp{\sn relLeft}{\sv 10683}}
+{\sp{\sn relTop}{\sv 257}}
+{\sp{\sn relRight}{\sv 10703}}
+{\sp{\sn relBottom}{\sv 3207}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn shapeType}{\sv 0}}
+{\sp{\sn rotation}{\sv 0}}
+{\sp{\sn geoRight}{\sv 20}}
+{\sp{\sn geoBottom}{\sv 2950}}
+{\sp{\sn shapePath}{\sv 4}}
+{\sp{\sn pVerticies}{\sv 8;2;(0,0);(0,2949)}}
+{\sp{\sn pSegmentInfo}{\sv 2;5;16384;45824;1;45824;32768}}
+{\sp{\sn fFillOK}{\sv 1}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn lineWidth}{\sv 6096}}
+{\sp{\sn lineColor}{\sv 0}}
+{\sp{\sn fLine}{\sv 1}}{\sp{\sn lineType}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 2}}
+{\sp{\sn fArrowheadsOK}{\sv 1}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+}}
+
+{\shp{\*\shpinst{\sp{\sn relLeft}{\sv 5091}}
+{\sp{\sn relTop}{\sv 2982}}
+{\sp{\sn relRight}{\sv 5372}}
+{\sp{\sn relBottom}{\sv 3183}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+{\sp{\sn shapeType}{\sv 202}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn txflTextFlow}{\sv 0}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn fLine}{\sv 0}}
+{\sp{\sn dxTextLeft}{\sv 0}}{\sp{\sn dxTextRight}{\sv 0}}{\sp{\sn dyTextTop}{\sv 0}}{\sp{\sn dyTextBottom}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 2}}
+{\shptxt\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl-200\f2\fs20\b0 NO\par}}}
+
+{\shp{\*\shpinst{\sp{\sn relLeft}{\sv 4721}}
+{\sp{\sn relTop}{\sv 2982}}
+{\sp{\sn relRight}{\sv 4885}}
+{\sp{\sn relBottom}{\sv 3183}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+{\sp{\sn shapeType}{\sv 202}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn txflTextFlow}{\sv 0}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn fLine}{\sv 0}}
+{\sp{\sn dxTextLeft}{\sv 0}}{\sp{\sn dxTextRight}{\sv 0}}{\sp{\sn dyTextTop}{\sv 0}}{\sp{\sn dyTextBottom}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 2}}
+{\shptxt\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl-200\f2\fs20\b0 SI\par}}}
+
+{\shp{\*\shpinst{\sp{\sn relLeft}{\sv 8924}}
+{\sp{\sn relTop}{\sv 2396}}
+{\sp{\sn relRight}{\sv 9535}}
+{\sp{\sn relBottom}{\sv 2597}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+{\sp{\sn shapeType}{\sv 202}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn txflTextFlow}{\sv 0}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn fLine}{\sv 0}}
+{\sp{\sn dxTextLeft}{\sv 0}}{\sp{\sn dxTextRight}{\sv 0}}{\sp{\sn dyTextTop}{\sv 0}}{\sp{\sn dyTextBottom}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 2}}
+{\shptxt\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl-200\f2\fs20\b0 Partido\par}}}
+
+{\shp{\*\shpinst{\sp{\sn relLeft}{\sv 5480}}
+{\sp{\sn relTop}{\sv 2103}}
+{\sp{\sn relRight}{\sv 8398}}
+{\sp{\sn relBottom}{\sv 2597}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+{\sp{\sn shapeType}{\sv 202}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn txflTextFlow}{\sv 0}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn fLine}{\sv 0}}
+{\sp{\sn dxTextLeft}{\sv 0}}{\sp{\sn dxTextRight}{\sv 0}}{\sp{\sn dyTextTop}{\sv 0}}{\sp{\sn dyTextBottom}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 2}}
+{\shptxt\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\ri176\qr\sl-204\f2\fs20\b0 CARGO:\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl-241\sb48\tx1275\tx2133\f2\fs20\b0 Piso/Depto.\tab Barrio\tab Localidad\par}}}
+
+{\shp{\*\shpinst{\sp{\sn relLeft}{\sv 4809}}
+{\sp{\sn relTop}{\sv 2396}}
+{\sp{\sn relRight}{\sv 5001}}
+{\sp{\sn relBottom}{\sv 2597}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+{\sp{\sn shapeType}{\sv 202}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn txflTextFlow}{\sv 0}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn fLine}{\sv 0}}
+{\sp{\sn dxTextLeft}{\sv 0}}{\sp{\sn dxTextRight}{\sv 0}}{\sp{\sn dyTextTop}{\sv 0}}{\sp{\sn dyTextBottom}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 2}}
+{\shptxt\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl-200\f2\fs20\b0 n\'B0\par}}}
+
+{\shp{\*\shpinst{\sp{\sn relLeft}{\sv 1386}}
+{\sp{\sn relTop}{\sv 2366}}
+{\sp{\sn relRight}{\sv 4471}}
+{\sp{\sn relBottom}{\sv 3193}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+{\sp{\sn shapeType}{\sv 202}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn txflTextFlow}{\sv 0}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn fLine}{\sv 0}}
+{\sp{\sn dxTextLeft}{\sv 0}}{\sp{\sn dxTextRight}{\sv 0}}{\sp{\sn dyTextTop}{\sv 0}}{\sp{\sn dyTextBottom}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 2}}
+{\shptxt\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl-244\f1\fs24\b1 DOMICILIO HABITUAL: \f2\fs20\b0\i0 Calle:\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\li33\sl240\slmult1\sb1\f1\fs24\b1 TELEFONOS\f2\b0 :\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\li33\sl-288\f1\fs24\b1 PIDE RESERVA DE IDENTIDAD?\par}}}
+
+{\shp{\*\shpinst{\sp{\sn relLeft}{\sv 6155}}
+{\sp{\sn relTop}{\sv 2103}}
+{\sp{\sn relRight}{\sv 6703}}
+{\sp{\sn relBottom}{\sv 2304}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+{\sp{\sn shapeType}{\sv 202}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn txflTextFlow}{\sv 0}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn fLine}{\sv 0}}
+{\sp{\sn dxTextLeft}{\sv 0}}{\sp{\sn dxTextRight}{\sv 0}}{\sp{\sn dyTextTop}{\sv 0}}{\sp{\sn dyTextBottom}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 2}}
+{\shptxt\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl-200\f2\fs20\b0 CUAL?\par}}}
+
+{\shp{\*\shpinst{\sp{\sn relLeft}{\sv 5116}}
+{\sp{\sn relTop}{\sv 2103}}
+{\sp{\sn relRight}{\sv 5858}}
+{\sp{\sn relBottom}{\sv 2304}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+{\sp{\sn shapeType}{\sv 202}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn txflTextFlow}{\sv 0}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn fLine}{\sv 0}}
+{\sp{\sn dxTextLeft}{\sv 0}}{\sp{\sn dxTextRight}{\sv 0}}{\sp{\sn dyTextTop}{\sv 0}}{\sp{\sn dyTextBottom}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 2}}
+{\shptxt\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl-200\tx460\f2\fs20\b0 SI\tab NO\par}}}
+
+{\shp{\*\shpinst{\sp{\sn relLeft}{\sv 5610}}
+{\sp{\sn relTop}{\sv 902}}
+{\sp{\sn relRight}{\sv 8106}}
+{\sp{\sn relBottom}{\sv 1728}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+{\sp{\sn shapeType}{\sv 202}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn txflTextFlow}{\sv 0}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn fLine}{\sv 0}}
+{\sp{\sn dxTextLeft}{\sv 0}}{\sp{\sn dxTextRight}{\sv 0}}{\sp{\sn dyTextTop}{\sv 0}}{\sp{\sn dyTextBottom}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 2}}
+{\shptxt\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl-244\f1\fs24\b1 NOMBRE:\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\li8\sl240\slmult1\f1\fs24\b1 EXHIBE: \f2\fs20\b0\i0 SI NO NO TIENE\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\li55\sl-288\f1\fs24\b1 FECHA DE NACIMIENTO:\par}}}
+
+{\shp{\*\shpinst{\sp{\sn relLeft}{\sv 1420}}
+{\sp{\sn relTop}{\sv 902}}
+{\sp{\sn relRight}{\sv 4868}}
+{\sp{\sn relBottom}{\sv 2314}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+{\sp{\sn shapeType}{\sv 202}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn txflTextFlow}{\sv 0}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn fLine}{\sv 0}}
+{\sp{\sn dxTextLeft}{\sv 0}}{\sp{\sn dxTextRight}{\sv 0}}{\sp{\sn dyTextTop}{\sv 0}}{\sp{\sn dyTextBottom}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 2}}
+{\shptxt\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl-244\f1\fs24\b1 APELLIDO:\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\ri205\sl240\slmult1\f1\fs24\b1 DOCUMENTO DE IDENTIDAD N\'B0: NACIONALIDAD:\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\ri3\sl240\slmult1\f1\fs24\b1 VINCULO CON LA VICTIMA: REPRESENTA A UNA INSTITUCI\'D3N:\par}}}
+
+{\shp{\*\shpinst{\sp{\sn relLeft}{\sv 1204}}
+{\sp{\sn relTop}{\sv 315}}
+{\sp{\sn relRight}{\sv 7240}}
+{\sp{\sn relBottom}{\sv 555}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+{\sp{\sn shapeType}{\sv 202}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn txflTextFlow}{\sv 0}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn fLine}{\sv 0}}
+{\sp{\sn dxTextLeft}{\sv 0}}{\sp{\sn dxTextRight}{\sv 0}}{\sp{\sn dyTextTop}{\sv 0}}{\sp{\sn dyTextBottom}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 2}}
+{\shptxt\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl-240\f1\fs24\b1 I .\'96 DENUNCIANTE:\f2\fs16\b0 (completar cuando el/la denunciante sea diferente a la v\'EDctima)\par}}}
+}}
+\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\sb5\f2\fs17\b0\i0\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\sb10\f2\fs17\b0\i0\par
+{\shpgrp{\*\shpinst\shplid218
+\shpleft1129\shptop40\shpright10679\shpbottom9153\shpfhdr0
+\shpbxpage\shpbypara\shpwr3\shpwrk0\shpfblwtxt1\shpz17
+\shpwr3\shpfblwtxt1{\sp{\sn groupLeft}{\sv 1129}}
+{\sp{\sn groupTop}{\sv 40}}
+{\sp{\sn groupRight}{\sv 10679}}
+{\sp{\sn groupBottom}{\sv 9153}}
+{\sp{\sn fFlipH}{\sv 0}}
+{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 2}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+
+{\shp{\*\shpinst\shplid219
+{\sp{\sn relLeft}{\sv 1129}}
+{\sp{\sn relTop}{\sv 45}}
+{\sp{\sn relRight}{\sv 10679}}
+{\sp{\sn relBottom}{\sv 65}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn shapeType}{\sv 0}}
+{\sp{\sn rotation}{\sv 0}}
+{\sp{\sn geoRight}{\sv 9550}}
+{\sp{\sn geoBottom}{\sv 20}}
+{\sp{\sn shapePath}{\sv 4}}
+{\sp{\sn pVerticies}{\sv 8;2;(0,0);(9549,0)}}
+{\sp{\sn pSegmentInfo}{\sv 2;5;16384;45824;1;45824;32768}}
+{\sp{\sn fFillOK}{\sv 1}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn lineWidth}{\sv 6096}}
+{\sp{\sn lineColor}{\sv 0}}
+{\sp{\sn fLine}{\sv 1}}{\sp{\sn lineType}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 2}}
+{\sp{\sn fArrowheadsOK}{\sv 1}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+}}
+
+{\shp{\*\shpinst\shplid220
+{\sp{\sn relLeft}{\sv 1133}}
+{\sp{\sn relTop}{\sv 40}}
+{\sp{\sn relRight}{\sv 1153}}
+{\sp{\sn relBottom}{\sv 7033}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn shapeType}{\sv 0}}
+{\sp{\sn rotation}{\sv 0}}
+{\sp{\sn geoRight}{\sv 20}}
+{\sp{\sn geoBottom}{\sv 6993}}
+{\sp{\sn shapePath}{\sv 4}}
+{\sp{\sn pVerticies}{\sv 8;2;(0,0);(0,6992)}}
+{\sp{\sn pSegmentInfo}{\sv 2;5;16384;45824;1;45824;32768}}
+{\sp{\sn fFillOK}{\sv 1}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn lineWidth}{\sv 6095}}
+{\sp{\sn lineColor}{\sv 0}}
+{\sp{\sn fLine}{\sv 1}}{\sp{\sn lineType}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 2}}
+{\sp{\sn fArrowheadsOK}{\sv 1}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+}}
+
+{\shp{\*\shpinst\shplid221
+{\sp{\sn relLeft}{\sv 10673}}
+{\sp{\sn relTop}{\sv 40}}
+{\sp{\sn relRight}{\sv 10693}}
+{\sp{\sn relBottom}{\sv 7033}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn shapeType}{\sv 0}}
+{\sp{\sn rotation}{\sv 0}}
+{\sp{\sn geoRight}{\sv 20}}
+{\sp{\sn geoBottom}{\sv 6993}}
+{\sp{\sn shapePath}{\sv 4}}
+{\sp{\sn pVerticies}{\sv 8;2;(0,0);(0,6992)}}
+{\sp{\sn pSegmentInfo}{\sv 2;5;16384;45824;1;45824;32768}}
+{\sp{\sn fFillOK}{\sv 1}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn lineWidth}{\sv 6096}}
+{\sp{\sn lineColor}{\sv 0}}
+{\sp{\sn fLine}{\sv 1}}{\sp{\sn lineType}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 2}}
+{\sp{\sn fArrowheadsOK}{\sv 1}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+}}
+
+{\shp{\*\shpinst\shplid222
+{\sp{\sn relLeft}{\sv 1129}}
+{\sp{\sn relTop}{\sv 7037}}
+{\sp{\sn relRight}{\sv 10679}}
+{\sp{\sn relBottom}{\sv 7057}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn shapeType}{\sv 0}}
+{\sp{\sn rotation}{\sv 0}}
+{\sp{\sn geoRight}{\sv 9550}}
+{\sp{\sn geoBottom}{\sv 20}}
+{\sp{\sn shapePath}{\sv 4}}
+{\sp{\sn pVerticies}{\sv 8;2;(0,0);(9549,0)}}
+{\sp{\sn pSegmentInfo}{\sv 2;5;16384;45824;1;45824;32768}}
+{\sp{\sn fFillOK}{\sv 1}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn lineWidth}{\sv 6095}}
+{\sp{\sn lineColor}{\sv 0}}
+{\sp{\sn fLine}{\sv 1}}{\sp{\sn lineType}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 2}}
+{\sp{\sn fArrowheadsOK}{\sv 1}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+}}
+
+{\shpgrp{\*\shpinst\shplid223
+{\sp{\sn groupLeft}{\sv 1129}}
+{\sp{\sn groupTop}{\sv 7042}}
+{\sp{\sn groupRight}{\sv 10669}}
+{\sp{\sn groupBottom}{\sv 9153}}
+{\sp{\sn relLeft}{\sv 1129}}
+{\sp{\sn relTop}{\sv 7042}}
+{\sp{\sn relRight}{\sv 10669}}
+{\sp{\sn relBottom}{\sv 9153}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+
+{\shp{\*\shpinst\shplid223
+{\sp{\sn relLeft}{\sv 1129}}
+{\sp{\sn relTop}{\sv 7042}}
+{\sp{\sn relRight}{\sv 10669}}
+{\sp{\sn relBottom}{\sv 9153}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn shapeType}{\sv 0}}
+{\sp{\sn rotation}{\sv 0}}
+{\sp{\sn geoRight}{\sv 9540}}
+{\sp{\sn geoBottom}{\sv 2111}}
+{\sp{\sn shapePath}{\sv 4}}
+{\sp{\sn pVerticies}{\sv 8;2;(4,0);(4,2110)}}
+{\sp{\sn pSegmentInfo}{\sv 2;5;16384;45824;1;45824;32768}}
+{\sp{\sn fFillOK}{\sv 1}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn lineWidth}{\sv 6095}}
+{\sp{\sn lineColor}{\sv 0}}
+{\sp{\sn fLine}{\sv 1}}{\sp{\sn lineType}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 2}}
+{\sp{\sn fArrowheadsOK}{\sv 1}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+}}
+
+{\shp{\*\shpinst\shplid223
+{\sp{\sn relLeft}{\sv 1129}}
+{\sp{\sn relTop}{\sv 7042}}
+{\sp{\sn relRight}{\sv 10669}}
+{\sp{\sn relBottom}{\sv 9153}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn shapeType}{\sv 0}}
+{\sp{\sn rotation}{\sv 0}}
+{\sp{\sn geoRight}{\sv 9540}}
+{\sp{\sn geoBottom}{\sv 2111}}
+{\sp{\sn shapePath}{\sv 4}}
+{\sp{\sn pVerticies}{\sv 8;2;(0,2105);(9540,2105)}}
+{\sp{\sn pSegmentInfo}{\sv 2;5;16384;45824;1;45824;32768}}
+{\sp{\sn fFillOK}{\sv 1}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn lineWidth}{\sv 6095}}
+{\sp{\sn lineColor}{\sv 0}}
+{\sp{\sn fLine}{\sv 1}}{\sp{\sn lineType}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 2}}
+{\sp{\sn fArrowheadsOK}{\sv 1}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+}}
+}}
+
+{\shp{\*\shpinst\shplid224
+{\sp{\sn relLeft}{\sv 10673}}
+{\sp{\sn relTop}{\sv 7042}}
+{\sp{\sn relRight}{\sv 10693}}
+{\sp{\sn relBottom}{\sv 9153}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn shapeType}{\sv 0}}
+{\sp{\sn rotation}{\sv 0}}
+{\sp{\sn geoRight}{\sv 20}}
+{\sp{\sn geoBottom}{\sv 2111}}
+{\sp{\sn shapePath}{\sv 4}}
+{\sp{\sn pVerticies}{\sv 8;2;(0,0);(0,2110)}}
+{\sp{\sn pSegmentInfo}{\sv 2;5;16384;45824;1;45824;32768}}
+{\sp{\sn fFillOK}{\sv 1}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn lineWidth}{\sv 6096}}
+{\sp{\sn lineColor}{\sv 0}}
+{\sp{\sn fLine}{\sv 1}}{\sp{\sn lineType}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 2}}
+{\sp{\sn fArrowheadsOK}{\sv 1}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+}}
+}}
+\pard\plain\s3\ls1\ilvl0\nooverflow\nocwrap\lnbrkrule\li376\fi-194\sl240\slmult1\sb51\tx377\f1\fs24\b1 \uc1\u8208 ?\expnd0\expndtw-1  \f1\fs24\b1\i0\expnd0\expndtw0 VICTIMA:\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f1\fs24\b1\i0\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\li453\sl240\slmult1\tx4485\f1\fs24\b1 APELLIDO:\tab NOMBRE:\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\li453\sl240\slmult1\f1\fs24\b1 APELLIDO MATERNO:\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\li453\sl240\slmult1\f1\fs24\b1 APODO:\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\li453\sl240\slmult1\f1\fs24\b1 LUGAR Y FECHA DE NACIMIENTO:\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\li453\sl240\slmult1\tx4372\f1\fs24\b1 NACIONALIDAD:\tab ESTADO\expnd0\expndtw-2  \f1\fs24\b1\i0\expnd0\expndtw0 CIVIL:\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\li453\sl240\slmult1\tx4652\f1\fs24\b1 DOCUMENTO DE\expnd0\expndtw-2  \f1\fs24\b1\i0\expnd0\expndtw0 IDENTIDAD\expnd0\expndtw-2  \f1\fs24\b1\i0\expnd0\expndtw0 N\'B0:\tab EXHIBE: \f2\fs20\b0\i0 SI NO NO\expnd-1\expndtw-3  \f2\fs20\b0\i0\expnd0\expndtw0 TIENE\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\li453\sl240\slmult1\sa49\f1\fs24\b1 SEXO/GENERO:\par
+\trowd\irow0\trgaph0\trrh266\trql\trleft403
+\clvertalt\clbrdrt\brdrnone\brdrw15\clbrdrl\brdrnone\brdrw15\clbrdrr\brdrnone\brdrw15\clbrdrb\brdrnone\brdrw15\cltxlrtb\cellx2248
+\clvertalt\clbrdrt\brdrnone\brdrw15\clbrdrl\brdrnone\brdrw15\clbrdrr\brdrnone\brdrw15\clbrdrb\brdrnone\brdrw15\cltxlrtb\cellx2793
+\clvertalt\clbrdrt\brdrnone\brdrw15\clbrdrl\brdrnone\brdrw15\clbrdrr\brdrnone\brdrw15\clbrdrb\brdrnone\brdrw15\cltxlrtb\cellx3695
+\clvertalt\clbrdrt\brdrnone\brdrw15\clbrdrl\brdrnone\brdrw15\clbrdrr\brdrnone\brdrw15\clbrdrb\brdrnone\brdrw15\cltxlrtb\cellx6248
+\clvertalt\clbrdrt\brdrnone\brdrw15\clbrdrl\brdrnone\brdrw15\clbrdrr\brdrnone\brdrw15\clbrdrb\brdrnone\brdrw15\cltxlrtb\cellx6711
+\clvertalt\clbrdrt\brdrnone\brdrw15\clbrdrl\brdrnone\brdrw15\clbrdrr\brdrnone\brdrw15\clbrdrb\brdrnone\brdrw15\cltxlrtb\cellx7290
+\clvertalt\clbrdrt\brdrnone\brdrw15\clbrdrl\brdrnone\brdrw15\clbrdrr\brdrnone\brdrw15\clbrdrb\brdrnone\brdrw15\cltxlrtb\cellx8025
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\li50\sl-244\f1\fs24\b1 OCUPACION:\expnd10\expndtw51  \f2\fs20\b0\i0\expnd0\expndtw0 SI\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\li126\sl-234\f2\fs20\b0 NO\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\li159\sl-234\f2\fs20\b0 CUAL?\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\li216\sl-244\f1\fs24\b1 TRABAJO INFORMAL?\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\li141\ri138\qc\sl-234\f2\fs20\b0 SI\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\li159\sl-234\f2\fs20\b0 NO\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\li159\sl-234\f2\fs20\b0 CUAL?\cell}\row
+\trowd\irow1\trgaph0\trrh266\trql\trleft403
+\clvertalt\clbrdrt\brdrnone\brdrw15\clbrdrl\brdrnone\brdrw15\clbrdrr\brdrnone\brdrw15\clbrdrb\brdrnone\brdrw15\cltxlrtb\cellx2248
+\clvertalt\clbrdrt\brdrnone\brdrw15\clbrdrl\brdrnone\brdrw15\clbrdrr\brdrnone\brdrw15\clbrdrb\brdrnone\brdrw15\cltxlrtb\cellx2793
+\clvertalt\clbrdrt\brdrnone\brdrw15\clbrdrl\brdrnone\brdrw15\clbrdrr\brdrnone\brdrw15\clbrdrb\brdrnone\brdrw15\cltxlrtb\cellx3695
+\clvertalt\clbrdrt\brdrnone\brdrw15\clbrdrl\brdrnone\brdrw15\clbrdrr\brdrnone\brdrw15\clbrdrb\brdrnone\brdrw15\cltxlrtb\cellx6248
+\clvertalt\clbrdrt\brdrnone\brdrw15\clbrdrl\brdrnone\brdrw15\clbrdrr\brdrnone\brdrw15\clbrdrb\brdrnone\brdrw15\cltxlrtb\cellx6711
+\clvertalt\clbrdrt\brdrnone\brdrw15\clbrdrl\brdrnone\brdrw15\clbrdrr\brdrnone\brdrw15\clbrdrb\brdrnone\brdrw15\cltxlrtb\cellx7290
+\clvertalt\clbrdrt\brdrnone\brdrw15\clbrdrl\brdrnone\brdrw15\clbrdrr\brdrnone\brdrw15\clbrdrb\brdrnone\brdrw15\cltxlrtb\cellx8025
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\li52\sl-246\f1\fs24\b1 AMA DE CASA: \f2\fs20\b0\i0 SI\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\li68\sl-230\sb16\f2\fs20\b0 NO\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f0\fs18\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f0\fs18\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f0\fs18\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f0\fs18\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f0\fs18\cell}\row\pard\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\li453\sl240\slmult1\sb4\tx3015\f1\fs24\b1 INGRESOS\expnd-1\expndtw-3  \f1\fs24\b1\i0\expnd0\expndtw0 PROPIOS?:\tab \f2\fs20\b0\i0 SI  NO\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\li453\sl-293\tx4122\tx5868\f1\fs24\b1 NIVEL EDUCATIVO:\tab \f2\fs20\b0\i0 Analfabeto/a:  \expnd5\expndtw25  \f2\fs20\b0\i0\expnd0\expndtw0 SI\tab NO\par\pard\plain\s3\ls1\ilvl1\nooverflow\nocwrap\lnbrkrule\li990\fi-212\sl-244\tx990\f2\fs20\b0 Primaria: \f2\fs16\b0\i0 completa/ incompleta \f2\fs20\b0\i0 b) Secundaria: \f2\fs16\b0\i0 completa/ incompleta \f2\fs20\b0\i0 c) Terciaria/universitaria: \f2\fs16\b0\i0 completa/\expnd-1\expndtw-3  \f2\fs16\b0\i0\expnd0\expndtw0 incompleta\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\li907\fi-498\ri2308\sl240\slmult1\sb1\tx3015\tx5073\f1\fs24\b1 COBERTURA\expnd0\expndtw-2  \f1\fs24\b1\i0\expnd0\expndtw0 DE\expnd0\expndtw-1  \f1\fs24\b1\i0\expnd0\expndtw0 SALUD:\tab \f2\fs20\b0\i0 a) Obra\expnd-1\expndtw-3  \f2\fs20\b0\i0\expnd0\expndtw0 Social/\expnd0\expndtw-1  \f2\fs20\b0\i0\expnd0\expndtw0 Mutual\tab b) Prepaga c) Sistema P\'FAblico Es adherente o\expnd0\expndtw-2  \f2\fs20\b0\i0\expnd0\expndtw0 titular?\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\li453\sl240\slmult1\tx3742\tx4337\f1\fs24\b1 BENEFICIO O\expnd-1\expndtw-5  \f1\fs24\b1\i0\expnd0\expndtw0 PLAN\expnd0\expndtw-1  \f1\fs24\b1\i0\expnd0\expndtw0 SOCIAL:\tab \f2\fs20\b0\i0 SI\tab NO\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\li453\sl-293\f1\fs24\b1 DOMICILIO HABITUAL: \f2\fs16\b0\i0 (en caso de domicilio de dif\'EDcil acceso o identificaci\'F3n, adjuntar croquis con referencias)\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\li453\fi380\ri886\sl240\slmult1\tx2729\tx3400\tx5128\tx6483\tx7792\f2\fs20\b0 Calle:\tab n\'B0\tab Piso/Depto.\tab Barrio\tab Localidad\tab Partido \f1\fs24\b1\i0 DOMICILIO TRANSITORIO/DE RESGUARDO: \f2\fs16\b0\i0 (el que actualmente ocupa y donde podr\'E1 encontr\'E1rselo/la ante posibles notificaciones; en caso de dif\'EDcil acceso o identificaci\'F3n, adjuntar croquis con\expnd-2\expndtw-9  \f2\fs16\b0\i0\expnd0\expndtw0 referencias)\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f2\fs16\b0\i0\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\li435\sl240\slmult1\tx4431\f1\fs24\b1 TELEFONO\expnd10\expndtw48  \f1\fs24\b1\i0\expnd0\expndtw0 PARTICULAR:\tab TELEFONO\expnd11\expndtw53  \f1\fs24\b1\i0\expnd0\expndtw0 CELULAR:\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\li453\sl240\slmult1\f1\fs24\b1 HORARIO EN QUE PUEDE SER CONTACTADA/O:\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\li453\sl240\slmult1\f1\fs24\b1 TELEFONO Y DIRECCION DE UNA PERSONA DE REFERENCIA:\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\li453\sl240\slmult1\sb11\sa48\f1\fs24\b1 EL DENUNCIADO ES SU:\par
+\trowd\irow0\trgaph0\trrh262\trql\trleft842
+\clvertalt\clbrdrt\brdrnone\brdrw15\clbrdrl\brdrnone\brdrw15\clbrdrr\brdrnone\brdrw15\clbrdrb\brdrnone\brdrw15\cltxlrtb\cellx2713
+\clvertalt\clbrdrt\brdrnone\brdrw15\clbrdrl\brdrnone\brdrw15\clbrdrr\brdrnone\brdrw15\clbrdrb\brdrnone\brdrw15\cltxlrtb\cellx5059
+\clvertalt\clbrdrt\brdrnone\brdrw15\clbrdrl\brdrnone\brdrw15\clbrdrr\brdrnone\brdrw15\clbrdrb\brdrnone\brdrw15\cltxlrtb\cellx7030
+\clvertalt\clbrdrt\brdrnone\brdrw15\clbrdrl\brdrnone\brdrw15\clbrdrr\brdrnone\brdrw15\clbrdrb\brdrnone\brdrw15\cltxlrtb\cellx9051
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\li50\sl-242\f2\fs24\b0 a\fs20 ) Esposo/a\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\li138\sl-234\f2\fs20\b0 d) Ex Pareja conviviente\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\li272\sl-234\f2\fs20\b0 g) Padre/Madre\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\li407\sl-234\f2\fs20\b0 j) Otro (especificar)\cell}\row
+\trowd\irow1\trgaph0\trrh244\trql\trleft842
+\clvertalt\clbrdrt\brdrnone\brdrw15\clbrdrl\brdrnone\brdrw15\clbrdrr\brdrnone\brdrw15\clbrdrb\brdrnone\brdrw15\cltxlrtb\cellx2713
+\clvertalt\clbrdrt\brdrnone\brdrw15\clbrdrl\brdrnone\brdrw15\clbrdrr\brdrnone\brdrw15\clbrdrb\brdrnone\brdrw15\cltxlrtb\cellx5059
+\clvertalt\clbrdrt\brdrnone\brdrw15\clbrdrl\brdrnone\brdrw15\clbrdrr\brdrnone\brdrw15\clbrdrb\brdrnone\brdrw15\cltxlrtb\cellx7030
+\clvertalt\clbrdrt\brdrnone\brdrw15\clbrdrl\brdrnone\brdrw15\clbrdrr\brdrnone\brdrw15\clbrdrb\brdrnone\brdrw15\cltxlrtb\cellx9051
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\li50\sl-224\f2\fs20\b0 b) Ex esposo/a\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\li134\sl-224\f2\fs20\b0 e) Novio/a\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\li270\sl-224\f2\fs20\b0 h) Hijo/a\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f0\fs16\cell}\row
+\trowd\irow2\trgaph0\trrh222\trql\trleft842
+\clvertalt\clbrdrt\brdrnone\brdrw15\clbrdrl\brdrnone\brdrw15\clbrdrr\brdrnone\brdrw15\clbrdrb\brdrnone\brdrw15\cltxlrtb\cellx2713
+\clvertalt\clbrdrt\brdrnone\brdrw15\clbrdrl\brdrnone\brdrw15\clbrdrr\brdrnone\brdrw15\clbrdrb\brdrnone\brdrw15\cltxlrtb\cellx5059
+\clvertalt\clbrdrt\brdrnone\brdrw15\clbrdrl\brdrnone\brdrw15\clbrdrr\brdrnone\brdrw15\clbrdrb\brdrnone\brdrw15\cltxlrtb\cellx7030
+\clvertalt\clbrdrt\brdrnone\brdrw15\clbrdrl\brdrnone\brdrw15\clbrdrr\brdrnone\brdrw15\clbrdrb\brdrnone\brdrw15\cltxlrtb\cellx9051
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\li50\sl-202\f2\fs20\b0 c) Pareja conviviente\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\li182\sl-202\f2\fs20\b0 f) Ex novio/a\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\li306\sl-202\f2\fs20\b0 i) Hermano/a\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f0\fs14\cell}\row\pard\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\sb3\f1\fs20\b1\i0\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\li638\sl240\slmult1\sb1\f1\fs20\b1 CONVIVE ACTUALMENTE CON EL AGRESOR? \f2\fs20\b0\i0 SI NO\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\li670\sl-293\tx1761\f1\fs20\b1 VIVIENDA\tab \f2\fs24\b0\i0 a) \f2\fs20\b0\i0 Propia b) Del agresor c) De ambos d) Alquilada e) Prestada/cedida f) Tenencia\expnd-4\expndtw-21  \f2\fs20\b0\i0\expnd0\expndtw0 precaria\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\li638\sl240\slmult1\tx6107\f1\fs20\b1 \'BFCOMPARTE ESA VIVIENDA CON OTRO GRUPO FAMILIAR?  \expnd7\expndtw36  \f2\fs20\b0\i0\expnd0\expndtw0 S\expnd0\expndtw-2  \f2\fs20\b0\i0\expnd0\expndtw0 I\tab NO\par\sect\sectd\sbkpage\headery0\footery779\margtsxn560\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\li104\sl240\slmult1\f2\fs20
+{\field\fldlock
+{\*\fldinst SHAPE  \\* MERGEFORMAT}
+{\fldrslt 
+{\shpgrp{\*\shpinst\shplid228
+\shpleft0\shptop0\shpright9550\shpbottom5733\shpfhdr0
+\shpbxcolumn\shpbxignore\shpbypara\shpbyignore\shpwr3\shpwrk0\shpfblwtxt1\shpz26
+\shplockanchor
+\shpwr3\shpwrk0\shpfblwtxt1{\sp{\sn groupLeft}{\sv 0}}
+{\sp{\sn groupTop}{\sv 0}}
+{\sp{\sn groupRight}{\sv 9550}}
+{\sp{\sn groupBottom}{\sv 5733}}
+{\sp{\sn fFlipH}{\sv 0}}
+{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn fPseudoInline}{\sv 1}}
+{\sp{\sn lidRegroup}{\sv 0}}
+{\sp{\sn posrelh}{\sv 3}}
+{\sp{\sn posrelv}{\sv 3}}
+
+{\shp{\*\shpinst\shplid229
+{\sp{\sn relLeft}{\sv 0}}
+{\sp{\sn relTop}{\sv 4}}
+{\sp{\sn relRight}{\sv 9550}}
+{\sp{\sn relBottom}{\sv 24}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn shapeType}{\sv 0}}
+{\sp{\sn rotation}{\sv 0}}
+{\sp{\sn geoRight}{\sv 9550}}
+{\sp{\sn geoBottom}{\sv 20}}
+{\sp{\sn shapePath}{\sv 4}}
+{\sp{\sn pVerticies}{\sv 8;2;(0,0);(9549,0)}}
+{\sp{\sn pSegmentInfo}{\sv 2;5;16384;45824;1;45824;32768}}
+{\sp{\sn fFillOK}{\sv 1}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn lineWidth}{\sv 6096}}
+{\sp{\sn lineColor}{\sv 0}}
+{\sp{\sn fLine}{\sv 1}}{\sp{\sn lineType}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 1}}
+{\sp{\sn fArrowheadsOK}{\sv 1}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+}}
+
+{\shp{\*\shpinst\shplid230
+{\sp{\sn relLeft}{\sv 4}}
+{\sp{\sn relTop}{\sv 0}}
+{\sp{\sn relRight}{\sv 24}}
+{\sp{\sn relBottom}{\sv 5733}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn shapeType}{\sv 0}}
+{\sp{\sn rotation}{\sv 0}}
+{\sp{\sn geoRight}{\sv 20}}
+{\sp{\sn geoBottom}{\sv 5733}}
+{\sp{\sn shapePath}{\sv 4}}
+{\sp{\sn pVerticies}{\sv 8;2;(0,0);(0,5732)}}
+{\sp{\sn pSegmentInfo}{\sv 2;5;16384;45824;1;45824;32768}}
+{\sp{\sn fFillOK}{\sv 1}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn lineWidth}{\sv 6095}}
+{\sp{\sn lineColor}{\sv 0}}
+{\sp{\sn fLine}{\sv 1}}{\sp{\sn lineType}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 1}}
+{\sp{\sn fArrowheadsOK}{\sv 1}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+}}
+
+{\shp{\*\shpinst\shplid231
+{\sp{\sn relLeft}{\sv 0}}
+{\sp{\sn relTop}{\sv 5727}}
+{\sp{\sn relRight}{\sv 9540}}
+{\sp{\sn relBottom}{\sv 5747}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn shapeType}{\sv 0}}
+{\sp{\sn rotation}{\sv 0}}
+{\sp{\sn geoRight}{\sv 9540}}
+{\sp{\sn geoBottom}{\sv 20}}
+{\sp{\sn shapePath}{\sv 4}}
+{\sp{\sn pVerticies}{\sv 8;2;(0,0);(9540,0)}}
+{\sp{\sn pSegmentInfo}{\sv 2;5;16384;45824;1;45824;32768}}
+{\sp{\sn fFillOK}{\sv 1}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn lineWidth}{\sv 6096}}
+{\sp{\sn lineColor}{\sv 0}}
+{\sp{\sn fLine}{\sv 1}}{\sp{\sn lineType}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 1}}
+{\sp{\sn fArrowheadsOK}{\sv 1}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+}}
+
+{\shp{\*\shpinst\shplid232
+{\sp{\sn relLeft}{\sv 9544}}
+{\sp{\sn relTop}{\sv 0}}
+{\sp{\sn relRight}{\sv 9564}}
+{\sp{\sn relBottom}{\sv 5733}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn shapeType}{\sv 0}}
+{\sp{\sn rotation}{\sv 0}}
+{\sp{\sn geoRight}{\sv 20}}
+{\sp{\sn geoBottom}{\sv 5733}}
+{\sp{\sn shapePath}{\sv 4}}
+{\sp{\sn pVerticies}{\sv 8;2;(0,0);(0,5732)}}
+{\sp{\sn pSegmentInfo}{\sv 2;5;16384;45824;1;45824;32768}}
+{\sp{\sn fFillOK}{\sv 1}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn lineWidth}{\sv 6096}}
+{\sp{\sn lineColor}{\sv 0}}
+{\sp{\sn fLine}{\sv 1}}{\sp{\sn lineType}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 1}}
+{\sp{\sn fArrowheadsOK}{\sv 1}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+}}
+
+{\shp{\*\shpinst{\sp{\sn relLeft}{\sv 344}}
+{\sp{\sn relTop}{\sv 3574}}
+{\sp{\sn relRight}{\sv 8724}}
+{\sp{\sn relBottom}{\sv 5425}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+{\sp{\sn shapeType}{\sv 202}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn txflTextFlow}{\sv 0}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn fLine}{\sv 0}}
+{\sp{\sn dxTextLeft}{\sv 0}}{\sp{\sn dxTextRight}{\sv 0}}{\sp{\sn dyTextTop}{\sv 0}}{\sp{\sn dyTextBottom}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 1}}
+{\shptxt\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\li2\sl-244\tx8098\f1\fs24\b1 PERTENECE O PERTENECIO A FUERZAS ARMADAS/SEGURIDAD O\expnd6\expndtw32  \f1\fs24\b1\i0\expnd0\expndtw0 POLICIAL?:\expnd-1\expndtw-3  \f2\fs20\b0\i0\expnd0\expndtw0 SI\tab NO\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\li319\sl-244\f2\fs20\b0 CUAL?\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl-293\f1\fs24\b1 DOMICILIO HABITUAL: \f2\fs16\b0\i0 (en caso de domicilio de dif\'EDcil acceso o identificaci\'F3n, adjuntar croquis con referencia)\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\li271\sl-244\tx1397\tx2792\tx4070\tx5198\tx6327\f2\fs20\b0 Calle:\tab n\f1\b1 \'B0\tab \f2\fs20\b0\i0 Piso/Depto.\tab Barrio\tab Localidad\tab Partido\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\li2\sl-293\sb1\f1\fs24\b1 DOMICILIO DE TRABAJO:\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\li271\sl-244\tx1397\tx2792\tx4070\tx5198\tx6327\f2\fs20\b0 Calle:\tab n\'B0\tab Piso/Depto.\tab Barrio\tab Localidad\tab Partido\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl-288\f1\fs24\b1 TELEFONO PARTICULAR/CELULAR/ LABORAL:\par}}}
+
+{\shp{\*\shpinst{\sp{\sn relLeft}{\sv 5208}}
+{\sp{\sn relTop}{\sv 3309}}
+{\sp{\sn relRight}{\sv 7753}}
+{\sp{\sn relBottom}{\sv 3510}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+{\sp{\sn shapeType}{\sv 202}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn txflTextFlow}{\sv 0}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn fLine}{\sv 0}}
+{\sp{\sn dxTextLeft}{\sv 0}}{\sp{\sn dxTextRight}{\sv 0}}{\sp{\sn dyTextTop}{\sv 0}}{\sp{\sn dyTextBottom}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 1}}
+{\shptxt\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl-200\f2\fs20\b0 b) Prepaga c) Sistema P\'FAblico\par}}}
+
+{\shp{\*\shpinst{\sp{\sn relLeft}{\sv 344}}
+{\sp{\sn relTop}{\sv 3280}}
+{\sp{\sn relRight}{\sv 4778}}
+{\sp{\sn relBottom}{\sv 3520}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+{\sp{\sn shapeType}{\sv 202}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn txflTextFlow}{\sv 0}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn fLine}{\sv 0}}
+{\sp{\sn dxTextLeft}{\sv 0}}{\sp{\sn dxTextRight}{\sv 0}}{\sp{\sn dyTextTop}{\sv 0}}{\sp{\sn dyTextBottom}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 1}}
+{\shptxt\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl-240\tx2581\f1\fs24\b1 COBERTURA\expnd0\expndtw-1  \f1\fs24\b1\i0\expnd0\expndtw0 DE SALUD:\tab \f2\fs20\b0\i0 a) Obra Social/\expnd-2\expndtw-9  \f2\fs20\b0\i0\expnd0\expndtw0 Mutual\par}}}
+
+{\shp{\*\shpinst{\sp{\sn relLeft}{\sv 2844}}
+{\sp{\sn relTop}{\sv 2724}}
+{\sp{\sn relRight}{\sv 3392}}
+{\sp{\sn relBottom}{\sv 3218}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+{\sp{\sn shapeType}{\sv 202}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn txflTextFlow}{\sv 0}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn fLine}{\sv 0}}
+{\sp{\sn dxTextLeft}{\sv 0}}{\sp{\sn dxTextRight}{\sv 0}}{\sp{\sn dyTextTop}{\sv 0}}{\sp{\sn dyTextBottom}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 1}}
+{\shptxt\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl-204\f2\fs20\b0 CUAL?\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\li12\sl-241\sb48\f2\fs20\b0 NO\par}}}
+
+{\shp{\*\shpinst{\sp{\sn relLeft}{\sv 344}}
+{\sp{\sn relTop}{\sv 2987}}
+{\sp{\sn relRight}{\sv 2695}}
+{\sp{\sn relBottom}{\sv 3227}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+{\sp{\sn shapeType}{\sv 202}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn txflTextFlow}{\sv 0}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn fLine}{\sv 0}}
+{\sp{\sn dxTextLeft}{\sv 0}}{\sp{\sn dxTextRight}{\sv 0}}{\sp{\sn dyTextTop}{\sv 0}}{\sp{\sn dyTextBottom}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 1}}
+{\shptxt\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl-240\f2\fs24\b0 I\f1\b1 NGRESOS PROPIOS\f2\b0 : \f2\fs20\b0\i0 SI\par}}}
+
+{\shp{\*\shpinst{\sp{\sn relLeft}{\sv 344}}
+{\sp{\sn relTop}{\sv 2694}}
+{\sp{\sn relRight}{\sv 2546}}
+{\sp{\sn relBottom}{\sv 2934}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+{\sp{\sn shapeType}{\sv 202}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn txflTextFlow}{\sv 0}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn fLine}{\sv 0}}
+{\sp{\sn dxTextLeft}{\sv 0}}{\sp{\sn dxTextRight}{\sv 0}}{\sp{\sn dyTextTop}{\sv 0}}{\sp{\sn dyTextBottom}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 1}}
+{\shptxt\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl-240\tx1921\f1\fs24\b1 OCUPACION: \expnd10\expndtw51  \f2\fs20\b0\i0\expnd0\expndtw0 SI\tab NO\par}}}
+
+{\shp{\*\shpinst{\sp{\sn relLeft}{\sv 5084}}
+{\sp{\sn relTop}{\sv 643}}
+{\sp{\sn relRight}{\sv 6089}}
+{\sp{\sn relBottom}{\sv 883}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+{\sp{\sn shapeType}{\sv 202}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn txflTextFlow}{\sv 0}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn fLine}{\sv 0}}
+{\sp{\sn dxTextLeft}{\sv 0}}{\sp{\sn dxTextRight}{\sv 0}}{\sp{\sn dyTextTop}{\sv 0}}{\sp{\sn dyTextBottom}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 1}}
+{\shptxt\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl-240\f1\fs24\b1 NOMBRE:\par}}}
+
+{\shp{\*\shpinst{\sp{\sn relLeft}{\sv 74}}
+{\sp{\sn relTop}{\sv 58}}
+{\sp{\sn relRight}{\sv 3709}}
+{\sp{\sn relBottom}{\sv 2642}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+{\sp{\sn shapeType}{\sv 202}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn txflTextFlow}{\sv 0}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn fLine}{\sv 0}}
+{\sp{\sn dxTextLeft}{\sv 0}}{\sp{\sn dxTextRight}{\sv 0}}{\sp{\sn dyTextTop}{\sv 0}}{\sp{\sn dyTextBottom}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 1}}
+{\shptxt\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl-244\f1\fs24\b1 III.\uc1\u8208 ?DENUNCIADO/A:\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\sb11\f1\fs23\b1\i0\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\li269\sl240\slmult1\sb1\f1\fs24\b1 APELLIDO:\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\li269\ri1208\sl240\slmult1\f1\fs24\b1 APELLIDO MATERNO: APODO:\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\li269\ri2\sl240\slmult1\f1\fs24\b1 LUGAR Y FECHA DE NACIMIENTO: NACIONALIDAD:\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\li269\ri123\sl240\slmult1\f1\fs24\b1 DOCUMENTO DE IDENTIDAD N\'B0: SEXO/GENERO:\par}}}
+}}
+{\pict
+{\*\picprop\defshp\shplid228
+{\sp{\sn shapeType}{\sv 75}}
+{\sp{\sn fFlipH}{\sv 0}}
+{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn fPseudoInline}{\sv 1}}
+{\sp{\sn fLayoutInCell}{\sv 1}}
+{\sp{\sn fLockPosition}{\sv 1}}
+{\sp{\sn fLockRotation}{\sv 1}}
+}
+\piccropl0\piccropr0\piccropt-5733\piccropb5733\picwgoal9550\pichgoal5733
+\wmetafile8\bliptag-1003278350\blipupi72
+}
+}}
+\par
+{\shp{\*\shpinst\shpleft1134\shpright10684\shptop267\shpbottom8628\shpbxpage\shpbypara\shpwr1\shpz27\shplid278{\sp{\sn dxWrapDistLeft}{\sv 0}}{\sp{\sn dxWrapDistRight}{\sv 0}}
+{\sp{\sn shapeType}{\sv 202}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn txflTextFlow}{\sv 0}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn fLine}{\sv 1}}{\sp{\sn lineColor}{\sv 0}}{\sp{\sn lineWidth}{\sv 6096}}{\sp{\sn lineStyle}{\sv 0}}
+{\sp{\sn dxTextLeft}{\sv 0}}{\sp{\sn dxTextRight}{\sv 0}}{\sp{\sn dyTextTop}{\sv 0}}{\sp{\sn dyTextBottom}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 2}}
+{\shptxt\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\li64\sl-292\f1\fs24\b1 IV\uc1\u8208 ? RELATO DE LOS HECHOS: \f2\fs16\b0\i0 (en caso de efectuar adem\'E1s denuncia penal, solamente adjuntar copia de la misma)\par}}}
+\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\sb3\f2\fs18\b0\i0\par\sect\sectd\sbkpage\headery0\footery779\margtsxn560
+\trowd\irow0\trgaph0\trrh438\trql\trleft161
+\clvertalt\clbrdrt\brdrs\brdrcf1\brdrw10\clbrdrl\brdrs\brdrcf1\brdrw10\clbrdrr\brdrs\brdrcf1\brdrw10\clbrdrb\brdrs\brdrcf1\brdrw10\cltxlrtb\cellx9646
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\li32\sl-292\f2\fs24\b0 V.\uc1\u8208 ?\f1\b1 COMPOSICION DEL GRUPO FAMILIAR CONVIVIENTE:\cell}\row
+\trowd\irow1\trgaph0\trrh586\trql\trleft161
+\clvertalt\clbrdrt\brdrs\brdrcf1\brdrw10\clbrdrl\brdrdb\brdrcf1\brdrw3\clbrdrr\brdrs\brdrcf1\brdrw10\clbrdrb\brdrs\brdrcf1\brdrw10\cltxlrtb\cellx1924
+\clvertalt\clbrdrt\brdrs\brdrcf1\brdrw10\clbrdrl\brdrs\brdrcf1\brdrw10\clbrdrr\brdrs\brdrcf1\brdrw10\clbrdrb\brdrs\brdrcf1\brdrw10\cltxlrtb\cellx2644
+\clvertalt\clbrdrt\brdrs\brdrcf1\brdrw10\clbrdrl\brdrs\brdrcf1\brdrw10\clbrdrr\brdrs\brdrcf1\brdrw10\clbrdrb\brdrs\brdrcf1\brdrw10\cltxlrtb\cellx3851
+\clvertalt\clbrdrt\brdrs\brdrcf1\brdrw10\clbrdrl\brdrs\brdrcf1\brdrw10\clbrdrr\brdrs\brdrcf1\brdrw10\clbrdrb\brdrs\brdrcf1\brdrw10\cltxlrtb\cellx4681
+\clvertalt\clbrdrt\brdrs\brdrcf1\brdrw10\clbrdrl\brdrs\brdrcf1\brdrw10\clbrdrr\brdrs\brdrcf1\brdrw10\clbrdrb\brdrs\brdrcf1\brdrw10\cltxlrtb\cellx6010
+\clvertalt\clbrdrt\brdrs\brdrcf1\brdrw10\clbrdrl\brdrs\brdrcf1\brdrw10\clbrdrr\brdrs\brdrcf1\brdrw10\clbrdrb\brdrs\brdrcf1\brdrw10\cltxlrtb\cellx7671
+\clvertalt\clbrdrt\brdrs\brdrcf1\brdrw10\clbrdrl\brdrs\brdrcf1\brdrw10\clbrdrr\brdrs\brdrcf1\brdrw15\clbrdrb\brdrs\brdrcf1\brdrw10\cltxlrtb\cellx9646
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\li17\sl-194\f1\fs16\b1 NOMBRE Y APELLIDO\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\li69\sl-194\f1\fs16\b1 EDAD\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\li69\sl-194\f1\fs16\b1 SEXO/G\'C9NERO\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\li72\sl-194\f1\fs16\b1 VINCULO\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\li74\ri45\sl240\slmult1\f1\fs16\b1 Es \f1\fs16\b1\i0\charscalex95 discapacitado/a?\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\li75\sl-194\f1\fs16\b1 Es v\'EDctima directa\par\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\li75\fi-1\ri575\sl190\f1\fs16\b1 de los actos de violencia?\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\li77\fi-1\ri609\sl240\slmult1\f1\fs16\b1 Es testigo de los actos de violencia?\cell}\row
+\trowd\irow2\trgaph0\trrh292\trql\trleft161
+\clvertalt\clbrdrt\brdrs\brdrcf1\brdrw10\clbrdrl\brdrdb\brdrcf1\brdrw3\clbrdrr\brdrs\brdrcf1\brdrw10\clbrdrb\brdrs\brdrcf1\brdrw10\cltxlrtb\cellx1924
+\clvertalt\clbrdrt\brdrs\brdrcf1\brdrw10\clbrdrl\brdrs\brdrcf1\brdrw10\clbrdrr\brdrs\brdrcf1\brdrw10\clbrdrb\brdrs\brdrcf1\brdrw10\cltxlrtb\cellx2644
+\clvertalt\clbrdrt\brdrs\brdrcf1\brdrw10\clbrdrl\brdrs\brdrcf1\brdrw10\clbrdrr\brdrs\brdrcf1\brdrw10\clbrdrb\brdrs\brdrcf1\brdrw10\cltxlrtb\cellx3851
+\clvertalt\clbrdrt\brdrs\brdrcf1\brdrw10\clbrdrl\brdrs\brdrcf1\brdrw10\clbrdrr\brdrs\brdrcf1\brdrw10\clbrdrb\brdrs\brdrcf1\brdrw10\cltxlrtb\cellx4681
+\clvertalt\clbrdrt\brdrs\brdrcf1\brdrw10\clbrdrl\brdrs\brdrcf1\brdrw10\clbrdrr\brdrs\brdrcf1\brdrw10\clbrdrb\brdrs\brdrcf1\brdrw10\cltxlrtb\cellx6010
+\clvertalt\clbrdrt\brdrs\brdrcf1\brdrw10\clbrdrl\brdrs\brdrcf1\brdrw10\clbrdrr\brdrs\brdrcf1\brdrw10\clbrdrb\brdrs\brdrcf1\brdrw10\cltxlrtb\cellx7671
+\clvertalt\clbrdrt\brdrs\brdrcf1\brdrw10\clbrdrl\brdrs\brdrcf1\brdrw10\clbrdrr\brdrs\brdrcf1\brdrw15\clbrdrb\brdrs\brdrcf1\brdrw10\cltxlrtb\cellx9646
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f0\fs20\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f0\fs20\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f0\fs20\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f0\fs20\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f0\fs20\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f0\fs20\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f0\fs20\cell}\row
+\trowd\irow3\trgaph0\trrh293\trql\trleft161
+\clvertalt\clbrdrt\brdrs\brdrcf1\brdrw10\clbrdrl\brdrdb\brdrcf1\brdrw3\clbrdrr\brdrs\brdrcf1\brdrw10\clbrdrb\brdrs\brdrcf1\brdrw10\cltxlrtb\cellx1924
+\clvertalt\clbrdrt\brdrs\brdrcf1\brdrw10\clbrdrl\brdrs\brdrcf1\brdrw10\clbrdrr\brdrs\brdrcf1\brdrw10\clbrdrb\brdrs\brdrcf1\brdrw10\cltxlrtb\cellx2644
+\clvertalt\clbrdrt\brdrs\brdrcf1\brdrw10\clbrdrl\brdrs\brdrcf1\brdrw10\clbrdrr\brdrs\brdrcf1\brdrw10\clbrdrb\brdrs\brdrcf1\brdrw10\cltxlrtb\cellx3851
+\clvertalt\clbrdrt\brdrs\brdrcf1\brdrw10\clbrdrl\brdrs\brdrcf1\brdrw10\clbrdrr\brdrs\brdrcf1\brdrw10\clbrdrb\brdrs\brdrcf1\brdrw10\cltxlrtb\cellx4681
+\clvertalt\clbrdrt\brdrs\brdrcf1\brdrw10\clbrdrl\brdrs\brdrcf1\brdrw10\clbrdrr\brdrs\brdrcf1\brdrw10\clbrdrb\brdrs\brdrcf1\brdrw10\cltxlrtb\cellx6010
+\clvertalt\clbrdrt\brdrs\brdrcf1\brdrw10\clbrdrl\brdrs\brdrcf1\brdrw10\clbrdrr\brdrs\brdrcf1\brdrw10\clbrdrb\brdrs\brdrcf1\brdrw10\cltxlrtb\cellx7671
+\clvertalt\clbrdrt\brdrs\brdrcf1\brdrw10\clbrdrl\brdrs\brdrcf1\brdrw10\clbrdrr\brdrs\brdrcf1\brdrw15\clbrdrb\brdrs\brdrcf1\brdrw10\cltxlrtb\cellx9646
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f0\fs22\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f0\fs22\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f0\fs22\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f0\fs22\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f0\fs22\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f0\fs22\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f0\fs22\cell}\row
+\trowd\irow4\trgaph0\trrh292\trql\trleft161
+\clvertalt\clbrdrt\brdrs\brdrcf1\brdrw10\clbrdrl\brdrdb\brdrcf1\brdrw3\clbrdrr\brdrs\brdrcf1\brdrw10\clbrdrb\brdrs\brdrcf1\brdrw10\cltxlrtb\cellx1924
+\clvertalt\clbrdrt\brdrs\brdrcf1\brdrw10\clbrdrl\brdrs\brdrcf1\brdrw10\clbrdrr\brdrs\brdrcf1\brdrw10\clbrdrb\brdrs\brdrcf1\brdrw10\cltxlrtb\cellx2644
+\clvertalt\clbrdrt\brdrs\brdrcf1\brdrw10\clbrdrl\brdrs\brdrcf1\brdrw10\clbrdrr\brdrs\brdrcf1\brdrw10\clbrdrb\brdrs\brdrcf1\brdrw10\cltxlrtb\cellx3851
+\clvertalt\clbrdrt\brdrs\brdrcf1\brdrw10\clbrdrl\brdrs\brdrcf1\brdrw10\clbrdrr\brdrs\brdrcf1\brdrw10\clbrdrb\brdrs\brdrcf1\brdrw10\cltxlrtb\cellx4681
+\clvertalt\clbrdrt\brdrs\brdrcf1\brdrw10\clbrdrl\brdrs\brdrcf1\brdrw10\clbrdrr\brdrs\brdrcf1\brdrw10\clbrdrb\brdrs\brdrcf1\brdrw10\cltxlrtb\cellx6010
+\clvertalt\clbrdrt\brdrs\brdrcf1\brdrw10\clbrdrl\brdrs\brdrcf1\brdrw10\clbrdrr\brdrs\brdrcf1\brdrw10\clbrdrb\brdrs\brdrcf1\brdrw10\cltxlrtb\cellx7671
+\clvertalt\clbrdrt\brdrs\brdrcf1\brdrw10\clbrdrl\brdrs\brdrcf1\brdrw10\clbrdrr\brdrs\brdrcf1\brdrw15\clbrdrb\brdrs\brdrcf1\brdrw10\cltxlrtb\cellx9646
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f0\fs20\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f0\fs20\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f0\fs20\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f0\fs20\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f0\fs20\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f0\fs20\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f0\fs20\cell}\row
+\trowd\irow5\trgaph0\trrh293\trql\trleft161
+\clvertalt\clbrdrt\brdrs\brdrcf1\brdrw10\clbrdrl\brdrdb\brdrcf1\brdrw3\clbrdrr\brdrs\brdrcf1\brdrw10\clbrdrb\brdrs\brdrcf1\brdrw10\cltxlrtb\cellx1924
+\clvertalt\clbrdrt\brdrs\brdrcf1\brdrw10\clbrdrl\brdrs\brdrcf1\brdrw10\clbrdrr\brdrs\brdrcf1\brdrw10\clbrdrb\brdrs\brdrcf1\brdrw10\cltxlrtb\cellx2644
+\clvertalt\clbrdrt\brdrs\brdrcf1\brdrw10\clbrdrl\brdrs\brdrcf1\brdrw10\clbrdrr\brdrs\brdrcf1\brdrw10\clbrdrb\brdrs\brdrcf1\brdrw10\cltxlrtb\cellx3851
+\clvertalt\clbrdrt\brdrs\brdrcf1\brdrw10\clbrdrl\brdrs\brdrcf1\brdrw10\clbrdrr\brdrs\brdrcf1\brdrw10\clbrdrb\brdrs\brdrcf1\brdrw10\cltxlrtb\cellx4681
+\clvertalt\clbrdrt\brdrs\brdrcf1\brdrw10\clbrdrl\brdrs\brdrcf1\brdrw10\clbrdrr\brdrs\brdrcf1\brdrw10\clbrdrb\brdrs\brdrcf1\brdrw10\cltxlrtb\cellx6010
+\clvertalt\clbrdrt\brdrs\brdrcf1\brdrw10\clbrdrl\brdrs\brdrcf1\brdrw10\clbrdrr\brdrs\brdrcf1\brdrw10\clbrdrb\brdrs\brdrcf1\brdrw10\cltxlrtb\cellx7671
+\clvertalt\clbrdrt\brdrs\brdrcf1\brdrw10\clbrdrl\brdrs\brdrcf1\brdrw10\clbrdrr\brdrs\brdrcf1\brdrw15\clbrdrb\brdrs\brdrcf1\brdrw10\cltxlrtb\cellx9646
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f0\fs22\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f0\fs22\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f0\fs22\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f0\fs22\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f0\fs22\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f0\fs22\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f0\fs22\cell}\row
+\trowd\irow6\trgaph0\trrh292\trql\trleft161
+\clvertalt\clbrdrt\brdrs\brdrcf1\brdrw10\clbrdrl\brdrdb\brdrcf1\brdrw3\clbrdrr\brdrs\brdrcf1\brdrw10\clbrdrb\brdrs\brdrcf1\brdrw10\cltxlrtb\cellx1924
+\clvertalt\clbrdrt\brdrs\brdrcf1\brdrw10\clbrdrl\brdrs\brdrcf1\brdrw10\clbrdrr\brdrs\brdrcf1\brdrw10\clbrdrb\brdrs\brdrcf1\brdrw10\cltxlrtb\cellx2644
+\clvertalt\clbrdrt\brdrs\brdrcf1\brdrw10\clbrdrl\brdrs\brdrcf1\brdrw10\clbrdrr\brdrs\brdrcf1\brdrw10\clbrdrb\brdrs\brdrcf1\brdrw10\cltxlrtb\cellx3851
+\clvertalt\clbrdrt\brdrs\brdrcf1\brdrw10\clbrdrl\brdrs\brdrcf1\brdrw10\clbrdrr\brdrs\brdrcf1\brdrw10\clbrdrb\brdrs\brdrcf1\brdrw10\cltxlrtb\cellx4681
+\clvertalt\clbrdrt\brdrs\brdrcf1\brdrw10\clbrdrl\brdrs\brdrcf1\brdrw10\clbrdrr\brdrs\brdrcf1\brdrw10\clbrdrb\brdrs\brdrcf1\brdrw10\cltxlrtb\cellx6010
+\clvertalt\clbrdrt\brdrs\brdrcf1\brdrw10\clbrdrl\brdrs\brdrcf1\brdrw10\clbrdrr\brdrs\brdrcf1\brdrw10\clbrdrb\brdrs\brdrcf1\brdrw10\cltxlrtb\cellx7671
+\clvertalt\clbrdrt\brdrs\brdrcf1\brdrw10\clbrdrl\brdrs\brdrcf1\brdrw10\clbrdrr\brdrs\brdrcf1\brdrw15\clbrdrb\brdrs\brdrcf1\brdrw10\cltxlrtb\cellx9646
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f0\fs20\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f0\fs20\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f0\fs20\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f0\fs20\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f0\fs20\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f0\fs20\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f0\fs20\cell}\row
+\trowd\irow7\trgaph0\trrh293\trql\trleft161
+\clvertalt\clbrdrt\brdrs\brdrcf1\brdrw10\clbrdrl\brdrdb\brdrcf1\brdrw3\clbrdrr\brdrs\brdrcf1\brdrw10\clbrdrb\brdrs\brdrcf1\brdrw10\cltxlrtb\cellx1924
+\clvertalt\clbrdrt\brdrs\brdrcf1\brdrw10\clbrdrl\brdrs\brdrcf1\brdrw10\clbrdrr\brdrs\brdrcf1\brdrw10\clbrdrb\brdrs\brdrcf1\brdrw10\cltxlrtb\cellx2644
+\clvertalt\clbrdrt\brdrs\brdrcf1\brdrw10\clbrdrl\brdrs\brdrcf1\brdrw10\clbrdrr\brdrs\brdrcf1\brdrw10\clbrdrb\brdrs\brdrcf1\brdrw10\cltxlrtb\cellx3851
+\clvertalt\clbrdrt\brdrs\brdrcf1\brdrw10\clbrdrl\brdrs\brdrcf1\brdrw10\clbrdrr\brdrs\brdrcf1\brdrw10\clbrdrb\brdrs\brdrcf1\brdrw10\cltxlrtb\cellx4681
+\clvertalt\clbrdrt\brdrs\brdrcf1\brdrw10\clbrdrl\brdrs\brdrcf1\brdrw10\clbrdrr\brdrs\brdrcf1\brdrw10\clbrdrb\brdrs\brdrcf1\brdrw10\cltxlrtb\cellx6010
+\clvertalt\clbrdrt\brdrs\brdrcf1\brdrw10\clbrdrl\brdrs\brdrcf1\brdrw10\clbrdrr\brdrs\brdrcf1\brdrw10\clbrdrb\brdrs\brdrcf1\brdrw10\cltxlrtb\cellx7671
+\clvertalt\clbrdrt\brdrs\brdrcf1\brdrw10\clbrdrl\brdrs\brdrcf1\brdrw10\clbrdrr\brdrs\brdrcf1\brdrw15\clbrdrb\brdrs\brdrcf1\brdrw10\cltxlrtb\cellx9646
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f0\fs22\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f0\fs22\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f0\fs22\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f0\fs22\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f0\fs22\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f0\fs22\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f0\fs22\cell}\row
+\trowd\irow8\trgaph0\trrh365\trql\trleft161
+\clvertalt\clbrdrt\brdrs\brdrcf1\brdrw10\clbrdrl\brdrs\brdrcf1\brdrw10\clbrdrr\brdrnone\brdrw15\clbrdrb\brdrs\brdrcf1\brdrw10\cltxlrtb\cellx2416
+\clvertalt\clbrdrt\brdrs\brdrcf1\brdrw10\clbrdrl\brdrnone\brdrw15\clbrdrr\brdrnone\brdrw15\clbrdrb\brdrs\brdrcf1\brdrw10\cltxlrtb\cellx2762
+\clvertalt\clbrdrt\brdrs\brdrcf1\brdrw10\clbrdrl\brdrnone\brdrw15\clbrdrr\brdrnone\brdrw15\clbrdrb\brdrs\brdrcf1\brdrw10\cltxlrtb\cellx3271
+\clvertalt\clbrdrt\brdrs\brdrcf1\brdrw10\clbrdrl\brdrnone\brdrw15\clbrdrr\brdrnone\brdrw15\clbrdrb\brdrs\brdrcf1\brdrw10\cltxlrtb\cellx4681
+\clvertalt\clbrdrt\brdrs\brdrcf1\brdrw10\clbrdrl\brdrnone\brdrw15\clbrdrr\brdrnone\brdrw15\clbrdrb\brdrs\brdrcf1\brdrw10\cltxlrtb\cellx8053
+\clvertalt\clbrdrt\brdrs\brdrcf1\brdrw10\clbrdrl\brdrnone\brdrw15\clbrdrr\brdrnone\brdrw15\clbrdrb\brdrs\brdrcf1\brdrw10\cltxlrtb\cellx8531
+\clvertalt\clbrdrt\brdrs\brdrcf1\brdrw10\clbrdrl\brdrnone\brdrw15\clbrdrr\brdrs\brdrcf1\brdrw10\clbrdrb\brdrs\brdrcf1\brdrw10\cltxlrtb\cellx9646
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\li77\sl-243\f2\fs20\b0 Hijos/as no convivientes?\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\li117\sl-243\f2\fs20\b0 SI\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\li95\sl-243\f2\fs20\b0 NO\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\li164\sl-243\f2\fs20\b0 Edades:\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\li430\sl-243\f2\fs20\b0 Conviven alternadamente con Ud.?\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\li105\sl-243\f2\fs20\b0 SI\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\li266\sl-243\f2\fs20\b0 NO\cell}\row\pard\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f2\fs20\b0\i0\par
+{\shpgrp{\*\shpinst\shplid610
+\shpleft1129\shptop203\shpright10689\shpbottom7083\shpfhdr0
+\shpbxpage\shpbypara\shpwr3\shpwrk0\shpfblwtxt1\shpz28
+\shpwr3\shpfblwtxt1{\sp{\sn groupLeft}{\sv 1129}}
+{\sp{\sn groupTop}{\sv 203}}
+{\sp{\sn groupRight}{\sv 10689}}
+{\sp{\sn groupBottom}{\sv 7083}}
+{\sp{\sn fFlipH}{\sv 0}}
+{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 2}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+
+{\shp{\*\shpinst\shplid611
+{\sp{\sn relLeft}{\sv 1129}}
+{\sp{\sn relTop}{\sv 208}}
+{\sp{\sn relRight}{\sv 10689}}
+{\sp{\sn relBottom}{\sv 228}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn shapeType}{\sv 0}}
+{\sp{\sn rotation}{\sv 0}}
+{\sp{\sn geoRight}{\sv 9560}}
+{\sp{\sn geoBottom}{\sv 20}}
+{\sp{\sn shapePath}{\sv 4}}
+{\sp{\sn pVerticies}{\sv 8;2;(0,0);(9559,0)}}
+{\sp{\sn pSegmentInfo}{\sv 2;5;16384;45824;1;45824;32768}}
+{\sp{\sn fFillOK}{\sv 1}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn lineWidth}{\sv 6096}}
+{\sp{\sn lineColor}{\sv 0}}
+{\sp{\sn fLine}{\sv 1}}{\sp{\sn lineType}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 2}}
+{\sp{\sn fArrowheadsOK}{\sv 1}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+}}
+
+{\shp{\*\shpinst\shplid612
+{\sp{\sn relLeft}{\sv 1133}}
+{\sp{\sn relTop}{\sv 203}}
+{\sp{\sn relRight}{\sv 1153}}
+{\sp{\sn relBottom}{\sv 7083}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn shapeType}{\sv 0}}
+{\sp{\sn rotation}{\sv 0}}
+{\sp{\sn geoRight}{\sv 20}}
+{\sp{\sn geoBottom}{\sv 6880}}
+{\sp{\sn shapePath}{\sv 4}}
+{\sp{\sn pVerticies}{\sv 8;2;(0,0);(0,6879)}}
+{\sp{\sn pSegmentInfo}{\sv 2;5;16384;45824;1;45824;32768}}
+{\sp{\sn fFillOK}{\sv 1}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn lineWidth}{\sv 6095}}
+{\sp{\sn lineColor}{\sv 0}}
+{\sp{\sn fLine}{\sv 1}}{\sp{\sn lineType}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 2}}
+{\sp{\sn fArrowheadsOK}{\sv 1}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+}}
+
+{\shpgrp{\*\shpinst\shplid613
+{\sp{\sn groupLeft}{\sv 1129}}
+{\sp{\sn groupTop}{\sv 203}}
+{\sp{\sn groupRight}{\sv 10684}}
+{\sp{\sn groupBottom}{\sv 7083}}
+{\sp{\sn relLeft}{\sv 1129}}
+{\sp{\sn relTop}{\sv 203}}
+{\sp{\sn relRight}{\sv 10684}}
+{\sp{\sn relBottom}{\sv 7083}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+
+{\shp{\*\shpinst\shplid613
+{\sp{\sn relLeft}{\sv 1129}}
+{\sp{\sn relTop}{\sv 203}}
+{\sp{\sn relRight}{\sv 10684}}
+{\sp{\sn relBottom}{\sv 7083}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn shapeType}{\sv 0}}
+{\sp{\sn rotation}{\sv 0}}
+{\sp{\sn geoRight}{\sv 9555}}
+{\sp{\sn geoBottom}{\sv 6880}}
+{\sp{\sn shapePath}{\sv 4}}
+{\sp{\sn pVerticies}{\sv 8;2;(0,6874);(9549,6874)}}
+{\sp{\sn pSegmentInfo}{\sv 2;5;16384;45824;1;45824;32768}}
+{\sp{\sn fFillOK}{\sv 1}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn lineWidth}{\sv 6096}}
+{\sp{\sn lineColor}{\sv 0}}
+{\sp{\sn fLine}{\sv 1}}{\sp{\sn lineType}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 2}}
+{\sp{\sn fArrowheadsOK}{\sv 1}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+}}
+
+{\shp{\*\shpinst\shplid613
+{\sp{\sn relLeft}{\sv 1129}}
+{\sp{\sn relTop}{\sv 203}}
+{\sp{\sn relRight}{\sv 10684}}
+{\sp{\sn relBottom}{\sv 7083}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn shapeType}{\sv 0}}
+{\sp{\sn rotation}{\sv 0}}
+{\sp{\sn geoRight}{\sv 9555}}
+{\sp{\sn geoBottom}{\sv 6880}}
+{\sp{\sn shapePath}{\sv 4}}
+{\sp{\sn pVerticies}{\sv 8;2;(9554,0);(9554,6879)}}
+{\sp{\sn pSegmentInfo}{\sv 2;5;16384;45824;1;45824;32768}}
+{\sp{\sn fFillOK}{\sv 1}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn lineWidth}{\sv 6096}}
+{\sp{\sn lineColor}{\sv 0}}
+{\sp{\sn fLine}{\sv 1}}{\sp{\sn lineType}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 2}}
+{\sp{\sn fArrowheadsOK}{\sv 1}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+}}
+}}
+}}
+\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\li183\sl240\slmult1\sb213\f1\fs24\b1 VI.\uc1\u8208 ?DATOS DE INTERES\par\pard\plain\s3\ls2\ilvl0\nooverflow\nocwrap\lnbrkrule\li430\fi-248\sl-293\tx431\tx4636\tx7226\f1\fs24\b1 Tipo de violencia \f2\fs16\b0\i0 (marcar una o\expnd-2\expndtw-12  \f2\fs16\b0\i0\expnd0\expndtw0 m\'E1s\expnd0\expndtw-2  \f2\fs16\b0\i0\expnd0\expndtw0 opciones\fs20 ):\tab a) F\'EDsica\tab c)\expnd0\expndtw-2  \f2\fs20\b0\i0\expnd0\expndtw0 Econ\'F3mica/Patrimonial\f1\fs24\cf1\par\pard\plain\s3\ls2\ilvl0\nooverflow\nocwrap\lnbrkrule\li4871\fi-212\sl240\slmult1\tx4872\tx7315\f2\fs20\b0 Psicol\'F3gica/Emocional\tab d)\expnd0\expndtw-2  \f2\fs20\b0\i0\expnd0\expndtw0 Sexual/Reproductiva\f2\fs20\cf1\par\pard\plain\s3\ls3\ilvl0\nooverflow\nocwrap\lnbrkrule\li440\fi-258\sl-293\tx441\f1\fs24\b1 Frecuencia de los actos de\expnd-1\expndtw-3  \f1\fs24\b1\i0\expnd0\expndtw0 violencia:\par\pard\plain\s3\ls3\ilvl1\nooverflow\nocwrap\lnbrkrule\li1802\fi-204\sl-244\tx1803\tx3723\f2\fs20\b0 Primera\expnd-1\expndtw-3  \f2\fs20\b0\i0\expnd0\expndtw0 vez\tab d) Una vez por\expnd0\expndtw-2  \f2\fs20\b0\i0\expnd0\expndtw0 mes\par\pard\plain\s3\ls3\ilvl1\nooverflow\nocwrap\lnbrkrule\li1812\fi-214\sl-244\tx1813\tx3723\f2\fs20\b0 Todos\expnd0\expndtw-2  \f2\fs20\b0\i0\expnd0\expndtw0 los\expnd0\expndtw-1  \f2\fs20\b0\i0\expnd0\expndtw0 d\'EDas\tab e) Una vez por\expnd0\expndtw-2  \f2\fs20\b0\i0\expnd0\expndtw0 a\'F1o\par\pard\plain\s3\ls3\ilvl1\nooverflow\nocwrap\lnbrkrule\li1822\fi-192\sl-244\sb1\tx1823\f2\fs20\b0 Todas las\expnd-1\expndtw-4  \f2\fs20\b0\i0\expnd0\expndtw0 semanas\par\pard\plain\s3\ls3\ilvl0\nooverflow\nocwrap\lnbrkrule\li412\fi-230\sl-293\tx413\tx7971\tx8874\f1\fs24\b1 Aument\'F3 la frecuencia de los actos de violencia en los \'FAltimos\expnd-4\expndtw-21  \f1\fs24\b1\i0\expnd0\expndtw0 2\expnd-1\expndtw-3  \f1\fs24\b1\i0\expnd0\expndtw0 meses?\tab \f2\fs20\b0\i0 SI    NO\tab NO\expnd0\expndtw-1  \f2\fs20\b0\i0\expnd0\expndtw0 SABE\par\pard\plain\s3\ls3\ilvl0\nooverflow\nocwrap\lnbrkrule\li440\fi-258\sl240\slmult1\tx441\tx5847\tx6794\f1\fs24\b1 La v\'EDctima\expnd-1\expndtw-5  \f1\fs24\b1\i0\expnd0\expndtw0 est\'E1\expnd0\expndtw-2  \f1\fs24\b1\i0\expnd0\expndtw0 embarazada?\tab \f2\fs20\b0\i0 SI    NO\tab NO\expnd0\expndtw-1  \f2\fs20\b0\i0\expnd0\expndtw0 SABE\par\pard\plain\s3\ls3\ilvl0\nooverflow\nocwrap\lnbrkrule\li433\fi-251\sl240\slmult1\tx434\tx5174\tx5542\tx6165\f1\fs24\b1 La v\'EDctima\expnd-1\expndtw-3  \f1\fs24\b1\i0\expnd0\expndtw0 es\expnd0\expndtw-1  \f1\fs24\b1\i0\expnd0\expndtw0 discapacitada?\tab \f2\fs20\b0\i0 SI\tab NO\tab NO\expnd0\expndtw-1  \f2\fs20\b0\i0\expnd0\expndtw0 SABE\par\pard\plain\s3\ls3\ilvl0\nooverflow\nocwrap\lnbrkrule\li387\fi-205\sl240\slmult1\sb1\tx388\f1\fs24\b1 La v\'EDctima ha recibido asistencia m\'E9dica a causa de la violencia? \f2\fs20\b0\i0 SI NO NO\expnd-6\expndtw-30  \f2\fs20\b0\i0\expnd0\expndtw0 SABE\par\pard\plain\s3\ls3\ilvl0\nooverflow\nocwrap\lnbrkrule\li426\fi-243\sl240\slmult1\tx426\tx7400\tx8165\f1\fs24\b1 El agresor tiene antecedentes penales o causas penales\expnd-3\expndtw-16  \f1\fs24\b1\i0\expnd0\expndtw0 en\expnd0\expndtw-1  \f1\fs24\b1\i0\expnd0\expndtw0 tr\'E1mite?\tab \f2\fs20\b0\i0 SI \expnd9\expndtw43  \f2\fs20\b0\i0\expnd0\expndtw0 NO\tab NO\expnd0\expndtw-1  \f2\fs20\b0\i0\expnd0\expndtw0 SABE\par\pard\plain\s3\ls3\ilvl0\nooverflow\nocwrap\lnbrkrule\li440\fi-258\sl240\slmult1\tx441\f1\fs24\b1 El agresor consume abusivamente alcohol? \f2\fs20\b0\i0 SI NO NO\expnd4\expndtw18  \f2\fs20\b0\i0\expnd0\expndtw0 SABE\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\li183\sl240\slmult1\tx4701\f1\fs24\b1 I) El agresor consume\expnd-1\expndtw-5  \f1\fs24\b1\i0\expnd0\expndtw0 sustancias\expnd0\expndtw-1  \f1\fs24\b1\i0\expnd0\expndtw0 adictivas?\tab \f2\fs20\b0\i0 SI NO NO\expnd-1\expndtw-3  \f2\fs20\b0\i0\expnd0\expndtw0 SABE\par\pard\plain\s3\ls4\ilvl0\nooverflow\nocwrap\lnbrkrule\li183\ri1065\sl240\slmult1\tx374\tx2505\tx3316\f1\fs24\b1 El agresor se encuentra bajo tratamiento psiqui\'E1trico y/o tiene diagnosticada alguna enfermedad\expnd0\expndtw-2  \f1\fs24\b1\i0\expnd0\expndtw0 mental?\tab \f2\fs20\b0\i0 SI    NO\tab NO\expnd0\expndtw-1  \f2\fs20\b0\i0\expnd0\expndtw0 SABE\par\pard\plain\s3\ls4\ilvl0\nooverflow\nocwrap\lnbrkrule\li183\ri316\sl240\slmult1\tx428\f1\fs24\b1 El agresor tiene antecedentes de actos de violencia o amenazas hacia otras personas? \f2\fs20\b0\i0 SI NO NO\expnd0\expndtw-1  \f2\fs20\b0\i0\expnd0\expndtw0 SABE\par\pard\plain\s3\ls4\ilvl0\nooverflow\nocwrap\lnbrkrule\li370\fi-188\sl240\slmult1\tx371\f1\fs24\b1 El agresor tiene armas de fuego? \f2\fs20\b0\i0 SI NO NO\expnd1\expndtw7  \f2\fs20\b0\i0\expnd0\expndtw0 SABE\par\pard\plain\s3\ls4\ilvl0\nooverflow\nocwrap\lnbrkrule\li507\fi-325\sl240\slmult1\tx508\tx5169\tx6026\f1\fs24\b1 El agresor utiliz\'F3\expnd-1\expndtw-3  \f1\fs24\b1\i0\expnd0\expndtw0 armas\expnd0\expndtw-1  \f1\fs24\b1\i0\expnd0\expndtw0 intimidatoriamente?\tab \f2\fs20\b0\i0 SI  \expnd9\expndtw45  \f2\fs20\b0\i0\expnd0\expndtw0 NO\tab NO\expnd0\expndtw1  \f2\fs20\b0\i0\expnd0\expndtw0 SABE\par\pard\plain\s3\ls4\ilvl0\nooverflow\nocwrap\lnbrkrule\li440\fi-258\sl240\slmult1\tx441\f1\fs24\b1 El agresor amenaz\'F3 a la victima de muerte o de lesionarla gravemente? \f2\fs20\b0\i0 SI NO NO\expnd-3\expndtw-14  \f2\fs20\b0\i0\expnd0\expndtw0 SABE\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\li183\sl240\slmult1\f1\fs24\b1 \'F1) El agresor ha intentado/amenazado con suicidarse? \f2\fs20\b0\i0 SI NO NO SABE\par
+{\shpgrp{\*\shpinst\shplid614
+\shpleft1129\shptop1034\shpright10689\shpbottom3008\shpfhdr0
+\shpbxpage\shpbypara\shpwr3\shpwrk0\shpfblwtxt1\shpz31
+\shpwr3\shpfblwtxt1{\sp{\sn groupLeft}{\sv 1129}}
+{\sp{\sn groupTop}{\sv 1034}}
+{\sp{\sn groupRight}{\sv 10689}}
+{\sp{\sn groupBottom}{\sv 3008}}
+{\sp{\sn fFlipH}{\sv 0}}
+{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 2}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+
+{\shp{\*\shpinst\shplid615
+{\sp{\sn relLeft}{\sv 1129}}
+{\sp{\sn relTop}{\sv 1039}}
+{\sp{\sn relRight}{\sv 10689}}
+{\sp{\sn relBottom}{\sv 1059}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn shapeType}{\sv 0}}
+{\sp{\sn rotation}{\sv 0}}
+{\sp{\sn geoRight}{\sv 9560}}
+{\sp{\sn geoBottom}{\sv 20}}
+{\sp{\sn shapePath}{\sv 4}}
+{\sp{\sn pVerticies}{\sv 8;2;(0,0);(9559,0)}}
+{\sp{\sn pSegmentInfo}{\sv 2;5;16384;45824;1;45824;32768}}
+{\sp{\sn fFillOK}{\sv 1}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn lineWidth}{\sv 6096}}
+{\sp{\sn lineColor}{\sv 0}}
+{\sp{\sn fLine}{\sv 1}}{\sp{\sn lineType}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 2}}
+{\sp{\sn fArrowheadsOK}{\sv 1}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+}}
+
+{\shpgrp{\*\shpinst\shplid616
+{\sp{\sn groupLeft}{\sv 1129}}
+{\sp{\sn groupTop}{\sv 1034}}
+{\sp{\sn groupRight}{\sv 10679}}
+{\sp{\sn groupBottom}{\sv 3008}}
+{\sp{\sn relLeft}{\sv 1129}}
+{\sp{\sn relTop}{\sv 1034}}
+{\sp{\sn relRight}{\sv 10679}}
+{\sp{\sn relBottom}{\sv 3008}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+
+{\shp{\*\shpinst\shplid616
+{\sp{\sn relLeft}{\sv 1129}}
+{\sp{\sn relTop}{\sv 1034}}
+{\sp{\sn relRight}{\sv 10679}}
+{\sp{\sn relBottom}{\sv 3008}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn shapeType}{\sv 0}}
+{\sp{\sn rotation}{\sv 0}}
+{\sp{\sn geoRight}{\sv 9550}}
+{\sp{\sn geoBottom}{\sv 1974}}
+{\sp{\sn shapePath}{\sv 4}}
+{\sp{\sn pVerticies}{\sv 8;2;(4,0);(4,1974)}}
+{\sp{\sn pSegmentInfo}{\sv 2;5;16384;45824;1;45824;32768}}
+{\sp{\sn fFillOK}{\sv 1}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn lineWidth}{\sv 6095}}
+{\sp{\sn lineColor}{\sv 0}}
+{\sp{\sn fLine}{\sv 1}}{\sp{\sn lineType}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 2}}
+{\sp{\sn fArrowheadsOK}{\sv 1}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+}}
+
+{\shp{\*\shpinst\shplid616
+{\sp{\sn relLeft}{\sv 1129}}
+{\sp{\sn relTop}{\sv 1034}}
+{\sp{\sn relRight}{\sv 10679}}
+{\sp{\sn relBottom}{\sv 3008}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn shapeType}{\sv 0}}
+{\sp{\sn rotation}{\sv 0}}
+{\sp{\sn geoRight}{\sv 9550}}
+{\sp{\sn geoBottom}{\sv 1974}}
+{\sp{\sn shapePath}{\sv 4}}
+{\sp{\sn pVerticies}{\sv 8;2;(0,1969);(9549,1969)}}
+{\sp{\sn pSegmentInfo}{\sv 2;5;16384;45824;1;45824;32768}}
+{\sp{\sn fFillOK}{\sv 1}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn lineWidth}{\sv 6095}}
+{\sp{\sn lineColor}{\sv 0}}
+{\sp{\sn fLine}{\sv 1}}{\sp{\sn lineType}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 2}}
+{\sp{\sn fArrowheadsOK}{\sv 1}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+}}
+}}
+
+{\shp{\*\shpinst\shplid617
+{\sp{\sn relLeft}{\sv 10683}}
+{\sp{\sn relTop}{\sv 1034}}
+{\sp{\sn relRight}{\sv 10703}}
+{\sp{\sn relBottom}{\sv 3008}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn shapeType}{\sv 0}}
+{\sp{\sn rotation}{\sv 0}}
+{\sp{\sn geoRight}{\sv 20}}
+{\sp{\sn geoBottom}{\sv 1974}}
+{\sp{\sn shapePath}{\sv 4}}
+{\sp{\sn pVerticies}{\sv 8;2;(0,0);(0,1974)}}
+{\sp{\sn pSegmentInfo}{\sv 2;5;16384;45824;1;45824;32768}}
+{\sp{\sn fFillOK}{\sv 1}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn lineWidth}{\sv 6096}}
+{\sp{\sn lineColor}{\sv 0}}
+{\sp{\sn fLine}{\sv 1}}{\sp{\sn lineType}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 2}}
+{\sp{\sn fArrowheadsOK}{\sv 1}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+}}
+
+{\shp{\*\shpinst{\sp{\sn relLeft}{\sv 1204}}
+{\sp{\sn relTop}{\sv 1094}}
+{\sp{\sn relRight}{\sv 4264}}
+{\sp{\sn relBottom}{\sv 1334}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+{\sp{\sn shapeType}{\sv 202}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn txflTextFlow}{\sv 0}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn fLine}{\sv 0}}
+{\sp{\sn dxTextLeft}{\sv 0}}{\sp{\sn dxTextRight}{\sv 0}}{\sp{\sn dyTextTop}{\sv 0}}{\sp{\sn dyTextBottom}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 2}}
+{\shptxt\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl-240\f1\fs24\b1 VII.\uc1\u8208 ? DENUNCIAS ANTERIORES:\par}}}
+
+{\shp{\*\shpinst{\sp{\sn relLeft}{\sv 1204}}
+{\sp{\sn relTop}{\sv 2217}}
+{\sp{\sn relRight}{\sv 8786}}
+{\sp{\sn relBottom}{\sv 2750}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+{\sp{\sn shapeType}{\sv 202}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn txflTextFlow}{\sv 0}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn fLine}{\sv 0}}
+{\sp{\sn dxTextLeft}{\sv 0}}{\sp{\sn dxTextRight}{\sv 0}}{\sp{\sn dyTextTop}{\sv 0}}{\sp{\sn dyTextBottom}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 2}}
+{\shptxt\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl-244\tx6403\f1\fs24\b1 Otros procesos en tr\'E1mite que lo/a vincula al\expnd-4\expndtw-20  \f1\fs24\b1\i0\expnd0\expndtw0 denunciado/a\f2\fs20\b0 :\expnd0\expndtw-1  \f2\fs20\b0\i0\expnd0\expndtw0 SI\tab NO\expnd8\expndtw40  \f2\fs20\b0\i0\expnd0\expndtw0 CUALES?\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl-288\tx5558\f1\fs24\b1 Se dict\'F3 alguna medida de protecci\'F3n\expnd-3\expndtw-15  \f1\fs24\b1\i0\expnd0\expndtw0 y/o\expnd0\expndtw-2  \f1\fs24\b1\i0\expnd0\expndtw0 asistencial?\tab \f2\fs20\b0\i0 SI NO  CUAL?\par}}}
+}}
+\pard\plain\s3\ls4\ilvl0\nooverflow\nocwrap\lnbrkrule\li441\fi-259\sl240\slmult1\tx442\f1\fs24\b1 El agresor es jugador/a compulsivo? \f2\fs20\b0\i0 SI NO NO\expnd2\expndtw12  \f2\fs20\b0\i0\expnd0\expndtw0 SABE\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f2\fs20\b0\i0\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f2\fs20\b0\i0\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f2\fs20\b0\i0\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f2\fs20\b0\i0\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\sb6\f2\fs29\b0\i0\par
+\trowd\irow0\trgaph0\trrh266\trql\trleft134
+\clvertalt\clbrdrt\brdrnone\brdrw15\clbrdrl\brdrnone\brdrw15\clbrdrr\brdrnone\brdrw15\clbrdrb\brdrnone\brdrw15\cltxlrtb\cellx3003
+\clvertalt\clbrdrt\brdrnone\brdrw15\clbrdrl\brdrnone\brdrw15\clbrdrr\brdrnone\brdrw15\clbrdrb\brdrnone\brdrw15\cltxlrtb\cellx4212
+\clvertalt\clbrdrt\brdrnone\brdrw15\clbrdrl\brdrnone\brdrw15\clbrdrr\brdrnone\brdrw15\clbrdrb\brdrnone\brdrw15\cltxlrtb\cellx6828
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\li50\sl-244\f1\fs24\b1 Efectuada ante:\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\li100\sl-244\f1\fs24\b1 Fecha:\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f0\fs18\cell}\row
+\trowd\irow1\trgaph0\trrh266\trql\trleft134
+\clvertalt\clbrdrt\brdrnone\brdrw15\clbrdrl\brdrnone\brdrw15\clbrdrr\brdrnone\brdrw15\clbrdrb\brdrnone\brdrw15\cltxlrtb\cellx3003
+\clvertalt\clbrdrt\brdrnone\brdrw15\clbrdrl\brdrnone\brdrw15\clbrdrr\brdrnone\brdrw15\clbrdrb\brdrnone\brdrw15\cltxlrtb\cellx4212
+\clvertalt\clbrdrt\brdrnone\brdrw15\clbrdrl\brdrnone\brdrw15\clbrdrr\brdrnone\brdrw15\clbrdrb\brdrnone\brdrw15\cltxlrtb\cellx6027
+\clvertalt\clbrdrt\brdrnone\brdrw15\clbrdrl\brdrnone\brdrw15\clbrdrr\brdrnone\brdrw15\clbrdrb\brdrnone\brdrw15\cltxlrtb\cellx6828
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\li50\sl-246\f1\fs24\b1 Juzgado interviniente\f2\fs20\b0 : a) Paz\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\li260\sl-230\sb16\f2\fs20\b0 b)Familia\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\li204\sl-230\sb16\f2\fs20\b0 c)Civil y Comercial\cell}
+{\pard\plain\intbl\s4\nooverflow\nocwrap\lnbrkrule\li135\sl-230\sb16\f2\fs20\b0 d)Penal\cell}\row\pard\sect\sectd\sbkpage\headery0\footery779\margtsxn500\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\li284\sl240\slmult1\f2\fs20
+{\field\fldlock
+{\*\fldinst SHAPE  \\* MERGEFORMAT}
+{\fldrslt 
+{\shpgrp{\*\shpinst\shplid630
+\shpleft0\shptop0\shpright9378\shpbottom2511\shpfhdr0
+\shpbxcolumn\shpbxignore\shpbypara\shpbyignore\shpwr3\shpwrk0\shpfblwtxt1\shpz35
+\shplockanchor
+\shpwr3\shpwrk0\shpfblwtxt1{\sp{\sn groupLeft}{\sv 0}}
+{\sp{\sn groupTop}{\sv 0}}
+{\sp{\sn groupRight}{\sv 9378}}
+{\sp{\sn groupBottom}{\sv 2511}}
+{\sp{\sn fFlipH}{\sv 0}}
+{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn fPseudoInline}{\sv 1}}
+{\sp{\sn lidRegroup}{\sv 0}}
+{\sp{\sn posrelh}{\sv 3}}
+{\sp{\sn posrelv}{\sv 3}}
+
+{\shp{\*\shpinst\shplid631
+{\sp{\sn relLeft}{\sv 0}}
+{\sp{\sn relTop}{\sv 4}}
+{\sp{\sn relRight}{\sv 9378}}
+{\sp{\sn relBottom}{\sv 24}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn shapeType}{\sv 0}}
+{\sp{\sn rotation}{\sv 0}}
+{\sp{\sn geoRight}{\sv 9378}}
+{\sp{\sn geoBottom}{\sv 20}}
+{\sp{\sn shapePath}{\sv 4}}
+{\sp{\sn pVerticies}{\sv 8;2;(0,0);(9378,0)}}
+{\sp{\sn pSegmentInfo}{\sv 2;5;16384;45824;1;45824;32768}}
+{\sp{\sn fFillOK}{\sv 1}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn lineWidth}{\sv 6096}}
+{\sp{\sn lineColor}{\sv 0}}
+{\sp{\sn fLine}{\sv 1}}{\sp{\sn lineType}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 1}}
+{\sp{\sn fArrowheadsOK}{\sv 1}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+}}
+
+{\shp{\*\shpinst\shplid632
+{\sp{\sn relLeft}{\sv 4}}
+{\sp{\sn relTop}{\sv 0}}
+{\sp{\sn relRight}{\sv 24}}
+{\sp{\sn relBottom}{\sv 2511}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn shapeType}{\sv 0}}
+{\sp{\sn rotation}{\sv 0}}
+{\sp{\sn geoRight}{\sv 20}}
+{\sp{\sn geoBottom}{\sv 2511}}
+{\sp{\sn shapePath}{\sv 4}}
+{\sp{\sn pVerticies}{\sv 8;2;(0,0);(0,2510)}}
+{\sp{\sn pSegmentInfo}{\sv 2;5;16384;45824;1;45824;32768}}
+{\sp{\sn fFillOK}{\sv 1}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn lineWidth}{\sv 6096}}
+{\sp{\sn lineColor}{\sv 0}}
+{\sp{\sn fLine}{\sv 1}}{\sp{\sn lineType}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 1}}
+{\sp{\sn fArrowheadsOK}{\sv 1}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+}}
+
+{\shp{\*\shpinst\shplid633
+{\sp{\sn relLeft}{\sv 0}}
+{\sp{\sn relTop}{\sv 2505}}
+{\sp{\sn relRight}{\sv 9369}}
+{\sp{\sn relBottom}{\sv 2525}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn shapeType}{\sv 0}}
+{\sp{\sn rotation}{\sv 0}}
+{\sp{\sn geoRight}{\sv 9369}}
+{\sp{\sn geoBottom}{\sv 20}}
+{\sp{\sn shapePath}{\sv 4}}
+{\sp{\sn pVerticies}{\sv 8;2;(0,0);(9368,0)}}
+{\sp{\sn pSegmentInfo}{\sv 2;5;16384;45824;1;45824;32768}}
+{\sp{\sn fFillOK}{\sv 1}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn lineWidth}{\sv 6096}}
+{\sp{\sn lineColor}{\sv 0}}
+{\sp{\sn fLine}{\sv 1}}{\sp{\sn lineType}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 1}}
+{\sp{\sn fArrowheadsOK}{\sv 1}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+}}
+
+{\shp{\*\shpinst\shplid634
+{\sp{\sn relLeft}{\sv 9373}}
+{\sp{\sn relTop}{\sv 0}}
+{\sp{\sn relRight}{\sv 9393}}
+{\sp{\sn relBottom}{\sv 2511}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn shapeType}{\sv 0}}
+{\sp{\sn rotation}{\sv 0}}
+{\sp{\sn geoRight}{\sv 20}}
+{\sp{\sn geoBottom}{\sv 2511}}
+{\sp{\sn shapePath}{\sv 4}}
+{\sp{\sn pVerticies}{\sv 8;2;(0,0);(0,2510)}}
+{\sp{\sn pSegmentInfo}{\sv 2;5;16384;45824;1;45824;32768}}
+{\sp{\sn fFillOK}{\sv 1}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn lineWidth}{\sv 6096}}
+{\sp{\sn lineColor}{\sv 0}}
+{\sp{\sn fLine}{\sv 1}}{\sp{\sn lineType}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 1}}
+{\sp{\sn fArrowheadsOK}{\sv 1}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+}}
+
+{\shp{\*\shpinst{\sp{\sn relLeft}{\sv 128}}
+{\sp{\sn relTop}{\sv 1817}}
+{\sp{\sn relRight}{\sv 9266}}
+{\sp{\sn relBottom}{\sv 2350}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+{\sp{\sn shapeType}{\sv 202}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn txflTextFlow}{\sv 0}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn fLine}{\sv 0}}
+{\sp{\sn dxTextLeft}{\sv 0}}{\sp{\sn dxTextRight}{\sv 0}}{\sp{\sn dyTextTop}{\sv 0}}{\sp{\sn dyTextBottom}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 1}}
+{\shptxt\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl-244\f1\fs24\b1 3) Adjunta informe de equipo interdisciplinario de Comisar\'EDa de la Mujer y la Familia? \f2\fs20\b0\i0 SI NO\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\li264\sl-288\f1\fs24\b1 De otros organismos? \f2\fs20\b0\i0 SI NO\par}}}
+
+{\shp{\*\shpinst{\sp{\sn relLeft}{\sv 4322}}
+{\sp{\sn relTop}{\sv 1523}}
+{\sp{\sn relRight}{\sv 6250}}
+{\sp{\sn relBottom}{\sv 1763}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+{\sp{\sn shapeType}{\sv 202}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn txflTextFlow}{\sv 0}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn fLine}{\sv 0}}
+{\sp{\sn dxTextLeft}{\sv 0}}{\sp{\sn dxTextRight}{\sv 0}}{\sp{\sn dyTextTop}{\sv 0}}{\sp{\sn dyTextBottom}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 1}}
+{\shptxt\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl-240\f1\fs24\b1 Apellido y nombre:\par}}}
+
+{\shp{\*\shpinst{\sp{\sn relLeft}{\sv 74}}
+{\sp{\sn relTop}{\sv 59}}
+{\sp{\sn relRight}{\sv 3897}}
+{\sp{\sn relBottom}{\sv 1763}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+{\sp{\sn shapeType}{\sv 202}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn txflTextFlow}{\sv 0}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn fLine}{\sv 0}}
+{\sp{\sn dxTextLeft}{\sv 0}}{\sp{\sn dxTextRight}{\sv 0}}{\sp{\sn dyTextTop}{\sv 0}}{\sp{\sn dyTextBottom}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 1}}
+{\shptxt\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl-244\f1\fs24\b1 VIII.\uc1\u8208 ? OTROS DATOS DE INTERES:\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\sb11\f1\fs23\b1\i0\par\pard\plain\s1\ls5\ilvl0\nooverflow\nocwrap\lnbrkrule\li249\fi-250\sl240\slmult1\sb1\tx250\tx2911\tx3416\f1\fs24\b1 Testigos de\expnd0\expndtw-2  \f1\fs24\b1\i0\expnd0\expndtw0 los\expnd0\expndtw-1  \f1\fs24\b1\i0\expnd0\expndtw0 hechos:\tab \f2\fs20\b0\i0 SI\tab NO\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\li1416\ri478\sl240\slmult1\f1\fs24\b1 Nombre y apellido: Domicilio:\par\pard\plain\s1\ls5\ilvl0\nooverflow\nocwrap\lnbrkrule\li303\fi-250\sl-288\tx304\tx2831\tx3539\f1\fs24\b1 Tiene\expnd0\expndtw-2  \f1\fs24\b1\i0\expnd0\expndtw0 abogado/a\f2\b0 ?\tab \f2\fs20\b0\i0 SI\tab NO\par}}}
+}}
+{\pict
+{\*\picprop\defshp\shplid630
+{\sp{\sn shapeType}{\sv 75}}
+{\sp{\sn fFlipH}{\sv 0}}
+{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn fPseudoInline}{\sv 1}}
+{\sp{\sn fLayoutInCell}{\sv 1}}
+{\sp{\sn fLockPosition}{\sv 1}}
+{\sp{\sn fLockRotation}{\sv 1}}
+}
+\piccropl0\piccropr0\piccropt-2511\piccropb2511\picwgoal9378\pichgoal2511
+\wmetafile8\bliptag-1003278350\blipupi72
+}
+}}
+\par
+{\shpgrp{\*\shpinst\shplid653
+\shpleft1309\shptop250\shpright10679\shpbottom4372\shpfhdr0
+\shpbxpage\shpbypara\shpwr3\shpwrk0\shpfblwtxt1\shpz40
+\shpwr1{\sp{\sn groupLeft}{\sv 1309}}
+{\sp{\sn groupTop}{\sv 250}}
+{\sp{\sn groupRight}{\sv 10679}}
+{\sp{\sn groupBottom}{\sv 4372}}
+{\sp{\sn fFlipH}{\sv 0}}
+{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 2}}
+{\sp{\sn dxWrapDistLeft}{\sv 0}}{\sp{\sn dxWrapDistRight}{\sv 0}}
+{\shp{\*\shpinst\shplid654
+{\sp{\sn relLeft}{\sv 1309}}
+{\sp{\sn relTop}{\sv 255}}
+{\sp{\sn relRight}{\sv 10679}}
+{\sp{\sn relBottom}{\sv 275}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn shapeType}{\sv 0}}
+{\sp{\sn rotation}{\sv 0}}
+{\sp{\sn geoRight}{\sv 9370}}
+{\sp{\sn geoBottom}{\sv 20}}
+{\sp{\sn shapePath}{\sv 4}}
+{\sp{\sn pVerticies}{\sv 8;2;(0,0);(9369,0)}}
+{\sp{\sn pSegmentInfo}{\sv 2;5;16384;45824;1;45824;32768}}
+{\sp{\sn fFillOK}{\sv 1}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn lineWidth}{\sv 6096}}
+{\sp{\sn lineColor}{\sv 0}}
+{\sp{\sn fLine}{\sv 1}}{\sp{\sn lineType}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 2}}
+{\sp{\sn fArrowheadsOK}{\sv 1}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+}}
+
+{\shp{\*\shpinst\shplid655
+{\sp{\sn relLeft}{\sv 1313}}
+{\sp{\sn relTop}{\sv 250}}
+{\sp{\sn relRight}{\sv 1333}}
+{\sp{\sn relBottom}{\sv 4372}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn shapeType}{\sv 0}}
+{\sp{\sn rotation}{\sv 0}}
+{\sp{\sn geoRight}{\sv 20}}
+{\sp{\sn geoBottom}{\sv 4122}}
+{\sp{\sn shapePath}{\sv 4}}
+{\sp{\sn pVerticies}{\sv 8;2;(0,0);(0,4122)}}
+{\sp{\sn pSegmentInfo}{\sv 2;5;16384;45824;1;45824;32768}}
+{\sp{\sn fFillOK}{\sv 1}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn lineWidth}{\sv 6096}}
+{\sp{\sn lineColor}{\sv 0}}
+{\sp{\sn fLine}{\sv 1}}{\sp{\sn lineType}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 2}}
+{\sp{\sn fArrowheadsOK}{\sv 1}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+}}
+
+{\shp{\*\shpinst\shplid656
+{\sp{\sn relLeft}{\sv 1309}}
+{\sp{\sn relTop}{\sv 4367}}
+{\sp{\sn relRight}{\sv 10669}}
+{\sp{\sn relBottom}{\sv 4387}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn shapeType}{\sv 0}}
+{\sp{\sn rotation}{\sv 0}}
+{\sp{\sn geoRight}{\sv 9360}}
+{\sp{\sn geoBottom}{\sv 20}}
+{\sp{\sn shapePath}{\sv 4}}
+{\sp{\sn pVerticies}{\sv 8;2;(0,0);(9360,0)}}
+{\sp{\sn pSegmentInfo}{\sv 2;5;16384;45824;1;45824;32768}}
+{\sp{\sn fFillOK}{\sv 1}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn lineWidth}{\sv 6096}}
+{\sp{\sn lineColor}{\sv 0}}
+{\sp{\sn fLine}{\sv 1}}{\sp{\sn lineType}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 2}}
+{\sp{\sn fArrowheadsOK}{\sv 1}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+}}
+
+{\shp{\*\shpinst\shplid657
+{\sp{\sn relLeft}{\sv 10673}}
+{\sp{\sn relTop}{\sv 250}}
+{\sp{\sn relRight}{\sv 10693}}
+{\sp{\sn relBottom}{\sv 4372}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn shapeType}{\sv 0}}
+{\sp{\sn rotation}{\sv 0}}
+{\sp{\sn geoRight}{\sv 20}}
+{\sp{\sn geoBottom}{\sv 4122}}
+{\sp{\sn shapePath}{\sv 4}}
+{\sp{\sn pVerticies}{\sv 8;2;(0,0);(0,4122)}}
+{\sp{\sn pSegmentInfo}{\sv 2;5;16384;45824;1;45824;32768}}
+{\sp{\sn fFillOK}{\sv 1}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn lineWidth}{\sv 6096}}
+{\sp{\sn lineColor}{\sv 0}}
+{\sp{\sn fLine}{\sv 1}}{\sp{\sn lineType}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 2}}
+{\sp{\sn fArrowheadsOK}{\sv 1}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+}}
+
+{\shp{\*\shpinst{\sp{\sn relLeft}{\sv 1384}}
+{\sp{\sn relTop}{\sv 2067}}
+{\sp{\sn relRight}{\sv 9422}}
+{\sp{\sn relBottom}{\sv 4064}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+{\sp{\sn shapeType}{\sv 202}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn txflTextFlow}{\sv 0}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn fLine}{\sv 0}}
+{\sp{\sn dxTextLeft}{\sv 0}}{\sp{\sn dxTextRight}{\sv 0}}{\sp{\sn dyTextTop}{\sv 0}}{\sp{\sn dyTextBottom}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 2}}
+{\shptxt\pard\plain\s1\ls6\ilvl0\nooverflow\nocwrap\lnbrkrule\li256\fi-257\sl-244\tx257\tx5649\tx6290\f1\fs24\b1 Restituci\'F3n de los efectos personales de\expnd-1\expndtw-6  \f1\fs24\b1\i0\expnd0\expndtw0 la\expnd0\expndtw-2  \f1\fs24\b1\i0\expnd0\expndtw0 v\'EDctima:\tab \f2\fs20\b0\i0 SI\tab NO\par\pard\plain\s1\ls6\ilvl0\nooverflow\nocwrap\lnbrkrule\li249\fi-250\sl240\slmult1\tx250\tx4627\tx5268\f1\fs24\b1 Asistencia legal, m\'E9dica\expnd-1\expndtw-7  \f1\fs24\b1\i0\expnd0\expndtw0 y/o\expnd0\expndtw-2  \f1\fs24\b1\i0\expnd0\expndtw0 psicol\'F3gica\f2\fs20\b0 :\tab SI\tab NO\par\pard\plain\s1\ls6\ilvl0\nooverflow\nocwrap\lnbrkrule\li204\fi-204\sl240\slmult1\tx204\tx4844\tx5485\f1\fs24\b1 Guarda provisoria\expnd-2\expndtw-8  \f1\fs24\b1\i0\expnd0\expndtw0 (v\'EDctimas\expnd-1\expndtw-4  \f1\fs24\b1\i0\expnd0\expndtw0 vulnerables):\tab \f2\fs20\b0\i0 SI\tab NO\par\pard\plain\s1\ls6\ilvl0\nooverflow\nocwrap\lnbrkrule\li242\fi-243\sl240\slmult1\tx243\tx6610\tx7252\f1\fs24\b1 Alimentos, custodia provisoria y r\'E9gimen\expnd-2\expndtw-10  \f1\fs24\b1\i0\expnd0\expndtw0 de\expnd0\expndtw-1  \f1\fs24\b1\i0\expnd0\expndtw0 comunicaci\'F3n:\tab \f2\fs20\b0\i0 SI\tab NO\par\pard\plain\s1\ls6\ilvl0\nooverflow\nocwrap\lnbrkrule\li256\fi-257\sl240\slmult1\tx257\tx6920\f1\fs24\b1 Secuestro de armas, prohibici\'F3n de comprar o tener\expnd-1\expndtw-7  \f1\fs24\b1\i0\expnd0\expndtw0 armas:\expnd10\expndtw52  \f2\fs20\b0\i0\expnd0\expndtw0 SI\tab NO\par\pard\plain\s1\ls6\ilvl0\nooverflow\nocwrap\lnbrkrule\li187\fi-188\sl240\slmult1\tx188\tx7756\f1\fs24\b1 Cese de los actos de perturbaci\'F3n o intimidaci\'F3n directa o\expnd-2\expndtw-11  \f1\fs24\b1\i0\expnd0\expndtw0 indirecta: \expnd11\expndtw53  \f2\fs20\b0\i0\expnd0\expndtw0 SI\tab NO\par\pard\plain\s1\ls6\ilvl0\nooverflow\nocwrap\lnbrkrule\li189\fi-190\sl-288\tx190\tx1721\f1\fs24\b1 Otras:\tab Cu\'E1les?\par}}}
+
+{\shp{\*\shpinst{\sp{\sn relLeft}{\sv 5159}}
+{\sp{\sn relTop}{\sv 1510}}
+{\sp{\sn relRight}{\sv 6083}}
+{\sp{\sn relBottom}{\sv 2004}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+{\sp{\sn shapeType}{\sv 202}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn txflTextFlow}{\sv 0}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn fLine}{\sv 0}}
+{\sp{\sn dxTextLeft}{\sv 0}}{\sp{\sn dxTextRight}{\sv 0}}{\sp{\sn dyTextTop}{\sv 0}}{\sp{\sn dyTextBottom}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 2}}
+{\shptxt\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\li64\sl-204\f2\fs20\b0 NO\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl-241\sb48\tx640\f2\fs20\b0 SI\tab NO\par}}}
+
+{\shp{\*\shpinst{\sp{\sn relLeft}{\sv 1384}}
+{\sp{\sn relTop}{\sv 1773}}
+{\sp{\sn relRight}{\sv 4856}}
+{\sp{\sn relBottom}{\sv 2013}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+{\sp{\sn shapeType}{\sv 202}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn txflTextFlow}{\sv 0}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn fLine}{\sv 0}}
+{\sp{\sn dxTextLeft}{\sv 0}}{\sp{\sn dxTextRight}{\sv 0}}{\sp{\sn dyTextTop}{\sv 0}}{\sp{\sn dyTextBottom}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 2}}
+{\shptxt\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl-240\f1\fs24\b1 c) Reintegro de la v\'EDctima al hogar:\par}}}
+
+{\shp{\*\shpinst{\sp{\sn relLeft}{\sv 1384}}
+{\sp{\sn relTop}{\sv 309}}
+{\sp{\sn relRight}{\sv 10624}}
+{\sp{\sn relBottom}{\sv 1721}}
+{\sp{\sn fRelFlipH}{\sv 0}}
+{\sp{\sn fRelFlipV}{\sv 0}}
+{\sp{\sn fBehindDocument}{\sv 1}}
+{\sp{\sn shapeType}{\sv 202}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn txflTextFlow}{\sv 0}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn fLine}{\sv 0}}
+{\sp{\sn dxTextLeft}{\sv 0}}{\sp{\sn dxTextRight}{\sv 0}}{\sp{\sn dyTextTop}{\sv 0}}{\sp{\sn dyTextBottom}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 2}}
+{\shptxt\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl-244\f1\fs24\b1 IX.\uc1\u8208 ?MEDIDAS SOLICITADAS:\par\pard\plain\s1\ls7\ilvl0\nooverflow\nocwrap\lnbrkrule\li247\fi-248\sl240\slmult1\tx248\tx2629\tx3043\f1\fs24\b1 Exclusi\'F3n\expnd-1\expndtw-3  \f1\fs24\b1\i0\expnd0\expndtw0 del\expnd0\expndtw-1  \f1\fs24\b1\i0\expnd0\expndtw0 hogar\f2\fs20\b0 :\tab SI\tab NO\par\pard\plain\s1\ls7\ilvl0\nooverflow\nocwrap\lnbrkrule\ri18\sl240\slmult1\tx387\tx1760\tx2131\f1\fs24\b1 Prohibici\'F3n de acceso/acercamiento al hogar y lugares de trabajo, estudio y esparcimiento:\tab \f2\fs20\b0\i0 SI\tab NO\par\pard\plain\s1\ls7\ilvl1\nooverflow\nocwrap\lnbrkrule\li442\fi-443\sl-288\tx443\tx3200\f1\fs24\b1 Per\'EDmetro\expnd0\expndtw-2  \f1\fs24\b1\i0\expnd0\expndtw0 de\expnd0\expndtw-2  \f1\fs24\b1\i0\expnd0\expndtw0 exclusi\'F3n\f2\fs20\b0 :\tab SI\par}}}
+}}
+\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\sb11\f2\fs16\b0\i0\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\sb11\f2\fs16\b0\i0\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\li113\ri109\qj\sl240\slmult1\sb52\f1\fs24\b1 Se hace entrega de material informativo al/la denunciante y se lo/a notifica que la presente denuncia ser\'E1 remitida al Juzgado de\'85\'85\'85\'85\'85\'85\'85\'85donde continuar\'E1 su tr\'E1mite, quien lee \'EDntegramente la presente, firmando a continuaci\'F3n.\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f1\fs20\b1\i0\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f1\fs20\b1\i0\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f1\fs20\b1\i0\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f1\fs20\b1\i0\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f1\fs20\b1\i0\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f1\fs20\b1\i0\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f1\fs20\b1\i0\par
+{\shp{\*\shpinst
+\shpleft1134\shptop308\shpright5319\shpbottom328
+\shpfhdr0\shpwr3\shpwrk0\shplid694\shpz41
+\shpbxpage\shpbypara\shpwr1{\sp{\sn fFlipH}{\sv 0}}
+{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn dxWrapDistLeft}{\sv 0}}{\sp{\sn dxWrapDistRight}{\sv 0}}{\sp{\sn shapeType}{\sv 0}}
+{\sp{\sn rotation}{\sv 0}}
+{\sp{\sn geoRight}{\sv 4185}}
+{\sp{\sn geoBottom}{\sv 20}}
+{\sp{\sn shapePath}{\sv 4}}
+{\sp{\sn pVerticies}{\sv 8;2;(0,0);(4184,0)}}
+{\sp{\sn pSegmentInfo}{\sv 2;5;16384;45824;1;45824;32768}}
+{\sp{\sn fFillOK}{\sv 1}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn lineWidth}{\sv 13839}}
+{\sp{\sn lineColor}{\sv 0}}
+{\sp{\sn fLine}{\sv 1}}{\sp{\sn lineType}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 2}}
+{\sp{\sn fArrowheadsOK}{\sv 1}}
+}}
+
+{\shp{\*\shpinst
+\shpleft5750\shptop308\shpright10293\shpbottom328
+\shpfhdr0\shpwr3\shpwrk0\shplid695\shpz42
+\shpbxpage\shpbypara\shpwr1{\sp{\sn fFlipH}{\sv 0}}
+{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn dxWrapDistLeft}{\sv 0}}{\sp{\sn dxWrapDistRight}{\sv 0}}{\sp{\sn shapeType}{\sv 0}}
+{\sp{\sn rotation}{\sv 0}}
+{\sp{\sn geoRight}{\sv 4543}}
+{\sp{\sn geoBottom}{\sv 20}}
+{\sp{\sn shapePath}{\sv 4}}
+{\sp{\sn pVerticies}{\sv 8;2;(0,0);(4542,0)}}
+{\sp{\sn pSegmentInfo}{\sv 2;5;16384;45824;1;45824;32768}}
+{\sp{\sn fFillOK}{\sv 1}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn lineWidth}{\sv 13839}}
+{\sp{\sn lineColor}{\sv 0}}
+{\sp{\sn fLine}{\sv 1}}{\sp{\sn lineType}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 2}}
+{\sp{\sn fArrowheadsOK}{\sv 1}}
+}}
+\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\sb2\f1\fs21\b1\i0\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\li1252\sl-287\tx6101\f2\fs24\b0 Firma\expnd-1\expndtw-3  \f2\fs24\b0\i0\expnd0\expndtw0 denunciante\tab Firma funcionario/a\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f2\fs20\b0\i0\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f2\fs20\b0\i0\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f2\fs20\b0\i0\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f2\fs20\b0\i0\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f2\fs20\b0\i0\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f2\fs20\b0\i0\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f2\fs20\b0\i0\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f2\fs20\b0\i0\par\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\f2\fs20\b0\i0\par
+{\shp{\*\shpinst\shpleft1314\shpright10494\shptop173\shpbottom879\shpbxpage\shpbypara\shpwr1\shpz43\shplid707{\sp{\sn dxWrapDistLeft}{\sv 0}}{\sp{\sn dxWrapDistRight}{\sv 0}}
+{\sp{\sn shapeType}{\sv 202}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn txflTextFlow}{\sv 0}}
+{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn fLine}{\sv 1}}{\sp{\sn lineColor}{\sv 0}}{\sp{\sn lineWidth}{\sv 6096}}{\sp{\sn lineStyle}{\sv 1}}
+{\sp{\sn dxTextLeft}{\sv 0}}{\sp{\sn dxTextRight}{\sv 0}}{\sp{\sn dyTextTop}{\sv 0}}{\sp{\sn dyTextBottom}{\sv 0}}
+{\sp{\sn posrelh}{\sv 1}}
+{\sp{\sn posrelv}{\sv 2}}
+{\shptxt\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\li64\sl240\slmult1\sb10\f1\fs24\b1 La falta de alguno de los datos previstos en este formulario no impedir\'E1 la toma de la denuncia y/o la tramitaci\'F3n de la misma.\par}}}
+\pard\plain\s1\nooverflow\nocwrap\lnbrkrule\sl240\slmult1\sb7\f2\fs10\b0\i0\par}

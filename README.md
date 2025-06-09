@@ -7,7 +7,7 @@ Frameworks utilizado: Boostrap, JQuery,SweetAlert entre otros.
 Base de datos que se utilizo fue MySQL y para el servidor se uso una pila LAMP en un servidor virtual privado(VPS),
 donde se configuro todo manualmente para la recepcion de peticiones del sistema a la BD y viceversa.
 Archivo de Base de Datos para importar y probar el sistema dentro de la carpeta BASEDEDATOPARAIMPORTAR.
-Usar wamp para pruebas con mysql de BD.
+Usar xamp para pruebas con mysql de BD.
 Las conexiones son para el usuario: root, servidor:localhost, contraseña: campo vacio y base de datos llamado fiscaliach. 
 
 ![1](https://user-images.githubusercontent.com/87587210/152698363-5868e247-5a25-4154-ad70-c78a0f54c49a.jpg)

@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap5.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.7/css/responsive.dataTables.min.css">
     <link rel="stylesheet" href="/css/tablaper.css">
+    <link rel="stylesheet" href="css/new-navbar.css">
 
     <script src="https://kit.fontawesome.com/cb2ee7fbfe.js" crossorigin="anonymous"></script>
 
@@ -19,6 +20,54 @@
 
 </head>
 <body style="background-color: beige;">
+
+  <nav class="fiscal-navbar">
+    <div class="fiscal-navbar-container">
+      <div class="fiscal-navbar-logo">
+        <a href="index.html">
+          <img src="images/logo.png" alt="Fiscalía Web" />
+          <span>Fiscalía Web</span>
+        </a>
+      </div>
+      <div class="fiscal-navbar-toggle">
+        <span class="fiscal-navbar-toggle-icon"></span>
+      </div>
+      <div class="fiscal-navbar-menu">
+        <ul class="fiscal-navbar-nav">
+          <li class="fiscal-navbar-item">
+            <a href="index.html" class="fiscal-navbar-link">
+              <i class="fas fa-home"></i> Inicio
+            </a>
+          </li>
+          <li class="fiscal-navbar-item">
+            <a href="comisarias.php" class="fiscal-navbar-link">
+              <i class="fas fa-building"></i> Comisarías
+            </a>
+          </li>
+          <li class="fiscal-navbar-item">
+            <a href="estadodenuncia.php" class="fiscal-navbar-link">
+              <i class="fas fa-search"></i> Estado de denuncia
+            </a>
+          </li>
+          <li class="fiscal-navbar-item">
+            <a href="registrar.php" class="fiscal-navbar-link">
+              <i class="fas fa-user-plus"></i> Registrarse
+            </a>
+          </li>
+          <li class="fiscal-navbar-item">
+            <a href="Login.html" class="fiscal-navbar-link active">
+              <i class="fas fa-sign-in-alt"></i> Iniciar sesión
+            </a>
+          </li>
+          <li class="fiscal-navbar-item">
+            <a href="contacto.html" class="fiscal-navbar-link">
+              <i class="fas fa-envelope"></i> Contacto
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
   <div class="modal fade" id="editarper" tabindex="-1" role="dialog" aria-labelledby="tablaexpModalLabel" aria-hidden="true" >
     <div class="modal-dialog" >
@@ -136,6 +185,7 @@
 <!-- Responsive DataTable   -->
 <script src="https://cdn.datatables.net/responsive/2.2.7/js/dataTables.responsive.min.js"></script>
 <script src="/js/tablaper.js"></script>
+<script src="js/new-navbar.js"></script>
 
 
 </body>

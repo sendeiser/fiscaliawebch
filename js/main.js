@@ -37,14 +37,56 @@ if (btn_login) {
       usuario,
       contrasena
     }, (response) => {
-      console.log(response.replace(/['"]+/g, ''));
-      switch (response.replace(/['"]+/g, '')) {
+      console.log(response.replace(/["']+/g, ''));
+      switch (response.replace(/["']+/g, '')) {
         case 'conexion exitosa':
           setInterval(login(), 2500);
-          setTimeout(function () {
-            window.location.href = "gestorbeta.html";
-          }, 2500);
-
+          // Verificar el rol del usuario para redirigir correctamente
+          $.ajax({
+            url: '/phpserv/get_user_role.php',
+            method: 'GET',
+            dataType: 'json',
+            success: function(role) {
+              console.log('Rol del usuario:', role);
+              console.log('Tipo de dato:', typeof role);
+              
+              // Asegurar que la comparación funcione independientemente del formato
+              var rolUsuario = typeof role === 'string' ? role : JSON.stringify(role);
+              console.log('Rol antes de procesar:', rolUsuario);
+              rolUsuario = rolUsuario.replace(/["']+/g, '');
+              console.log('Rol procesado:', rolUsuario);
+              console.log('¿Es igual a "administrador"?', rolUsuario.toLowerCase() === 'administrador');
+              
+              setTimeout(function () {
+                // Comparar con 'administrador' en lugar de 'admin'
+                if (rolUsuario.toLowerCase() === 'administrador') {
+                  window.location.href = "auditoria.html";
+                } else {
+                  window.location.href = "gestorbeta.html";
+                }
+              }, 2500);
+            },
+            error: function(xhr, status, error) {
+              console.error('Error al obtener el rol:', error);
+              console.error('Estado de la solicitud:', status);
+              console.error('Respuesta del servidor:', xhr.responseText);
+              // Por defecto, redirigir a la página de usuario normal
+              setTimeout(function () {
+                window.location.href = "gestorbeta.html";
+              }, 2500);
+            }
+          });
+          break;
+        case 'usuario_bloqueado':
+          respuesta.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" style="display: none;"> <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16"><path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></symbol></svg>
+        <div class="alert alert-warning d-flex align-items-center col-8 alert-dismissible fade show justify-content-center"  role="alert">
+          <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+          <div>
+            Su cuenta ha sido bloqueada por múltiples intentos fallidos. Contacte al administrador.
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" aria-hidden="true"></button>
+        </div>
+        `
           break
         case 'contrasena incorrecta':
           respuesta.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" style="display: none;"> <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16"><path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></symbol></svg>
@@ -304,7 +346,12 @@ if (btn_noti) {
 
     titu = $('#inp-titu').val();
     texto = $('#inp-texto').val();
-    img = document.getElementById("inp-img").files[0].name;
+    
+    const imgInput = document.getElementById("inp-img");
+    let img = '';
+    if (imgInput && imgInput.files && imgInput.files.length > 0) {
+      img = imgInput.files[0].name;
+    }
 
     $.post('phpserv/carganoti.php', {
       titu,
@@ -379,46 +426,49 @@ if (btn_noti) {
 
 }
 
-var manual = document.getElementById('manual');
+// Manual element functionality with proper null checks
+// Only execute if the element exists in the current page
 
-manual.addEventListener('click',  (e) => {
-  e.preventDefault();
-  var manual_option = document.getElementById('manual_opcion');
-if(manual_option.style.display == 'none')
-{
-  manual_option.style.cssText = 'display: grid';
+const ver_manual = document.getElementById('ver_manual');
+if (ver_manual) {
+  try {
+    ver_manual.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.location.href = "viewmanual.html";
+    });
+  } catch (err) {
+    console.log('Error setting up ver_manual event listener:', err);
+  }
 }
-else
-{
-  manual_option.style.cssText = 'display: none';
+
+const descargar_manual = document.getElementById('descargar_manual');
+if (descargar_manual) {
+  try {
+    descargar_manual.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.location.href = "MANUAL DE USUARIO Y ADM DE S.A.G.D.F. 2022 0212.pdf"
+    });
+  } catch (err) {
+    console.log('Error setting up descargar_manual event listener:', err);
+  }
 }
 
-} )
 
-let ver_manual = document.getElementById('ver_manual');
-
-ver_manual.addEventListener('click', (e) => {
-  e.preventDefault();
-  window.location.href = "viewmanual.html";
-})
-
-let descargar_manual = document.getElementById('descargar_manual');
-
-descargar_manual.addEventListener('click', (e) => {
-  e.preventDefault();
-  window.location.href = "MANUAL DE USUARIO Y ADM DE S.A.G.D.F. 2022 0212.pdf"
-})
-
-
-document.getElementById('tomar_den').addEventListener('click', (e) => {
-
-e.preventDefault();
-const doc = "https://docs.google.com/document/d/17piMDm0Ohw7PAWDyZgaRlpa4Uf97-Nuy/edit?usp=sharing&ouid=116680726476718182494&rtpof=true&sd=true";
-window.open(doc,"_blank");
-})
+const tomar_den = document.getElementById('tomar_den');
+if (tomar_den) {
+  try {
+    tomar_den.addEventListener('click', (e) => {
+      e.preventDefault();
+      const doc = "https://docs.google.com/document/d/17piMDm0Ohw7PAWDyZgaRlpa4Uf97-Nuy/edit?usp=sharing&ouid=116680726476718182494&rtpof=true&sd=true";
+      window.open(doc,"_blank");
+    });
+  } catch (err) {
+    console.log('Error setting up tomar_den event listener:', err);
+  }
+}
 //Reportes Graficos 
 
-/* function crearCadenaLineal(json){
+function crearCadenaLineal(json){
   var parsed = JSON.parse(json);
   var arr = [];
   for(var x in parsed){
@@ -426,18 +476,23 @@ window.open(doc,"_blank");
   }
   return arr;
 }
-var btn_causas = document.getElementById('btn__causas');
+
+const btn_causas = document.getElementById('btn__causas');
 if(btn_causas){
-  btn_causas.addEventListener('click', (e) => {
-    e.preventDefault();
-    causa_form = document.getElementById('causas_form')
-    var causa_type = new FormData(causa_form);
-    fetch('/phpserv/graficos.php', {
-      method: 'POST',
-      body: causa_type
-    }).then(res => res.json())
-    .then(data => {
-      console.log(data)
+  try {
+    btn_causas.addEventListener('click', (e) => {
+      e.preventDefault();
+      causa_form = document.getElementById('causas_form')
+      var causa_type = new FormData(causa_form);
+      fetch('/phpserv/graficos.php', {
+        method: 'POST',
+        body: causa_type
+      }).then(res => res.json())
+      .then(data => {
+        console.log(data)
+      })
     })
-  })
-} */
+  } catch (err) {
+    console.log('Error setting up btn_causas event listener:', err);
+  }
+}

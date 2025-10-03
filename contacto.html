@@ -1,165 +1,643 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Fiscalia - Chamical</title>
-  <!--Import Google Icon Font-->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!-- Compiled and minified CSS -->
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">-->
-  <link rel="stylesheet" href="css/navi.css">
-  <link rel="stylesheet" href="css/estilos.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-  <!-- Font Awesome -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
-  <!-- MDB -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css" rel="stylesheet">
-
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Mate+SC&display=swap" rel="stylesheet">
-
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Sistema de Gestión de Denuncias Fiscalía</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/modern-design.css">
+    <link rel="stylesheet" href="css/new-navbar.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    
+    <!-- Bootstrap & External Libraries -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css">
+    
+    <style>
+        :root {
+            --primary-blue: #1976d2;
+            --secondary-blue: #2196f3;
+            --light-blue: #e3f2fd;
+            --accent-color: #0d47a1;
+            --bg-light: #f8f9fa;
+            --bg-white: #ffffff;
+            --text-dark: #2c3e50;
+            --text-muted: #6c757d;
+            --border-light: #e9ecef;
+            --shadow-light: rgba(0, 0, 0, 0.1);
+            --success-color: #28a745;
+            --danger-color: #dc3545;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e3f2fd 50%, #bbdefb 100%);
+            color: var(--text-dark);
+            min-height: 100vh;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .contact-hero {
+            background: linear-gradient(135deg, rgba(25, 118, 210, 0.9) 0%, rgba(33, 150, 243, 0.8) 100%), 
+                        url('images/fondocontacto.jpg') center/cover;
+            padding: 120px 0 80px;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(25, 118, 210, 0.2);
+            z-index: 0;
+        }
+        
+        .contact-hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .contact-container {
+            margin: -60px auto 60px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .contact-form-card {
+            background: var(--bg-white);
+            border: 1px solid var(--border-light);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 30px var(--shadow-light);
+            margin-bottom: 30px;
+        }
+        
+        .contact-info-card {
+            background: var(--bg-white);
+            border: 1px solid var(--border-light);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 8px 25px var(--shadow-light);
+            height: 100%;
+        }
+        
+        .form-group label {
+            color: var(--text-dark);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .form-control {
+            background: var(--bg-white);
+            border: 2px solid var(--border-light);
+            border-radius: 12px;
+            padding: 15px 20px;
+            font-size: 16px;
+            color: var(--text-dark);
+            transition: all 0.3s ease;
+        }
+        
+        .form-control::placeholder {
+            color: var(--text-muted);
+        }
+        
+        .form-control:focus {
+            background: var(--light-blue);
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.1);
+            color: var(--text-dark);
+        }
+        
+        .form-control.is-invalid {
+            border-color: var(--danger-color);
+            background: rgba(220, 53, 69, 0.05);
+        }
+        
+        .form-control.is-valid {
+            border-color: var(--success-color);
+            background: rgba(40, 167, 69, 0.05);
+        }
+        
+        .btn-send {
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            border: none;
+            border-radius: 12px;
+            padding: 15px 40px;
+            font-weight: 600;
+            color: white;
+            transition: all 0.3s ease;
+            width: 100%;
+            box-shadow: 0 5px 15px rgba(25, 118, 210, 0.3);
+        }
+        
+        .btn-send:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(25, 118, 210, 0.4);
+            color: white;
+        }
+        
+        .contact-info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: var(--light-blue);
+            border: 1px solid rgba(25, 118, 210, 0.1);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-info-item:hover {
+            background: rgba(25, 118, 210, 0.1);
+            transform: translateX(5px);
+            border-color: var(--primary-blue);
+            box-shadow: 0 5px 15px var(--shadow-light);
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            color: white;
+            font-size: 20px;
+            flex-shrink: 0;
+            box-shadow: 0 3px 10px rgba(25, 118, 210, 0.3);
+        }
+        
+        .contact-details h5 {
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+        
+        .contact-details p {
+            margin-bottom: 0;
+            color: var(--text-muted);
+        }
+        
+        .map-container {
+            background: var(--bg-white);
+            border: 1px solid var(--border-light);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 8px 25px var(--shadow-light);
+            margin-top: 30px;
+            text-align: center;
+        }
+        
+        .map-placeholder {
+            background: var(--light-blue);
+            border: 2px dashed rgba(25, 118, 210, 0.3);
+            border-radius: 12px;
+            padding: 60px 20px;
+            color: var(--text-muted);
+        }
+        
+        .custom-control-label {
+            color: var(--text-dark);
+        }
+        
+        .invalid-feedback {
+            color: var(--danger-color);
+        }
+        
+        h1, h3, h4, h5 {
+            color: var(--text-dark);
+        }
+        
+        .contact-hero h1 {
+            color: white;
+        }
+        
+        .lead {
+            color: rgba(255, 255, 255, 0.95);
+        }
+        
+        .modern-footer {
+            background: var(--accent-color) !important;
+            color: white !important;
+            padding: 40px 0;
+            margin-top: 60px;
+        }
+        
+        .modern-footer .text-muted {
+            color: rgba(255, 255, 255, 0.7) !important;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-hero {
+                padding: 100px 0 60px;
+            }
+            
+            .contact-container {
+                margin: -40px 20px 40px;
+            }
+            
+            .contact-form-card,
+            .contact-info-card {
+                padding: 30px 20px;
+            }
+        }
+    </style>
 </head>
-
 <body>
+    <!-- Navigation -->
+    <nav class="fiscal-navbar">
+        <div class="fiscal-navbar-container">
+            <a href="index.html" class="fiscal-navbar-brand">
+                <img src="images/justicia2.png" alt="Fiscalía Chamical" class="fiscal-navbar-logo">
+                <span class="fiscal-navbar-title">Fiscalía Chamical</span>
+            </a>
+            
+            <button class="fiscal-navbar-toggle" aria-label="Abrir menú de navegación" aria-expanded="false">
+                <span class="fiscal-navbar-toggle-icon"></span>
+            </button>
 
-  <ul class="nav bg-image d-flex justify-content-center" style="background-image: url('images/16982.jpg');">
-
-    <nav class="navbar navbar-light bg-light rounded">
-      <div class="container-fluid">
-        <a class="navbar-brand" onclick="accion()" href="#" style="font-weight: bold;">
-          <img src="images/justicia2.png" alt="" width="40" height="34" class="d-inline-block align-text-top">
-          Fiscalia Web
-        </a>
-      </div>
+            <div class="fiscal-navbar-collapse">
+                <ul class="fiscal-navbar-nav">
+                    <li class="fiscal-navbar-item">
+                        <a class="fiscal-navbar-link" href="index.html">
+                            <i class="fas fa-home fiscal-navbar-icon"></i>
+                            <span>Inicio</span>
+                        </a>
+                    </li>
+                    <li class="fiscal-navbar-item">
+                        <a class="fiscal-navbar-link" href="comisarias.php">
+                            <i class="fas fa-building fiscal-navbar-icon"></i>
+                            <span>Comisarías</span>
+                        </a>
+                    </li>
+                    <li class="fiscal-navbar-item">
+                        <a class="fiscal-navbar-link" href="estadodenuncia.php">
+                            <i class="fas fa-search fiscal-navbar-icon"></i>
+                            <span>Estado de Denuncia</span>
+                        </a>
+                    </li>
+                    <li class="fiscal-navbar-item">
+                        <a class="fiscal-navbar-link" href="registro.html">
+                            <i class="fas fa-user-plus fiscal-navbar-icon"></i>
+                            <span>Registrarse</span>
+                        </a>
+                    </li>
+                    <li class="fiscal-navbar-item">
+                        <a class="fiscal-navbar-link" href="Login.html">
+                            <i class="fas fa-sign-in-alt fiscal-navbar-icon"></i>
+                            <span>Iniciar Sesión</span>
+                        </a>
+                    </li>
+                    <li class="fiscal-navbar-item">
+                        <a class="fiscal-navbar-link active" href="contacto.html">
+                            <i class="fas fa-envelope fiscal-navbar-icon"></i>
+                            <span>Contacto</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
+    <!-- Hero Section -->
+    <section class="contact-hero">
+        <div class="contact-hero-content">
+            <div class="container">
+                <h1 class="display-4 font-weight-bold mb-4">
+                    <i class="fas fa-envelope mr-3"></i>
+                    Contáctanos
+                </h1>
+                <p class="lead mb-0">
+                    Estamos aquí para ayudarte. Envíanos tu consulta y te responderemos a la brevedad.
+                </p>
+            </div>
+        </div>
+    </section>
 
-    <li class="nav-item desaparece1">
-      <a class="nav-link " aria-current="page" href="#" aria-disabled="false" onclick="accion()">Menu</a>
-    </li>
-    <li class="nav-item justify-content-right desaparece">
-      <a class="nav-link" href="index.html">Inicio</a>
-    </li>
-    <li class="nav-item justify-content-right desaparece">
-      <a class="nav-link" href="comisarias.php">Comisarias</a>
-    </li>
-    <li class="nav-item justify-content-right desaparece">
-      <a class="nav-link" href="estadodenuncia.php">Estado de su Denuncia</a>
-    </li>
-    <li class="nav-item desaparece">
-      <a class="nav-link" href="registro.html" aria-disabled="true">Registrar</a>
-    </li>
-    <li class="nav-item desaparece">
-      <a class="nav-link" href="Login.html" aria-disabled="true">Iniciar Sesion</a>
-    </li>
-    <li class="nav-item desaparece">
-      <a class="nav-link" href="contacto.html" aria-disabled="true">Contacto</a>
-    </li>
-  </ul>
-
-  <div class="contacto">
-   
-    <div class="contacto__title_container">
-
-      <h1 class="contacto__title" class="col-xl-12 border border-danger mt-4">Informacion de Contacto</h1>
-
+    <!-- Contact Content -->
+    <div class="container contact-container">
+        <div class="row">
+            <!-- Contact Form -->
+            <div class="col-lg-8">
+                <div class="contact-form-card">
+                    <h3 class="mb-4">
+                        <i class="fas fa-paper-plane mr-2"></i>
+                        Envíanos tu Mensaje
+                    </h3>
+                    
+                    <form id="contactForm" novalidate>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="nombre" class="font-weight-bold">
+                                        <i class="fas fa-user mr-2"></i>
+                                        Nombre Completo *
+                                    </label>
+                                    <input type="text" 
+                                           class="form-control" 
+                                           id="nombre" 
+                                           name="nombre" 
+                                           placeholder="Ingrese su nombre completo" 
+                                           required>
+                                    <div class="invalid-feedback">
+                                        Por favor, ingrese su nombre completo.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="email" class="font-weight-bold">
+                                        <i class="fas fa-envelope mr-2"></i>
+                                        Correo Electrónico *
+                                    </label>
+                                    <input type="email" 
+                                           class="form-control" 
+                                           id="email" 
+                                           name="email" 
+                                           placeholder="ejemplo@correo.com" 
+                                           required>
+                                    <div class="invalid-feedback">
+                                        Por favor, ingrese un correo electrónico válido.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="telefono" class="font-weight-bold">
+                                        <i class="fas fa-phone mr-2"></i>
+                                        Teléfono
+                                    </label>
+                                    <input type="tel" 
+                                           class="form-control" 
+                                           id="telefono" 
+                                           name="telefono" 
+                                           placeholder="(0362) 123-4567">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="asunto" class="font-weight-bold">
+                                        <i class="fas fa-tag mr-2"></i>
+                                        Asunto *
+                                    </label>
+                                    <select class="form-control" id="asunto" name="asunto" required>
+                                        <option value="">Seleccione un asunto</option>
+                                        <option value="consulta">Consulta General</option>
+                                        <option value="denuncia">Estado de Denuncia</option>
+                                        <option value="informacion">Solicitud de Información</option>
+                                        <option value="reclamo">Reclamo</option>
+                                        <option value="otro">Otro</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        Por favor, seleccione un asunto.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="mensaje" class="font-weight-bold">
+                                <i class="fas fa-comment mr-2"></i>
+                                Mensaje *
+                            </label>
+                            <textarea class="form-control" 
+                                      id="mensaje" 
+                                      name="mensaje" 
+                                      rows="5"
+                                      placeholder="Escriba su mensaje aquí..." 
+                                      required></textarea>
+                            <div class="invalid-feedback">
+                                Por favor, escriba su mensaje.
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" 
+                                       class="custom-control-input" 
+                                       id="privacidad" 
+                                       name="privacidad" 
+                                       required>
+                                <label class="custom-control-label" for="privacidad">
+                                    Acepto la política de privacidad y el tratamiento de mis datos personales *
+                                </label>
+                                <div class="invalid-feedback">
+                                    Debe aceptar la política de privacidad.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-send">
+                            <i class="fas fa-paper-plane mr-2"></i>
+                            Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Contact Information -->
+            <div class="col-lg-4">
+                <div class="contact-info-card">
+                    <h3 class="mb-4">
+                        <i class="fas fa-info-circle mr-2"></i>
+                        Información de Contacto
+                    </h3>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h5>Dirección</h5>
+                            <p>Av. Las Heras 95<br>Resistencia, Chaco</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h5>Teléfono</h5>
+                            <p>(0362) 444-5555<br>Línea gratuita: 0800-123-4567</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h5>Email</h5>
+                            <p>consultas@fiscaliachaco.gov.ar<br>denuncias@fiscaliachaco.gov.ar</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h5>Horarios de Atención</h5>
+                            <p>Lunes a Viernes: 8:00 - 16:00<br>Sábados: 8:00 - 12:00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Map Section -->
+        <div class="map-container">
+            <h3 class="mb-4">
+                <i class="fas fa-map mr-2"></i>
+                Ubicación
+            </h3>
+            <div class="map-placeholder">
+                <i class="fas fa-map-marked-alt fa-3x mb-3" style="color: var(--primary-blue);"></i>
+                <h5>Mapa Interactivo</h5>
+                <p class="mb-0">Aquí se puede integrar un mapa interactivo con la ubicación exacta de la Fiscalía Chamical.</p>
+            </div>
+        </div>
     </div>
-   
-    <div class="contacto__body">
-      <div class="contacto__body__info">
-        <h1 class="itemstitucont">Contacto de Fiscalia Chamical</h1>
-        <h2 class="itemstitucont1">Correo</h1>
-          <p style="font-size:20px"> <a href="mailto:fiscaliachamical@gmail.com">fiscaliachamical@gmail.com</a> </p>
-          <h2 class="itemstitucont1">Telefono</h1>
-            <p style="font-size:20px"> <a href="tel:3826540500">3826-540500</a> </p>
-            <h1 class="itemstitucont">Contacto del Creador</h1>
-            <h2 class="itemstitucont1">Correo</h1>
-              <p style="font-size:20px"> <a href="mailto:martingt010@gmail.com">martingt010@gmail.com</a> </p>
-              <h2 class="itemstitucont1">Telefono</h1>
-                <p style="font-size:20px"> <a href="tel:3826432180">3826-432180</a> </p>
 
-      </div>
+    <!-- Footer -->
+    <footer class="modern-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Fiscalía Chamical</h5>
+                    <p class="text-muted">Sistema de Gestión de Denuncias</p>
+                </div>
+                <div class="col-md-6 text-right">
+                    <p class="text-muted mb-0">
+                        © 2024 Fiscalía Chamical. Todos los derechos reservados.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-      <div class="contacto__body__mapa" >
-        <iframe class="mapa__iframe" width="100%" height="100%" id="gmap_canvas"
-          src="https://maps.google.com/?q=-30.358517,-66.308171&entry=gps,&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
-          scrolling="no" marginheight="0" marginwidth="0"></iframe><br>
-          
-        <style>
-          .mapouter {
-            position: relative;
-            text-align: right;
-            height: 500px;
-            width: 600px;
-          }
-        </style>
-        <style>
-          .gmap_canvas {
-            overflow: hidden;
-            background: none !important;
-            height: 500px;
-            width: 600px;
-          }
-        </style>
-      </div>
-
-    </div>
-
-
-  </div>
-
-
-
-
-
-  <!-- Footer -->
-  <footer class="page-footer font-small"
-    style="border-top:5px solid rgba(0, 0, 0, 0.555);background-color:#4a3933; color:rgba(202, 159, 159, 0.835);font-size: large;font-weight:bold;height:max-content">
-
-    <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2021 Copyright:
-      <a href="" style="color: #f8ecb296;">Fiscalia - Chamical,La Rioja - Argentina</a>
-    </div>
-    <!-- Copyright -->
-
-  </footer>
-  <!-- Footer -->
-
-  <script>
-    function accion() {
-      var ancla = document.getElementsByClassName('nav-item');
-      for (i = 1; i < ancla.length; i++) {
-        ancla[i].classList.toggle('desaparece');
-
-      }
-    }
-
-
-  </script>
-
-  </script>
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
-    integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
-    integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc"
-    crossorigin="anonymous"></script>
-  <!-- MDB -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"></script>
-
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/main.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contactForm');
+            const submitBtn = form.querySelector('.btn-send');
+            
+            // Form validation
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                if (validateForm()) {
+                    submitForm();
+                }
+            });
+            
+            // Real-time validation
+            const inputs = form.querySelectorAll('input, select, textarea');
+            inputs.forEach(input => {
+                input.addEventListener('blur', function() {
+                    validateField(this);
+                });
+                
+                input.addEventListener('input', function() {
+                    if (this.classList.contains('is-invalid')) {
+                        validateField(this);
+                    }
+                });
+            });
+            
+            function validateField(field) {
+                const value = field.value.trim();
+                let isValid = true;
+                
+                if (field.hasAttribute('required') && !value) {
+                    isValid = false;
+                } else if (field.type === 'email' && value) {
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    isValid = emailRegex.test(value);
+                } else if (field.type === 'checkbox' && field.hasAttribute('required')) {
+                    isValid = field.checked;
+                }
+                
+                field.classList.toggle('is-valid', isValid && value);
+                field.classList.toggle('is-invalid', !isValid);
+                
+                return isValid;
+            }
+            
+            function validateForm() {
+                let isValid = true;
+                
+                inputs.forEach(input => {
+                    if (!validateField(input)) {
+                        isValid = false;
+                    }
+                });
+                
+                return isValid;
+            }
+            
+            function submitForm() {
+                const originalText = submitBtn.innerHTML;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Enviando...';
+                submitBtn.disabled = true;
+                
+                // Simulate form submission
+                setTimeout(() => {
+                    Swal.fire({
+                        icon: 'success',
+                        title: '¡Mensaje Enviado!',
+                        text: 'Gracias por contactarnos. Responderemos a la brevedad.',
+                        confirmButtonText: 'Aceptar',
+                        confirmButtonColor: '#1976d2'
+                    }).then(() => {
+                        form.reset();
+                        inputs.forEach(input => {
+                            input.classList.remove('is-valid', 'is-invalid');
+                        });
+                    });
+                    
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                }, 2000);
+            }
+            
+            // Phone number formatting
+            const phoneInput = document.getElementById('telefono');
+            phoneInput.addEventListener('input', function(e) {
+                let value = e.target.value.replace(/\D/g, '');
+                if (value.length >= 4) {
+                    value = value.replace(/(\d{4})(\d{3})(\d{4})/, '($1) $2-$3');
+                } else if (value.length >= 3) {
+                    value = value.replace(/(\d{4})(\d+)/, '($1) $2');
+                }
+                e.target.value = value;
+            });
+        });
+    </script>
+    
+    <!-- Navbar Script -->
+    <script src="js/new-navbar.js"></script>
 </body>
-
 </html>

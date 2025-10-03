@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="css/tablaper.css" />
   <!--Import Google Icon Font-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-  <link rel="stylesheet" href="css/navi.css" />
+  <link rel="stylesheet" href="css/new-navbar.css" />
   <link rel="stylesheet" href="css/gestorbeta.css" />
   <link rel="stylesheet" href="css/estilos.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -41,7 +41,32 @@
       </div>
     </div>
     <div class="cont_auditoria">
-      <button id="btn_auditoria">Auditoria(Adm)</button>
+      <!-- Menú de usuario en esquina superior derecha -->
+      <div class="user-menu" id="userMenu">
+        <button class="user-toggle" id="userMenuToggle" aria-haspopup="true" aria-expanded="false">
+          <span class="avatar" id="userAvatar">
+            <img id="userAvatarImg" class="avatar-img hidden" src="images/logo.png" alt="Avatar">
+            <i id="userAvatarIcon" class="fas fa-user-circle"></i>
+          </span>
+          <span class="user-name" id="userMenuName">Usuario</span>
+          <i class="fas fa-chevron-down caret"></i>
+        </button>
+        <div class="user-dropdown" id="userDropdown" role="menu" aria-hidden="true">
+          <div class="user-header">
+            <div class="avatar-sm">
+              <img id="ddUserAvatarImg" class="avatar-img-sm hidden" src="images/logo.png" alt="Avatar">
+              <i id="ddUserAvatarIcon" class="fas fa-user"></i>
+            </div>
+            <div class="user-meta">
+              <div class="name" id="ddUserName">Usuario</div>
+              <div class="role" id="ddUserRole">Usuario</div>
+            </div>
+          </div>
+          <div class="dropdown-divider"></div>
+          <button class="dropdown-item" id="btnEditProfile"><i class="fas fa-user-edit me-2"></i>Editar perfil</button>
+          <button class="dropdown-item" id="btnLogout"><i class="fas fa-sign-out-alt me-2"></i>Cerrar sesión</button>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -737,10 +762,13 @@
     });
   </script>
 <script>
-      // Funcionalidad del botón de auditoría
+      // El botón de auditoría ha sido eliminado
+      // Código comentado para evitar errores
+      /*
       document.getElementById('btn_auditoria').addEventListener('click', function() {
         new bootstrap.Modal(document.getElementById('auditModal')).show();
       });
+      */
 
       document.getElementById('auditLoginBtn').addEventListener('click', function() {
         const username = document.getElementById('auditUsername').value;
@@ -772,6 +800,71 @@
         });
       });
     </script>
+    
+    <!-- Navbar Script -->
+    <script src="js/new-navbar.js"></script>
+    
+    <!-- Modal Edición de Perfil -->
+    <div class="profile-modal-backdrop" id="profileModalBackdrop" aria-hidden="true">
+      <div class="profile-modal" role="dialog" aria-modal="true" aria-labelledby="profileModalTitle">
+        <div class="modal-header">
+          <h5 id="profileModalTitle" class="m-0">Editar perfil</h5>
+          <button type="button" class="btn btn-sm btn-light" id="btnCloseProfile"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="modal-body">
+          <form id="profileForm" class="profile-form" enctype="multipart/form-data">
+            <div class="profile-grid">
+              <div>
+                <div class="form-group">
+                  <label for="perfilUsuario">Usuario</label>
+                  <input type="text" id="perfilUsuario" name="perfilUsuario" readonly>
+                </div>
+                <div class="form-group">
+                  <label for="perfilNombre">Nombre</label>
+                  <input type="text" id="perfilNombre" name="perfilNombre" placeholder="Ingrese su nombre">
+                </div>
+                <div class="form-group">
+                  <label for="perfilApellido">Apellido</label>
+                  <input type="text" id="perfilApellido" name="perfilApellido" placeholder="Ingrese su apellido">
+                </div>
+                <div class="form-group">
+                  <label for="perfilCorreo">Correo electrónico</label>
+                  <input type="email" id="perfilCorreo" name="perfilCorreo" placeholder="correo@dominio.com">
+                </div>
+                <div class="form-group">
+                  <label for="perfilCelular">Celular</label>
+                  <input type="text" id="perfilCelular" name="perfilCelular" placeholder="Número de celular">
+                </div>
+              </div>
+              <div>
+                <div class="form-group profile-avatar-preview">
+                  <div>
+                    <label for="perfilFoto">Foto de perfil</label>
+                    <input type="file" id="perfilFoto" name="perfilFoto" accept="image/*">
+                  </div>
+                  <img id="perfilPreviewImg" src="images/logo.png" alt="Previsualización">
+                </div>
+                <div class="form-group">
+                  <label for="perfilContrasena">Nueva contraseña</label>
+                  <input type="password" id="perfilContrasena" name="perfilContrasena" placeholder="Opcional">
+                </div>
+                <div class="form-group">
+                  <label for="perfilContrasenaConfirm">Confirmar contraseña</label>
+                  <input type="password" id="perfilContrasenaConfirm" name="perfilContrasenaConfirm" placeholder="Opcional">
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" id="btnCancelProfile">Cancelar</button>
+          <button type="submit" form="profileForm" class="btn btn-primary">Guardar cambios</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Perfil de usuario -->
+    <script src="js/profile.js"></script>
 </body>
 
 </html>

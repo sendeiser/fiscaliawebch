@@ -1,0 +1,218 @@
+/**
+ * user_mgmt.css
+ * Estilos para la página de gestión de usuarios
+ */
+
+/* Estilos generales */
+body {
+    background-color: #f8f9fa;
+}
+
+.container-fluid {
+    padding: 20px;
+}
+
+/* Estilos para las tarjetas de estadísticas */
+.stats-card {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.stats-card:hover {
+    transform: translateY(-5px);
+}
+
+.stats-card .card-body {
+    padding: 20px;
+}
+
+.stats-card .card-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    color: #6c757d;
+}
+
+.stats-card .stats-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.stats-card .stats-icon {
+    font-size: 2rem;
+    opacity: 0.7;
+}
+
+/* Colores para las tarjetas de estadísticas */
+.card-active {
+    background-color: #28a745;
+    color: white;
+}
+
+.card-blocked {
+    background-color: #dc3545;
+    color: white;
+}
+
+.card-success {
+    background-color: #17a2b8;
+    color: white;
+}
+
+.card-failed {
+    background-color: #ffc107;
+    color: #343a40;
+}
+
+/* Estilos para las pestañas */
+.nav-tabs {
+    border-bottom: 2px solid #dee2e6;
+    margin-bottom: 20px;
+}
+
+.nav-tabs .nav-link {
+    border: none;
+    color: #6c757d;
+    font-weight: 600;
+    padding: 10px 20px;
+    margin-right: 5px;
+    border-radius: 0;
+}
+
+.nav-tabs .nav-link:hover {
+    border-color: transparent;
+    color: #343a40;
+}
+
+.nav-tabs .nav-link.active {
+    color: #007bff;
+    background-color: transparent;
+    border-bottom: 3px solid #007bff;
+}
+
+/* Estilos para los filtros */
+.filters-section {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.filters-section .form-group {
+    margin-bottom: 15px;
+}
+
+.filters-section .btn {
+    margin-top: 10px;
+}
+
+/* Estilos para las tablas */
+.table-container {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    overflow-x: auto;
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+.table thead th {
+    border-top: none;
+    border-bottom: 2px solid #dee2e6;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+.table tbody tr:hover {
+    background-color: rgba(0, 123, 255, 0.05);
+}
+
+/* Estilos para los estados */
+.status-active {
+    color: #28a745;
+    font-weight: 600;
+}
+
+.status-blocked {
+    color: #dc3545;
+    font-weight: 600;
+}
+
+/* Estilos para los botones */
+.btn-unlock {
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-unlock:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+.btn-export {
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.btn-export:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+}
+
+.btn-refresh {
+    color: #fff;
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+}
+
+.btn-refresh:hover {
+    background-color: #138496;
+    border-color: #117a8b;
+}
+
+/* Estilos para la paginación */
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 767.98px) {
+    .stats-card .stats-number {
+        font-size: 1.8rem;
+    }
+    
+    .stats-card .stats-icon {
+        font-size: 1.5rem;
+    }
+    
+    .filters-section {
+        padding: 10px;
+    }
+    
+    .table-container {
+        padding: 10px;
+    }
+    
+    .table thead th {
+        font-size: 0.7rem;
+    }
+    
+    .table tbody td {
+        font-size: 0.8rem;
+    }
+}

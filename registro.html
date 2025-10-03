@@ -1,181 +1,664 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fiscalia - Chamical</title>
-  <!--Import Google Icon Font-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Registro de Usuario - Fiscalía Chamical</title>
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!-- Compiled and minified CSS -->
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">-->
-  <link rel="stylesheet" href="css/navi.css">
-  <link rel="stylesheet" href="css/estilos.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-  <link rel="stylesheet" href="sweetalert2.min.css">
+  
+  <!-- Stylesheets -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/modern-design.css">
+  <link rel="stylesheet" href="css/new-navbar.css">
+  
+  <style>
+    :root {
+      --register-primary: #2c3e50;
+      --register-secondary: #3498db;
+      --register-accent: #e74c3c;
+      --register-success: #27ae60;
+      --register-light: #ecf0f1;
+      --register-dark: #34495e;
+      --register-white: #ffffff;
+      --register-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      --register-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url('images/registrar.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      opacity: 0.1;
+      z-index: -1;
+    }
+
+    /* Navigation */
+    .navbar {
+      background: rgba(255, 255, 255, 0.95) !important;
+      backdrop-filter: blur(10px);
+      border: none;
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+      padding: 1rem 0;
+    }
+
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: var(--register-primary) !important;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .navbar-brand img {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+    }
+
+    .nav-link {
+      color: var(--register-dark) !important;
+      font-weight: 500;
+      padding: 0.75rem 1.25rem !important;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      margin: 0 0.25rem;
+    }
+
+    .nav-link:hover {
+      background: var(--register-gradient);
+      color: white !important;
+      transform: translateY(-2px);
+    }
+
+    .nav-link.active {
+      background: var(--register-secondary);
+      color: white !important;
+    }
+
+    /* Mobile Navigation */
+    @media (max-width: 768px) {
+      .desaparece {
+        display: none;
+      }
+      
+      .nav-item:first-child {
+        display: block !important;
+      }
+    }
+
+    /* Register Container */
+    .register-container {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+    }
+
+    .register-card {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(20px);
+      border-radius: 20px;
+      padding: 3rem;
+      box-shadow: var(--register-shadow);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      width: 100%;
+      max-width: 900px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .register-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--register-gradient);
+    }
+
+    .register-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.25rem;
+      font-weight: 700;
+      color: var(--register-primary);
+      text-align: center;
+      margin-bottom: 2.5rem;
+      position: relative;
+    }
+
+    .register-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background: var(--register-gradient);
+      border-radius: 2px;
+    }
+
+    /* Form Styles */
+    .form-floating {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-control {
+      border: 2px solid #e9ecef;
+      border-radius: 12px;
+      padding: 1rem;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      background: rgba(255, 255, 255, 0.9);
+    }
+
+    .form-control:focus {
+      border-color: var(--register-secondary);
+      box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+      background: white;
+    }
+
+    .form-floating > label {
+      color: #6c757d;
+      font-weight: 500;
+    }
+
+    /* Form Grid */
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .form-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+    }
+
+    /* Buttons */
+    .btn-container {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+
+    .btn-modern {
+      padding: 0.875rem 2rem;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 1rem;
+      border: none;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      min-width: 160px;
+    }
+
+    .btn-login {
+      background: transparent;
+      color: var(--register-secondary);
+      border: 2px solid var(--register-secondary) !important;
+    }
+
+    .btn-login:hover {
+      background: var(--register-secondary);
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(52, 152, 219, 0.3);
+    }
+
+    .btn-register {
+      background: var(--register-gradient);
+      color: white;
+      border: 2px solid transparent !important;
+    }
+
+    .btn-register:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+      filter: brightness(1.1);
+    }
+
+    .btn-register:active {
+      transform: translateY(0);
+    }
+
+    /* Loading State */
+    .btn-loading {
+      position: relative;
+      color: transparent !important;
+    }
+
+    .btn-loading::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      top: 50%;
+      left: 50%;
+      margin-left: -10px;
+      margin-top: -10px;
+      border: 2px solid transparent;
+      border-top: 2px solid white;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Response Area */
+    #resp-reg {
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    /* Input Icons */
+    .input-icon {
+      position: relative;
+    }
+
+    .input-icon i {
+      position: absolute;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #6c757d;
+      z-index: 10;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .register-card {
+        padding: 2rem 1.5rem;
+        margin: 1rem;
+        border-radius: 16px;
+      }
+
+      .register-title {
+        font-size: 1.75rem;
+      }
+
+      .btn-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .btn-modern {
+        width: 100%;
+        max-width: 300px;
+      }
+
+      .navbar {
+        padding: 0.5rem 0;
+      }
+
+      .nav-link {
+        padding: 0.5rem 1rem !important;
+        margin: 0.25rem 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .register-card {
+        padding: 1.5rem 1rem;
+      }
+
+      .register-title {
+        font-size: 1.5rem;
+      }
+
+      .form-control {
+        padding: 0.875rem;
+      }
+
+      .form-grid {
+        gap: 0.75rem;
+      }
+    }
+
+    /* Animations */
+    .register-card {
+      animation: fadeInUp 0.6s ease-out;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Focus States */
+    .btn-modern:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.3);
+    }
+
+    .form-control:focus {
+      outline: none;
+    }
+
+    /* Form Validation */
+    .form-control.is-valid {
+      border-color: var(--register-success);
+    }
+
+    .form-control.is-invalid {
+      border-color: var(--register-accent);
+    }
+
+    .valid-feedback {
+      color: var(--register-success);
+      font-size: 0.875rem;
+      margin-top: 0.25rem;
+    }
+
+    .invalid-feedback {
+      color: var(--register-accent);
+      font-size: 0.875rem;
+      margin-top: 0.25rem;
+    }
+  </style>
 </head>
 
-<body class="bg-image" style="background-image:url('images/registrar.jpg')">
-  <ul class="nav bg-image d-flex justify-content-center" style="background-image: url('images/registrar.jpg');">
+<body>
+  <!-- Navigation -->
+  <nav class="fiscal-navbar">
+    <div class="fiscal-navbar-container">
+      <a href="index.html" class="fiscal-navbar-brand">
+        <img src="images/justicia2.png" alt="Fiscalía Chamical" class="fiscal-navbar-logo">
+        <span class="fiscal-navbar-title">Fiscalía Chamical</span>
+      </a>
+      
+      <button class="fiscal-navbar-toggle" aria-label="Abrir menú de navegación" aria-expanded="false">
+        <span class="fiscal-navbar-toggle-icon"></span>
+      </button>
 
-    <nav class="navbar navbar-light bg-light rounded">
-      <div class="container-fluid">
-        <a class="navbar-brand" onclick="accion()" href="#">
-          <img src="images/justicia2.png" alt="" width="40" height="34" class="d-inline-block align-text-top">
-          Fiscalia Web
-        </a>
-      </div>
-    </nav>
-
-
-    <li class="nav-item desaparece1">
-      <a class="nav-link " aria-current="page" href="#" aria-disabled="false" onclick="accion()">Menu</a>
-    </li>
-    <li class="nav-item justify-content-right desaparece">
-      <a class="nav-link" href="index.html">Inicio</a>
-    </li>
-    <li class="nav-item justify-content-right desaparece">
-      <a class="nav-link" href="comisarias.php">Comisarias</a>
-    </li>
-    <li class="nav-item justify-content-right desaparece">
-      <a class="nav-link" href="estadodenuncia.php">Estado de su Denuncia</a>
-    </li>
-    <li class="nav-item desaparece">
-      <a class="nav-link" href="registro.html" aria-disabled="true">Registrar</a>
-    </li>
-    <li class="nav-item desaparece">
-      <a class="nav-link" href="Login.html" aria-disabled="true">Iniciar Sesion</a>
-    </li>
-    <li class="nav-item desaparece">
-      <a class="nav-link" href="contacto.html" aria-disabled="true">Contacto</a>
-    </li>
-  </ul>
-
-
-
-
-
-
-  <div class="col-md-12 col-sm-12 col-xl-12 d-flex justify-content-center">
-
-
-
-
-
-    <div
-      class="container rounded containerregis col-xl-6 col-lg-9  col-md-9 col-sm-9 col-10 d-flex justify-content-center">
-
-      <div class="row">
-
-        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 d-flex justify-content-center">
-
-          <p for="" class="registitulo text-center">Registro de Usuarios</p>
-
-        </div>
-
-
-
-        <div class="col-xl-12 d-flex justify-content-center mt-4">
-
-          <form action="" method="post" id="form-reg"
-            class="row g-2 col-md-12 col-sm-12 col-lg-12 d-flex justify-content-center">
-
-            <div class="col-xl-4 col-md-4 col-sm-9 col-8">
-              <div class="form-floating mb-3 letrasreg">
-                <input type="text" class="form-control" name="usuario" id="floatingInput" placeholder="Usuario"
-                  required>
-                <label for="floatingInput">Usuario</label>
-              </div>
-            </div>
-
-            <div class="col-xl-4 col-md-4 col-sm-9 col-8">
-              <div class="form-floating mb-3 letrasreg">
-                <input type="password" class="form-control" name="contrasena" id="floatingPassword"
-                  placeholder="Password" required>
-                <label for="floatingInput">Contraseña</label>
-              </div>
-            </div>
-
-            <div class="col-xl-4 col-md-4 col-sm-9 col-8">
-              <div class="form-floating mb-3 letrasreg">
-                <input type="email" class="form-control" name="correo" id="floatingInput"
-                  placeholder="example@example.com" required>
-                <label for="floatingInput">Email</label>
-              </div>
-            </div>
-
-            <div class="col-xl-4 col-md-4 col-sm-9 col-8">
-              <div class="form-floating mb-3 letrasreg">
-                <input type="number" class="form-control" name="celular" id="floatingInput" placeholder="Telefono"
-                  required>
-                <label for="floatingInput">Telefono</label>
-              </div>
-            </div>
-
-            <div class="col-xl-4 col-md-4 col-sm-9 col-8">
-              <div class="form-floating mb-3 letrasreg">
-                <input type="text" class="form-control" name="nombre" id="floatingInput" placeholder="Nombre" required>
-                <label for="floatingInput">Nombre</label>
-              </div>
-            </div>
-
-            <div class="col-xl-4 col-md-4 col-sm-9 col-8">
-              <div class="form-floating mb-3 letrasreg">
-                <input type="text" class="form-control" name="apellido" id="floatingInput" placeholder="Apellido"
-                  required>
-                <label for="floatingInput">Apellido</label>
-              </div>
-            </div>
-            <div class="col-xl-12 col-md-9 col-sm-9">
-              <div class="d-grid gap-3 d-flex justify-content-center">
-                <a href="Login.html"><button class="button rounded" type="button">Iniciar Sesion</button></a>
-                <a href=""><button class="button  rounded" type="submit" id="btn-reg">Registrarse</button></a>
-              </div>
-              <div class="container" style="height: 3vh;"></div>
-            </div>
-          </form>
-        </div>
-
+      <div class="fiscal-navbar-collapse">
+        <ul class="fiscal-navbar-nav">
+          <li class="fiscal-navbar-item">
+            <a class="fiscal-navbar-link" href="index.html">
+              <i class="fas fa-home fiscal-navbar-icon"></i>
+              <span>Inicio</span>
+            </a>
+          </li>
+          <li class="fiscal-navbar-item">
+            <a class="fiscal-navbar-link" href="comisarias.php">
+              <i class="fas fa-building fiscal-navbar-icon"></i>
+              <span>Comisarías</span>
+            </a>
+          </li>
+          <li class="fiscal-navbar-item">
+            <a class="fiscal-navbar-link" href="estadodenuncia.php">
+              <i class="fas fa-search fiscal-navbar-icon"></i>
+              <span>Estado de Denuncia</span>
+            </a>
+          </li>
+          <li class="fiscal-navbar-item">
+            <a class="fiscal-navbar-link active" href="registro.html">
+              <i class="fas fa-user-plus fiscal-navbar-icon"></i>
+              <span>Registrarse</span>
+            </a>
+          </li>
+          <li class="fiscal-navbar-item">
+            <a class="fiscal-navbar-link" href="Login.html">
+              <i class="fas fa-sign-in-alt fiscal-navbar-icon"></i>
+              <span>Iniciar Sesión</span>
+            </a>
+          </li>
+          <li class="fiscal-navbar-item">
+            <a class="fiscal-navbar-link" href="contacto.html">
+              <i class="fas fa-envelope fiscal-navbar-icon"></i>
+              <span>Contacto</span>
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
-    <div class="row d-flex justify-content-center">
-      <div class="col-4" id="resp-reg">
+  </nav>
 
-      </div>
+  <!-- Register Container -->
+  <div class="register-container">
+    <div class="register-card">
+      <h1 class="register-title">Registro de Usuarios</h1>
+      
+      <form action="" method="post" id="form-reg">
+        <div class="form-grid">
+          <div class="form-floating">
+            <input type="text" class="form-control" name="usuario" id="usuario" placeholder="Usuario" required>
+            <label for="usuario">
+              <i class="fas fa-user me-2"></i>Usuario
+            </label>
+          </div>
+
+          <div class="form-floating">
+            <input type="password" class="form-control" name="contrasena" id="contrasena" placeholder="Contraseña" required>
+            <label for="contrasena">
+              <i class="fas fa-lock me-2"></i>Contraseña
+            </label>
+          </div>
+
+          <div class="form-floating">
+            <input type="email" class="form-control" name="correo" id="correo" placeholder="example@example.com" required>
+            <label for="correo">
+              <i class="fas fa-envelope me-2"></i>Email
+            </label>
+          </div>
+
+          <div class="form-floating">
+            <input type="tel" class="form-control" name="celular" id="celular" placeholder="Teléfono" required>
+            <label for="celular">
+              <i class="fas fa-phone me-2"></i>Teléfono
+            </label>
+          </div>
+
+          <div class="form-floating">
+            <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre" required>
+            <label for="nombre">
+              <i class="fas fa-user-circle me-2"></i>Nombre
+            </label>
+          </div>
+
+          <div class="form-floating">
+            <input type="text" class="form-control" name="apellido" id="apellido" placeholder="Apellido" required>
+            <label for="apellido">
+              <i class="fas fa-user-circle me-2"></i>Apellido
+            </label>
+          </div>
+        </div>
+
+        <div class="btn-container">
+          <a href="Login.html" class="btn-modern btn-login">
+            <i class="fas fa-sign-in-alt me-2"></i>Iniciar Sesión
+          </a>
+          <button class="btn-modern btn-register" type="submit" id="btn-reg">
+            <i class="fas fa-user-plus me-2"></i>Registrarse
+          </button>
+        </div>
+      </form>
+
+      <div id="resp-reg"></div>
     </div>
-
-
-
   </div>
 
-
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="js/main.js"></script>
+  <script src="js/sweetAlerts.js"></script>
 
   <script>
+    // Mobile menu toggle
     function accion() {
       var ancla = document.getElementsByClassName('nav-item');
       for (i = 1; i < ancla.length; i++) {
         ancla[i].classList.toggle('desaparece');
-
       }
     }
 
+    // Form validation and enhancements
+    $(document).ready(function () {
+      // Phone number formatting
+      $('#celular').on('input', function() {
+        let value = this.value.replace(/\D/g, '');
+        if (value.length > 0) {
+          if (value.length <= 3) {
+            value = value;
+          } else if (value.length <= 6) {
+            value = value.slice(0, 3) + '-' + value.slice(3);
+          } else {
+            value = value.slice(0, 3) + '-' + value.slice(3, 6) + '-' + value.slice(6, 10);
+          }
+        }
+        this.value = value;
+      });
+
+      // Real-time validation
+      $('.form-control').on('blur', function() {
+        validateField($(this));
+      });
+
+      // Form submission with loading state
+      $('#form-reg').on('submit', function(e) {
+        e.preventDefault();
+        
+        // Validate all fields
+        let isValid = true;
+        $('.form-control').each(function() {
+          if (!validateField($(this))) {
+            isValid = false;
+          }
+        });
+
+        if (isValid) {
+          const submitBtn = $('#btn-reg');
+          submitBtn.addClass('btn-loading');
+          
+          // Simulate form submission (replace with actual submission logic)
+          setTimeout(() => {
+            submitBtn.removeClass('btn-loading');
+            // Add your form submission logic here
+          }, 2000);
+        }
+      });
+
+      // Input focus animations
+      $('.form-control').on('focus', function() {
+        $(this).parent().addClass('focused');
+      }).on('blur', function() {
+        if (!$(this).val()) {
+          $(this).parent().removeClass('focused');
+        }
+      });
+    });
+
+    // Field validation function
+    function validateField($field) {
+      const value = $field.val().trim();
+      const fieldName = $field.attr('name');
+      let isValid = true;
+      let message = '';
+
+      // Remove previous validation classes
+      $field.removeClass('is-valid is-invalid');
+      $field.siblings('.valid-feedback, .invalid-feedback').remove();
+
+      if (!value) {
+        isValid = false;
+        message = 'Este campo es requerido';
+      } else {
+        switch (fieldName) {
+          case 'usuario':
+            if (value.length < 3) {
+              isValid = false;
+              message = 'El usuario debe tener al menos 3 caracteres';
+            }
+            break;
+          case 'contrasena':
+            if (value.length < 6) {
+              isValid = false;
+              message = 'La contraseña debe tener al menos 6 caracteres';
+            }
+            break;
+          case 'correo':
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(value)) {
+              isValid = false;
+              message = 'Ingrese un email válido';
+            }
+            break;
+          case 'celular':
+            const phoneRegex = /^\d{3}-\d{3}-\d{4}$/;
+            if (!phoneRegex.test(value) && value.replace(/\D/g, '').length < 10) {
+              isValid = false;
+              message = 'Ingrese un teléfono válido';
+            }
+            break;
+          case 'nombre':
+          case 'apellido':
+            if (value.length < 2) {
+              isValid = false;
+              message = 'Debe tener al menos 2 caracteres';
+            }
+            break;
+        }
+      }
+
+      // Apply validation classes and messages
+      if (isValid) {
+        $field.addClass('is-valid');
+        $field.after('<div class="valid-feedback">✓ Válido</div>');
+      } else {
+        $field.addClass('is-invalid');
+        $field.after('<div class="invalid-feedback">' + message + '</div>');
+      }
+
+      return isValid;
+    }
   </script>
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
-    integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
-    integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc"
-    crossorigin="anonymous"></script>
-  <script src="/js/main.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script src="/js/sweetAlerts.js"></script>
+  
+  <!-- Navbar Script -->
+  <script src="js/new-navbar.js"></script>
 </body>
 
 </html>

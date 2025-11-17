@@ -50,7 +50,7 @@ function cargarEstadisticas() {
             
             // Actualizar las tarjetas de estadísticas
             document.getElementById('totalOperaciones').textContent = data.data.total_operaciones || '0';
-            document.getElementById('operacionesInsert').textContent = data.data.total_inserciones || '0';
+            document.getElementById('operacionesInsert').textContent = (data.data.total_informes != null ? data.data.total_informes : data.data.total_inserciones) || '0';
             document.getElementById('operacionesUpdate').textContent = data.data.total_actualizaciones || '0';
             document.getElementById('operacionesDelete').textContent = data.data.total_eliminaciones || '0';
 
@@ -99,7 +99,7 @@ function cargarAuditoria() {
     const dni = document.getElementById('filtroDNI').value;
 
     // Mostrar indicador de carga
-    document.getElementById('tablaAuditoria').innerHTML = '<tr><td colspan="7" class="text-center"><div class="spinner-border" role="status"><span class="visually-hidden">Cargando...</span></div></td></tr>';
+    document.getElementById('tablaAuditoria').innerHTML = '<tr><td colspan="8" class="text-center"><div class="spinner-border" role="status"><span class="visually-hidden">Cargando...</span></div></td></tr>';
 
     // Realizar petición AJAX
     fetch(`phpserv/get_auditoria.php?page=${currentPage}&items_per_page=${itemsPerPage}&date_from=${fechaDesde}&date_to=${fechaHasta}&tabla=${tabla}&operacion=${operacion}&usuario=${usuario}&expediente=${expediente}&dni=${dni}`)
@@ -127,7 +127,7 @@ function mostrarAuditoria(registros) {
     tabla.innerHTML = '';
 
     if (registros.length === 0) {
-        tabla.innerHTML = '<tr><td colspan="7" class="text-center">No se encontraron registros</td></tr>';
+        tabla.innerHTML = '<tr><td colspan="8" class="text-center">No se encontraron registros</td></tr>';
         return;
     }
 
@@ -135,15 +135,16 @@ function mostrarAuditoria(registros) {
         const fila = document.createElement('tr');
         
         // Crear celdas para cada columna
-        const columnas = [
-            registro.id,
-            registro.fecha + ' ' + registro.hora,
-            registro.usuario,
-            registro.tabla_afectada,
-            registro.operacion,
-            registro.num_expediente || '-',
-            registro.detalles || '-'
-        ];
+    const columnas = [
+        registro.id,
+        registro.fecha + ' ' + registro.hora,
+        registro.usuario,
+        (registro.rol || '-'),
+        registro.tabla_afectada,
+        registro.operacion,
+        registro.num_expediente || '-',
+        (registro.nombre || registro.usuario || '-')
+    ];
 
         columnas.forEach(texto => {
             const celda = document.createElement('td');
@@ -452,7 +453,7 @@ function verDetalles(registro) {
                     <th>ID:</th>
                     <td>${registro.id}</td>
                 </tr>
-                <tr>
+estadodenuncia.php                <tr>
                     <th>Fecha:</th>
                     <td>${registro.fecha}</td>
                 </tr>

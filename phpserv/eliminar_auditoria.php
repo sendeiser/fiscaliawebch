@@ -5,7 +5,20 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 // Configuración de cabeceras
-header("Access-Control-Allow-Origin: *");
+session_start();
+// Verificar permisos de administrador de forma consistente
+$rolSesion = isset($_SESSION['rol']) ? strtolower(trim($_SESSION['rol'])) : null;
+$tipoSesion = isset($_SESSION['tipo']) ? strtolower(trim($_SESSION['tipo'])) : null;
+if ($rolSesion !== 'administrador' && $tipoSesion !== 'admin') {
+    header('Content-Type: application/json');
+    http_response_code(403);
+    echo json_encode([
+        'status' => 'error',
+        'message' => 'Acceso denegado. Se requiere rol de administrador.'
+    ]);
+    exit;
+}
+header("Access-Control-Allow-Origin: ");
 header("Content-Type: application/json; charset=UTF-8");
 header("Access-Control-Allow-Methods: DELETE, OPTIONS");
 header("Access-Control-Max-Age: 3600");

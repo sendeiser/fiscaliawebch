@@ -593,6 +593,9 @@ div.sociales a:nth-child(3)>i
      background-color: darkslategrey;
 
 }
+.contact-info-item{
+     overflow: auto;
+}
 
 @media (max-width:1500px) {
      #principal {

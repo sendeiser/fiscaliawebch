@@ -208,6 +208,8 @@
             padding: 60px 20px;
             color: var(--text-muted);
         }
+        .map-embed { position: relative; width: 100%; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; }
+        .map-embed iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
         
         .custom-control-label {
             color: var(--text-dark);
@@ -508,10 +510,9 @@
                 <i class="fas fa-map mr-2"></i>
                 Ubicación
             </h3>
-            <div class="map-placeholder">
-                <i class="fas fa-map-marked-alt fa-3x mb-3" style="color: var(--primary-blue);"></i>
-                <h5>Mapa Interactivo</h5>
-                <p class="mb-0">Aquí se puede integrar un mapa interactivo con la ubicación exacta de la Fiscalía Chamical.</p>
+                <div class="map-embed mt-3">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d221.47690146410312!2d-66.3077861986306!3d-30.35804332733344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x942917006562f543%3A0x1eab4a446966318a!2sMinisterio%20P%C3%BAblico%20Fiscal!5e0!3m2!1ses-419!2sar!4v1762988486534!5m2!1ses-419!2sar" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
             </div>
         </div>
     </div>
@@ -602,25 +603,48 @@
                 const originalText = submitBtn.innerHTML;
                 submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Enviando...';
                 submitBtn.disabled = true;
-                
-                // Simulate form submission
-                setTimeout(() => {
+                const formData = new FormData(form);
+                fetch('phpserv/contacto.php', {
+                    method: 'POST',
+                    body: formData,
+                    headers: { 'Accept': 'application/json' }
+                })
+                .then(function(r){ return r.json(); })
+                .then(function(res){
+                    if (res && res.status === 'success') {
+                        Swal.fire({
+                            icon: 'success',
+                            title: '¡Mensaje Enviado!',
+                            text: 'Gracias por contactarnos. Responderemos a la brevedad.',
+                            confirmButtonText: 'Aceptar',
+                            confirmButtonColor: '#1976d2'
+                        }).then(() => {
+                            form.reset();
+                            inputs.forEach(input => { input.classList.remove('is-valid', 'is-invalid'); });
+                        });
+                    } else {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Error',
+                            text: (res && res.message) ? res.message : 'No se pudo enviar el mensaje.',
+                            confirmButtonText: 'Aceptar',
+                            confirmButtonColor: '#1976d2'
+                        });
+                    }
+                })
+                .catch(function(){
                     Swal.fire({
-                        icon: 'success',
-                        title: '¡Mensaje Enviado!',
-                        text: 'Gracias por contactarnos. Responderemos a la brevedad.',
+                        icon: 'error',
+                        title: 'Error de conexión',
+                        text: 'No se pudo conectar con el servidor.',
                         confirmButtonText: 'Aceptar',
                         confirmButtonColor: '#1976d2'
-                    }).then(() => {
-                        form.reset();
-                        inputs.forEach(input => {
-                            input.classList.remove('is-valid', 'is-invalid');
-                        });
                     });
-                    
+                })
+                .finally(function(){
                     submitBtn.innerHTML = originalText;
                     submitBtn.disabled = false;
-                }, 2000);
+                });
             }
             
             // Phone number formatting

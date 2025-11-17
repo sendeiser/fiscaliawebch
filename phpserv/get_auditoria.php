@@ -3,15 +3,19 @@
  * get_auditoria.php - Obtiene registros de auditoría con paginación y filtros
  */
 
-// Mostrar errores para depuración
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-// Configuración de cabeceras
 header('Content-Type: application/json');
-header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: GET');
+session_start();
+$rolSesion = isset($_SESSION['rol']) ? strtolower(trim($_SESSION['rol'])) : null;
+$tipoSesion = isset($_SESSION['tipo']) ? strtolower(trim($_SESSION['tipo'])) : null;
+if ($rolSesion !== 'administrador' && $tipoSesion !== 'admin') {
+    echo json_encode(['status' => 'error', 'message' => 'Acceso denegado. Se requiere rol de administrador.']);
+    exit;
+}
 
 // Conexión a la base de datos
 $servername = "localhost";
@@ -40,9 +44,8 @@ $items_per_page = isset($_GET['items_per_page']) ? intval($_GET['items_per_page'
 // Calcular offset para la consulta SQL
 $offset = ($page - 1) * $items_per_page;
 
-// Construir consulta base
-$sql_count = "SELECT COUNT(*) as total FROM auditoria";
-$sql = "SELECT * FROM auditoria";
+$sql_count = "SELECT COUNT(*) as total FROM auditoria a";
+$sql = "SELECT a.*, u.Nombre AS nombre, u.rol AS rol FROM auditoria a LEFT JOIN usuarios u ON u.usuario = a.usuario";
 
 // Array para condiciones WHERE
 $where_conditions = [];
@@ -51,43 +54,43 @@ $types = "";
 
 // Filtros
 if (isset($_GET['tabla']) && !empty($_GET['tabla'])) {
-    $where_conditions[] = "tabla_afectada LIKE ?";
+    $where_conditions[] = "a.tabla_afectada LIKE ?";
     $params[] = "%{$_GET['tabla']}%";
     $types .= "s";
 }
 
 if (isset($_GET['operacion']) && !empty($_GET['operacion'])) {
-    $where_conditions[] = "operacion LIKE ?";
+    $where_conditions[] = "a.operacion LIKE ?";
     $params[] = "%{$_GET['operacion']}%";
     $types .= "s";
 }
 
 if (isset($_GET['date_from']) && !empty($_GET['date_from'])) {
-    $where_conditions[] = "fecha >= ?";
+    $where_conditions[] = "a.fecha >= ?";
     $params[] = $_GET['date_from'];
     $types .= "s";
 }
 
 if (isset($_GET['date_to']) && !empty($_GET['date_to'])) {
-    $where_conditions[] = "fecha <= ?";
+    $where_conditions[] = "a.fecha <= ?";
     $params[] = $_GET['date_to'];
     $types .= "s";
 }
 
 if (isset($_GET['usuario']) && !empty($_GET['usuario'])) {
-    $where_conditions[] = "usuario LIKE ?";
+    $where_conditions[] = "a.usuario LIKE ?";
     $params[] = "%{$_GET['usuario']}%";
     $types .= "s";
 }
 
 if (isset($_GET['expediente']) && !empty($_GET['expediente'])) {
-    $where_conditions[] = "num_expediente LIKE ?";
+    $where_conditions[] = "a.num_expediente LIKE ?";
     $params[] = "%{$_GET['expediente']}%";
     $types .= "s";
 }
 
 if (isset($_GET['dni']) && !empty($_GET['dni'])) {
-    $where_conditions[] = "dni LIKE ?";
+    $where_conditions[] = "a.dni LIKE ?";
     $params[] = "%{$_GET['dni']}%";
     $types .= "s";
 }
@@ -99,7 +102,7 @@ if (!empty($where_conditions)) {
 }
 
 // Ordenar por fecha y hora descendente (más reciente primero)
-$sql .= " ORDER BY fecha DESC, hora DESC";
+$sql .= " ORDER BY a.fecha DESC, a.hora DESC";
 
 // Añadir límite para paginación
 $sql .= " LIMIT ? OFFSET ?";

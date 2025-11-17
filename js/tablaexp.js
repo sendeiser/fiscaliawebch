@@ -13,8 +13,30 @@ $(document).ready(function () {
     datatable = $('#tablaexp').DataTable({
         "bProcessing": true,
         "bDeferRender": true,
-        "bServerSide": true,
-        "sAjaxSource": "serverside/serversideExpedientes.php",
+        "bServerSide": false,
+        "ajax": {
+            "url": "/phpserv/gb_get_expedientes.php",
+            "dataSrc": function(json){
+                try{
+                    var rows = (json && json.data && Array.isArray(json.data.registros)) ? json.data.registros : [];
+                    return rows.map(function(r){
+                        return [
+                            r.idexpediente,
+                            r.dnidenunciante,
+                            r.denunciado,
+                            r.fechadeentrada,
+                            r.fechadesalida,
+                            r.causa,
+                            r.medida,
+                            r.fojas,
+                            r.librodeactas,
+                            r.codigocomisaria,
+                            r.numerodeexpediente
+                        ];
+                    });
+                }catch(e){ return []; }
+            }
+        },
         "columnDefs": [{
             "targets": -1,
             "defaultContent": `<button class="editar btn btn-success" type="button" data-toggle="modal" data-target="#editar">Editar</button>

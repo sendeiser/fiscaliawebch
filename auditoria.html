@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="app-env" content="gestorbeta">
     <title>Auditoría del Sistema</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -109,6 +110,41 @@
             padding: 1rem 0;
             margin-top: 2rem;
         }
+        .user-menu { position: relative; display: flex; align-items: center; }
+        .user-toggle { display: flex; align-items: center; gap: .5rem; background: rgba(255,255,255,0.12); color: #fff; border: 1px solid rgba(255,255,255,0.25); padding: .35rem .6rem; border-radius: 20px; cursor: pointer; }
+        .user-toggle:hover { background: rgba(255,255,255,0.2); }
+        .user-toggle .avatar { font-size: 1.2rem; display:flex; align-items:center; }
+        .user-toggle .caret { font-size: .9rem; opacity: .9; }
+        .user-name { font-weight: 600; }
+        .user-dropdown { position: absolute; top: calc(100% + .4rem); right: 0; min-width: 220px; background: #fff; border-radius: 10px; box-shadow: 0 10px 24px rgba(0,0,0,.18); padding: .5rem; z-index: 1000; display: none; }
+        .user-dropdown.show { display: block; }
+        .user-header { display: flex; align-items: center; gap: .6rem; padding: .5rem .5rem .4rem; }
+        .avatar-sm { display:flex; align-items:center; justify-content:center; width: 34px; height: 34px; border-radius: 50%; background: var(--light-color); color: var(--secondary-color); }
+        .avatar-img { width: 20px; height: 20px; border-radius: 50%; }
+        .avatar-img-sm { width: 28px; height: 28px; border-radius: 50%; }
+        .hidden { display: none; }
+        .user-meta .name { font-weight: 700; }
+        .user-meta .role { font-size: .85rem; color: #6c757d; }
+        .dropdown-divider { height:1px; background:#eee; margin:.5rem 0; }
+        .dropdown-item { width: 100%; display: flex; align-items:center; gap:.5rem; padding: .45rem .6rem; border: none; background: transparent; color: var(--secondary-color); border-radius: 8px; }
+        .dropdown-item:hover { background: #f2f4f6; }
+
+        .profile-modal-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,0.55); display: none; align-items: center; justify-content: center; z-index: 1050; }
+        .profile-modal-backdrop.show { display: flex; }
+        .profile-modal { width: min(920px, 92vw); background: #ffffff; color: var(--secondary-color); border-radius: 12px; box-shadow: 0 10px 20px rgba(0,0,0,0.25); border: 1px solid rgba(0,0,0,0.1); }
+        .profile-modal .modal-header { display:flex; justify-content:space-between; align-items:center; padding: .8rem 1rem; border-bottom:1px solid #e5e7eb; }
+        .profile-modal .modal-body { padding: 1rem; }
+        .profile-modal .modal-footer { display:flex; justify-content:flex-end; gap:.6rem; padding: .8rem 1rem; border-top:1px solid #e5e7eb; }
+        .profile-form .form-group { margin-bottom: .85rem; }
+        .profile-form label { display:block; margin-bottom: .35rem; font-weight: 600; }
+        .profile-form input[type="text"],
+        .profile-form input[type="email"],
+        .profile-form input[type="password"],
+        .profile-form input[type="file"] { width: 100%; padding: .55rem .65rem; border-radius: 8px; border: 1px solid #ced4da; background: #fff; color: var(--secondary-color); }
+        .profile-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        .profile-avatar-preview { display:flex; align-items:center; gap: .8rem; }
+        .profile-avatar-preview img { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 2px solid var(--secondary-color); }
+        @media (max-width: 768px) { .profile-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -139,10 +175,32 @@
                             <i class="fas fa-tasks me-1"></i> Gestor
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">
-                            <i class="fas fa-sign-out-alt me-1"></i> Salir
-                        </a>
+                    <li class="nav-item d-flex align-items-center ms-2">
+                        <div class="user-menu" id="userMenu">
+                          <button class="user-toggle" id="userMenuToggle" aria-haspopup="true" aria-expanded="false">
+                            <span class="avatar" id="userAvatar">
+                              <img id="userAvatarImg" class="avatar-img hidden" src="images/logo.png" alt="Avatar">
+                              <i id="userAvatarIcon" class="fas fa-user-circle"></i>
+                            </span>
+                            <span class="user-name" id="userMenuName">Usuario</span>
+                            <i class="fas fa-chevron-down caret"></i>
+                          </button>
+                          <div class="user-dropdown" id="userDropdown" role="menu" aria-hidden="true">
+                            <div class="user-header">
+                              <div class="avatar-sm">
+                                <img id="ddUserAvatarImg" class="avatar-img-sm hidden" src="images/logo.png" alt="Avatar">
+                                <i id="ddUserAvatarIcon" class="fas fa-user"></i>
+                              </div>
+                              <div class="user-meta">
+                                <div class="name" id="ddUserName">Usuario</div>
+                                <div class="role" id="ddUserRole">Usuario</div>
+                              </div>
+                            </div>
+                            <div class="dropdown-divider"></div>
+                            <button class="dropdown-item" id="btnEditProfile"><i class="fas fa-user-edit me-2"></i>Editar perfil</button>
+                            <button class="dropdown-item" id="btnLogout"><i class="fas fa-sign-out-alt me-2"></i>Cerrar sesión</button>
+                          </div>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -293,6 +351,7 @@
                             <th>ID</th>
                             <th>Fecha y Hora</th>
                             <th>Usuario</th>
+                            <th>Rol</th>
                             <th>Tabla</th>
                             <th>Operación</th>
                             <th>Expediente</th>
@@ -339,6 +398,66 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/gestorbeta.js"></script>
+    <script src="/js/main.js"></script>
     <script src="js/auditoria.js"></script>
-</body>
+    <script src="js/profile.js"></script>
+    <div class="profile-modal-backdrop" id="profileModalBackdrop" aria-hidden="true">
+      <div class="profile-modal" role="dialog" aria-modal="true" aria-labelledby="profileModalTitle">
+        <div class="modal-header">
+          <h5 id="profileModalTitle" class="m-0">Editar perfil</h5>
+          <button type="button" class="btn btn-sm btn-light" id="btnCloseProfile"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="modal-body">
+          <form id="profileForm" class="profile-form" enctype="multipart/form-data">
+            <div class="profile-grid">
+              <div>
+                <div class="form-group">
+                  <label for="perfilUsuario">Usuario</label>
+                  <input type="text" id="perfilUsuario" name="perfilUsuario" readonly>
+                </div>
+                <div class="form-group">
+                  <label for="perfilNombre">Nombre</label>
+                  <input type="text" id="perfilNombre" name="perfilNombre" placeholder="Ingrese su nombre">
+                </div>
+                <div class="form-group">
+                  <label for="perfilApellido">Apellido</label>
+                  <input type="text" id="perfilApellido" name="perfilApellido" placeholder="Ingrese su apellido">
+                </div>
+                <div class="form-group">
+                  <label for="perfilCorreo">Correo electrónico</label>
+                  <input type="email" id="perfilCorreo" name="perfilCorreo" placeholder="correo@dominio.com">
+                </div>
+                <div class="form-group">
+                  <label for="perfilCelular">Celular</label>
+                  <input type="text" id="perfilCelular" name="perfilCelular" placeholder="Número de celular">
+                </div>
+              </div>
+              <div>
+                <div class="form-group profile-avatar-preview">
+                  <div>
+                    <label for="perfilFoto">Foto de perfil</label>
+                    <input type="file" id="perfilFoto" name="perfilFoto" accept="image/*">
+                  </div>
+                  <img id="perfilPreviewImg" src="images/logo.png" alt="Previsualización">
+                </div>
+                <div class="form-group">
+                  <label for="perfilContrasena">Nueva contraseña</label>
+                  <input type="password" id="perfilContrasena" name="perfilContrasena" placeholder="Opcional">
+                </div>
+                <div class="form-group">
+                  <label for="perfilContrasenaConfirm">Confirmar contraseña</label>
+                  <input type="password" id="perfilContrasenaConfirm" name="perfilContrasenaConfirm" placeholder="Opcional">
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" id="btnCancelProfile">Cancelar</button>
+          <button type="submit" form="profileForm" class="btn btn-primary">Guardar cambios</button>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

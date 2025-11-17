@@ -42,12 +42,17 @@ $result_inserciones = $conn->query($sql_inserciones);
 $row_inserciones = $result_inserciones->fetch_assoc();
 $total_inserciones = $row_inserciones['total'];
 
-$sql_actualizaciones = "SELECT COUNT(*) as total FROM auditoria WHERE operacion = 'UPDATE'";
+$sql_informes = "SELECT COUNT(*) as total FROM auditoria WHERE operacion = 'Nuevo Registro de expediente'";
+$result_informes = $conn->query($sql_informes);
+$row_informes = $result_informes->fetch_assoc();
+$total_informes = $row_informes['total'];
+
+$sql_actualizaciones = "SELECT COUNT(*) as total FROM auditoria WHERE operacion IN ('Se edito un expediente','Se edito una comisaria','Se edito una persona')";
 $result_actualizaciones = $conn->query($sql_actualizaciones);
 $row_actualizaciones = $result_actualizaciones->fetch_assoc();
 $total_actualizaciones = $row_actualizaciones['total'];
 
-$sql_eliminaciones = "SELECT COUNT(*) as total FROM auditoria WHERE operacion = 'DELETE'";
+$sql_eliminaciones = "SELECT COUNT(*) as total FROM auditoria WHERE operacion IN ('Se elimino una persona','Se elimino un expediente','Se elimino una comisaria')";
 $result_eliminaciones = $conn->query($sql_eliminaciones);
 $row_eliminaciones = $result_eliminaciones->fetch_assoc();
 $total_eliminaciones = $row_eliminaciones['total'];
@@ -70,6 +75,7 @@ echo json_encode([
     'data' => [
         'total_operaciones' => $total_operaciones,
         'total_inserciones' => $total_inserciones,
+        'total_informes' => $total_informes,
         'total_actualizaciones' => $total_actualizaciones,
         'total_eliminaciones' => $total_eliminaciones,
         'tablas_afectadas' => $tablas_afectadas

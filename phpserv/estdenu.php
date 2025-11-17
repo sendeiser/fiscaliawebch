@@ -1,4 +1,5 @@
 <?php include('connect.php');
+header('Content-Type: application/json');
 
 session_start();
 
@@ -8,32 +9,24 @@ $sqlreg = "INSERT INTO auditoria (tabla_afectada, operacion, fecha, hora, usuari
   VALUES ('Ninguna', 'Consulta de estado de denuncia', '$fecha', '$hora', '$user', NULL)";
 
 
-$dni = $_POST['dni1'];
+$dni = isset($_POST['dni1']) ? $_POST['dni1'] : '';
 
 
 
 if (isset($dni)) {
-  $query = "SELECT * FROM expedientes WHERE dnidenunciante='$dni'";
+  $dni = mysqli_real_escape_string($conexion, $dni);
+  $query = "SELECT idexpediente, dnidenunciante, denunciado, causa, numerodeexpediente, fechadeentrada, fechadesalida FROM expedientes WHERE dnidenunciante='$dni' ORDER BY fechadeentrada DESC";
   $result = mysqli_query($conexion, $query);
-
-  $exist = mysqli_num_rows($result);
-
+  $exist = $result ? mysqli_num_rows($result) : 0;
   if ($exist > 0) {
-
-    while ($row = $result->fetch_array()) {
-      $last = end($row);
+    $expedientes = [];
+    while ($row = mysqli_fetch_assoc($result)) {
+      $expedientes[] = $row;
     }
-
-    if ($last == NULL) {
-      echo json_encode('noprocesada');
-    } else {
-
-      echo json_encode($last);
-    }
+    echo json_encode($expedientes);
   } else {
     echo json_encode('dninoexiste');
   }
-  $conexion->query($sqlreg);  //registro el uso de la consulta del estado de la denuncia realizada por el usario 
+  $conexion->query($sqlreg);
+  if ($result) { mysqli_free_result($result); }
 }
-
-mysqli_free_result($result);

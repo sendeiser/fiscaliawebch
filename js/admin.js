@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function cargarEstadisticas() {
     // Realizar petición AJAX para obtener estadísticas
     $.ajax({
-        url: 'phpserv/get_estadisticas_usuarios.php',
+        url: '/phpserv/get_estadisticas_usuarios.php',
         type: 'GET',
         dataType: 'json',
         success: function(response) {
@@ -75,7 +75,7 @@ function cargarUsuarios() {
     
     // Realizar petición AJAX para obtener usuarios
     $.ajax({
-        url: 'phpserv/get_usuarios.php',
+        url: '/phpserv/get_usuarios.php',
         type: 'GET',
         dataType: 'json',
         success: function(response) {
@@ -130,14 +130,22 @@ function mostrarUsuarios(usuarios) {
             <td>${usuario.intentos_fallidos || 0}</td>
             <td>${fechaBloqueo}</td>
             <td>
-                ${usuario.bloqueado == 1 ? 
-                    `<button class="btn btn-sm btn-unlock" data-user-id="${usuario.idusuarios}">
-                        <i class="fas fa-unlock me-1"></i>Desbloquear
-                    </button>` : 
-                    `<button class="btn btn-sm btn-secondary" disabled>
-                        <i class="fas fa-check me-1"></i>Activo
-                    </button>`
-                }
+                <div class="btn-group" role="group">
+                    ${usuario.bloqueado == 1 ? 
+                        `<button class="btn btn-sm btn-unlock btn-outline-success" title="Desbloquear" data-user-id="${usuario.idusuarios}">
+                            <i class="fas fa-unlock"></i>
+                        </button>` : 
+                        `<button class="btn btn-sm btn-outline-secondary" title="Activo" disabled>
+                            <i class="fas fa-check"></i>
+                        </button>`
+                    }
+                    <button class="btn btn-sm btn-edit-user btn-outline-primary" title="Modificar" data-user-id="${usuario.idusuarios}" data-user-usuario="${usuario.usuario}" data-user-nombre="${usuario.Nombre}" data-user-apellido="${usuario.Apellido}" data-user-rol="${usuario.rol || 'usuario'}">
+                        <i class="fas fa-pen"></i>
+                    </button>
+                    <button class="btn btn-sm btn-delete-user btn-outline-danger" title="Eliminar" data-user-id="${usuario.idusuarios}" data-user-usuario="${usuario.usuario}">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </div>
             </td>
         `;
         
@@ -149,6 +157,27 @@ function mostrarUsuarios(usuarios) {
         btn.addEventListener('click', function() {
             const userId = this.getAttribute('data-user-id');
             desbloquearUsuario(userId);
+        });
+    });
+
+    // Añadir eventos a los botones de edición
+    document.querySelectorAll('.btn-edit-user').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            const userId = this.getAttribute('data-user-id');
+            const usuario = this.getAttribute('data-user-usuario');
+            const nombre = this.getAttribute('data-user-nombre');
+            const apellido = this.getAttribute('data-user-apellido');
+            const rol = this.getAttribute('data-user-rol');
+            editarUsuario({ id: userId, usuario, nombre, apellido, rol });
+        });
+    });
+
+    // Añadir eventos a los botones de eliminación
+    document.querySelectorAll('.btn-delete-user').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            const userId = this.getAttribute('data-user-id');
+            const usuario = this.getAttribute('data-user-usuario');
+            eliminarUsuario(userId, usuario);
         });
     });
 }
@@ -171,7 +200,7 @@ function desbloquearUsuario(userId) {
         if (result.isConfirmed) {
             // Realizar petición AJAX para desbloquear usuario
             $.ajax({
-                url: 'phpserv/desbloquear_usuario.php',
+                url: '/phpserv/desbloquear_usuario.php',
                 type: 'POST',
                 data: { id_usuario: userId },
                 dataType: 'json',
@@ -388,5 +417,118 @@ function mostrarError(titulo, mensaje) {
         text: mensaje,
         icon: 'error',
         confirmButtonColor: '#dc3545'
+    });
+}
+
+/**
+ * Edita datos básicos de un usuario (Nombre, Apellido, Rol, Correo opcional)
+ */
+function editarUsuario(info) {
+    Swal.fire({
+        title: 'Modificar usuario',
+        html:
+            '<div class="mb-2 text-start"><label class="form-label">Usuario</label><input id="swUsuario" class="form-control" value="'+ (info.usuario || '') +'" disabled></div>'+
+            '<div class="mb-2 text-start"><label class="form-label">Nombre</label><input id="swNombre" class="form-control" value="'+ (info.nombre || '') +'"></div>'+
+            '<div class="mb-2 text-start"><label class="form-label">Apellido</label><input id="swApellido" class="form-control" value="'+ (info.apellido || '') +'"></div>'+
+            '<div class="mb-2 text-start"><label class="form-label">Rol</label><select id="swRol" class="form-select">'+
+                '<option value="usuario" '+ (String(info.rol).toLowerCase()==='usuario'?'selected':'') +'>Usuario</option>'+
+                '<option value="administrador" '+ (String(info.rol).toLowerCase()==='administrador'?'selected':'') +'>Administrador</option>'+
+            '</select></div>'+
+            '<div class="mb-2 text-start"><label class="form-label">Correo</label><input id="swCorreo" class="form-control" placeholder="Opcional"></div>'+
+            '<div class="mb-2 text-start"><label class="form-label">Nueva contraseña</label><input id="swPass" type="password" class="form-control" placeholder="Opcional"></div>',
+        focusConfirm: false,
+        showCancelButton: true,
+        confirmButtonText: 'Guardar',
+        cancelButtonText: 'Cancelar',
+        preConfirm: () => {
+            return {
+                id: parseInt(info.id,10),
+                nombre: document.getElementById('swNombre').value.trim(),
+                apellido: document.getElementById('swApellido').value.trim(),
+                rol: document.getElementById('swRol').value,
+                correo: document.getElementById('swCorreo').value.trim(),
+                contrasena: document.getElementById('swPass').value
+            };
+        }
+    }).then(function(result){
+        if (result.isConfirmed) {
+            const datos = result.value || {};
+            const body = new URLSearchParams(datos).toString();
+            fetch('/phpserv/actualizar_usuario.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                credentials: 'same-origin',
+                body
+            }).then(function(res){
+                var ok = res.ok;
+                var status = res.status;
+                return res.text().then(function(t){
+                    var obj = null;
+                    try { obj = JSON.parse(t); } catch(_){}
+                    if (ok) {
+                        if (obj && obj.status) return obj;
+                        var s = String(t || '').trim().toLowerCase();
+                        if (s === 'success' || s === 'si' || s === 'ok') return { status: 'success' };
+                        return { status: 'success' };
+                    } 
+                });
+            }).then(function(response){
+                if (response && response.status === 'success') {
+                    Swal.fire({ toast:true, position:'top-end', icon:'success', title:'Usuario modificado', showConfirmButton:false, timer:2500 });
+                    cargarUsuarios(); actualizarEstadisticas();
+                }
+            });
+        }
+    });
+}
+
+/**
+ * Elimina un usuario
+ */
+function eliminarUsuario(id, usuario) {
+    Swal.fire({
+        title: 'Eliminar usuario',
+        text: '¿Desea eliminar el usuario "' + (usuario || id) + '"? Esta acción no se puede deshacer.',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#d33',
+        cancelButtonColor: '#3085d6',
+        confirmButtonText: 'Sí, eliminar',
+        cancelButtonText: 'Cancelar'
+    }).then(function(result){
+        if (result.isConfirmed) {
+            const body = new URLSearchParams({ id_usuario: id }).toString();
+            fetch('/phpserv/eliminar_usuario.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                credentials: 'same-origin',
+                body
+            }).then(function(res){
+                var ok = res.ok;
+                var status = res.status;
+                return res.text().then(function(t){
+                    var obj = null;
+                    try { obj = JSON.parse(t); } catch(_){}
+                    if (ok) {
+                        if (obj && obj.status) return obj;
+                        var s = String(t || '').trim().toLowerCase();
+                        if (s === 'success' || s === 'si' || s === 'ok') return { status: 'success' };
+                        return { status: 'success' };
+                    } else {
+                        if (obj) return obj;
+                        return { status: 'error', message: (status===403 ? 'No puede eliminar su propio usuario o no tiene permisos' : 'Error '+status) };
+                    }
+                });
+            }).then(function(response){
+                if (response && response.status === 'success') {
+                    Swal.fire({ toast:true, position:'top-end', icon:'success', title:'Usuario eliminado', showConfirmButton:false, timer:2500 });
+                    cargarUsuarios(); actualizarEstadisticas();
+                } else {
+                    Swal.fire({ icon:'error', title:'No se pudo eliminar', text: (response && response.message) || 'Ocurrió un problema al eliminar el usuario', confirmButtonText:'Cerrar' });
+                }
+            }).catch(function(){
+                Swal.fire({ icon:'error', title:'Operación no realizada', html:'No fue posible eliminar el usuario.<br><small>Compruebe la conexión y permisos de administrador</small>', confirmButtonText:'Entendido' });
+            });
+        }
     });
 }

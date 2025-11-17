@@ -398,10 +398,59 @@
       font-size: 0.875rem;
       margin-top: 0.25rem;
     }
+    /* SweetAlert2 - Registro Theme */
+    .swal2-popup.register-modal {
+      background: #3c5c59e6;
+      color: #eaf3fa;
+      border-radius: 20px;
+      border: 1px solid #2f7e72;
+      box-shadow: 0 15px 35px rgba(0,0,0,.25);
+      padding: 2rem 2rem 1.5rem;
+      backdrop-filter: blur(6px);
+    }
+    .swal2-popup.register-modal .swal2-title {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 2rem;
+      color: #2ee59d;
+      margin-top: .5rem;
+    }
+    .swal2-popup.register-modal .swal2-html-container {
+      font-size: 1rem;
+      color: #d8ebf3;
+    }
+    .swal2-popup.register-modal .swal2-icon { 
+      border-color: #ffcc00 !important; 
+      color: #ffcc00 !important; 
+    }
+    .swal2-popup.register-modal .swal2-input {
+      border-radius: 12px;
+      border: 2px solid #2f7e72;
+      background: rgba(255,255,255,.9);
+      color: #2c3e50;
+      padding: .8rem 1rem;
+    }
+    .swal2-actions .swal2-styled {
+      border-radius: 12px !important;
+      padding: .7rem 1.6rem !important;
+      font-weight: 600 !important;
+    }
+    .swal2-styled.swal2-confirm {
+      background: #2ecc71 !important; /* Confirmar */
+      border: 2px solid #25a35a !important;
+      color: #ffffff !important;
+    }
+    .swal2-styled.swal2-cancel {
+      background: #1e3a8a !important; /* Volver */
+      border: 2px solid #1b357b !important;
+      color: #ffffff !important;
+    }
+    .swal2-styled.swal2-confirm:hover { filter: brightness(1.1); }
+    .swal2-styled.swal2-cancel:hover { filter: brightness(1.1); }
   </style>
 </head>
 
-<body>
+<body data-page="registro">
   <!-- Navigation -->
   <nav class="fiscal-navbar">
     <div class="fiscal-navbar-container">
@@ -522,8 +571,10 @@
   </div>
 
   <!-- Scripts -->
+  <script src="lib/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="js/modal-theme.js"></script>
   <script src="js/main.js"></script>
   <script src="js/sweetAlerts.js"></script>
 
@@ -558,11 +609,11 @@
         validateField($(this));
       });
 
-      // Form submission with loading state
+      // Form submission with confirmation modal (mantiene funcionalidad)
       $('#form-reg').on('submit', function(e) {
         e.preventDefault();
-        
-        // Validate all fields
+
+        // Validación de todos los campos
         let isValid = true;
         $('.form-control').each(function() {
           if (!validateField($(this))) {
@@ -570,16 +621,35 @@
           }
         });
 
-        if (isValid) {
-          const submitBtn = $('#btn-reg');
-          submitBtn.addClass('btn-loading');
-          
-          // Simulate form submission (replace with actual submission logic)
-          setTimeout(() => {
-            submitBtn.removeClass('btn-loading');
-            // Add your form submission logic here
-          }, 2000);
-        }
+        if (!isValid) return;
+
+        // Modal coherente con diseño principal
+        Swal.fire({
+          icon: 'info',
+          title: 'Confirmar Registro',
+          html: '<p>Revise sus datos antes de continuar.</p>',
+          showCancelButton: true,
+          confirmButtonText: 'Confirmar',
+          cancelButtonText: 'Volver',
+          customClass: {
+            popup: 'register-modal'
+          }
+        }).then((result) => {
+          if (result.isConfirmed) {
+            const submitBtn = $('#btn-reg');
+            submitBtn.addClass('btn-loading');
+            // Simulación de envío, sustituir por lógica real
+            setTimeout(() => {
+              submitBtn.removeClass('btn-loading');
+              Swal.fire({
+                icon: 'success',
+                title: 'Registro enviado',
+                text: 'Procesaremos su solicitud.',
+                customClass: { popup: 'register-modal' }
+              });
+            }, 1200);
+          }
+        });
       });
 
       // Input focus animations

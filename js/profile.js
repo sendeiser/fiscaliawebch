@@ -150,23 +150,24 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // Cerrar sesión
   if (btnLogout) {
-    btnLogout.addEventListener('click', function() {
-      fetch('/phpserv/logout.php', { method:'POST' })
-        .then(res => res.json())
-        .then(data => {
-          if (data && data.status === 'success') {
-            window.location.href = 'Login.html';
-          } else {
-            Swal.fire({ icon:'error', title:'Error', text:'No se pudo cerrar sesión.' });
-          }
-        })
-        .catch(err => {
-          console.error('Error al cerrar sesión:', err);
-          Swal.fire({ icon:'error', title:'Error', text:'Ocurrió un error al cerrar sesión.' });
-        });
-    });
+    if (!(window.LogoutDialog && typeof window.LogoutDialog.show === 'function')) {
+      btnLogout.addEventListener('click', function() {
+        fetch('/phpserv/logout.php', { method:'POST' })
+          .then(res => res.json())
+          .then(data => {
+            if (data && data.status === 'success') {
+              window.location.href = 'Login.html';
+            } else {
+              Swal.fire({ icon:'error', title:'Error', text:'No se pudo cerrar sesión.' });
+            }
+          })
+          .catch(err => {
+            console.error('Error al cerrar sesión:', err);
+            Swal.fire({ icon:'error', title:'Error', text:'Ocurrió un error al cerrar sesión.' });
+          });
+      });
+    }
   }
 
   // Inicializar

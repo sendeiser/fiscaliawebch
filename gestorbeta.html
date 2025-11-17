@@ -135,6 +135,11 @@
         </lord-icon>Noticias
       </a>
 
+      <a class="nav-link1 border" onclick="accion()" name="contactos" href="#">
+        <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
+        <lord-icon src="https://cdn.lordicon.com/nocovwne.json" trigger="loop" colors="primary:#121331,secondary:#08a88a" stroke="80" style="width:40px;height:40px"></lord-icon>Mensajes de Contacto
+      </a>
+
       <div class="nav-link1 border manual" id="manual">
         <script src="https://cdn.lordicon.com/fudrjiwc.js"></script>
         <lord-icon src="https://cdn.lordicon.com/ggqtvqxi.json" trigger="hover" style="width:40px;height:40px">
@@ -585,6 +590,67 @@
       </div>
     </div>
 
+    <div id="contactos" class="invisible">
+      <div >
+        <h1 class="badge bg-primary bg-gradient text-center fs-3 fw-bold rounded">Mensajes de Contacto</h1>
+        <div class="row g-3 mt-2">
+          <div class="col-md-3">
+            <label class="form-label">Fecha desde</label>
+            <input type="date" class="form-control" id="ct_fechaDesde">
+          </div>
+          <div class="col-md-3">
+            <label class="form-label">Fecha hasta</label>
+            <input type="date" class="form-control" id="ct_fechaHasta">
+          </div>
+          <div class="col-md-3">
+            <label class="form-label">Estado</label>
+            <select class="form-select" id="ct_estado">
+              <option value="">Todos</option>
+              <option value="leido">Leído</option>
+              <option value="no_leido">No leído</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <label class="form-label">Palabras clave</label>
+            <input type="text" class="form-control" id="ct_q" placeholder="Nombre, email, asunto o contenido">
+          </div>
+          <div class="col-12 d-flex justify-content-end mt-2">
+            <button id="ct_btnLimpiar" class="btn btn-secondary me-2">Limpiar</button>
+            <button id="ct_btnBuscar" class="btn btn-primary">Aplicar</button>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between align-items-center mt-3">
+          <div class="btn-group">
+            <button id="ct_marcarLeidos" class="btn btn-success">Marcar como leídos</button>
+            <button id="ct_marcarNoLeidos" class="btn btn-warning">Marcar como no leídos</button>
+            <button id="ct_eliminar" class="btn btn-danger">Eliminar seleccionados</button>
+          </div>
+          <button id="ct_exportarCSV" class="btn btn-outline-primary"><i class="fas fa-file-csv me-2"></i>Exportar CSV</button>
+        </div>
+        <div class="table-responsive mt-3">
+          <table class="table table-hover">
+            <thead class="table-dark">
+              <tr>
+                <th><input type="checkbox" id="ct_selectAll"></th>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Asunto</th>
+                <th>Contenido</th>
+                <th>Fecha y Hora</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="ct_tabla">
+            </tbody>
+          </table>
+        </div>
+        <nav aria-label="Paginación de contactos" class="invisible">
+          <ul id="ct_paginacion" class="pagination justify-content-center"></ul>
+        </nav>
+      </div>
+    </div>
+
   </div>
 
   <!-- Modal de Autenticación para Auditoría -->
@@ -674,6 +740,7 @@
   <script src="/js/tablaper.js"></script>
   <script src="https://cdn.lordicon.com/lusqsztk.js"></script>
   <script src="librerias/plotly-latest.min.js"></script>
+  <script src="/js/contactos.js"></script>
   <!-- Funciones del menu -->
   <script>
     function accion() {
@@ -865,6 +932,7 @@
     
     <!-- Perfil de usuario -->
     <script src="js/profile.js"></script>
+    <script src="js/gestorbeta.js"></script>
 </body>
 
 </html>

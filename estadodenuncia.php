@@ -359,32 +359,41 @@
         <!-- PHP Results -->
         <?php
         if ($_POST) {
-            $dni = $_POST['dni'];
-            $sql = "SELECT * FROM expedientes WHERE dni = '$dni'";
-            $result = mysqli_query($conn, $sql);
-            
-            if (mysqli_num_rows($result) > 0) {
+            $dni = isset($_POST['dni']) ? $_POST['dni'] : '';
+            $dni = mysqli_real_escape_string($conexion, $dni);
+            $sql = "SELECT * FROM expedientes WHERE dnidenunciante = '" . $dni . "'";
+            $result = mysqli_query($conexion, $sql);
+
+            if ($result && mysqli_num_rows($result) > 0) {
                 echo '<div class="status-result">';
                 echo '<h3 class="text-center mb-4"><i class="fas fa-file-alt mr-2"></i>Resultados de la Consulta</h3>';
-                
+
                 while ($row = mysqli_fetch_assoc($result)) {
                     $statusClass = 'status-pending';
-                    $statusText = $row['estado'];
-                    
-                    if (strtolower($row['estado']) == 'activo' || strtolower($row['estado']) == 'en proceso') {
-                        $statusClass = 'status-active';
-                    } elseif (strtolower($row['estado']) == 'cerrado' || strtolower($row['estado']) == 'finalizado') {
+                    $statusText = 'En proceso';
+                    if (!empty($row['fechadesalida'])) {
                         $statusClass = 'status-closed';
+                        $statusText = 'Finalizado';
+                    } else {
+                        $statusClass = 'status-active';
+                        $statusText = 'En proceso';
                     }
-                    
+
                     echo '<div class="status-card">';
                     echo '<div class="row">';
                     echo '<div class="col-md-8">';
-                    echo '<h5 class="mb-3"><i class="fas fa-folder-open mr-2"></i>Expediente N° ' . $row['id'] . '</h5>';
-                    echo '<p class="mb-2"><strong>DNI:</strong> ' . $row['dni'] . '</p>';
-                    echo '<p class="mb-2"><strong>Fecha:</strong> ' . date('d/m/Y', strtotime($row['fecha'])) . '</p>';
-                    if (!empty($row['descripcion'])) {
-                        echo '<p class="mb-2"><strong>Descripción:</strong> ' . $row['descripcion'] . '</p>';
+                    $expNum = !empty($row['numerodeexpediente']) ? $row['numerodeexpediente'] : $row['idexpediente'];
+                    echo '<h5 class="mb-3"><i class="fas fa-folder-open mr-2"></i>Expediente N° ' . $expNum . '</h5>';
+                    echo '<p class="mb-2"><strong>DNI:</strong> ' . $row['dnidenunciante'] . '</p>';
+                    echo '<p class="mb-2"><strong>Fecha de entrada:</strong> ' . date('d/m/Y', strtotime($row['fechadeentrada'])) . '</p>';
+                    if (!empty($row['fechadesalida'])) {
+                        echo '<p class="mb-2"><strong>Fecha de salida:</strong> ' . date('d/m/Y', strtotime($row['fechadesalida'])) . '</p>';
+                    }
+                    if (!empty($row['causa'])) {
+                        echo '<p class="mb-2"><strong>Causa:</strong> ' . $row['causa'] . '</p>';
+                    }
+                    if (!empty($row['denunciado'])) {
+                        echo '<p class="mb-2"><strong>Denunciado:</strong> ' . $row['denunciado'] . '</p>';
                     }
                     echo '</div>';
                     echo '<div class="col-md-4 text-right">';

@@ -57,8 +57,18 @@ $(document).ready(function () {
 
     "bProcessing": true,
     "bDeferRender": true,
-    "bServerSide": true,
-    "sAjaxSource": "serverside/serversidePersonas.php",
+    "bServerSide": false,
+    "ajax": {
+      "url": "/phpserv/gb_get_personas.php",
+      "dataSrc": function(json){
+        try{
+          var rows = (json && json.data && Array.isArray(json.data.registros)) ? json.data.registros : [];
+          return rows.map(function(r){
+            return [ r.dnidenunciante, r.nombre, r.apellido ];
+          });
+        }catch(e){ return []; }
+      }
+    },
     "columnDefs": [{
       "targets": -1,
       "defaultContent": "<div class='wrapper'><div class='btn-group'><button class='btn btn-info btn-sm btnEditar' data-bs-target='#editarper' data-bs-toggle='modal'><i class='fas fa-pen'></i></button><button class='btn btn-danger btn-sm btnBorrar' data-bs-target='#eliminarper' data-bs-toggle='modal' title='Eliminar'><i class='fas fa-user-minus'></i></button></div></div>"

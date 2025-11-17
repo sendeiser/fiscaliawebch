@@ -385,6 +385,44 @@
                 </div>
             </div>
         </div>
+        <!-- Generador de Contraseñas -->
+        <div class="admin-panel">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2><i class="fas fa-key me-2"></i>Generador de Contraseñas</h2>
+            </div>
+            <div class="row g-3 align-items-end">
+                <div class="col-md-3">
+                    <label for="pwLength" class="form-label">Longitud</label>
+                    <input type="number" id="pwLength" class="form-control" min="8" max="64" value="12">
+                </div>
+                <div class="col-md-3">
+                    <button id="btnGenerarPW" class="btn btn-filter w-100"><i class="fas fa-bolt me-2"></i>Generar</button>
+                </div>
+            </div>
+            <div class="mt-4">
+                <div class="card">
+                    <div class="card-header">Últimas contraseñas generadas</div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-striped table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Contraseña</th>
+                                        <th>Usuario</th>
+                                        <th>Fecha</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tablaPWRand">
+                                    <tr><td colspan="5" class="text-center">Sin registros</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Footer -->
@@ -401,6 +439,81 @@
     <script src="/js/gestorbeta.js"></script>
     <script src="/js/main.js"></script>
     <script src="js/auditoria.js"></script>
+    <script>
+      (function(){
+        function cargarUltimas(){
+          fetch('/phpserv/pwrandom.php?limit=10', { method: 'GET', credentials: 'same-origin' })
+            .then(r => r.json())
+            .then(json => {
+              var tbody = document.getElementById('tablaPWRand');
+              if (!tbody) return;
+              tbody.innerHTML = '';
+              var registros = (json && json.data && json.data.registros) ? json.data.registros : [];
+              if (!registros.length) { tbody.innerHTML = '<tr><td colspan="4" class="text-center">Sin registros</td></tr>'; return; }
+              registros.forEach(function(r){
+                var tr = document.createElement('tr');
+                tr.innerHTML = '<td>'+r.id+'</td>'+
+                               '<td><code>'+r.password_plain+'</code></td>'+
+                               '<td>'+r.usuario+'</td>'+
+                               '<td>'+new Date(r.created_at).toLocaleString()+'</td>'+
+                               '<td><button class="btn btn-sm btn-danger btn-del-pw" data-id="'+r.id+'"><i class="fas fa-trash"></i></button></td>';
+                tbody.appendChild(tr);
+              });
+            })
+            .catch(function(){ /* no-op */ });
+        }
+        function generar(){
+          var lenEl = document.getElementById('pwLength');
+          var len = lenEl ? parseInt(lenEl.value, 10) : 12;
+          fetch('/phpserv/pwrandom.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            credentials: 'same-origin',
+            body: JSON.stringify({ length: len })
+          })
+          .then(r => r.json())
+          .then(json => {
+            if (json && json.status === 'success') {
+              var pwd = (json.data && json.data.password) ? json.data.password : '';
+              Swal.fire({
+                icon: 'success',
+                title: 'Contraseña generada',
+                html: '<div class="mb-2"><code style="font-size:1.1rem">'+pwd+'</code></div><button class="btn btn-filter" id="copyPW">Copiar</button>'
+              });
+              setTimeout(function(){ var b = document.getElementById('copyPW'); if (b) { b.addEventListener('click', function(){ navigator.clipboard.writeText(pwd); }); } }, 50);
+              cargarUltimas();
+            } else {
+              Swal.fire({ icon:'error', title:'Error', text:(json && json.message) || 'No se pudo generar la contraseña' });
+            }
+          })
+          .catch(function(){ Swal.fire({ icon:'error', title:'Error', text:'No se pudo generar la contraseña' }); });
+        }
+        document.addEventListener('DOMContentLoaded', function(){
+          var btn = document.getElementById('btnGenerarPW');
+          if (btn) btn.addEventListener('click', function(e){ e.preventDefault(); generar(); });
+          cargarUltimas();
+          var tbody = document.getElementById('tablaPWRand');
+          if (tbody) {
+            tbody.addEventListener('click', function(ev){
+              var t = ev.target;
+              if (t && t.classList && t.classList.contains('btn-del-pw')) {
+                var id = parseInt(t.getAttribute('data-id'), 10) || 0;
+                if (!id) return;
+                Swal.fire({ icon:'warning', title:'Eliminar contraseña', text:'¿Desea eliminar esta contraseña?', showCancelButton:true })
+                  .then(function(res){
+                    if (res.isConfirmed) {
+                      fetch('/phpserv/pwrandom.php?id='+id, { method:'DELETE', credentials:'same-origin' })
+                        .then(function(r){ return r.json(); })
+                        .then(function(j){ if (j && j.status==='success') { cargarUltimas(); } else { Swal.fire({icon:'error', title:'Error', text:'No se pudo eliminar'}); } })
+                        .catch(function(){ Swal.fire({icon:'error', title:'Error', text:'No se pudo eliminar'}); });
+                    }
+                  });
+              }
+            });
+          }
+        });
+      })();
+    </script>
     <script src="js/profile.js"></script>
     <div class="profile-modal-backdrop" id="profileModalBackdrop" aria-hidden="true">
       <div class="profile-modal" role="dialog" aria-modal="true" aria-labelledby="profileModalTitle">

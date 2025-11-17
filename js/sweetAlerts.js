@@ -55,23 +55,15 @@ function actualizar(){location.reload(true);}
     },
     inputValidator: (value) => {
       return new Promise((resolve) => {
-        if (value === 'fiscaliach2022') {
-          Swal.fire({
-            icon: 'success',
-            title: 'Bienvenido',
-            html:
-              'Ahora podrá registrarse para poder gestionar el sistema de FiscaliaWeb',
-            customClass: {
-              popup: 'access-success',
-              title: 'access-title',
-              htmlContainer: 'access-html',
-              confirmButton: 'access-confirm'
-            },
-            confirmButtonText: 'Aceptar'
+        var v = String(value || '').trim();
+        if (!v) { resolve('Ingrese la contraseña'); return; }
+        fetch('/phpserv/check_pwrandom.php?pwd=' + encodeURIComponent(v), { method: 'GET' })
+          .then(function(r){ return r.json(); })
+          .then(function(j){
+            if (j && j.status === 'success' && j.exists === true) { resolve(); }
+            else { resolve('Contraseña incorrecta, vuelva a intentarlo.'); }
           })
-        } else {
-          resolve('Contraseña incorrecta, vuelva a intentarlo.')
-        }
+          .catch(function(){ resolve('Error de verificación, intente nuevamente.'); });
       })
     }
   }).then((result) => {

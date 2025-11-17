@@ -30,36 +30,33 @@ $.post('phpserv/noticias.php',{datos},(response)=>{
 
 })()*/
 function noti(i) {
-  let url = './phpserv/noticias.php';
-  fetch(url).then(res => res.json()).then((out) => {
-      const almac = [];
-
-      out.forEach(function (elemento, indice, array) {
-
-        if (indice < i) {
-
-          almac.push(`
-     
-     
-     <div class="col-9 col-lg-4 col-md-7 col-sm-7 col-xl-4 p-3 rounded"> <div class="card">
-     <img src="${out[indice].imagen}" class="thumb-post" style="width:100%; height:150px">
-     <div class="card-body">
-     <h5 class="card-title" style="font-size:20px">${out[indice].titulo}</h5>
-     <p class="card-text" style="font-size:14px">${out[indice].noticia}.</p>
-     </div>
-     </div> </div>
-     `)
-
-
-          noticias.innerHTML = almac.join("").toString()
-        }
-
-
-      })
+  var container = document.getElementById('noticias');
+  if (!container) return;
+  var url = './phpserv/noticias.php';
+  fetch(url)
+    .then(function(res){ return res.json(); })
+    .then(function(out){
+      var list = Array.isArray(out) ? out : (out && out.data && Array.isArray(out.data) ? out.data : []);
+      var html = [];
+      list.slice(0, i).forEach(function(item){
+        var img = item.imagen || '';
+        var tit = item.titulo || '';
+        var txt = item.noticia || '';
+        html.push(
+          '<div class="col-9 col-lg-4 col-md-7 col-sm-7 col-xl-4 p-3 rounded">\n'
+          + '  <div class="card">\n'
+          + '    <img src="'+img+'" class="thumb-post" style="width:100%; height:150px">\n'
+          + '    <div class="card-body">\n'
+          + '      <h5 class="card-title" style="font-size:20px">'+tit+'</h5>\n'
+          + '      <p class="card-text" style="font-size:14px">'+txt+'</p>\n'
+          + '    </div>\n'
+          + '  </div>\n'
+          + '</div>'
+        );
+      });
+      container.innerHTML = html.join('');
     })
-    .catch(err => {
-      throw err
-    });
+    .catch(function(err){ console.error('Error cargando noticias:', err); });
 }
 
 $(document).ready(function () {
@@ -67,8 +64,8 @@ $(document).ready(function () {
   var id = 3;
   noti(id);
   $("#notibot").click(function () {
-    noti(id + 3);
     id = id + 3;
+    noti(id);
 
   });
 

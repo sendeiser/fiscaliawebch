@@ -308,6 +308,16 @@ if (btn_regist) {
             if (pass1) pass1.value = '';
             if (pass2) pass2.value = '';
           } catch(_){}
+        } else if (status === 403) {
+          Swal.fire({
+            title: 'Clave de registro inválida',
+            icon: 'error',
+            text: (json && json.message) || 'Debe utilizar una contraseña generada por el administrador.'
+          });
+          try {
+            var passField = formreg.querySelector('input[name="contrasena"]');
+            if (passField) passField.focus();
+          } catch(_){}
         } else {
           Swal.fire({
             title: 'Error',

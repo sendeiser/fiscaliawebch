@@ -576,6 +576,36 @@
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="js/modal-theme.js"></script>
   <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      var pwd = document.getElementById('contrasena');
+      var badge = document.getElementById('pwd_strength');
+      var btn = document.getElementById('btn-reg');
+      var valid = false;
+      function setState(ok){
+        valid = !!ok;
+        if (btn) btn.disabled = !valid;
+        if (badge) {
+          if (ok) { badge.className = 'badge bg-success'; badge.textContent = 'Clave válida'; }
+          else { badge.className = 'badge bg-danger'; badge.textContent = 'Clave inválida'; }
+        }
+      }
+      function check(){
+        var v = pwd ? String(pwd.value||'').trim() : '';
+        if (!v) { setState(false); return; }
+        fetch('/phpserv/check_pwrandom.php?pwd=' + encodeURIComponent(v), { method:'GET' })
+          .then(r => r.json())
+          .then(j => { setState(j && j.exists === true); })
+          .catch(() => setState(false));
+      }
+      if (pwd) {
+        pwd.addEventListener('input', function(){ setState(false); });
+        pwd.addEventListener('blur', check);
+      }
+      var gen = document.getElementById('pwd_gen');
+      if (gen) { gen.style.display = 'none'; }
+    });
+  </script>
   <script src="js/sweetAlerts.js"></script>
 
   <script>
@@ -609,48 +639,7 @@
         validateField($(this));
       });
 
-      // Form submission with confirmation modal (mantiene funcionalidad)
-      $('#form-reg').on('submit', function(e) {
-        e.preventDefault();
-
-        // Validación de todos los campos
-        let isValid = true;
-        $('.form-control').each(function() {
-          if (!validateField($(this))) {
-            isValid = false;
-          }
-        });
-
-        if (!isValid) return;
-
-        // Modal coherente con diseño principal
-        Swal.fire({
-          icon: 'info',
-          title: 'Confirmar Registro',
-          html: '<p>Revise sus datos antes de continuar.</p>',
-          showCancelButton: true,
-          confirmButtonText: 'Confirmar',
-          cancelButtonText: 'Volver',
-          customClass: {
-            popup: 'register-modal'
-          }
-        }).then((result) => {
-          if (result.isConfirmed) {
-            const submitBtn = $('#btn-reg');
-            submitBtn.addClass('btn-loading');
-            // Simulación de envío, sustituir por lógica real
-            setTimeout(() => {
-              submitBtn.removeClass('btn-loading');
-              Swal.fire({
-                icon: 'success',
-                title: 'Registro enviado',
-                text: 'Procesaremos su solicitud.',
-                customClass: { popup: 'register-modal' }
-              });
-            }, 1200);
-          }
-        });
-      });
+      // El envío del formulario será gestionado por la lógica existente de registro
 
       // Input focus animations
       $('.form-control').on('focus', function() {

@@ -23,6 +23,19 @@ if ($correo === '' || $usuario === '' || $contrasena === '' || $nombre === '' ||
 }
 
 try {
+  $stmtPw = $conexion->prepare('SELECT id FROM pwrandom WHERE password_plain = ? LIMIT 1');
+  $stmtPw->bind_param('s', $contrasena);
+  $stmtPw->execute();
+  $stmtPw->store_result();
+  if ($stmtPw->num_rows < 1) {
+    http_response_code(403);
+    echo json_encode(['status' => 'error', 'message' => 'Contraseña de registro no autorizada']);
+    $stmtPw->close();
+    $conexion->close();
+    exit;
+  }
+  $stmtPw->close();
+
   $stmt = $conexion->prepare('SELECT idusuarios FROM usuarios WHERE Correo = ?');
   $stmt->bind_param('s', $correo);
   $stmt->execute();

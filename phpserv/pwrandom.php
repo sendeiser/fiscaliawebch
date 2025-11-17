@@ -82,6 +82,28 @@ if ($method === 'GET') {
   exit;
 }
 
+if ($method === 'DELETE') {
+  $id = isset($_GET['id']) ? intval($_GET['id']) : 0;
+  if ($id <= 0) {
+    http_response_code(400);
+    echo json_encode(['status'=>'error','message'=>'ID inválido']);
+    $conexion->close();
+    exit;
+  }
+  $stmt = $conexion->prepare('DELETE FROM pwrandom WHERE id = ?');
+  $stmt->bind_param('i', $id);
+  if (!$stmt->execute()) {
+    http_response_code(500);
+    echo json_encode(['status'=>'error','message'=>'No se pudo eliminar']);
+    $stmt->close(); $conexion->close();
+    exit;
+  }
+  $stmt->close();
+  echo json_encode(['status'=>'success']);
+  $conexion->close();
+  exit;
+}
+
 http_response_code(405);
 echo json_encode(['status'=>'error','message'=>'Método no permitido']);
 ?>

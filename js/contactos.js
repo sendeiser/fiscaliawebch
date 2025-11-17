@@ -48,7 +48,7 @@ function filtrosQuery() {
 function cargarContactos() {
   const tabla = document.getElementById('ct_tabla');
   if (tabla) tabla.innerHTML = '<tr><td colspan="8" class="text-center"><div class="spinner-border" role="status"><span class="visually-hidden">Cargando...</span></div></td></tr>';
-  fetch('phpserv/get_contactos.php?' + filtrosQuery())
+  fetch('/phpserv/get_contactos.php?' + filtrosQuery(), { credentials: 'same-origin' })
     .then(r => { if (!r.ok) throw new Error('Error al cargar'); return r.json(); })
     .then(data => {
       mostrarContactos(data.data.registros || []);
@@ -170,7 +170,7 @@ function actualizarEstadoSeleccion(estado) {
 }
 
 function actualizarEstado(ids, estado) {
-  fetch('phpserv/update_contactos_estado.php', {
+  fetch('/phpserv/update_contactos_estado.php', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ ids: ids, estado: estado })
@@ -187,7 +187,7 @@ function eliminarSeleccionados() {
 }
 
 function eliminarPorIds(ids) {
-  fetch('phpserv/eliminar_contactos.php', {
+  fetch('/phpserv/eliminar_contactos.php', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ ids: ids })
@@ -197,7 +197,7 @@ function eliminarPorIds(ids) {
 }
 
 function exportarCSVContactos() {
-  const url = 'phpserv/exportar_contactos_csv.php?' + filtrosQuery();
+  const url = '/phpserv/exportar_contactos_csv.php?' + filtrosQuery();
   fetch(url)
     .then(r => { if (!r.ok) throw new Error('Error al exportar'); return r.blob(); })
     .then(blob => {

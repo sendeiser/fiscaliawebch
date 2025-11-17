@@ -21,9 +21,9 @@ $apellido = isset($data['apellido']) ? trim($data['apellido']) : '';
 $denunciado = isset($data['denunciado']) ? trim($data['denunciado']) : '';
 $causa = isset($data['causa']) ? trim($data['causa']) : '';
 $medida = isset($data['medida']) ? trim($data['medida']) : '';
-$fojas = isset($data['fojas']) ? trim($data['fojas']) : null;
-$libro = isset($data['librodeactas']) ? trim($data['librodeactas']) : null;
-$comisaria = isset($data['codigocomisaria']) ? trim($data['codigocomisaria']) : (isset($data['comisaria']) ? trim($data['comisaria']) : '');
+$fojas = isset($data['fojas']) ? intval($data['fojas']) : null;
+$libro = isset($data['librodeactas']) ? intval($data['librodeactas']) : null;
+$comisaria = isset($data['codigocomisaria']) ? intval($data['codigocomisaria']) : (isset($data['comisaria']) ? intval($data['comisaria']) : 0);
 $nroexp = isset($data['numerodeexpediente']) ? trim($data['numerodeexpediente']) : (isset($data['nroexpediente']) ? trim($data['nroexpediente']) : '');
 $numexpinstr = isset($data['numexpinstru']) ? trim($data['numexpinstru']) : null;
 $fechaent = isset($data['fechadeentrada']) ? trim($data['fechadeentrada']) : date('Y-m-d');
@@ -33,6 +33,13 @@ if ($dni === '' || $nombre === '' || $apellido === '' || $denunciado === '' || $
     exit;
 }
 
+$conexion->begin_transaction();
+
+$stmtExp = $conexion->prepare('INSERT INTO expedientes (causa, medida, fechadeentrada, fojas, librodeactas, codigocomisaria, numerodeexpediente, dnidenunciante, denunciado, numexpinstru) VALUES (?,?,?,?,?,?,?,?,?,?)');
+$stmtExp->bind_param('sssiiisisi', $causa, $medida, $fechaent, $fojas, $libro, $comisaria, $nroexp, $dni, $denunciado, $numexpinstr);
+if (!$stmtExp->execute()) { $conexion->rollback(); echo json_encode(['status'=>'error','message'=>$stmtExp->error?:'Error expediente']); exit; }
+$idexp = $stmtExp->insert_id; $stmtExp->close();
+
 $stmtp = $conexion->prepare('SELECT dnidenunciante FROM personas1 WHERE dnidenunciante = ?');
 $stmtp->bind_param('i', $dni); $stmtp->execute(); $rp = $stmtp->get_result(); $exists = ($rp && $rp->num_rows > 0);
 $stmtp->close();
@@ -40,19 +47,16 @@ $stmtp->close();
 if (!$exists) {
     $stmtInsP = $conexion->prepare('INSERT INTO personas1 (dnidenunciante, nombre, apellido) VALUES (?,?,?)');
     $stmtInsP->bind_param('iss', $dni, $nombre, $apellido);
-    if (!$stmtInsP->execute()) { echo json_encode(['status'=>'error','message'=>'Error personas']); exit; }
+    if (!$stmtInsP->execute()) { $conexion->rollback(); echo json_encode(['status'=>'error','message'=>$stmtInsP->error?:'Error personas']); exit; }
     $stmtInsP->close();
 } else {
     $stmtUpdP = $conexion->prepare('UPDATE personas1 SET nombre = ?, apellido = ? WHERE dnidenunciante = ?');
     $stmtUpdP->bind_param('ssi', $nombre, $apellido, $dni);
-    $stmtUpdP->execute();
+    if (!$stmtUpdP->execute()) { $conexion->rollback(); echo json_encode(['status'=>'error','message'=>$stmtUpdP->error?:'Error personas']); exit; }
     $stmtUpdP->close();
 }
 
-$stmtExp = $conexion->prepare('INSERT INTO expedientes (causa, medida, fechadeentrada, fojas, librodeactas, codigocomisaria, numerodeexpediente, dnidenunciante, denunciado, numexpinstru) VALUES (?,?,?,?,?,?,?,?,?,?)');
-$stmtExp->bind_param('sssisssisi', $causa, $medida, $fechaent, $fojas, $libro, $comisaria, $nroexp, $dni, $denunciado, $numexpinstr);
-if (!$stmtExp->execute()) { echo json_encode(['status'=>'error','message'=>'Error expediente']); exit; }
-$idexp = $stmtExp->insert_id; $stmtExp->close();
+$conexion->commit();
 
 $sqlreg = "INSERT INTO auditoria (tabla_afectada, operacion, fecha, hora, usuario, num_expediente, dni) VALUES ('expedientes', 'Nuevo Registro de expediente', '$fecha', '$hora', '$usuario', '$nroexp', '$dni')";
 $conexion->query($sqlreg);

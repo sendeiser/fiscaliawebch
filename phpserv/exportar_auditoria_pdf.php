@@ -166,6 +166,7 @@ $stmt_audit->close();
 $conn->close();
 
 // Salida del PDF
+if (function_exists('ob_get_length')) { while (ob_get_level() > 0) { ob_end_clean(); } }
 header('Content-Type: application/pdf');
-header('Content-Disposition: attachment; filename="auditoria.pdf"');
-$pdf->Output('D', 'auditoria.pdf');
+header('Content-Disposition: inline; filename="auditoria.pdf"');
+$pdf->Output('I', 'auditoria.pdf');

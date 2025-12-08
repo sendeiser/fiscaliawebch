@@ -14,8 +14,10 @@ $output = fopen('php://output', 'w');
 // Establecer el encabezado UTF-8 BOM para que Excel reconozca correctamente los caracteres especiales
 fputs($output, "\xEF\xBB\xBF");
 
+// Opcional: indicar separador para Excel
+fputs($output, "sep=,\n");
 // Encabezados del CSV
-fputcsv($output, array('ID', 'Fecha', 'Hora', 'Usuario', 'Tabla', 'Operación', 'Expediente', 'DNI'));
+fputcsv($output, array('ID', 'Fecha y Hora', 'Usuario', 'Tabla', 'Operación', 'Expediente', 'DNI'));
 
 // Obtener parámetros de filtro
 $date_from = isset($_GET['date_from']) ? $_GET['date_from'] : '';
@@ -93,8 +95,7 @@ $result = $stmt->get_result();
 while ($row = $result->fetch_assoc()) {
     $csvRow = array(
         $row['id'],
-        $row['fecha'],
-        $row['hora'],
+        $row['fecha'].' '.$row['hora'],
         $row['usuario'],
         $row['tabla'],
         $row['operacion'],

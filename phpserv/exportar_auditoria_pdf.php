@@ -1,6 +1,8 @@
 <?php
 // Incluir archivo de conexión y FPDF
 require_once 'conexion.php';
+session_start();
+$conn = Conexion::conectar();
 require_once 'informes/fpdf.php';
 require_once 'informes/plantilla.php';
 
@@ -14,41 +16,40 @@ $expediente = isset($_GET['expediente']) ? $_GET['expediente'] : '';
 $dni = isset($_GET['dni']) ? $_GET['dni'] : '';
 
 // Construir la consulta SQL base
-$sql = "SELECT a.*, u.usuario as nombre_usuario 
-        FROM auditoria a 
-        LEFT JOIN usuarios u ON a.id_usuario = u.id";
+$sql = "SELECT a.id, a.fecha, a.hora, a.usuario, a.tabla_afectada AS tabla, a.operacion, a.num_expediente AS expediente, a.dni 
+        FROM auditoria a";
 
 // Construir la cláusula WHERE basada en los filtros
 $where_clauses = array();
 $params = array();
 
 if (!empty($date_from)) {
-    $where_clauses[] = "DATE(a.fecha_hora) >= ?"; 
+    $where_clauses[] = "a.fecha >= ?"; 
     $params[] = $date_from;
 }
 
 if (!empty($date_to)) {
-    $where_clauses[] = "DATE(a.fecha_hora) <= ?"; 
+    $where_clauses[] = "a.fecha <= ?"; 
     $params[] = $date_to;
 }
 
 if (!empty($tabla)) {
-    $where_clauses[] = "a.tabla LIKE ?"; 
+    $where_clauses[] = "a.tabla_afectada LIKE ?"; 
     $params[] = "%$tabla%";
 }
 
 if (!empty($operacion)) {
-    $where_clauses[] = "a.operacion = ?"; 
-    $params[] = $operacion;
+    $where_clauses[] = "a.operacion LIKE ?"; 
+    $params[] = "%$operacion%";
 }
 
 if (!empty($usuario)) {
-    $where_clauses[] = "u.usuario LIKE ?"; 
+    $where_clauses[] = "a.usuario LIKE ?"; 
     $params[] = "%$usuario%";
 }
 
 if (!empty($expediente)) {
-    $where_clauses[] = "a.expediente LIKE ?"; 
+    $where_clauses[] = "a.num_expediente LIKE ?"; 
     $params[] = "%$expediente%";
 }
 
@@ -63,14 +64,14 @@ if (count($where_clauses) > 0) {
 }
 
 // Ordenar por fecha y hora descendente
-$sql .= " ORDER BY a.fecha_hora DESC";
+$sql .= " ORDER BY a.fecha DESC, a.hora DESC";
 
 // Preparar y ejecutar la consulta
 $stmt = $conn->prepare($sql);
 
 // Vincular parámetros si existen
 if (count($params) > 0) {
-    $types = str_repeat('s', count($params)); // Todos los parámetros son strings
+    $types = str_repeat('s', count($params));
     $stmt->bind_param($types, ...$params);
 }
 
@@ -115,12 +116,12 @@ $pdf->Ln(5);
 $pdf->SetFillColor(200, 200, 200);
 $pdf->SetFont('Arial', 'B', 10);
 $pdf->Cell(15, 10, 'ID', 1, 0, 'C', true);
-$pdf->Cell(35, 10, 'Fecha y Hora', 1, 0, 'C', true);
+$pdf->Cell(50, 10, 'Fecha y Hora', 1, 0, 'C', true);
 $pdf->Cell(25, 10, 'Usuario', 1, 0, 'C', true);
 $pdf->Cell(25, 10, 'Tabla', 1, 0, 'C', true);
 $pdf->Cell(25, 10, 'Operación', 1, 0, 'C', true);
 $pdf->Cell(25, 10, 'Expediente', 1, 0, 'C', true);
-$pdf->Cell(40, 10, 'Detalles', 1, 1, 'C', true);
+$pdf->Cell(30, 10, 'DNI', 1, 1, 'C', true);
 
 // Datos de la tabla
 $pdf->SetFont('Arial', '', 9);
@@ -134,7 +135,7 @@ while ($row = $result->fetch_assoc()) {
         $pdf->SetFillColor(200, 200, 200);
         $pdf->SetFont('Arial', 'B', 10);
         $pdf->Cell(15, 10, 'ID', 1, 0, 'C', true);
-        $pdf->Cell(35, 10, 'Fecha y Hora', 1, 0, 'C', true);
+    $pdf->Cell(50, 10, 'Fecha y Hora', 1, 0, 'C', true);
         $pdf->Cell(25, 10, 'Usuario', 1, 0, 'C', true);
         $pdf->Cell(25, 10, 'Tabla', 1, 0, 'C', true);
         $pdf->Cell(25, 10, 'Operación', 1, 0, 'C', true);
@@ -143,28 +144,20 @@ while ($row = $result->fetch_assoc()) {
         $pdf->SetFont('Arial', '', 9);
     }
     
-    // Limitar longitud de detalles para que quepa en la celda
-    $detalles = $row['detalles'];
-    if (strlen($detalles) > 30) {
-        $detalles = substr($detalles, 0, 27) . '...';
-    }
-    
     $pdf->Cell(15, 10, $row['id'], 1, 0, 'C');
-    $pdf->Cell(35, 10, $row['fecha_hora'], 1, 0, 'C');
-    $pdf->Cell(25, 10, $row['nombre_usuario'] ?? 'N/A', 1, 0, 'L');
+    $pdf->Cell(50, 10, $row['fecha'].' '.$row['hora'], 1, 0, 'C');
+    $pdf->Cell(25, 10, $row['usuario'], 1, 0, 'L');
     $pdf->Cell(25, 10, $row['tabla'], 1, 0, 'L');
     $pdf->Cell(25, 10, $row['operacion'], 1, 0, 'C');
     $pdf->Cell(25, 10, $row['expediente'] ?? 'N/A', 1, 0, 'C');
-    $pdf->Cell(40, 10, $detalles, 1, 1, 'L');
+    $pdf->Cell(30, 10, $row['dni'] ?? 'N/A', 1, 1, 'C');
 }
 
-// Registrar la acción en la tabla de auditoría
-$usuario_id = isset($_SESSION['id_usuario']) ? $_SESSION['id_usuario'] : null;
-$detalles = "Exportación de registros de auditoría a PDF";
-
-$sql_audit = "INSERT INTO auditoria (id_usuario, tabla, operacion, detalles) VALUES (?, 'auditoria', 'EXPORT', ?)";
-$stmt_audit = $conn->prepare($sql_audit);
-$stmt_audit->bind_param("is", $usuario_id, $detalles);
+// Registrar la acción en la tabla de auditoría (opcional)
+$usuarioReg = isset($_SESSION['nombre_usuario']) ? $_SESSION['nombre_usuario'] : 'sistema';
+$detallesReg = "Exportación de auditoría PDF";
+$stmt_audit = $conn->prepare("INSERT INTO auditoria (tabla_afectada, operacion, fecha, hora, usuario, detalles) VALUES ('auditoria','EXPORT',DATE(NOW()),TIME(NOW()),?,?)");
+$stmt_audit->bind_param("ss", $usuarioReg, $detallesReg);
 $stmt_audit->execute();
 
 // Cerrar conexiones

@@ -259,6 +259,10 @@ if (btn_d) {
 var btn_regist = document.getElementById('btn-reg');
 
 if (btn_regist) {
+  var formregSubmit = document.getElementById('form-reg');
+  if (formregSubmit) {
+    formregSubmit.addEventListener('submit', function(e){ e.preventDefault(); btn_regist.click(); });
+  }
 
   btn_regist.addEventListener('click', function (e) {
     e.preventDefault();

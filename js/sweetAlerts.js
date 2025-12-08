@@ -22,8 +22,7 @@ function actualizar(){location.reload(true);}
   document.head.appendChild(style);
 })();
 
-(async () => {
-  const { value: password } = await Swal.fire({
+Swal.fire({
     title: 'Contraseña de Acceso',
     input: 'password',
     icon: 'warning',
@@ -32,8 +31,8 @@ function actualizar(){location.reload(true);}
     inputPlaceholder: 'Ingrese la contraseña',
     iconColor: '#ffd000',
     allowOutsideClick: false,
-    allowEnterkey: false,
-    allowEscapekey: false,
+    allowEnterKey: false,
+    allowEscapeKey: false,
     showCancelButton: true,
     reverseButtons: true,
     cancelButtonText: 'Volver',
@@ -49,7 +48,7 @@ function actualizar(){location.reload(true);}
       icon: 'access-icon'
     },
     inputAttributes: {
-      maxLength: 16,
+      maxLength: 64,
       autocapitalize: 'off',
       autocorrect: 'off'
     },
@@ -66,9 +65,23 @@ function actualizar(){location.reload(true);}
           .catch(function(){ resolve('Error de verificación, intente nuevamente.'); });
       })
     }
-  }).then((result) => {
-    if (result.dismiss === Swal.DismissReason.cancel) {
-      window.location.href = 'index.html';
-    }
-  });
-})();
+}).then(function(result){
+  if (result.dismiss === Swal.DismissReason.cancel) {
+    window.location.href = 'index.html';
+    return;
+  }
+  if (result.isConfirmed) {
+    var v = String(result.value || '').trim();
+    try {
+      window.accessPassword = v;
+      var field = document.getElementById('contrasena');
+      if (field) {
+        field.value = v;
+        var ev = new Event('input', { bubbles: true });
+        field.dispatchEvent(ev);
+        var ev2 = new Event('blur', { bubbles: true });
+        field.dispatchEvent(ev2);
+      }
+    } catch(_){ }
+  }
+});

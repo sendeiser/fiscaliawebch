@@ -582,6 +582,7 @@
       var badge = document.getElementById('pwd_strength');
       var btn = document.getElementById('btn-reg');
       var valid = false;
+      var timer = null;
       function setState(ok){
         valid = !!ok;
         if (btn) btn.disabled = !valid;
@@ -599,8 +600,13 @@
           .catch(() => setState(false));
       }
       if (pwd) {
-        pwd.addEventListener('input', function(){ setState(false); });
+        pwd.addEventListener('input', function(){
+          setState(false);
+          if (timer) { clearTimeout(timer); }
+          timer = setTimeout(check, 300);
+        });
         pwd.addEventListener('blur', check);
+        if (pwd.value && pwd.value.trim() !== '') { check(); }
       }
       var gen = document.getElementById('pwd_gen');
       if (gen) { gen.style.display = 'none'; }

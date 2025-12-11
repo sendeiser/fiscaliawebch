@@ -17,7 +17,7 @@ if ($rolSesion !== 'administrador' && $tipoSesion !== 'admin') {
 }
 
 // Incluir archivo de conexión a la base de datos
-require_once '../connect.php';
+require_once 'connect.php';
 
 try {
     // Consultar todos los usuarios con sus datos relevantes
@@ -26,10 +26,10 @@ try {
               FROM usuarios 
               ORDER BY bloqueado DESC, Apellido ASC, Nombre ASC";
     
-    $result = $mysqli->query($query);
+    $result = $conexion->query($query);
     
     if (!$result) {
-        throw new Exception("Error en la consulta: " . $mysqli->error);
+        throw new Exception("Error en la consulta: " . $conexion->error);
     }
     
     // Configurar cabeceras para descarga de archivo CSV
@@ -71,17 +71,13 @@ try {
     // Cerrar el resultado
     $result->free();
     
-    // Registrar en la tabla de auditoría
-    $admin_id = isset($_SESSION['id_usuario']) ? $_SESSION['id_usuario'] : 0;
-    $ip = $_SERVER['REMOTE_ADDR'];
-    $detalles = "Exportación de usuarios a CSV";
-    
-    $query = "INSERT INTO auditoria (usuario_id, accion, ip, detalles) 
-              VALUES (?, 'exportar_csv', ?, ?)";
-    
-    $stmt = $mysqli->prepare($query);
-    $stmt->bind_param('iss', $admin_id, $ip, $detalles);
-    $stmt->execute();
+    // Registrar acción en auditoría (esquema actual)
+    $usuarioAud = isset($_SESSION['nombre_usuario']) ? $_SESSION['nombre_usuario'] : 'sistema';
+    $detallesAud = 'Exportación de usuarios a CSV';
+    $stmtAud = $conexion->prepare("INSERT INTO auditoria (tabla_afectada, operacion, fecha, hora, usuario, detalles) VALUES ('usuarios','EXPORT',DATE(NOW()),TIME(NOW()),?,?)");
+    $stmtAud->bind_param('ss', $usuarioAud, $detallesAud);
+    $stmtAud->execute();
+    $stmtAud->close();
     
 } catch (Exception $e) {
     // En caso de error, devolver mensaje de texto plano

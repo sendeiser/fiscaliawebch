@@ -17,12 +17,12 @@ if ($rolSesion !== 'administrador' && $tipoSesion !== 'admin') {
 }
 
 // Incluir archivo de conexión a la base de datos
-require_once '../connect.php';
+require_once 'connect.php';
 
 // Verificar si TCPDF está disponible (debe estar instalado)
 if (!file_exists('../vendor/tecnickcom/tcpdf/tcpdf.php')) {
     // Si no está disponible, crear un PDF básico con FPDF (incluido en PHP)
-    require_once('fpdf/fpdf.php');
+    require_once 'informes/fpdf.php';
     
     try {
         // Consultar todos los usuarios
@@ -31,10 +31,10 @@ if (!file_exists('../vendor/tecnickcom/tcpdf/tcpdf.php')) {
                   FROM usuarios 
                   ORDER BY bloqueado DESC, Apellido ASC, Nombre ASC";
         
-        $result = $mysqli->query($query);
+        $result = $conexion->query($query);
         
         if (!$result) {
-            throw new Exception("Error en la consulta: " . $mysqli->error);
+            throw new Exception("Error en la consulta: " . $conexion->error);
         }
         
         // Crear PDF
@@ -75,16 +75,12 @@ if (!file_exists('../vendor/tecnickcom/tcpdf/tcpdf.php')) {
         }
         
         // Registrar en la tabla de auditoría
-        $admin_id = isset($_SESSION['id_usuario']) ? $_SESSION['id_usuario'] : 0;
-        $ip = $_SERVER['REMOTE_ADDR'];
-        $detalles = "Exportación de usuarios a PDF";
-        
-        $query = "INSERT INTO auditoria (usuario_id, accion, ip, detalles) 
-                  VALUES (?, 'exportar_pdf', ?, ?)";
-        
-        $stmt = $mysqli->prepare($query);
-        $stmt->bind_param('iss', $admin_id, $ip, $detalles);
-        $stmt->execute();
+        $usuarioAud = isset($_SESSION['nombre_usuario']) ? $_SESSION['nombre_usuario'] : 'sistema';
+        $detallesAud = 'Exportación de usuarios a PDF';
+        $stmtAud = $conexion->prepare("INSERT INTO auditoria (tabla_afectada, operacion, fecha, hora, usuario, detalles) VALUES ('usuarios','EXPORT',DATE(NOW()),TIME(NOW()),?,?)");
+        $stmtAud->bind_param('ss', $usuarioAud, $detallesAud);
+        $stmtAud->execute();
+        $stmtAud->close();
         
         // Salida del PDF
         header('Content-Type: application/pdf');
@@ -108,10 +104,10 @@ if (!file_exists('../vendor/tecnickcom/tcpdf/tcpdf.php')) {
                   FROM usuarios 
                   ORDER BY bloqueado DESC, Apellido ASC, Nombre ASC";
         
-        $result = $mysqli->query($query);
+        $result = $conexion->query($query);
         
         if (!$result) {
-            throw new Exception("Error en la consulta: " . $mysqli->error);
+            throw new Exception("Error en la consulta: " . $conexion->error);
         }
         
         // Crear nuevo documento PDF
@@ -192,21 +188,18 @@ if (!file_exists('../vendor/tecnickcom/tcpdf/tcpdf.php')) {
         $pdf->Cell(array_sum($w), 0, '', 'T');
         
         // Registrar en la tabla de auditoría
-        $admin_id = isset($_SESSION['id_usuario']) ? $_SESSION['id_usuario'] : 0;
-        $ip = $_SERVER['REMOTE_ADDR'];
-        $detalles = "Exportación de usuarios a PDF";
-        
-        $query = "INSERT INTO auditoria (usuario_id, accion, ip, detalles) 
-                  VALUES (?, 'exportar_pdf', ?, ?)";
-        
-        $stmt = $mysqli->prepare($query);
-        $stmt->bind_param('iss', $admin_id, $ip, $detalles);
-        $stmt->execute();
+        $usuarioAud = isset($_SESSION['nombre_usuario']) ? $_SESSION['nombre_usuario'] : 'sistema';
+        $detallesAud = 'Exportación de usuarios a PDF';
+        $stmtAud = $conexion->prepare("INSERT INTO auditoria (tabla_afectada, operacion, fecha, hora, usuario, detalles) VALUES ('usuarios','EXPORT',DATE(NOW()),TIME(NOW()),?,?)");
+        $stmtAud->bind_param('ss', $usuarioAud, $detallesAud);
+        $stmtAud->execute();
+        $stmtAud->close();
         
         // Salida del PDF
+        if (function_exists('ob_get_length')) { while (ob_get_level() > 0) { ob_end_clean(); } }
         header('Content-Type: application/pdf');
-        header('Content-Disposition: attachment; filename=usuarios_' . date('Y-m-d') . '.pdf');
-        $pdf->Output('usuarios_' . date('Y-m-d') . '.pdf', 'D');
+        header('Content-Disposition: inline; filename=usuarios_' . date('Y-m-d') . '.pdf');
+        $pdf->Output('usuarios_' . date('Y-m-d') . '.pdf', 'I');
         
     } catch (Exception $e) {
         // En caso de error, devolver mensaje de texto plano

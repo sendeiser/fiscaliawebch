@@ -25,38 +25,21 @@ $conexion->query($sqlCreate);
 
 $method = $_SERVER['REQUEST_METHOD'];
 
-function generatePassword($length = 12) {
-  $length = max(8, min(64, intval($length)));
-  $lower = 'abcdefghjkmnpqrstuvwxyz';
-  $upper = 'ABCDEFGHJKMNPQRSTUVWXYZ';
-  $digits = '23456789';
-  $symbols = '@#$%&*+-_=';
-  $all = $lower.$upper.$digits.$symbols;
-  $password = '';
-  $password .= $lower[random_int(0, strlen($lower)-1)];
-  $password .= $upper[random_int(0, strlen($upper)-1)];
-  $password .= $digits[random_int(0, strlen($digits)-1)];
-  $password .= $symbols[random_int(0, strlen($symbols)-1)];
-  for ($i = 4; $i < $length; $i++) {
-    $password .= $all[random_int(0, strlen($all)-1)];
-  }
-  $chars = str_split($password);
-  for ($i = count($chars)-1; $i > 0; $i--) {
-    $j = random_int(0, $i);
-    [$chars[$i], $chars[$j]] = [$chars[$j], $chars[$i]];
-  }
-  return implode('', $chars);
+function generateHashToken($length = 64) {
+  $length = max(32, min(64, intval($length)));
+  if ($length >= 64) { return bin2hex(random_bytes(32)); }
+  return bin2hex(random_bytes(16));
 }
 
 if ($method === 'POST') {
-  $length = 12;
+  $length = 64;
   if (isset($_POST['length'])) { $length = intval($_POST['length']); }
   $raw = file_get_contents('php://input');
   if ($raw) {
     $json = json_decode($raw, true);
     if (is_array($json) && isset($json['length'])) { $length = intval($json['length']); }
   }
-  $pwd = generatePassword($length);
+  $pwd = generateHashToken($length);
   $hash = password_hash($pwd, PASSWORD_BCRYPT);
   $usuario = isset($_SESSION['nombre_usuario']) ? $_SESSION['nombre_usuario'] : 'admin';
   $now = date('Y-m-d H:i:s');

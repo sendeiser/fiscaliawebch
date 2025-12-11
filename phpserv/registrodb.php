@@ -23,17 +23,21 @@ if ($correo === '' || $usuario === '' || $contrasena === '' || $nombre === '' ||
 }
 
 try {
-  $stmtPw = $conexion->prepare('SELECT id FROM pwrandom WHERE password_plain = ? LIMIT 1');
+  $conexion->begin_transaction();
+  $stmtPw = $conexion->prepare('SELECT id FROM pwrandom WHERE password_plain = ? LIMIT 1 FOR UPDATE');
   $stmtPw->bind_param('s', $contrasena);
   $stmtPw->execute();
   $stmtPw->store_result();
   if ($stmtPw->num_rows < 1) {
+    $conexion->rollback();
     http_response_code(403);
     echo json_encode(['status' => 'error', 'message' => 'Contraseña de registro no autorizada']);
     $stmtPw->close();
     $conexion->close();
     exit;
   }
+  $stmtPw->bind_result($pwrand_id);
+  $stmtPw->fetch();
   $stmtPw->close();
 
   $stmt = $conexion->prepare('SELECT idusuarios FROM usuarios WHERE Correo = ?');
@@ -41,6 +45,7 @@ try {
   $stmt->execute();
   $stmt->store_result();
   if ($stmt->num_rows > 0) {
+    $conexion->rollback();
     http_response_code(409);
     error_log('Intento de registro duplicado para correo: ' . $correo . ' IP: ' . $_SERVER['REMOTE_ADDR']);
     echo json_encode(['status' => 'error', 'message' => 'Usuario ya registrado']);
@@ -55,6 +60,7 @@ try {
   $stmt2->execute();
   $stmt2->store_result();
   if ($stmt2->num_rows > 0) {
+    $conexion->rollback();
     http_response_code(409);
     error_log('Intento de registro duplicado para usuario: ' . $usuario . ' IP: ' . $_SERVER['REMOTE_ADDR']);
     echo json_encode(['status' => 'error', 'message' => 'Nombre de usuario ya registrado']);
@@ -67,6 +73,20 @@ try {
   $ins = $conexion->prepare('INSERT INTO usuarios (Nombre, Apellido, Celular, Correo, Usuario, Contrasena) VALUES (?,?,?,?,?,?)');
   $ins->bind_param('ssssss', $nombre, $apellido, $celular, $correo, $usuario, $contrasena);
   if ($ins->execute()) {
+    $del = $conexion->prepare('DELETE FROM pwrandom WHERE id = ?');
+    $del->bind_param('i', $pwrand_id);
+    if (!$del->execute()) {
+      $del->close();
+      $conexion->rollback();
+      http_response_code(500);
+      error_log('Error al consumir token pwrandom: ' . $conexion->error);
+      echo json_encode(['status' => 'error', 'message' => 'Error del servidor']);
+      $ins->close();
+      $conexion->close();
+      exit;
+    }
+    $del->close();
+    $conexion->commit();
     if (isset($_POST['do_redirect']) && $_POST['do_redirect'] === '1' && empty($_SERVER['HTTP_X_REQUESTED_WITH'])) {
       header('Location: /Login.html', true, 302);
       exit;
@@ -74,12 +94,14 @@ try {
     http_response_code(200);
     echo json_encode(['status' => 'success', 'message' => 'Registro exitoso', 'redirect' => 'Login.html']);
   } else {
+    $conexion->rollback();
     http_response_code(500);
     error_log('Error al insertar usuario: ' . $conexion->error);
     echo json_encode(['status' => 'error', 'message' => 'Error del servidor']);
   }
   $ins->close();
 } catch (Exception $e) {
+  $conexion->rollback();
   http_response_code(500);
   error_log('Excepción en registro: ' . $e->getMessage());
   echo json_encode(['status' => 'error', 'message' => 'Error del servidor']);

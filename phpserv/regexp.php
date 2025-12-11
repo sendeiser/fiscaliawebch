@@ -38,6 +38,16 @@ if (isset($_POST['dni'])) {
   $consulta = mysqli_query($conexion, $pregunta);
   $resp = mysqli_num_rows($consulta);
 
+  // Restricción: no repetir número de expediente
+  $dupq = "SELECT idexpediente FROM expedientes WHERE numerodeexpediente='" . mysqli_real_escape_string($conexion, $nroexpediente) . "' LIMIT 1";
+  $dupr = mysqli_query($conexion, $dupq);
+  if ($dupr && mysqli_num_rows($dupr) > 0) {
+    echo json_encode('nroexpduplicado');
+    if ($consulta) { mysqli_free_result($consulta); }
+    if ($dupr) { mysqli_free_result($dupr); }
+    exit;
+  }
+
   if ($resp == 0) {
 
     if ($conexion->query($sql) == true and $conexion->query($sql2) == true) {

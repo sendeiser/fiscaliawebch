@@ -1,10 +1,10 @@
 <?php
-require 'conexion.php';
+require 'connect.php';
 date_default_timezone_set("America/Argentina/Buenos_Aires");
 setlocale(LC_TIME, 'es_RA.UTF-8','esp');
 session_start();
 
-$user = $_SESSION['nombre_usuario'];
+$user = isset($_SESSION['nombre_usuario']) ? $_SESSION['nombre_usuario'] : 'sistema';
 $fecha = date("Y-m-d"); // Genera la fecha actual en formato "YYYY-MM-DD"
 $hora = date("H:i:s"); // Genera la hora actual en formato "HH:MM:SS"
 
@@ -19,11 +19,11 @@ if (isset($_POST['titu'])){
         $image=$_POST['img'];
        
         $sql= "INSERT INTO noticias (noticia,imagen,titulo) VALUES ('$texto','images/$image','$titu')";
-        $mysqli->query($sql);
+        $conexion->query($sql);
 
         $sqlreg = "INSERT INTO auditoria (tabla_afectada, operacion, fecha, hora, usuario)
-        VALUES ('Noticias', 'Se subio una nueva noticia', '$fecha', '$hora', '$user')";
-        $mysqli->query($sqlreg);
+        VALUES ('noticias', 'Se subio una nueva noticia', '$fecha', '$hora', '$user')";
+        $conexion->query($sqlreg);
       
         echo 'si';    
     }   
@@ -31,7 +31,7 @@ if (isset($_POST['titu'])){
         $titu=$_POST['titu'];
         $texto=$_POST['texto'];
         $sql= "INSERT INTO noticias (noticia,imagen,titulo) VALUES ('$texto','images/noti.jpg','$titu')";
-        $mysqli->query($sql);
+        $conexion->query($sql);
         echo 'no';
     }
 

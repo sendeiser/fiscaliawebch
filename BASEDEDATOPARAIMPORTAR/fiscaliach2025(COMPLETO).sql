@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2025-11-17 18:19:37
+Date: 2025-12-10 23:33:37
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -35,7 +35,7 @@ CREATE TABLE `auditoria` (
   KEY `idx_usuario` (`usuario`),
   KEY `idx_num_expediente` (`num_expediente`),
   KEY `idx_dni` (`dni`)
-) ENGINE=InnoDB AUTO_INCREMENT=394 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci COMMENT='Tabla de auditoría para registrar cambios en el sistema';
+) ENGINE=InnoDB AUTO_INCREMENT=460 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci COMMENT='Tabla de auditoría para registrar cambios en el sistema';
 
 -- ----------------------------
 -- Records of auditoria
@@ -430,6 +430,72 @@ INSERT INTO `auditoria` VALUES ('390', 'contactos', 'Nuevo mensaje de contacto',
 INSERT INTO `auditoria` VALUES ('391', 'Ninguna', 'Inicio de sesion', '2025-11-17', '18:14:37', 'sendeiser', null, null, null);
 INSERT INTO `auditoria` VALUES ('392', 'usuarios', 'Cierre de sesion por inactividad', '2025-11-17', '18:16:31', 'sendeiser', null, null, null);
 INSERT INTO `auditoria` VALUES ('393', 'Ninguna', 'Inicio de sesion', '2025-11-17', '18:17:18', 'sendeiser', null, null, null);
+INSERT INTO `auditoria` VALUES ('394', 'usuarios', 'Cierre de sesion por inactividad', '2025-11-17', '18:19:43', 'sendeiser', null, null, null);
+INSERT INTO `auditoria` VALUES ('395', 'Ninguna', 'Inicio de sesion', '2025-11-17', '18:42:46', 'sendeiser', null, null, null);
+INSERT INTO `auditoria` VALUES ('396', 'usuarios', 'Cierre de sesion por inactividad', '2025-11-17', '18:43:59', 'sendeiser', null, null, null);
+INSERT INTO `auditoria` VALUES ('397', 'usuarios', 'Cierre de sesion por inactividad', '2025-11-17', '18:43:59', 'sistema', null, null, null);
+INSERT INTO `auditoria` VALUES ('398', 'Ninguna', 'Inicio de sesion', '2025-11-17', '18:44:16', 'sendeiser', null, null, null);
+INSERT INTO `auditoria` VALUES ('399', 'usuarios', 'Cierre de sesion por inactividad', '2025-11-17', '18:45:41', 'sendeiser', null, null, null);
+INSERT INTO `auditoria` VALUES ('400', 'Ninguna', 'Inicio de sesion', '2025-11-17', '18:46:05', 'rodrigo84', null, null, null);
+INSERT INTO `auditoria` VALUES ('401', 'usuarios', 'Cierre de sesion por inactividad', '2025-11-17', '18:47:09', 'rodrigo84', null, null, null);
+INSERT INTO `auditoria` VALUES ('402', 'usuarios', 'Cierre de sesion por inactividad', '2025-11-17', '18:47:09', 'sistema', null, null, null);
+INSERT INTO `auditoria` VALUES ('403', 'Ninguna', 'Inicio de sesion', '2025-11-17', '18:47:40', 'sendeiser', null, null, null);
+INSERT INTO `auditoria` VALUES ('404', 'usuarios', 'Cierre de sesion por inactividad', '2025-11-17', '18:49:41', 'sendeiser', null, null, null);
+INSERT INTO `auditoria` VALUES ('405', 'usuarios', 'Cierre de sesion por inactividad', '2025-11-17', '18:49:41', 'sistema', null, null, null);
+INSERT INTO `auditoria` VALUES ('406', 'Ninguna', 'Inicio de sesion', '2025-11-17', '19:04:04', 'sendeiser', null, null, null);
+INSERT INTO `auditoria` VALUES ('407', 'usuarios', 'Cierre de sesion por inactividad', '2025-11-17', '19:05:12', 'sendeiser', null, null, null);
+INSERT INTO `auditoria` VALUES ('408', 'usuarios', 'Cierre de sesion por inactividad', '2025-11-17', '19:05:12', 'sendeiser', null, null, null);
+INSERT INTO `auditoria` VALUES ('409', 'Ninguna', 'Inicio de sesion', '2025-11-18', '11:21:00', 'sendeiser', null, null, null);
+INSERT INTO `auditoria` VALUES ('410', 'usuarios', 'Cierre de sesion por inactividad', '2025-11-18', '11:22:59', 'sendeiser', null, null, null);
+INSERT INTO `auditoria` VALUES ('411', 'Ninguna', 'Inicio de sesion', '2025-11-18', '17:58:26', 'sendeiser', null, null, null);
+INSERT INTO `auditoria` VALUES ('412', 'Ninguna', 'Inicio de sesion', '2025-11-18', '18:00:08', 'lemoncry', null, null, null);
+INSERT INTO `auditoria` VALUES ('413', 'usuarios', 'Cierre de sesion', '2025-11-18', '18:00:40', 'lemoncry', null, null, null);
+INSERT INTO `auditoria` VALUES ('414', 'Ninguna', 'Inicio de sesion', '2025-11-18', '18:01:01', 'sendeiser', null, null, null);
+INSERT INTO `auditoria` VALUES ('415', 'Ninguna', 'Inicio de sesion', '2025-11-18', '18:01:57', 'lemoncry', null, null, null);
+INSERT INTO `auditoria` VALUES ('416', 'usuarios', 'Cierre de sesion por inactividad', '2025-11-18', '18:02:13', 'lemoncry', null, null, null);
+INSERT INTO `auditoria` VALUES ('417', 'usuarios', 'Cierre de sesion por inactividad', '2025-11-18', '18:03:15', 'sistema', null, null, null);
+INSERT INTO `auditoria` VALUES ('418', 'Ninguna', 'Inicio de sesion', '2025-11-18', '18:05:04', 'sendeiser', null, null, null);
+INSERT INTO `auditoria` VALUES ('419', 'usuarios', 'Cierre de sesion por inactividad', '2025-11-18', '18:06:42', 'sendeiser', null, null, null);
+INSERT INTO `auditoria` VALUES ('420', 'usuarios', 'Cierre de sesion por inactividad', '2025-11-18', '18:06:42', 'sistema', null, null, null);
+INSERT INTO `auditoria` VALUES ('421', 'Ninguna', 'Inicio de sesion', '2025-11-18', '18:15:44', 'sendeiser', null, null, null);
+INSERT INTO `auditoria` VALUES ('422', 'Ninguna', 'Inicio de sesion', '2025-11-18', '18:16:48', 'wally', null, null, null);
+INSERT INTO `auditoria` VALUES ('423', 'usuarios', 'Cierre de sesion por inactividad', '2025-11-18', '18:17:57', 'wally', null, null, null);
+INSERT INTO `auditoria` VALUES ('424', 'usuarios', 'Cierre de sesion por inactividad', '2025-11-18', '18:19:34', 'sistema', null, null, null);
+INSERT INTO `auditoria` VALUES ('425', 'Ninguna', 'Inicio de sesion', '2025-11-30', '22:40:51', 'rodrigo84', null, null, null);
+INSERT INTO `auditoria` VALUES ('426', 'usuarios', 'Cierre de sesion por inactividad', '2025-11-30', '22:44:52', 'rodrigo84', null, null, null);
+INSERT INTO `auditoria` VALUES ('427', 'usuarios', 'Cierre de sesion por inactividad', '2025-11-30', '22:44:52', 'rodrigo84', null, null, null);
+INSERT INTO `auditoria` VALUES ('428', 'Ninguna', 'Inicio de sesion', '2025-11-30', '22:45:18', 'rodrigo84', null, null, null);
+INSERT INTO `auditoria` VALUES ('429', 'usuarios', 'Cierre de sesion por inactividad', '2025-11-30', '22:54:56', 'rodrigo84', null, null, null);
+INSERT INTO `auditoria` VALUES ('430', 'Ninguna', 'Inicio de sesion', '2025-11-30', '22:55:01', 'rodrigo84', null, null, null);
+INSERT INTO `auditoria` VALUES ('431', 'usuarios', 'Cierre de sesion por inactividad', '2025-11-30', '22:58:17', 'rodrigo84', null, null, null);
+INSERT INTO `auditoria` VALUES ('432', 'Ninguna', 'Inicio de sesion', '2025-11-30', '22:59:19', 'rodrigo84', null, null, null);
+INSERT INTO `auditoria` VALUES ('433', 'usuarios', 'Cierre de sesion por inactividad', '2025-11-30', '23:01:13', 'rodrigo84', null, null, null);
+INSERT INTO `auditoria` VALUES ('434', 'Ninguna', 'Inicio de sesion', '2025-11-30', '23:06:57', 'rodrigo84', null, null, null);
+INSERT INTO `auditoria` VALUES ('435', 'usuarios', 'Cierre de sesion por inactividad', '2025-11-30', '23:14:23', 'rodrigo84', null, null, null);
+INSERT INTO `auditoria` VALUES ('436', 'Ninguna', 'Inicio de sesion', '2025-11-30', '23:17:53', 'rodrigo84', null, null, null);
+INSERT INTO `auditoria` VALUES ('437', 'usuarios', 'Cierre de sesion por inactividad', '2025-11-30', '23:23:10', 'rodrigo84', null, null, null);
+INSERT INTO `auditoria` VALUES ('438', 'Ninguna', 'Inicio de sesion', '2025-11-30', '23:26:31', 'rodrigo84', null, null, null);
+INSERT INTO `auditoria` VALUES ('439', 'usuarios', 'Cierre de sesion por inactividad', '2025-11-30', '23:31:25', 'rodrigo84', null, null, null);
+INSERT INTO `auditoria` VALUES ('440', 'Ninguna', 'Inicio de sesion', '2025-11-30', '23:32:21', 'rodrigo84', null, null, null);
+INSERT INTO `auditoria` VALUES ('441', 'usuarios', 'Cierre de sesion por inactividad', '2025-11-30', '23:33:48', 'rodrigo84', null, null, null);
+INSERT INTO `auditoria` VALUES ('442', 'Ninguna', 'Inicio de sesion', '2025-12-08', '15:24:07', 'sendeiser', null, null, null);
+INSERT INTO `auditoria` VALUES ('443', 'usuarios', 'Cierre de sesion por inactividad', '2025-12-08', '15:26:11', 'sendeiser', null, null, null);
+INSERT INTO `auditoria` VALUES ('444', 'Ninguna', 'Inicio de sesion', '2025-12-08', '15:28:40', 'sendeiser', null, null, null);
+INSERT INTO `auditoria` VALUES ('445', 'usuarios', 'Cierre de sesion por inactividad', '2025-12-08', '15:32:02', 'sendeiser', null, null, null);
+INSERT INTO `auditoria` VALUES ('446', 'Ninguna', 'Inicio de sesion', '2025-12-08', '15:33:05', 'sendeiser', null, null, null);
+INSERT INTO `auditoria` VALUES ('447', 'usuarios', 'Cierre de sesion por inactividad', '2025-12-08', '15:34:41', 'sendeiser', null, null, null);
+INSERT INTO `auditoria` VALUES ('448', 'Ninguna', 'Inicio de sesion', '2025-12-08', '15:35:44', 'sendeiser', null, null, null);
+INSERT INTO `auditoria` VALUES ('449', 'Ninguna', 'Inicio de sesion', '2025-12-10', '23:14:52', 'sendeiser', null, null, null);
+INSERT INTO `auditoria` VALUES ('450', 'usuarios', 'Cierre de sesion por inactividad', '2025-12-10', '23:16:37', 'sendeiser', null, null, null);
+INSERT INTO `auditoria` VALUES ('451', 'Ninguna', 'Inicio de sesion', '2025-12-10', '23:16:52', 'felixhugo', null, null, null);
+INSERT INTO `auditoria` VALUES ('452', 'Ninguna', 'Inicio de sesion', '2025-12-10', '23:17:52', 'sendeiser', null, null, null);
+INSERT INTO `auditoria` VALUES ('453', 'usuarios', 'Cierre de sesion por inactividad', '2025-12-10', '23:21:59', 'sendeiser', null, null, null);
+INSERT INTO `auditoria` VALUES ('454', 'Ninguna', 'Inicio de sesion', '2025-12-10', '23:22:06', 'sendeiser', null, null, null);
+INSERT INTO `auditoria` VALUES ('455', 'Ninguna', 'Inicio de sesion', '2025-12-10', '23:23:29', 'elberluna', null, null, null);
+INSERT INTO `auditoria` VALUES ('456', 'usuarios', 'Cierre de sesion', '2025-12-10', '23:24:01', 'elberluna', null, null, null);
+INSERT INTO `auditoria` VALUES ('457', 'usuarios', 'Cierre de sesion por inactividad', '2025-12-10', '23:30:09', 'sendeiser', null, null, null);
+INSERT INTO `auditoria` VALUES ('458', 'Ninguna', 'Inicio de sesion', '2025-12-10', '23:30:15', 'sendeiser', null, null, null);
+INSERT INTO `auditoria` VALUES ('459', 'usuarios', 'Cierre de sesion por inactividad', '2025-12-10', '23:31:44', 'sendeiser', null, null, null);
 
 -- ----------------------------
 -- Table structure for comisarias
@@ -574,7 +640,7 @@ CREATE TABLE `historial_accesos` (
   PRIMARY KEY (`id`),
   KEY `fk_historial_usuario_idx` (`id_usuario`),
   CONSTRAINT `fk_historial_usuario` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`idusuarios`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=83 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=118 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- ----------------------------
 -- Records of historial_accesos
@@ -657,6 +723,41 @@ INSERT INTO `historial_accesos` VALUES ('79', '39', '2025-11-17 17:15:44', '::1'
 INSERT INTO `historial_accesos` VALUES ('80', '38', '2025-11-17 17:31:23', '::1', '1', 'Inicio de sesión exitoso');
 INSERT INTO `historial_accesos` VALUES ('81', '38', '2025-11-17 18:14:37', '::1', '1', 'Inicio de sesión exitoso');
 INSERT INTO `historial_accesos` VALUES ('82', '38', '2025-11-17 18:17:18', '::1', '1', 'Inicio de sesión exitoso');
+INSERT INTO `historial_accesos` VALUES ('83', '38', '2025-11-17 18:42:46', '::1', '1', 'Inicio de sesión exitoso');
+INSERT INTO `historial_accesos` VALUES ('84', '38', '2025-11-17 18:44:16', '::1', '1', 'Inicio de sesión exitoso');
+INSERT INTO `historial_accesos` VALUES ('85', '40', '2025-11-17 18:46:05', '::1', '1', 'Inicio de sesión exitoso');
+INSERT INTO `historial_accesos` VALUES ('86', '38', '2025-11-17 18:47:40', '::1', '1', 'Inicio de sesión exitoso');
+INSERT INTO `historial_accesos` VALUES ('87', '38', '2025-11-17 19:04:00', '::1', '0', 'Contraseña incorrecta');
+INSERT INTO `historial_accesos` VALUES ('88', '38', '2025-11-17 19:04:04', '::1', '1', 'Inicio de sesión exitoso');
+INSERT INTO `historial_accesos` VALUES ('89', '38', '2025-11-18 11:21:00', '::1', '1', 'Inicio de sesión exitoso');
+INSERT INTO `historial_accesos` VALUES ('90', '38', '2025-11-18 17:58:26', '::1', '1', 'Inicio de sesión exitoso');
+INSERT INTO `historial_accesos` VALUES ('91', '51', '2025-11-18 18:00:08', '::1', '1', 'Inicio de sesión exitoso');
+INSERT INTO `historial_accesos` VALUES ('92', '38', '2025-11-18 18:01:01', '::1', '1', 'Inicio de sesión exitoso');
+INSERT INTO `historial_accesos` VALUES ('93', '51', '2025-11-18 18:01:57', '::1', '1', 'Inicio de sesión exitoso');
+INSERT INTO `historial_accesos` VALUES ('94', '38', '2025-11-18 18:05:04', '::1', '1', 'Inicio de sesión exitoso');
+INSERT INTO `historial_accesos` VALUES ('95', '38', '2025-11-18 18:15:44', '::1', '1', 'Inicio de sesión exitoso');
+INSERT INTO `historial_accesos` VALUES ('96', '52', '2025-11-18 18:16:48', '::1', '1', 'Inicio de sesión exitoso');
+INSERT INTO `historial_accesos` VALUES ('97', '40', '2025-11-30 22:40:45', '::1', '0', 'Contraseña incorrecta');
+INSERT INTO `historial_accesos` VALUES ('98', '40', '2025-11-30 22:40:51', '::1', '1', 'Inicio de sesión exitoso');
+INSERT INTO `historial_accesos` VALUES ('99', '40', '2025-11-30 22:45:19', '::1', '1', 'Inicio de sesión exitoso');
+INSERT INTO `historial_accesos` VALUES ('100', '40', '2025-11-30 22:55:01', '::1', '1', 'Inicio de sesión exitoso');
+INSERT INTO `historial_accesos` VALUES ('101', '40', '2025-11-30 22:59:19', '::1', '1', 'Inicio de sesión exitoso');
+INSERT INTO `historial_accesos` VALUES ('102', '40', '2025-11-30 23:06:57', '::1', '1', 'Inicio de sesión exitoso');
+INSERT INTO `historial_accesos` VALUES ('103', '40', '2025-11-30 23:17:53', '::1', '1', 'Inicio de sesión exitoso');
+INSERT INTO `historial_accesos` VALUES ('104', '40', '2025-11-30 23:26:27', '::1', '0', 'Contraseña incorrecta');
+INSERT INTO `historial_accesos` VALUES ('105', '40', '2025-11-30 23:26:31', '::1', '1', 'Inicio de sesión exitoso');
+INSERT INTO `historial_accesos` VALUES ('106', '40', '2025-11-30 23:32:22', '::1', '1', 'Inicio de sesión exitoso');
+INSERT INTO `historial_accesos` VALUES ('107', '38', '2025-12-08 15:24:08', '::1', '1', 'Inicio de sesión exitoso');
+INSERT INTO `historial_accesos` VALUES ('108', '38', '2025-12-08 15:28:40', '::1', '1', 'Inicio de sesión exitoso');
+INSERT INTO `historial_accesos` VALUES ('109', '38', '2025-12-08 15:33:05', '::1', '1', 'Inicio de sesión exitoso');
+INSERT INTO `historial_accesos` VALUES ('110', '38', '2025-12-08 15:35:44', '::1', '1', 'Inicio de sesión exitoso');
+INSERT INTO `historial_accesos` VALUES ('111', '38', '2025-12-10 23:14:52', '::1', '1', 'Inicio de sesión exitoso');
+INSERT INTO `historial_accesos` VALUES ('112', '53', '2025-12-10 23:16:52', '::1', '1', 'Inicio de sesión exitoso');
+INSERT INTO `historial_accesos` VALUES ('113', '38', '2025-12-10 23:17:42', '::1', '0', 'Contraseña incorrecta');
+INSERT INTO `historial_accesos` VALUES ('114', '38', '2025-12-10 23:17:52', '::1', '1', 'Inicio de sesión exitoso');
+INSERT INTO `historial_accesos` VALUES ('115', '38', '2025-12-10 23:22:06', '::1', '1', 'Inicio de sesión exitoso');
+INSERT INTO `historial_accesos` VALUES ('116', '54', '2025-12-10 23:23:29', '::1', '1', 'Inicio de sesión exitoso');
+INSERT INTO `historial_accesos` VALUES ('117', '38', '2025-12-10 23:30:15', '::1', '1', 'Inicio de sesión exitoso');
 
 -- ----------------------------
 -- Table structure for noticias
@@ -760,11 +861,13 @@ CREATE TABLE `pwrandom` (
   `usuario` varchar(255) NOT NULL,
   `created_at` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 -- ----------------------------
 -- Records of pwrandom
 -- ----------------------------
+INSERT INTO `pwrandom` VALUES ('10', '=++mAz3e6H6S', '$2y$10$gQB.tCJIf6R3NjDlFGdlW..Px6uNxAIhUflU0wjpupO.FU8FhNPO6', 'sendeiser', '2025-11-18 18:15:57');
+INSERT INTO `pwrandom` VALUES ('11', 'FX-wg8DqT_&w', '$2y$10$PgkUt/UXW/g6mo/p2l1zheu.jG9QVAoKaxRwzAf4R1xyaiDjkfqE.', 'rodrigo84', '2025-11-30 23:12:27');
 
 -- ----------------------------
 -- Table structure for usuarios
@@ -784,7 +887,7 @@ CREATE TABLE `usuarios` (
   `rol` enum('usuario','administrador') DEFAULT 'usuario',
   `foto` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`idusuarios`)
-) ENGINE=InnoDB AUTO_INCREMENT=50 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=55 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 -- ----------------------------
 -- Records of usuarios
@@ -793,6 +896,11 @@ INSERT INTO `usuarios` VALUES ('38', 'Martin Gustavo', 'Gonza', '3826432180', ''
 INSERT INTO `usuarios` VALUES ('39', 'Martin Gustavo21', 'Gonzalez1', '3826432180', 'martingt0120@gmail.com', 'sendeiser23', '14537188656', '0', '0', null, 'usuario', null);
 INSERT INTO `usuarios` VALUES ('40', 'rodrigo', 'nieva', '3826540500', 'rodrigonieva84@outlook.com', 'rodrigo84', 'riocuarto', '0', '0', null, 'administrador', 'images/profiles/user_40_20251112110005.jpeg');
 INSERT INTO `usuarios` VALUES ('47', 'changuito', 'zeballos', '382', '', 'bocajuniors', '123gorra', '0', '0', null, 'usuario', null);
+INSERT INTO `usuarios` VALUES ('50', 'Trico', 'Champ', '254', 'trico@gmail.com', 'trico', 'qnF9HY5KT=ZW', '0', '0', null, 'usuario', null);
+INSERT INTO `usuarios` VALUES ('51', 'Lemon', 'Champ', '365', 'lemsh@gmail.com', 'lemoncry', 'mapa123', '0', '0', null, 'usuario', null);
+INSERT INTO `usuarios` VALUES ('52', 'wally', 'elperro', '381', 'wally@gmail.com', 'wally', 'celular1', '0', '0', null, 'usuario', null);
+INSERT INTO `usuarios` VALUES ('53', 'Felix', 'Nieva', '382', 'felix@gmail.com', 'felixhugo', 'dd5196c5571e72173f7419ea47751a15', '0', '0', null, 'usuario', null);
+INSERT INTO `usuarios` VALUES ('54', 'Elber', 'Luna', '382', 'elber@gmail.com', 'elberluna', '962217f130c72be04d440686e9a21201', '0', '0', null, 'usuario', null);
 
 -- ----------------------------
 -- Table structure for usuarios_verificacion

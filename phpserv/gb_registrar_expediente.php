@@ -35,6 +35,20 @@ if ($dni === '' || $nombre === '' || $apellido === '' || $denunciado === '' || $
 
 $conexion->begin_transaction();
 
+// Verificar que el número de expediente no exista ya
+$stmtCheck = $conexion->prepare('SELECT idexpediente FROM expedientes WHERE numerodeexpediente = ? LIMIT 1 FOR UPDATE');
+$stmtCheck->bind_param('s', $nroexp);
+$stmtCheck->execute();
+$stmtCheck->store_result();
+if ($stmtCheck->num_rows > 0) {
+    $stmtCheck->close();
+    $conexion->rollback();
+    echo json_encode(['status'=>'error','message'=>'Número de expediente ya registrado']);
+    $conexion->close();
+    exit;
+}
+$stmtCheck->close();
+
 $stmtExp = $conexion->prepare('INSERT INTO expedientes (causa, medida, fechadeentrada, fojas, librodeactas, codigocomisaria, numerodeexpediente, dnidenunciante, denunciado, numexpinstru) VALUES (?,?,?,?,?,?,?,?,?,?)');
 $stmtExp->bind_param('sssiiisisi', $causa, $medida, $fechaent, $fojas, $libro, $comisaria, $nroexp, $dni, $denunciado, $numexpinstr);
 if (!$stmtExp->execute()) { $conexion->rollback(); echo json_encode(['status'=>'error','message'=>$stmtExp->error?:'Error expediente']); exit; }

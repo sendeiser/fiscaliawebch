@@ -369,35 +369,16 @@
                 echo '<h3 class="text-center mb-4"><i class="fas fa-file-alt mr-2"></i>Resultados de la Consulta</h3>';
 
                 while ($row = mysqli_fetch_assoc($result)) {
-                    $statusClass = 'status-pending';
-                    $statusText = 'En proceso';
-                    if (!empty($row['fechadesalida'])) {
-                        $statusClass = 'status-closed';
-                        $statusText = 'Finalizado';
-                    } else {
-                        $statusClass = 'status-active';
-                        $statusText = 'En proceso';
-                    }
-
+                    $expNum = !empty($row['numerodeexpediente']) ? $row['numerodeexpediente'] : $row['idexpediente'];
                     echo '<div class="status-card">';
                     echo '<div class="row">';
-                    echo '<div class="col-md-8">';
-                    $expNum = !empty($row['numerodeexpediente']) ? $row['numerodeexpediente'] : $row['idexpediente'];
+                    echo '<div class="col-md-12">';
                     echo '<h5 class="mb-3"><i class="fas fa-folder-open mr-2"></i>Expediente N° ' . $expNum . '</h5>';
-                    echo '<p class="mb-2"><strong>DNI:</strong> ' . $row['dnidenunciante'] . '</p>';
-                    echo '<p class="mb-2"><strong>Fecha de entrada:</strong> ' . date('d/m/Y', strtotime($row['fechadeentrada'])) . '</p>';
                     if (!empty($row['fechadesalida'])) {
-                        echo '<p class="mb-2"><strong>Fecha de salida:</strong> ' . date('d/m/Y', strtotime($row['fechadesalida'])) . '</p>';
+                        echo '<p class="mb-2">Llegarse por el ministerio publico fiscal para mas informacion</p>';
+                    } else {
+                        echo '<p class="mb-2">No hay informacion al respecto</p>';
                     }
-                    if (!empty($row['causa'])) {
-                        echo '<p class="mb-2"><strong>Causa:</strong> ' . $row['causa'] . '</p>';
-                    }
-                    if (!empty($row['denunciado'])) {
-                        echo '<p class="mb-2"><strong>Denunciado:</strong> ' . $row['denunciado'] . '</p>';
-                    }
-                    echo '</div>';
-                    echo '<div class="col-md-4 text-right">';
-                    echo '<span class="status-badge ' . $statusClass . '">' . $statusText . '</span>';
                     echo '</div>';
                     echo '</div>';
                     echo '</div>';

@@ -16,7 +16,7 @@ $expediente = isset($_GET['expediente']) ? $_GET['expediente'] : '';
 $dni = isset($_GET['dni']) ? $_GET['dni'] : '';
 
 // Construir la consulta SQL base
-$sql = "SELECT a.id, a.fecha, a.hora, a.usuario, a.tabla_afectada AS tabla, a.operacion, a.num_expediente AS expediente, a.dni 
+$sql = "SELECT a.id, a.fecha, a.hora, a.usuario, a.tabla_afectada AS tabla, a.operacion, a.num_expediente AS expediente, a.dni, a.valores_anteriores, a.valores_nuevos 
         FROM auditoria a";
 
 // Construir la cláusula WHERE basada en los filtros
@@ -140,7 +140,7 @@ while ($row = $result->fetch_assoc()) {
         $pdf->Cell(25, 10, 'Tabla', 1, 0, 'C', true);
         $pdf->Cell(25, 10, 'Operación', 1, 0, 'C', true);
         $pdf->Cell(25, 10, 'Expediente', 1, 0, 'C', true);
-        $pdf->Cell(40, 10, 'Detalles', 1, 1, 'C', true);
+        $pdf->Cell(30, 10, 'DNI', 1, 1, 'C', true);
         $pdf->SetFont('Arial', '', 9);
     }
     
@@ -151,6 +151,20 @@ while ($row = $result->fetch_assoc()) {
     $pdf->Cell(25, 10, $row['operacion'], 1, 0, 'C');
     $pdf->Cell(25, 10, $row['expediente'] ?? 'N/A', 1, 0, 'C');
     $pdf->Cell(30, 10, $row['dni'] ?? 'N/A', 1, 1, 'C');
+    
+    // Bloques de detalles completos
+    if (!empty($row['valores_anteriores'])) {
+        $pdf->SetFont('Arial', 'B', 9);
+        $pdf->Cell(0, 6, 'Valores Anteriores:', 1, 1);
+        $pdf->SetFont('Arial', '', 8);
+        $pdf->MultiCell(0, 6, $row['valores_anteriores'], 1);
+    }
+    if (!empty($row['valores_nuevos'])) {
+        $pdf->SetFont('Arial', 'B', 9);
+        $pdf->Cell(0, 6, 'Valores Nuevos:', 1, 1);
+        $pdf->SetFont('Arial', '', 8);
+        $pdf->MultiCell(0, 6, $row['valores_nuevos'], 1);
+    }
 }
 
 // Registrar la acción en la tabla de auditoría (opcional)

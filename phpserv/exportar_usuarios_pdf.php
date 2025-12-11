@@ -26,7 +26,7 @@ if (!file_exists('../vendor/tecnickcom/tcpdf/tcpdf.php')) {
     
     try {
         // Consultar todos los usuarios
-        $query = "SELECT idusuarios, usuario, Nombre, Apellido, Correo, 
+        $query = "SELECT idusuarios, usuario, Nombre, Apellido, Correo, Celular,
                   rol, intentos_fallidos, bloqueado, fecha_bloqueo 
                   FROM usuarios 
                   ORDER BY bloqueado DESC, Apellido ASC, Nombre ASC";
@@ -37,8 +37,8 @@ if (!file_exists('../vendor/tecnickcom/tcpdf/tcpdf.php')) {
             throw new Exception("Error en la consulta: " . $conexion->error);
         }
         
-        // Crear PDF
-        $pdf = new FPDF();
+        // Crear PDF en orientación horizontal
+        $pdf = new FPDF('L', 'mm', 'A4');
         $pdf->AddPage();
         
         // Título
@@ -49,13 +49,15 @@ if (!file_exists('../vendor/tecnickcom/tcpdf/tcpdf.php')) {
         
         // Encabezados de tabla
         $pdf->SetFont('Arial', 'B', 10);
-        $pdf->Cell(10, 7, 'ID', 1);
-        $pdf->Cell(30, 7, 'Usuario', 1);
-        $pdf->Cell(30, 7, 'Nombre', 1);
-        $pdf->Cell(30, 7, 'Apellido', 1);
-        $pdf->Cell(20, 7, 'Rol', 1);
+        $pdf->Cell(12, 7, 'ID', 1);
+        $pdf->Cell(28, 7, 'Usuario', 1);
+        $pdf->Cell(28, 7, 'Nombre', 1);
+        $pdf->Cell(28, 7, 'Apellido', 1);
+        $pdf->Cell(45, 7, 'Correo', 1);
+        $pdf->Cell(30, 7, 'Celular', 1);
+        $pdf->Cell(18, 7, 'Rol', 1);
         $pdf->Cell(20, 7, 'Intentos', 1);
-        $pdf->Cell(25, 7, 'Estado', 1);
+        $pdf->Cell(20, 7, 'Estado', 1);
         $pdf->Cell(30, 7, 'Fecha Bloqueo', 1);
         $pdf->Ln();
         
@@ -63,13 +65,16 @@ if (!file_exists('../vendor/tecnickcom/tcpdf/tcpdf.php')) {
         $pdf->SetFont('Arial', '', 9);
         while ($row = $result->fetch_assoc()) {
             $estado = ($row['bloqueado'] == 1) ? 'Bloqueado' : 'Activo';
-            $pdf->Cell(10, 6, $row['idusuarios'], 1);
-            $pdf->Cell(30, 6, $row['usuario'], 1);
-            $pdf->Cell(30, 6, $row['Nombre'], 1);
-            $pdf->Cell(30, 6, $row['Apellido'], 1);
-            $pdf->Cell(20, 6, $row['rol'] ?: 'usuario', 1);
+            $pdf->SetFont('Arial', '', 9);
+            $pdf->Cell(12, 6, $row['idusuarios'], 1);
+            $pdf->Cell(28, 6, $row['usuario'], 1);
+            $pdf->Cell(28, 6, $row['Nombre'], 1);
+            $pdf->Cell(28, 6, $row['Apellido'], 1);
+            $pdf->Cell(45, 6, $row['Correo'], 1);
+            $pdf->Cell(30, 6, $row['Celular'], 1);
+            $pdf->Cell(18, 6, $row['rol'] ?: 'usuario', 1);
             $pdf->Cell(20, 6, $row['intentos_fallidos'], 1);
-            $pdf->Cell(25, 6, $estado, 1);
+            $pdf->Cell(20, 6, $estado, 1);
             $pdf->Cell(30, 6, $row['fecha_bloqueo'] ?: '-', 1);
             $pdf->Ln();
         }
@@ -82,10 +87,11 @@ if (!file_exists('../vendor/tecnickcom/tcpdf/tcpdf.php')) {
         $stmtAud->execute();
         $stmtAud->close();
         
-        // Salida del PDF
+        // Salida del PDF inline
+        if (function_exists('ob_get_length')) { while (ob_get_level() > 0) { ob_end_clean(); } }
         header('Content-Type: application/pdf');
-        header('Content-Disposition: attachment; filename=usuarios_' . date('Y-m-d') . '.pdf');
-        $pdf->Output('D', 'usuarios_' . date('Y-m-d') . '.pdf');
+        header('Content-Disposition: inline; filename=usuarios_' . date('Y-m-d') . '.pdf');
+        $pdf->Output('I', 'usuarios_' . date('Y-m-d') . '.pdf');
         
     } catch (Exception $e) {
         // En caso de error, devolver mensaje de texto plano
@@ -99,7 +105,7 @@ if (!file_exists('../vendor/tecnickcom/tcpdf/tcpdf.php')) {
     
     try {
         // Consultar todos los usuarios
-        $query = "SELECT idusuarios, usuario, Nombre, Apellido, Correo, 
+        $query = "SELECT idusuarios, usuario, Nombre, Apellido, Correo, Celular,
                   rol, intentos_fallidos, bloqueado, fecha_bloqueo 
                   FROM usuarios 
                   ORDER BY bloqueado DESC, Apellido ASC, Nombre ASC";
@@ -145,8 +151,8 @@ if (!file_exists('../vendor/tecnickcom/tcpdf/tcpdf.php')) {
         $pdf->SetFont('', 'B');
         
         // Encabezados de tabla
-        $w = array(15, 30, 35, 35, 50, 20, 25, 25, 40);
-        $header = array('ID', 'Usuario', 'Nombre', 'Apellido', 'Correo', 'Rol', 'Intentos', 'Estado', 'Fecha Bloqueo');
+        $w = array(15, 28, 28, 28, 45, 30, 18, 20, 20, 35);
+        $header = array('ID', 'Usuario', 'Nombre', 'Apellido', 'Correo', 'Celular', 'Rol', 'Intentos', 'Estado', 'Fecha Bloqueo');
         
         // Encabezado
         for($i = 0; $i < count($header); $i++)
@@ -167,19 +173,20 @@ if (!file_exists('../vendor/tecnickcom/tcpdf/tcpdf.php')) {
             $pdf->Cell($w[2], 6, $row['Nombre'], 'LR', 0, 'L', $fill);
             $pdf->Cell($w[3], 6, $row['Apellido'], 'LR', 0, 'L', $fill);
             $pdf->Cell($w[4], 6, $row['Correo'], 'LR', 0, 'L', $fill);
-            $pdf->Cell($w[5], 6, $row['rol'] ?: 'usuario', 'LR', 0, 'C', $fill);
-            $pdf->Cell($w[6], 6, $row['intentos_fallidos'], 'LR', 0, 'C', $fill);
+            $pdf->Cell($w[5], 6, $row['Celular'], 'LR', 0, 'L', $fill);
+            $pdf->Cell($w[6], 6, $row['rol'] ?: 'usuario', 'LR', 0, 'C', $fill);
+            $pdf->Cell($w[7], 6, $row['intentos_fallidos'], 'LR', 0, 'C', $fill);
             
             // Color rojo para bloqueados
             if ($row['bloqueado'] == 1) {
                 $pdf->SetTextColor(255, 0, 0);
-                $pdf->Cell($w[7], 6, $estado, 'LR', 0, 'C', $fill);
+                $pdf->Cell($w[8], 6, $estado, 'LR', 0, 'C', $fill);
                 $pdf->SetTextColor(0);
             } else {
-                $pdf->Cell($w[7], 6, $estado, 'LR', 0, 'C', $fill);
+                $pdf->Cell($w[8], 6, $estado, 'LR', 0, 'C', $fill);
             }
             
-            $pdf->Cell($w[8], 6, $row['fecha_bloqueo'] ?: '-', 'LR', 0, 'C', $fill);
+            $pdf->Cell($w[9], 6, $row['fecha_bloqueo'] ?: '-', 'LR', 0, 'C', $fill);
             $pdf->Ln();
             $fill=!$fill;
         }

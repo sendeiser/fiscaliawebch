@@ -7,7 +7,10 @@ class PDF extends FPDF
     function Header()
     {
         // Logo
-         $this->Image("logoFC.jpeg", 15, 5, 30); 
+        $logoPath = __DIR__ . DIRECTORY_SEPARATOR . "logoFC.jpeg";
+        if (file_exists($logoPath)) {
+            $this->Image($logoPath, 15, 5, 30);
+        }
         // Arial bold 15
         $this->SetFont("Arial", "B", 12);
         // Título
@@ -31,4 +34,3 @@ class PDF extends FPDF
         $this->Cell(0, 10, 'Pagina ' . $this->PageNo() . '/{nb}', 0, 0, 'C');
     }
 }
-?>

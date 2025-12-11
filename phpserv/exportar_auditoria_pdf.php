@@ -1,4 +1,6 @@
 <?php
+error_reporting(0);
+ini_set('display_errors', '0');
 // Incluir archivo de conexión y FPDF
 require_once 'conexion.php';
 session_start();
@@ -184,3 +186,4 @@ if (function_exists('ob_get_length')) { while (ob_get_level() > 0) { ob_end_clea
 header('Content-Type: application/pdf');
 header('Content-Disposition: inline; filename="auditoria.pdf"');
 $pdf->Output('I', 'auditoria.pdf');
+exit;

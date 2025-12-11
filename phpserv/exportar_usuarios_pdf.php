@@ -1,4 +1,6 @@
 <?php
+error_reporting(0);
+ini_set('display_errors', '0');
 /**
  * exportar_usuarios_pdf.php
  * Exporta la lista de usuarios a formato PDF
@@ -92,6 +94,7 @@ if (!file_exists('../vendor/tecnickcom/tcpdf/tcpdf.php')) {
         header('Content-Type: application/pdf');
         header('Content-Disposition: inline; filename=usuarios_' . date('Y-m-d') . '.pdf');
         $pdf->Output('I', 'usuarios_' . date('Y-m-d') . '.pdf');
+        exit;
         
     } catch (Exception $e) {
         // En caso de error, devolver mensaje de texto plano
@@ -207,6 +210,7 @@ if (!file_exists('../vendor/tecnickcom/tcpdf/tcpdf.php')) {
         header('Content-Type: application/pdf');
         header('Content-Disposition: inline; filename=usuarios_' . date('Y-m-d') . '.pdf');
         $pdf->Output('usuarios_' . date('Y-m-d') . '.pdf', 'I');
+        exit;
         
     } catch (Exception $e) {
         // En caso de error, devolver mensaje de texto plano

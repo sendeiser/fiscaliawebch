@@ -19,6 +19,19 @@ if ($rolSesion !== 'administrador' && $tipoSesion !== 'admin') {
 // Incluir archivo de conexión a la base de datos
 require_once 'connect.php';
 
+function ensureView($conexion, $viewName, $selectSQL) {
+    $stmt = $conexion->prepare('SELECT TABLE_NAME FROM information_schema.VIEWS WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = ?');
+    $stmt->bind_param('s', $viewName);
+    if ($stmt->execute()) {
+        $res = $stmt->get_result();
+        if (!$res || $res->num_rows === 0) {
+            $conexion->query('CREATE OR REPLACE VIEW ' . $viewName . ' AS ' . $selectSQL);
+        }
+    }
+    $stmt->close();
+}
+ensureView($conexion, 'vista_usuarios', "SELECT idusuarios, usuario, Nombre, Apellido, Correo, Celular, rol, intentos_fallidos, bloqueado, fecha_bloqueo FROM usuarios");
+
 // Verificar si TCPDF está disponible (debe estar instalado)
 if (!file_exists('../vendor/tecnickcom/tcpdf/tcpdf.php')) {
     // Si no está disponible, crear un PDF básico con FPDF (incluido en PHP)
@@ -28,7 +41,7 @@ if (!file_exists('../vendor/tecnickcom/tcpdf/tcpdf.php')) {
         // Consultar todos los usuarios
         $query = "SELECT idusuarios, usuario, Nombre, Apellido, Correo, Celular,
                   rol, intentos_fallidos, bloqueado, fecha_bloqueo 
-                  FROM usuarios 
+                  FROM vista_usuarios 
                   ORDER BY bloqueado DESC, Apellido ASC, Nombre ASC";
         
         $result = $conexion->query($query);
@@ -107,7 +120,7 @@ if (!file_exists('../vendor/tecnickcom/tcpdf/tcpdf.php')) {
         // Consultar todos los usuarios
         $query = "SELECT idusuarios, usuario, Nombre, Apellido, Correo, Celular,
                   rol, intentos_fallidos, bloqueado, fecha_bloqueo 
-                  FROM usuarios 
+                  FROM vista_usuarios 
                   ORDER BY bloqueado DESC, Apellido ASC, Nombre ASC";
         
         $result = $conexion->query($query);

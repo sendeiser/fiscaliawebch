@@ -6,6 +6,19 @@ $conn = Conexion::conectar();
 require_once 'informes/fpdf.php';
 require_once 'informes/plantilla.php';
 
+function ensureView($conn, $viewName, $selectSQL) {
+    $stmt = $conn->prepare('SELECT TABLE_NAME FROM information_schema.VIEWS WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = ?');
+    $stmt->bind_param('s', $viewName);
+    if ($stmt->execute()) {
+        $res = $stmt->get_result();
+        if (!$res || $res->num_rows === 0) {
+            $conn->query('CREATE OR REPLACE VIEW ' . $viewName . ' AS ' . $selectSQL);
+        }
+    }
+    $stmt->close();
+}
+ensureView($conn, 'vista_auditoria', "SELECT id, fecha, hora, usuario, tabla_afectada AS tabla, operacion, num_expediente AS expediente, dni, valores_anteriores, valores_nuevos FROM auditoria");
+
 // Obtener parámetros de filtro
 $date_from = isset($_GET['date_from']) ? $_GET['date_from'] : '';
 $date_to = isset($_GET['date_to']) ? $_GET['date_to'] : '';
@@ -16,8 +29,8 @@ $expediente = isset($_GET['expediente']) ? $_GET['expediente'] : '';
 $dni = isset($_GET['dni']) ? $_GET['dni'] : '';
 
 // Construir la consulta SQL base
-$sql = "SELECT a.id, a.fecha, a.hora, a.usuario, a.tabla_afectada AS tabla, a.operacion, a.num_expediente AS expediente, a.dni, a.valores_anteriores, a.valores_nuevos 
-        FROM auditoria a";
+$sql = "SELECT a.id, a.fecha, a.hora, a.usuario, a.tabla, a.operacion, a.expediente, a.dni, a.valores_anteriores, a.valores_nuevos 
+        FROM vista_auditoria a";
 
 // Construir la cláusula WHERE basada en los filtros
 $where_clauses = array();
@@ -34,7 +47,7 @@ if (!empty($date_to)) {
 }
 
 if (!empty($tabla)) {
-    $where_clauses[] = "a.tabla_afectada LIKE ?"; 
+    $where_clauses[] = "a.tabla LIKE ?"; 
     $params[] = "%$tabla%";
 }
 
@@ -49,7 +62,7 @@ if (!empty($usuario)) {
 }
 
 if (!empty($expediente)) {
-    $where_clauses[] = "a.num_expediente LIKE ?"; 
+    $where_clauses[] = "a.expediente LIKE ?"; 
     $params[] = "%$expediente%";
 }
 
